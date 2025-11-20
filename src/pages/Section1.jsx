@@ -88,20 +88,20 @@ export default function Section1() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-amber-50 via-stone-50 to-amber-50">
+    <div className="min-h-screen bg-[#222A31]">
       
       {/* Top Navigation */}
-      <div className="bg-white/80 backdrop-blur-sm border-b border-stone-200 sticky top-0 z-40 shadow-sm">
+      <div className="bg-[#2A3440]/95 backdrop-blur-sm border-b border-[#25DCE6]/20 sticky top-0 z-40 shadow-lg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
-            <Link to={createPageUrl("Home")} className="flex items-center gap-2 text-stone-700 hover:text-stone-900 transition-colors">
+            <Link to={createPageUrl("Home")} className="flex items-center gap-2 text-[#25DCE6] hover:text-[#FFFFFD] transition-colors">
               <ArrowLeft className="w-5 h-5" />
               <span className="font-medium hidden sm:inline">Back to Contents</span>
             </Link>
             
             <div className="flex items-center gap-2">
-              <BookOpen className="w-5 h-5 text-amber-700" />
-              <span className="font-serif font-semibold text-stone-900 hidden sm:inline">
+              <BookOpen className="w-5 h-5 text-[#25DCE6]" />
+              <span className="font-serif font-semibold text-[#FFFFFD] hidden sm:inline">
                 Pages 1-64
               </span>
             </div>
@@ -135,12 +135,12 @@ export default function Section1() {
           {/* Mobile Navigation Overlay */}
           {mobileMenuOpen && (
             <div className="fixed inset-0 z-50 lg:hidden">
-              <div className="absolute inset-0 bg-black/50" onClick={() => setMobileMenuOpen(false)}></div>
-              <div className="absolute left-0 top-0 bottom-0 w-80 bg-white shadow-xl overflow-y-auto p-6">
+              <div className="absolute inset-0 bg-black/70" onClick={() => setMobileMenuOpen(false)}></div>
+              <div className="absolute left-0 top-0 bottom-0 w-80 bg-[#2A3440] shadow-xl overflow-y-auto p-6 border-r border-[#25DCE6]/20">
                 <div className="flex justify-between items-center mb-6">
-                  <h3 className="font-serif font-bold text-xl">Chapters</h3>
+                  <h3 className="font-serif font-bold text-xl text-[#FFFFFD]">Chapters</h3>
                   <Button variant="ghost" size="icon" onClick={() => setMobileMenuOpen(false)}>
-                    <X className="w-5 h-5" />
+                    <X className="w-5 h-5 text-[#25DCE6]" />
                   </Button>
                 </div>
                 <ChapterNav

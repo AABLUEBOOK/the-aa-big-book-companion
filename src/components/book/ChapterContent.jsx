@@ -59,19 +59,19 @@ export default function ChapterContent({ chapter, onNext, onPrevious }) {
   };
 
   return (
-    <div className="bg-white rounded-2xl shadow-xl border border-stone-200 overflow-hidden">
+    <div className="bg-[#2A3440] rounded-2xl shadow-2xl border border-[#25DCE6]/20 overflow-hidden">
       
       {/* Chapter Header */}
-      <div className="bg-gradient-to-r from-amber-50 to-stone-50 border-b border-stone-200 px-8 sm:px-12 py-8">
+      <div className="bg-gradient-to-r from-[#2A3440] to-[#222A31] border-b border-[#25DCE6]/20 px-8 sm:px-12 py-8">
         {chapter.chapter && (
-          <div className="text-sm font-medium text-stone-500 uppercase tracking-widest mb-2">
+          <div className="text-sm font-medium text-[#25DCE6]/70 uppercase tracking-widest mb-2">
             Chapter {chapter.chapter}
           </div>
         )}
-        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-stone-900 leading-tight">
+        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-[#FFFFFD] leading-tight">
           {chapter.title}
         </h1>
-        <div className="mt-3 text-sm text-stone-500">
+        <div className="mt-3 text-sm text-[#25DCE6]/60">
           Page {chapter.pageNum}
         </div>
       </div>
@@ -86,15 +86,15 @@ export default function ChapterContent({ chapter, onNext, onPrevious }) {
           }}
         ></div>
 
-        <div className="prose prose-lg prose-stone max-w-none relative">
-          <div className="font-serif text-stone-800 leading-relaxed text-lg space-y-6">
+        <div className="prose prose-lg max-w-none relative">
+          <div className="font-serif text-[#FFFFFD] leading-relaxed text-lg space-y-6">
             {chapterData.paragraphs?.map((para, idx) => {
               const baseClasses = "mb-6 first:mt-0 leading-relaxed";
               const highlightClasses = {
-                'yellow': 'bg-yellow-100/70 px-2 py-1 rounded',
-                'pink': 'bg-pink-100/70 px-2 py-1 rounded',
-                'blue': 'bg-blue-100/70 px-2 py-1 rounded',
-                'basic-text': 'border-l-4 border-amber-400 pl-4 bg-amber-50/30 py-2'
+                'yellow': 'bg-[#25DCE6]/20 px-2 py-1 rounded border-l-2 border-[#25DCE6]',
+                'pink': 'bg-pink-500/20 px-2 py-1 rounded border-l-2 border-pink-400',
+                'blue': 'bg-blue-500/20 px-2 py-1 rounded border-l-2 border-blue-400',
+                'basic-text': 'border-l-4 border-[#25DCE6] pl-4 bg-[#25DCE6]/10 py-2'
               };
               
               return (
@@ -129,19 +129,19 @@ export default function ChapterContent({ chapter, onNext, onPrevious }) {
           {chapterData.highlights?.filter(h => h.type === 'sidebar').map((highlight, idx) => (
             <div
               key={idx}
-              className="bg-gradient-to-br from-blue-50 to-blue-100 border-2 border-blue-300 rounded-lg px-4 py-3 shadow-md hover:shadow-lg transition-shadow"
+              className="bg-[#25DCE6]/10 border-2 border-[#25DCE6]/40 rounded-lg px-4 py-3 shadow-lg hover:shadow-xl hover:bg-[#25DCE6]/15 transition-all backdrop-blur-sm"
               style={{ transform: `rotate(${idx % 2 === 0 ? '1deg' : '-1deg'})` }}
             >
-              <div className="text-xs font-bold text-blue-900 uppercase tracking-wider text-center leading-tight">
+              <div className="text-xs font-bold text-[#25DCE6] uppercase tracking-wider text-center leading-tight">
                 {highlight.text}
               </div>
               {highlight.subtext && (
-                <div className="text-xs text-blue-700 text-center mt-1">
+                <div className="text-xs text-[#FFFFFD]/70 text-center mt-1">
                   {highlight.subtext}
                 </div>
               )}
               {highlight.page && (
-                <div className="text-xs text-blue-600 text-center mt-1 font-mono">
+                <div className="text-xs text-[#25DCE6]/80 text-center mt-1 font-mono">
                   P. {highlight.page}
                 </div>
               )}
@@ -151,18 +151,18 @@ export default function ChapterContent({ chapter, onNext, onPrevious }) {
       </div>
 
       {/* Navigation Footer */}
-      <div className="bg-stone-50 border-t border-stone-200 px-8 sm:px-12 py-6 flex items-center justify-between">
+      <div className="bg-[#222A31] border-t border-[#25DCE6]/20 px-8 sm:px-12 py-6 flex items-center justify-between">
         <Button
           variant="outline"
           onClick={onPrevious}
           disabled={!onPrevious}
-          className="gap-2"
+          className="gap-2 border-[#25DCE6]/40 text-[#25DCE6] hover:bg-[#25DCE6]/10 hover:border-[#25DCE6] disabled:opacity-30"
         >
           <ChevronLeft className="w-4 h-4" />
           <span className="hidden sm:inline">Previous</span>
         </Button>
 
-        <div className="text-sm text-stone-500 font-medium">
+        <div className="text-sm text-[#25DCE6]/70 font-medium">
           {currentIndex + 1} of {CHAPTERS.length}
         </div>
 
@@ -170,7 +170,7 @@ export default function ChapterContent({ chapter, onNext, onPrevious }) {
           variant="outline"
           onClick={onNext}
           disabled={!onNext}
-          className="gap-2"
+          className="gap-2 border-[#25DCE6]/40 text-[#25DCE6] hover:bg-[#25DCE6]/10 hover:border-[#25DCE6] disabled:opacity-30"
         >
           <span className="hidden sm:inline">Next</span>
           <ChevronRight className="w-4 h-4" />
