@@ -306,10 +306,10 @@ function AnnotatedText({ text, annotations }) {
 
         const annotation = part.annotations[0];
         const colorClasses = {
-          yellow: 'bg-yellow-400/30 border-b-2 border-yellow-400',
-          pink: 'bg-pink-400/30 border-b-2 border-pink-400',
-          blue: 'bg-blue-400/30 border-b-2 border-blue-400',
-          green: 'bg-green-400/30 border-b-2 border-green-400'
+          yellow: 'bg-yellow-400/40 border-b-2 border-yellow-400 text-[#FFFFFD]',
+          pink: 'bg-pink-400/40 border-b-2 border-pink-400 text-[#FFFFFD]',
+          blue: 'bg-blue-400/40 border-b-2 border-blue-400 text-[#FFFFFD]',
+          green: 'bg-green-400/40 border-b-2 border-green-400 text-[#FFFFFD]'
         };
 
         if (annotation.type === 'highlight') {
@@ -320,7 +320,7 @@ function AnnotatedText({ text, annotations }) {
           );
         } else {
           return (
-            <span key={idx} className="border-b-2 border-[#25DCE6] decoration-2">
+            <span key={idx} className="border-b-2 border-[#25DCE6] decoration-2 text-[#FFFFFD]">
               {part.text}
             </span>
           );

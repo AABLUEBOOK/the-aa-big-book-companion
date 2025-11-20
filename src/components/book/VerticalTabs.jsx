@@ -16,9 +16,12 @@ export default function VerticalTabs({ tabs = [], isLocked, onTabClick }) {
     mutationFn: (data) => base44.entities.BookTab.create(data),
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['bookTabs'] });
-      setIsAdding(false);
       setTabLabel('');
       setSelectedColor('yellow');
+      // Keep adding mode open if less than 6 tabs
+      if (tabs.length >= 5) {
+        setIsAdding(false);
+      }
     }
   });
 
