@@ -1,9 +1,12 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { ArrowLeft, BookOpen, Menu, X } from "lucide-react";
+import { base44 } from "@/api/base44Client";
+import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
+import { ArrowLeft, BookOpen, Menu, X, Lock, Unlock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import ChapterContent from "../components/book/ChapterContent";
 import ChapterNav from "../components/book/ChapterNav";
+import VerticalTabs from "../components/book/VerticalTabs";
 
 function createPageUrl(pageName) {
   return `/${pageName}`;
@@ -69,6 +72,40 @@ const CHAPTERS = [
 export default function Section1() {
   const [currentChapterId, setCurrentChapterId] = useState("preface");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const queryClient = useQueryClient();
+
+  const { data: annotations = [] } = useQuery({
+    queryKey: ['annotations', currentChapterId],
+    queryFn: () => base44.entities.Annotation.filter({ chapter_id: currentChapterId }),
+    initialData: []
+  });
+
+  const { data: tabs = [] } = useQuery({
+    queryKey: ['bookTabs'],
+    queryFn: () => base44.entities.BookTab.list(),
+    initialData: []
+  });
+
+  const { data: settings } = useQuery({
+    queryKey: ['bookSettings'],
+    queryFn: async () => {
+      const list = await base44.entities.BookSettings.list();
+      return list[0] || { is_locked: false };
+    }
+  });
+
+  const toggleLockMutation = useMutation({
+    mutationFn: async () => {
+      if (settings?.id) {
+        return base44.entities.BookSettings.update(settings.id, { is_locked: !settings.is_locked });
+      } else {
+        return base44.entities.BookSettings.create({ is_locked: true });
+      }
+    },
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ['bookSettings'] });
+    }
+  });
 
   const currentChapter = CHAPTERS.find(ch => ch.id === currentChapterId);
   const currentIndex = CHAPTERS.findIndex(ch => ch.id === currentChapterId);
@@ -99,18 +136,39 @@ export default function Section1() {
               <span className="font-medium hidden sm:inline">Back to Contents</span>
             </Link>
             
-            <div className="flex items-center gap-2">
-              <BookOpen className="w-5 h-5 text-[#25DCE6]" />
-              <span className="font-serif font-semibold text-[#FFFFFD] hidden sm:inline">
-                Pages 1-64
-              </span>
+            <div className="flex items-center gap-4">
+              <div className="flex items-center gap-2">
+                <BookOpen className="w-5 h-5 text-[#25DCE6]" />
+                <span className="font-serif font-semibold text-[#FFFFFD] hidden sm:inline">
+                  Pages 1-64
+                </span>
+              </div>
+
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={() => toggleLockMutation.mutate()}
+                className="gap-2 text-[#25DCE6] hover:bg-[#25DCE6]/10 hidden sm:flex"
+              >
+                {settings?.is_locked ? (
+                  <>
+                    <Lock className="w-4 h-4" />
+                    <span className="text-xs">Locked</span>
+                  </>
+                ) : (
+                  <>
+                    <Unlock className="w-4 h-4" />
+                    <span className="text-xs">Unlocked</span>
+                  </>
+                )}
+              </Button>
             </div>
 
             <Button
               variant="ghost"
               size="icon"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="lg:hidden"
+              className="lg:hidden text-[#25DCE6]"
             >
               {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
             </Button>
@@ -161,12 +219,21 @@ export default function Section1() {
               chapter={currentChapter}
               currentIndex={currentIndex}
               totalChapters={CHAPTERS.length}
+              annotations={annotations}
+              isLocked={settings?.is_locked || false}
               onNext={currentIndex < CHAPTERS.length - 1 ? goToNext : null}
               onPrevious={currentIndex > 0 ? goToPrevious : null}
             />
           </div>
         </div>
       </div>
+
+      {/* Vertical Tabs */}
+      <VerticalTabs 
+        tabs={tabs} 
+        isLocked={settings?.is_locked || false}
+        onTabClick={(chapterId) => setCurrentChapterId(chapterId)}
+      />
     </div>
   );
 }
