@@ -24,7 +24,7 @@ const BOOK_SECTIONS = [
     title: "Bill's Story & The Solution",
     page_range: "1-43",
     description: "Chapter 1-3: Bill's Story, There Is a Solution, More About Alcoholism",
-    route: "Section1"
+    route: "Section2"
   },
   {
     id: 3,
@@ -32,7 +32,7 @@ const BOOK_SECTIONS = [
     title: "We Agnostics & How It Works",
     page_range: "44-71",
     description: "Chapter 4-5: Faith and the Twelve Steps",
-    route: "Section1"
+    route: "Section3"
   },
   {
     id: 4,
@@ -40,7 +40,7 @@ const BOOK_SECTIONS = [
     title: "Into Action",
     page_range: "72-88",
     description: "Chapter 6: Working the program of recovery",
-    route: "Section1"
+    route: "Section4"
   },
   {
     id: 5,
@@ -48,7 +48,7 @@ const BOOK_SECTIONS = [
     title: "Working with Others",
     page_range: "89-103",
     description: "Chapter 7: How to help other alcoholics",
-    route: "Section1"
+    route: "Section5"
   },
   {
     id: 6,
@@ -56,7 +56,7 @@ const BOOK_SECTIONS = [
     title: "To Wives & The Family Afterward",
     page_range: "104-135",
     description: "Chapter 8-9: Guidance for families",
-    route: "Section1"
+    route: "Section6"
   },
   {
     id: 7,
@@ -64,7 +64,7 @@ const BOOK_SECTIONS = [
     title: "To Employers & A Vision for You",
     page_range: "136-164",
     description: "Chapter 10-11: The workplace and future of A.A.",
-    route: "Section1"
+    route: "Section7"
   },
   {
     id: 8,
@@ -72,7 +72,7 @@ const BOOK_SECTIONS = [
     title: "Personal Stories - Part I",
     page_range: "171-301",
     description: "Pioneers of A.A. - stories from the early days",
-    route: "Section1"
+    route: "Section8"
   },
   {
     id: 9,
@@ -80,7 +80,7 @@ const BOOK_SECTIONS = [
     title: "Personal Stories - Part II & III",
     page_range: "303-469",
     description: "They Stopped in Time & They Lost Nearly All",
-    route: "Section1"
+    route: "Section9"
   },
   {
     id: 10,
@@ -88,7 +88,7 @@ const BOOK_SECTIONS = [
     title: "Appendices",
     page_range: "471-575",
     description: "The Twelve Traditions, spiritual experience, and more",
-    route: "Section1"
+    route: "Section10"
   }
 ];
 
