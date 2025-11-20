@@ -9,13 +9,90 @@ function createPageUrl(pageName) {
   return `/${pageName}`;
 }
 
-export default function Home() {
-  const { data: sections = [], isLoading } = useQuery({
-    queryKey: ['bookSections'],
-    queryFn: () => base44.entities.BookSection.list('section_number'),
-    initialData: [],
-  });
+const BOOK_SECTIONS = [
+  {
+    id: 1,
+    section_number: 1,
+    title: "Preface & Forewords",
+    page_range: "xi-xxvi",
+    description: "Introduction to the book, its history, and The Doctor's Opinion",
+    route: "Section1"
+  },
+  {
+    id: 2,
+    section_number: 2,
+    title: "Bill's Story & The Solution",
+    page_range: "1-43",
+    description: "Chapter 1-3: Bill's Story, There Is a Solution, More About Alcoholism",
+    route: "Section1"
+  },
+  {
+    id: 3,
+    section_number: 3,
+    title: "We Agnostics & How It Works",
+    page_range: "44-71",
+    description: "Chapter 4-5: Faith and the Twelve Steps",
+    route: "Section1"
+  },
+  {
+    id: 4,
+    section_number: 4,
+    title: "Into Action",
+    page_range: "72-88",
+    description: "Chapter 6: Working the program of recovery",
+    route: "Section1"
+  },
+  {
+    id: 5,
+    section_number: 5,
+    title: "Working with Others",
+    page_range: "89-103",
+    description: "Chapter 7: How to help other alcoholics",
+    route: "Section1"
+  },
+  {
+    id: 6,
+    section_number: 6,
+    title: "To Wives & The Family Afterward",
+    page_range: "104-135",
+    description: "Chapter 8-9: Guidance for families",
+    route: "Section1"
+  },
+  {
+    id: 7,
+    section_number: 7,
+    title: "To Employers & A Vision for You",
+    page_range: "136-164",
+    description: "Chapter 10-11: The workplace and future of A.A.",
+    route: "Section1"
+  },
+  {
+    id: 8,
+    section_number: 8,
+    title: "Personal Stories - Part I",
+    page_range: "171-301",
+    description: "Pioneers of A.A. - stories from the early days",
+    route: "Section1"
+  },
+  {
+    id: 9,
+    section_number: 9,
+    title: "Personal Stories - Part II & III",
+    page_range: "303-469",
+    description: "They Stopped in Time & They Lost Nearly All",
+    route: "Section1"
+  },
+  {
+    id: 10,
+    section_number: 10,
+    title: "Appendices",
+    page_range: "471-575",
+    description: "The Twelve Traditions, spiritual experience, and more",
+    route: "Section1"
+  }
+];
 
+export default function Home() {
   return (
     <div className="min-h-screen bg-[#222A31]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20">
@@ -65,19 +142,9 @@ export default function Home() {
 
         {/* Sections Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
-          {isLoading ? (
-            Array(10).fill(0).map((_, i) => (
-              <Card key={i} className="animate-pulse">
-                <CardContent className="p-8">
-                  <div className="h-24 bg-stone-200 rounded"></div>
-                </CardContent>
-              </Card>
-            ))
-          ) : (
-            sections.map((section) => (
-              <SectionWidget key={section.id} section={section} />
-            ))
-          )}
+          {BOOK_SECTIONS.map((section) => (
+            <SectionWidget key={section.id} section={section} />
+          ))}
         </div>
 
         {/* Footer */}
@@ -93,7 +160,7 @@ export default function Home() {
 
 function SectionWidget({ section }) {
   return (
-    <Link to={createPageUrl(`Section${section.section_number}`)}>
+    <Link to={createPageUrl(section.route)}>
       <Card className="group transition-all duration-300 border-2 hover:-translate-y-1 cursor-pointer hover:shadow-2xl hover:shadow-[#25DCE6]/20 hover:border-[#25DCE6]/50 border-[#25DCE6]/20">
         <CardContent className="p-8 bg-gradient-to-br from-[#2A3440] to-[#222A31] relative overflow-hidden">
           
