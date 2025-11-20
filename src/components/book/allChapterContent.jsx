@@ -219,7 +219,18 @@ export const CHAPTER_CONTENT = {
       { text: "12 STEPS", type: "sidebar", subtext: "P. 59-60" }
     ],
     paragraphs: [
-      { text: "Content for How It Works will be added soon from pages 58-71." }
+      { text: 'Rarely have we seen a person fail who has thoroughly followed our path. Those who do not recover are people who cannot or will not completely give themselves to this simple program, usually men and women who are constitutionally incapable of being honest with themselves. There are such unfortunates. They are not at fault; they seem to have been born that way.', highlight: 'yellow' },
+      { text: 'Our stories disclose in a general way what we used to be like, what happened, and what we are like now. If you have decided you want what we have and are willing to go to any length to get it—then you are ready to take certain steps.', highlight: 'blue' },
+      { text: 'Remember that we deal with alcohol—cunning, baffling, powerful! Without help it is too much for us. But there is One who has all power—that One is God. May you find Him now!', highlight: 'blue' },
+      { text: 'Half measures availed us nothing. We stood at the turning point. We asked His protection and care with complete abandon.', highlight: 'blue' },
+      { text: 'Here are the steps we took, which are suggested as a program of recovery:', highlight: 'orange' },
+      { text: '1. We admitted we were powerless over alcohol—that our lives had become unmanageable.\n2. Came to believe that a Power greater than ourselves could restore us to sanity.\n3. Made a decision to turn our will and our lives over to the care of God as we understood Him.\n4. Made a searching and fearless moral inventory of ourselves.\n5. Admitted to God, to ourselves, and to another human being the exact nature of our wrongs.\n6. Were entirely ready to have God remove all these defects of character.\n7. Humbly asked Him to remove our shortcomings.\n8. Made a list of all persons we had harmed, and became willing to make amends to them all.\n9. Made direct amends to such people wherever possible, except when to do so would injure them or others.\n10. Continued to take personal inventory and when we were wrong promptly admitted it.\n11. Sought through prayer and meditation to improve our conscious contact with God as we understood Him, praying only for knowledge of His will for us and the power to carry that out.\n12. Having had a spiritual awakening as the result of these steps, we tried to carry this message to alcoholics, and to practice these principles in all our affairs.', highlight: 'orange' },
+      { text: 'Being convinced, we were at Step Three, which is that we decided to turn our will and our life over to God as we understood Him. The first requirement is that we be convinced that any life run on self-will can hardly be a success.', highlight: 'orange' },
+      { text: 'Selfishness—self-centeredness! That, we think, is the root of our troubles. Driven by a hundred forms of fear, self-delusion, self-seeking, and self-pity, we step on the toes of our fellows and they retaliate.', highlight: 'yellow' },
+      { text: 'Many of us said to our Maker, as we understood Him: "God, I offer myself to Thee—to build with me and to do with me as Thou wilt. Relieve me of the bondage of self, that I may better do Thy will. Take away my difficulties, that victory over them may bear witness to those I would help of Thy Power, Thy Love, and Thy Way of life. May I do Thy will always!"', highlight: 'green' },
+      { text: 'Resentment is the "number one" offender. It destroys more alcoholics than anything else. From it stem all forms of spiritual disease, for we have been not only mentally and physically ill, we have been spiritually sick.', highlight: 'yellow' },
+      { text: 'In dealing with resentments, we set them on paper. We listed people, institutions or principles with whom we were angry. We asked ourselves why we were angry.', highlight: 'orange' },
+      { text: 'This was our course: We realized that the people who wronged us were perhaps spiritually sick. Though we did not like their symptoms and the way these disturbed us, they, like ourselves, were sick too.', highlight: 'yellow' }
     ]
   },
 
@@ -228,7 +239,19 @@ export const CHAPTER_CONTENT = {
       { text: "CHAPTER 6", type: "sidebar" }
     ],
     paragraphs: [
-      { text: "Content for Into Action will be added soon from pages 72-88." }
+      { text: 'This brings us to the Fifth Step in the program of recovery. We admitted to God, to ourselves, and to another human being, the exact nature of our defects.', highlight: 'orange' },
+      { text: 'If we skip this vital step, we may not overcome drinking. Time after time newcomers have tried to keep to themselves certain facts about their lives. Trying to avoid this humbling experience, they have turned to easier methods. Almost invariably they got drunk.', highlight: 'yellow' },
+      { text: 'We must be entirely honest with somebody if we expect to live long or happily in this world.', highlight: 'yellow' },
+      { text: 'Once we have taken this step, withholding nothing, we are delighted. We can look the world in the eye. We can be alone at perfect peace and ease. Our fears fall from us. We begin to feel the nearness of our Creator.', highlight: 'blue' },
+      { text: 'If we are painstaking about this phase of our development, we will be amazed before we are half way through. We are going to know a new freedom and a new happiness. We will not regret the past nor wish to shut the door on it.', highlight: 'blue' },
+      { text: 'We will comprehend the word serenity and we will know peace. No matter how far down the scale we have gone, we will see how our experience can benefit others. That feeling of uselessness and self-pity will disappear.', highlight: 'blue' },
+      { text: 'We will lose interest in selfish things and gain interest in our fellows. Self-seeking will slip away. Our whole attitude and outlook upon life will change. Fear of people and of economic insecurity will leave us.', highlight: 'blue' },
+      { text: 'We will intuitively know how to handle situations which used to baffle us. We will suddenly realize that God is doing for us what we could not do for ourselves. Are these extravagant promises? We think not. They are being fulfilled among us—sometimes quickly, sometimes slowly.', highlight: 'blue' },
+      { text: 'Continue to watch for selfishness, dishonesty, resentment, and fear. When these crop up, we ask God at once to remove them. We discuss them with someone immediately and make amends quickly if we have harmed anyone.', highlight: 'orange' },
+      { text: 'Love and tolerance of others is our code. And we have ceased fighting anything or anyone—even alcohol.', highlight: 'blue' },
+      { text: 'We are not cured of alcoholism. What we really have is a daily reprieve contingent on the maintenance of our spiritual condition.', highlight: 'yellow' },
+      { text: 'When we retire at night, we constructively review our day. Were we resentful, selfish, dishonest or afraid? Do we owe an apology? Have we kept something to ourselves which should be discussed with another person at once?', highlight: 'orange' },
+      { text: 'On awakening let us think about the twenty-four hours ahead. Before we begin, we ask God to direct our thinking, especially asking that it be divorced from self-pity, dishonest or self-seeking motives.', highlight: 'green' }
     ]
   },
 
@@ -237,7 +260,14 @@ export const CHAPTER_CONTENT = {
       { text: "CHAPTER 7", type: "sidebar" }
     ],
     paragraphs: [
-      { text: "Content for Working with Others will be added soon from pages 89-103." }
+      { text: 'Practical experience shows that nothing will so much insure immunity from drinking as intensive work with other alcoholics. It works when other activities fail.', highlight: 'blue' },
+      { text: 'Life will take on new meaning. To watch people recover, to see them help others, to watch loneliness vanish, to see a fellowship grow up about you, to have a host of friends—this is an experience you must not miss.', highlight: 'blue' },
+      { text: 'When you discover a prospect for Alcoholics Anonymous, find out all you can about him. If he does not want to stop drinking, don\'t waste time trying to persuade him.', highlight: 'yellow' },
+      { text: 'See your man alone, if possible. At first engage in general conversation. After a while, turn the talk to some phase of drinking. Tell him enough about your drinking habits, symptoms, and experiences to encourage him to speak of himself.', highlight: 'yellow' },
+      { text: 'If you are satisfied that he is a real alcoholic, begin to dwell on the hopeless feature of the malady. Show him, from your own experience, how the queer mental condition surrounding that first drink prevents normal functioning of the will power.', highlight: 'yellow' },
+      { text: 'Outline the program of action, explaining how you made a self-appraisal, how you straightened out your past and why you are now endeavoring to be helpful to him. It is important for him to realize that your attempt to pass this on to him plays a vital part in your own recovery.', highlight: 'yellow' },
+      { text: 'Never avoid these responsibilities, but be sure you are doing the right thing if you assume them. Helping others is the foundation stone of your recovery.', highlight: 'blue' },
+      { text: 'Burn the idea into the consciousness of every man that he can get well regardless of anyone. The only condition is that he trust in God and clean house.', highlight: 'blue' }
     ]
   },
 
@@ -246,7 +276,11 @@ export const CHAPTER_CONTENT = {
       { text: "CHAPTER 8", type: "sidebar" }
     ],
     paragraphs: [
-      { text: "Content for To Wives will be added soon from pages 104-121." }
+      { text: 'With few exceptions, our book thus far has spoken of men. But what we have said applies quite as much to women. Our activities in behalf of women who drink are on the increase.', highlight: 'yellow' },
+      { text: 'Try not to condemn your alcoholic husband no matter what he says or does. He is just another very sick, unreasonable person. Treat him, when you can, as though he had pneumonia.', highlight: 'yellow' },
+      { text: 'The first principle of success is that you should never be angry. Even though your husband becomes unbearable and you have to leave him temporarily, you should, if you can, go without rancor.', highlight: 'yellow' },
+      { text: 'Be determined that your husband\'s drinking is not going to spoil your relations with your children or your friends. They need your companionship and your help. It is possible to have a full and useful life, though your husband continues to drink.', highlight: 'yellow' },
+      { text: 'We wives found that, like everybody else, we were afflicted with pride, self-pity, vanity and all the things which go to make up the self-centered person. Now we try to put spiritual principles to work in every department of our lives.', highlight: 'yellow' }
     ]
   },
 
@@ -255,7 +289,11 @@ export const CHAPTER_CONTENT = {
       { text: "CHAPTER 9", type: "sidebar" }
     ],
     paragraphs: [
-      { text: "Content for The Family Afterward will be added soon from pages 122-135." }
+      { text: 'Successful readjustment means the opposite of wrapping in cotton wool. All members of the family should meet upon the common ground of tolerance, understanding and love.', highlight: 'yellow' },
+      { text: 'Cessation of drinking is but the first step away from a highly strained, abnormal condition. Let families realize, as they start their journey, that all will not be fair weather.', highlight: 'yellow' },
+      { text: 'The alcoholic\'s past becomes the principal asset of the family and frequently it is almost the only one! This painful past may be of infinite value to other families still struggling with their problem.', highlight: 'blue' },
+      { text: 'We are sure God wants us to be happy, joyous, and free. We cannot subscribe to the belief that this life is a vale of tears, though it once was just that for many of us.', highlight: 'blue' },
+      { text: 'We have three little mottoes which are apropos: First Things First, Live and Let Live, Easy Does It.', highlight: 'yellow' }
     ]
   },
 
@@ -264,7 +302,9 @@ export const CHAPTER_CONTENT = {
       { text: "CHAPTER 10", type: "sidebar" }
     ],
     paragraphs: [
-      { text: "Content for To Employers will be added soon from pages 136-150." }
+      { text: 'No man should be fired just because he is alcoholic. If he wants to stop, he should be afforded a real chance. If he cannot or does not want to stop, he should be discharged.', highlight: 'yellow' },
+      { text: 'Can you discard the feeling that you are dealing only with habit, with stubbornness, or a weak will? The employee is a gravely ill person.', highlight: 'yellow' },
+      { text: 'Your understanding treatment of their cases will pay dividends. The right kind of man, the kind who recovers, will work like the devil and thank you to his dying day.', highlight: 'blue' }
     ]
   },
 
@@ -273,7 +313,11 @@ export const CHAPTER_CONTENT = {
       { text: "CHAPTER 11", type: "sidebar" }
     ],
     paragraphs: [
-      { text: "Content for A Vision for You will be added soon from pages 151-164." }
+      { text: 'For most normal folks, drinking means conviviality, companionship and colorful imagination. But not so with us in those last days of heavy drinking. The old pleasures were gone.', highlight: 'yellow' },
+      { text: 'You are going to meet these new friends in your own community. Near you, alcoholics are dying helplessly like people in a sinking ship. Among them you will make lifelong friends.', highlight: 'blue' },
+      { text: 'You will learn the full meaning of "Love thy neighbor as thyself."', highlight: 'blue' },
+      { text: 'Our hope is that when this chip of a book is launched on the world tide of alcoholism, defeated drinkers will seize upon it, to follow its suggestions. Many, we are sure, will rise to their feet and march on.', highlight: 'blue' },
+      { text: 'Abandon yourself to God as you understand God. Admit your faults to Him and to your fellows. Clear away the wreckage of your past. Give freely of what you find and join us. We shall be with you in the Fellowship of the Spirit.', highlight: 'blue' }
     ]
   }
 };
