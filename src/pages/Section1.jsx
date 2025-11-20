@@ -125,21 +125,21 @@ export default function Section1() {
   };
 
   return (
-    <div className="min-h-screen bg-[#222A31]">
+    <div className="min-h-screen bg-[#222A31] pb-20 lg:pb-0">
       
       {/* Top Navigation */}
       <div className="bg-[#2A3440]/95 backdrop-blur-sm border-b border-[#25DCE6]/20 sticky top-0 z-40 shadow-lg">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16">
-            <Link to={createPageUrl("Home")} className="flex items-center gap-2 text-[#25DCE6] hover:text-[#FFFFFD] transition-colors">
-              <ArrowLeft className="w-5 h-5" />
-              <span className="font-medium hidden sm:inline">Back to Contents</span>
+        <div className="w-full px-3 sm:px-4 lg:px-6">
+          <div className="flex items-center justify-between h-14 sm:h-16">
+            <Link to={createPageUrl("Home")} className="flex items-center gap-1.5 sm:gap-2 text-[#25DCE6] hover:text-[#FFFFFD] transition-colors">
+              <ArrowLeft className="w-4 h-4 sm:w-5 sm:h-5" />
+              <span className="font-medium text-sm sm:text-base">Back</span>
             </Link>
             
-            <div className="flex items-center gap-4">
-              <div className="flex items-center gap-2">
-                <BookOpen className="w-5 h-5 text-[#25DCE6]" />
-                <span className="font-serif font-semibold text-[#FFFFFD] hidden sm:inline">
+            <div className="flex items-center gap-2 sm:gap-4">
+              <div className="flex items-center gap-1.5 sm:gap-2">
+                <BookOpen className="w-4 h-4 sm:w-5 sm:h-5 text-[#25DCE6]" />
+                <span className="font-serif font-semibold text-[#FFFFFD] text-xs sm:text-base">
                   Pages 1-64
                 </span>
               </div>
@@ -148,40 +148,40 @@ export default function Section1() {
                 variant="ghost"
                 size="sm"
                 onClick={() => toggleLockMutation.mutate()}
-                className="gap-2 text-[#25DCE6] hover:bg-[#25DCE6]/10 hidden sm:flex"
+                className="gap-1 sm:gap-2 text-[#25DCE6] hover:bg-[#25DCE6]/10 h-8 px-2 sm:h-9 sm:px-3"
               >
                 {settings?.is_locked ? (
                   <>
-                    <Lock className="w-4 h-4" />
-                    <span className="text-xs">Locked</span>
+                    <Lock className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+                    <span className="text-xs hidden sm:inline">Locked</span>
                   </>
                 ) : (
                   <>
-                    <Unlock className="w-4 h-4" />
-                    <span className="text-xs">Unlocked</span>
+                    <Unlock className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+                    <span className="text-xs hidden sm:inline">Unlocked</span>
                   </>
                 )}
               </Button>
-            </div>
 
-            <Button
-              variant="ghost"
-              size="icon"
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="lg:hidden text-[#25DCE6]"
-            >
-              {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-            </Button>
+              <Button
+                variant="ghost"
+                size="icon"
+                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                className="lg:hidden text-[#25DCE6] w-8 h-8"
+              >
+                {mobileMenuOpen ? <X className="w-4 h-4" /> : <Menu className="w-4 h-4" />}
+              </Button>
+            </div>
           </div>
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="flex gap-8">
+      <div className="w-full px-3 sm:px-4 lg:px-6 xl:px-8 py-4 sm:py-6 lg:py-8 max-w-[1600px] mx-auto">
+        <div className="flex gap-4 lg:gap-8">
           
           {/* Side Navigation - Desktop */}
-          <div className="hidden lg:block w-80 flex-shrink-0">
-            <div className="sticky top-24">
+          <div className="hidden lg:block w-64 xl:w-80 flex-shrink-0">
+            <div className="sticky top-20">
               <ChapterNav
                 chapters={CHAPTERS}
                 currentChapterId={currentChapterId}
@@ -194,11 +194,11 @@ export default function Section1() {
           {mobileMenuOpen && (
             <div className="fixed inset-0 z-50 lg:hidden">
               <div className="absolute inset-0 bg-black/70" onClick={() => setMobileMenuOpen(false)}></div>
-              <div className="absolute left-0 top-0 bottom-0 w-80 bg-[#2A3440] shadow-xl overflow-y-auto p-6 border-r border-[#25DCE6]/20">
-                <div className="flex justify-between items-center mb-6">
-                  <h3 className="font-serif font-bold text-xl text-[#FFFFFD]">Chapters</h3>
-                  <Button variant="ghost" size="icon" onClick={() => setMobileMenuOpen(false)}>
-                    <X className="w-5 h-5 text-[#25DCE6]" />
+              <div className="absolute left-0 top-0 bottom-0 w-[85vw] max-w-sm bg-[#2A3440] shadow-xl overflow-y-auto p-4 sm:p-6 border-r border-[#25DCE6]/20">
+                <div className="flex justify-between items-center mb-4 sm:mb-6">
+                  <h3 className="font-serif font-bold text-lg sm:text-xl text-[#FFFFFD]">Chapters</h3>
+                  <Button variant="ghost" size="icon" onClick={() => setMobileMenuOpen(false)} className="w-8 h-8">
+                    <X className="w-4 h-4 text-[#25DCE6]" />
                   </Button>
                 </div>
                 <ChapterNav
@@ -214,7 +214,7 @@ export default function Section1() {
           )}
 
           {/* Main Content */}
-          <div className="flex-1 max-w-4xl">
+          <div className="flex-1 w-full lg:max-w-4xl lg:pr-12 xl:pr-16">
             <ChapterContent
               chapter={currentChapter}
               currentIndex={currentIndex}

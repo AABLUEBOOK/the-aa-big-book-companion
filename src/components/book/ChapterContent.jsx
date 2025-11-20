@@ -122,25 +122,25 @@ export default function ChapterContent({ chapter, currentIndex, totalChapters, a
   };
 
   return (
-    <div className="bg-[#2A3440] rounded-2xl shadow-2xl border border-[#25DCE6]/20 overflow-hidden">
-      
+    <div className="bg-[#2A3440] rounded-xl sm:rounded-2xl shadow-2xl border border-[#25DCE6]/20 overflow-hidden">
+
       {/* Chapter Header */}
-      <div className="bg-gradient-to-r from-[#2A3440] to-[#222A31] border-b border-[#25DCE6]/20 px-8 sm:px-12 py-8">
+      <div className="bg-gradient-to-r from-[#2A3440] to-[#222A31] border-b border-[#25DCE6]/20 px-4 sm:px-8 lg:px-12 py-4 sm:py-6 lg:py-8">
         {chapter.chapter && (
-          <div className="text-sm font-medium text-[#25DCE6]/70 uppercase tracking-widest mb-2">
+          <div className="text-xs sm:text-sm font-medium text-[#25DCE6]/70 uppercase tracking-widest mb-1 sm:mb-2">
             Chapter {chapter.chapter}
           </div>
         )}
-        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-[#FFFFFD] leading-tight">
+        <h1 className="text-xl sm:text-3xl lg:text-4xl xl:text-5xl font-serif font-bold text-[#FFFFFD] leading-tight">
           {chapter.title}
         </h1>
-        <div className="mt-3 text-sm text-[#25DCE6]/60">
+        <div className="mt-2 sm:mt-3 text-xs sm:text-sm text-[#25DCE6]/60">
           Page {chapter.pageNum}
         </div>
       </div>
 
       {/* Chapter Body */}
-      <div className="px-8 sm:px-12 py-12 relative">
+      <div className="px-4 sm:px-8 lg:px-12 py-6 sm:py-10 lg:py-12 relative">
         
         {/* Decorative page texture */}
         <div className="absolute inset-0 opacity-[0.02] pointer-events-none"
@@ -149,8 +149,8 @@ export default function ChapterContent({ chapter, currentIndex, totalChapters, a
           }}
         ></div>
 
-        <div className="prose prose-lg max-w-none relative select-text">
-          <div className="font-serif text-[#FFFFFD] leading-relaxed text-lg space-y-6">
+        <div className="prose prose-sm sm:prose-base lg:prose-lg max-w-none relative select-text">
+          <div className="font-serif text-[#FFFFFD] leading-relaxed text-base sm:text-lg space-y-4 sm:space-y-6">
             {chapterData.paragraphs?.map((para, idx) => {
               const baseClasses = "mb-6 first:mt-0 leading-relaxed";
               const highlightClasses = {
@@ -228,18 +228,18 @@ export default function ChapterContent({ chapter, currentIndex, totalChapters, a
       </div>
 
       {/* Navigation Footer */}
-      <div className="bg-[#222A31] border-t border-[#25DCE6]/20 px-8 sm:px-12 py-6 flex items-center justify-between">
+      <div className="bg-[#222A31] border-t border-[#25DCE6]/20 px-4 sm:px-8 lg:px-12 py-4 sm:py-6 flex items-center justify-between">
         <Button
           variant="outline"
           onClick={onPrevious}
           disabled={!onPrevious}
-          className="gap-2 border-[#25DCE6]/40 text-[#25DCE6] hover:bg-[#25DCE6]/10 hover:border-[#25DCE6] disabled:opacity-30"
+          className="gap-1 sm:gap-2 border-[#25DCE6]/40 text-[#25DCE6] hover:bg-[#25DCE6]/10 hover:border-[#25DCE6] disabled:opacity-30 h-9 sm:h-10 px-3 sm:px-4"
         >
-          <ChevronLeft className="w-4 h-4" />
-          <span className="hidden sm:inline">Previous</span>
+          <ChevronLeft className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+          <span className="text-xs sm:text-sm">Prev</span>
         </Button>
 
-        <div className="text-sm text-[#25DCE6]/70 font-medium">
+        <div className="text-xs sm:text-sm text-[#25DCE6]/70 font-medium">
           {currentIndex + 1} of {totalChapters}
         </div>
 
@@ -247,10 +247,10 @@ export default function ChapterContent({ chapter, currentIndex, totalChapters, a
           variant="outline"
           onClick={onNext}
           disabled={!onNext}
-          className="gap-2 border-[#25DCE6]/40 text-[#25DCE6] hover:bg-[#25DCE6]/10 hover:border-[#25DCE6] disabled:opacity-30"
+          className="gap-1 sm:gap-2 border-[#25DCE6]/40 text-[#25DCE6] hover:bg-[#25DCE6]/10 hover:border-[#25DCE6] disabled:opacity-30 h-9 sm:h-10 px-3 sm:px-4"
         >
-          <span className="hidden sm:inline">Next</span>
-          <ChevronRight className="w-4 h-4" />
+          <span className="text-xs sm:text-sm">Next</span>
+          <ChevronRight className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
         </Button>
       </div>
     </div>
