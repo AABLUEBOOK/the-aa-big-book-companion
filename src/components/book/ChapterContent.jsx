@@ -228,32 +228,7 @@ export default function ChapterContent({ chapter, currentIndex, totalChapters, a
         </div>
       </div>
 
-      {/* Navigation Footer */}
-      <div className="bg-[#222A31] border-t border-[#25DCE6]/20 px-4 sm:px-8 lg:px-12 py-4 sm:py-6 flex items-center justify-between">
-        <Button
-          variant="outline"
-          onClick={onPrevious}
-          disabled={!onPrevious}
-          className="gap-1 sm:gap-2 border-[#25DCE6]/40 text-[#25DCE6] hover:bg-[#25DCE6]/10 hover:border-[#25DCE6] disabled:opacity-30 h-9 sm:h-10 px-3 sm:px-4"
-        >
-          <ChevronLeft className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
-          <span className="text-xs sm:text-sm">Prev</span>
-        </Button>
 
-        <div className="text-xs sm:text-sm text-[#25DCE6]/70 font-medium">
-          {currentIndex + 1} of {totalChapters}
-        </div>
-
-        <Button
-          variant="outline"
-          onClick={onNext}
-          disabled={!onNext}
-          className="gap-1 sm:gap-2 border-[#25DCE6]/40 text-[#25DCE6] hover:bg-[#25DCE6]/10 hover:border-[#25DCE6] disabled:opacity-30 h-9 sm:h-10 px-3 sm:px-4"
-        >
-          <span className="text-xs sm:text-sm">Next</span>
-          <ChevronRight className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
-        </Button>
-      </div>
     </div>
   );
 }

@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
 import { base44 } from "@/api/base44Client";
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import { ArrowLeft, BookOpen, Menu, X } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import ChapterContent from "../components/book/ChapterContent";
 import ChapterNav from "../components/book/ChapterNav";
 import VerticalTabs from "../components/book/VerticalTabs";
@@ -190,8 +190,8 @@ export default function Section1() {
             <div className="sticky top-20">
               <ChapterNav
                 chapters={CHAPTERS}
-                currentChapterId={currentChapterId}
-                onChapterChange={setCurrentChapterId}
+                currentChapterId=""
+                onChapterChange={scrollToChapter}
               />
             </div>
           </div>
@@ -209,35 +209,59 @@ export default function Section1() {
                 </div>
                 <ChapterNav
                   chapters={CHAPTERS}
-                  currentChapterId={currentChapterId}
-                  onChapterChange={(id) => {
-                    setCurrentChapterId(id);
-                    setMobileMenuOpen(false);
-                  }}
+                  currentChapterId=""
+                  onChapterChange={scrollToChapter}
                 />
               </div>
             </div>
           )}
 
-          {/* Main Content */}
-          <div className="flex-1 w-full lg:max-w-4xl lg:pr-12 xl:pr-16">
-            <ChapterContent
-              chapter={currentChapter}
-              currentIndex={currentIndex}
-              totalChapters={CHAPTERS.length}
-              annotations={annotations}
-              isLocked={settings?.is_locked || false}
-              onNext={currentIndex < CHAPTERS.length - 1 ? goToNext : null}
-              onPrevious={currentIndex > 0 ? goToPrevious : null}
-            />
+          {/* Main Content - All Chapters */}
+          <div className="flex-1 w-full lg:max-w-4xl lg:pr-12 xl:pr-16 space-y-8">
+            {CHAPTERS.map((chapter, index) => {
+              const chapterAnnotations = allAnnotations.filter(a => a.chapter_id === chapter.id);
+              return (
+                <div key={chapter.id} id={chapter.id}>
+                  <ChapterContent
+                    chapter={chapter}
+                    currentIndex={index}
+                    totalChapters={CHAPTERS.length}
+                    annotations={chapterAnnotations}
+                    isLocked={false}
+                    onNext={null}
+                    onPrevious={null}
+                  />
+                </div>
+              );
+            })}
+
+            {/* Bottom Navigation */}
+            <div className="bg-[#2A3440] rounded-xl border border-[#25DCE6]/20 p-6 sm:p-8 text-center space-y-4">
+              <h3 className="text-xl font-serif font-bold text-[#FFFFFD]">End of Section 1</h3>
+              <p className="text-[#FFFFFD]/70">Continue to the next section or return to top</p>
+              <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                <Button
+                  onClick={scrollToTop}
+                  variant="outline"
+                  className="border-[#25DCE6]/40 text-[#25DCE6] hover:bg-[#25DCE6]/10"
+                >
+                  Back to Top
+                </Button>
+                <Link to={createPageUrl("Home")}>
+                  <Button className="w-full sm:w-auto bg-[#25DCE6] text-[#222A31] hover:bg-[#25DCE6]/90">
+                    Table of Contents
+                  </Button>
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
       {/* Bottom Tabs */}
       <VerticalTabs 
-        tabs={tabs}
-        currentChapterId={currentChapterId}
+        tabs={allTabs}
+        currentChapterId=""
         isLocked={false}
       />
     </div>
