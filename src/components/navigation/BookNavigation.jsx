@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { ChevronDown, ChevronRight, BookOpen, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import BookSearch from "../book/BookSearch";
 
 const BOOK_STRUCTURE = [
   {
@@ -90,7 +91,8 @@ export default function BookNavigation({ onNavigate }) {
           <BookOpen className="w-5 h-5 text-[#25DCE6]" />
           <h2 className="text-lg font-serif font-bold text-[#FFFFFD]">Big Book</h2>
         </div>
-        <p className="text-xs text-[#25DCE6]/60">Alcoholics Anonymous</p>
+        <p className="text-xs text-[#25DCE6]/60 mb-4">Alcoholics Anonymous</p>
+        <BookSearch onNavigate={onNavigate} />
       </div>
 
       <div className="p-2">
