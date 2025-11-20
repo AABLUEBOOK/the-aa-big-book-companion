@@ -8,11 +8,9 @@ export default function AnnotationToolbar({
   onHighlight, 
   onUnderline, 
   onClear,
-  isLocked,
-  onToggleLock,
   position 
 }) {
-  if (!selectedText || isLocked) return null;
+  if (!selectedText) return null;
 
   const colors = [
     { name: 'yellow', class: 'bg-yellow-400' },

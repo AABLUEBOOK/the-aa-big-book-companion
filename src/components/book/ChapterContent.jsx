@@ -161,7 +161,7 @@ export default function ChapterContent({ chapter, currentIndex, totalChapters, a
               };
 
               // Check if this text has user annotations
-              const textAnnotations = annotations.filter(a => para.text.includes(a.text));
+              const textAnnotations = annotations?.filter(a => para.text.includes(a.text)) || [];
               
               return (
                 <p 
@@ -192,14 +192,15 @@ export default function ChapterContent({ chapter, currentIndex, totalChapters, a
           </div>
         </div>
 
-        <AnnotationToolbar
-          selectedText={selectedText}
-          onHighlight={handleHighlight}
-          onUnderline={handleUnderline}
-          onClear={clearSelection}
-          isLocked={isLocked}
-          position={toolbarPosition}
-        />
+        {selectedText && !isLocked && (
+          <AnnotationToolbar
+            selectedText={selectedText}
+            onHighlight={handleHighlight}
+            onUnderline={handleUnderline}
+            onClear={clearSelection}
+            position={toolbarPosition}
+          />
+        )}
 
         {/* Sidebar Annotations */}
         <div className="hidden xl:block absolute -right-64 top-24 w-56 space-y-4">

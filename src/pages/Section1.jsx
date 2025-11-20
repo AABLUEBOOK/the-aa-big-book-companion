@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { base44 } from "@/api/base44Client";
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
-import { ArrowLeft, BookOpen, Menu, X, Lock, Unlock } from "lucide-react";
+import { ArrowLeft, BookOpen, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import ChapterContent from "../components/book/ChapterContent";
 import ChapterNav from "../components/book/ChapterNav";
@@ -128,26 +128,9 @@ export default function Section1() {
     initialData: []
   });
 
-  const { data: settings } = useQuery({
-    queryKey: ['bookSettings'],
-    queryFn: async () => {
-      const list = await base44.entities.BookSettings.list();
-      return list[0] || { is_locked: false };
-    }
-  });
+  const settings = { is_locked: false };
 
-  const toggleLockMutation = useMutation({
-    mutationFn: async () => {
-      if (settings?.id) {
-        return base44.entities.BookSettings.update(settings.id, { is_locked: !settings.is_locked });
-      } else {
-        return base44.entities.BookSettings.create({ is_locked: true });
-      }
-    },
-    onSuccess: () => {
-      queryClient.invalidateQueries({ queryKey: ['bookSettings'] });
-    }
-  });
+
 
   const currentChapter = CHAPTERS.find(ch => ch.id === currentChapterId);
   const currentIndex = CHAPTERS.findIndex(ch => ch.id === currentChapterId);
@@ -167,7 +150,7 @@ export default function Section1() {
   };
 
   return (
-    <div className="min-h-screen bg-[#222A31] pb-20 lg:pb-0">
+    <div className="min-h-screen bg-[#222A31] pb-24">
       
       {/* Top Navigation */}
       <div className="bg-[#2A3440]/95 backdrop-blur-sm border-b border-[#25DCE6]/20 sticky top-0 z-40 shadow-lg">
@@ -182,28 +165,9 @@ export default function Section1() {
               <div className="flex items-center gap-1.5 sm:gap-2">
                 <BookOpen className="w-4 h-4 sm:w-5 sm:h-5 text-[#25DCE6]" />
                 <span className="font-serif font-semibold text-[#FFFFFD] text-xs sm:text-base">
-                  Pages 1-64
+                  Pages 1-164
                 </span>
               </div>
-
-              <Button
-                variant="ghost"
-                size="sm"
-                onClick={() => toggleLockMutation.mutate()}
-                className="gap-1 sm:gap-2 text-[#25DCE6] hover:bg-[#25DCE6]/10 h-8 px-2 sm:h-9 sm:px-3"
-              >
-                {settings?.is_locked ? (
-                  <>
-                    <Lock className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
-                    <span className="text-xs hidden sm:inline">Locked</span>
-                  </>
-                ) : (
-                  <>
-                    <Unlock className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
-                    <span className="text-xs hidden sm:inline">Unlocked</span>
-                  </>
-                )}
-              </Button>
 
               <Button
                 variant="ghost"
@@ -270,11 +234,11 @@ export default function Section1() {
         </div>
       </div>
 
-      {/* Vertical Tabs */}
+      {/* Bottom Tabs */}
       <VerticalTabs 
         tabs={tabs}
         currentChapterId={currentChapterId}
-        isLocked={settings?.is_locked || false}
+        isLocked={false}
       />
     </div>
   );
