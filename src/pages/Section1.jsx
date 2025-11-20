@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { base44 } from "@/api/base44Client";
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
-import { ArrowLeft, BookOpen, Menu, X } from "lucide-react";
+import { ArrowLeft, BookOpen } from "lucide-react";
 import ChapterContent from "../components/book/ChapterContent";
-import ChapterNav from "../components/book/ChapterNav";
 import VerticalTabs from "../components/book/VerticalTabs";
+import BookNavigation, { MobileBookNavigation } from "../components/navigation/BookNavigation";
 
 function createPageUrl(pageName) {
   return `/${pageName}`;
@@ -112,7 +112,6 @@ const CHAPTERS = [
 ];
 
 export default function Section1() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [currentChapterId, setCurrentChapterId] = useState(CHAPTERS[0]?.id || "");
 
   const { data: allAnnotations = [] } = useQuery({
@@ -187,14 +186,7 @@ export default function Section1() {
                 </span>
               </div>
 
-              <Button
-                variant="ghost"
-                size="icon"
-                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="lg:hidden text-[#25DCE6] w-8 h-8"
-              >
-                {mobileMenuOpen ? <X className="w-4 h-4" /> : <Menu className="w-4 h-4" />}
-              </Button>
+              <MobileBookNavigation />
             </div>
           </div>
         </div>
@@ -205,34 +197,10 @@ export default function Section1() {
           
           {/* Side Navigation - Desktop */}
           <div className="hidden lg:block w-64 xl:w-80 flex-shrink-0">
-            <div className="sticky top-20">
-              <ChapterNav
-                chapters={CHAPTERS}
-                currentChapterId={currentChapterId}
-                onChapterChange={scrollToChapter}
-              />
+            <div className="sticky top-20 bg-[#2A3440] rounded-xl border border-[#25DCE6]/20 shadow-lg">
+              <BookNavigation />
             </div>
           </div>
-
-          {/* Mobile Navigation Overlay */}
-          {mobileMenuOpen && (
-            <div className="fixed inset-0 z-50 lg:hidden">
-              <div className="absolute inset-0 bg-black/70" onClick={() => setMobileMenuOpen(false)}></div>
-              <div className="absolute left-0 top-0 bottom-0 w-[85vw] max-w-sm bg-[#2A3440] shadow-xl overflow-y-auto p-4 sm:p-6 border-r border-[#25DCE6]/20">
-                <div className="flex justify-between items-center mb-4 sm:mb-6">
-                  <h3 className="font-serif font-bold text-lg sm:text-xl text-[#FFFFFD]">Chapters</h3>
-                  <Button variant="ghost" size="icon" onClick={() => setMobileMenuOpen(false)} className="w-8 h-8">
-                    <X className="w-4 h-4 text-[#25DCE6]" />
-                  </Button>
-                </div>
-                <ChapterNav
-                  chapters={CHAPTERS}
-                  currentChapterId={currentChapterId}
-                  onChapterChange={scrollToChapter}
-                />
-              </div>
-            </div>
-          )}
 
           {/* Main Content - All Chapters */}
           <div className="flex-1 w-full lg:max-w-4xl lg:pr-12 xl:pr-16 space-y-8">
