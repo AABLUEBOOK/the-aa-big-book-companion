@@ -419,5 +419,77 @@ export const CHAPTER_CONTENT = {
       { text: 'The trial officials who convicted me and the victims of my crime have all decided to support my early release from prison. Coincidence? I think not. These are just samples of God doing for me what I couldn\'t do for myself.', highlight: 'blue' },
       { text: 'From experience, I\'ve realized that I cannot go back and make a brand-new start. But through A.A., I can start from now and make a brand-new end.' }
     ]
+  },
+
+  "listening-to-the-wind": {
+    highlights: [],
+    paragraphs: [
+      { text: 'I started drinking when I was around eleven years old. I stayed with my brother and his wife just outside of Gallup, New Mexico. We were poor. The smell of beans and fresh tortillas symbolized home to me.' },
+      { text: 'I had a hard time reading and understanding school work, so I skipped school every chance I got. I met a boy and together we ditched school and stole a truck. We drank tequila and explored the red mesas together.' },
+      { text: 'When I was fifteen years old, I arrived alone in San Francisco with a guitar, a small suitcase, and $30. Three days later I found myself sleeping in a doorway to stay out of the rain.' },
+      { text: 'Sometime in the middle of the long, restless night, a kindly middle-aged white man laid his hand on my shoulder. The price he asked in return seemed little. Thus began a long and somewhat profitable career in prostitution.' },
+      { text: 'I started stealing and robbed a gas station and a liquor store. One night, I was pulled from a car, pistol whipped, and left to die in the mud with rain falling softly upon me.' },
+      { text: 'The judge said I could not be rehabilitated, and I was charged with eighteen counts of felony. I would not see the streets again for nearly twenty-six months. I was seventeen years old.' },
+      { text: 'When I got off the bus, I got a waitressing job in a bar. A few weeks later I saw him, the only Indian I had met in a very long time. That man became the father of my first-born child.' },
+      { text: 'My son was born, and on the day of his birth, I found my purpose in life: I was born to be a mom. He was beautiful. I had never felt like this in my life.' },
+      { text: 'I needed transportation. Where could I get lots of money? I could take the bus to the next town, work all night, and come home in the morning if I could get someone to watch my little boy. The night job paid well.' },
+      { text: 'I met a wonderful man at the beach, and we fell in love. I told him I worked for the government and held a top security clearance. He proposed. The relationship broke up over my drinking.' },
+      { text: 'This mountain town was a place I had visited as a child with Dad and Grandma. I got a job cleaning cabins and got back on welfare. By this time I was consuming nearly a fifth of tequila each day.' },
+      { text: 'One day I got up as usual. The next conscious memory was the emergency room. They said I was suffering from malnutrition. I was nearly thirty pounds underweight.' },
+      { text: 'One thing led to another, and we wound up married. The most powerful motive I had was getting out of the streets. The marriage was a farce. One night I caught my husband with another woman.' },
+      { text: 'One evening during a party at my home, a woman there was writing something down on a small piece of paper. She came right up to me and handed me the small blue paper: "If you ever want to stop drinking, call Alcoholics Anonymous, 24 hours a day."' },
+      { text: 'I was afraid to go on the street, so I turned to Mothers\' Aid. One morning I woke up alone. I needed a drink, and the bottle on the bedside table was dry. I found my empty purse on the floor. I remembered the number in the pocket of my jeans.' },
+      { text: 'Five minutes later she pulled into my driveway. She must have been some kind of an angel. How had she appeared from nowhere that day in the laundromat?' },
+      { text: 'The A.A. woman made sure I had no more alcohol in the house. I went to meetings every day and started taking the steps. That feeble request to God worked. From that day on, I knew that I had found a Higher Power and that He would help me.', highlight: 'blue' },
+      { text: 'The Twelve Steps worked like a crowbar, prying into my dishonesty and fear. I made some friends for the first time in my life. Real friends that cared, even when I was broke and feeling desperate.' },
+      { text: 'I met my current husband in an A.A. meeting. Together we carry the message to Indian people on reservations all over the country. Our daughter was born during my early sobriety.' },
+      { text: 'My life is filled with honesty today. I am in love and proud to be a Native American. I stand at the top of the sacred mountain, and I listen to the wind. I have a conscious daily contact with my Creator today, and He loves me.', highlight: 'blue' }
+    ]
+  },
+
+  "twice-gifted": {
+    highlights: [],
+    paragraphs: [
+      { text: 'Today is Sunday, my favorite day of the week. Things are usually peaceful, and I always get that wonderfully humbling, it\'s amazing to be alive, feeling.' },
+      { text: 'Sunday used to be pretty wild in the old days. I cannot remember a time without booze in my life. By the time I actually reached legal drinking age, I had definitely gone beyond weekend party drinking.' },
+      { text: 'During my young adulthood, drinking was the way I related to others. Over the years I grew up and got a life, but it was only a façade. I never did mature other than in the physical way.' },
+      { text: 'Then a few things began to change. Some years before I finally gave up drinking, my body started to give me signals. Tests were run, but no real diagnosis was ever confirmed.' },
+      { text: 'About one year prior to this experience a man was brought in to be treated for chronic alcoholism. He had lost everything worthwhile in life. Following the elimination of alcohol, he accepted the plan outlined in this book.' },
+      { text: 'During my late forties, it was not unusual for me to have a drink alone in the evening. Any event was an occasion for excessive celebration. This was where I got my first bar tab.' },
+      { text: 'I was forty-nine when my second husband and I were married. We had ten years of laughter, sharing, and wonderment well laced with martinis and Scotch. I watched him die of alcoholism. But I learned nothing from his death.' },
+      { text: 'My early sixties saw me drunk every night. I bounced checks, pawned silver, mourned, and I continued my drinking. Finally on one cold winter day, I called Alcoholics Anonymous.' },
+      { text: 'A series of circumstances brought me to a new doctor. The new physician took one look at my appearance and my blood test results, and asked if I drank. He explained that I had a disease called cirrhosis of the liver.' },
+      { text: 'My new doctor gave me a referral to a liver transplant clinic. The doctors made it clear that if I wanted to live, I was going to have to prove that alcohol was no longer going to be part of my life.' },
+      { text: 'That meeting more of what the people in A.A. were saying started to pass through my ears, and into my head, and finally into my heart. I found myself willing, and after some weeks of just showing up, I began to believe that this program could work for me.' },
+      { text: 'During the six months of evaluation, I had a blood test at least weekly. After a six-month period I was officially listed as a candidate for a liver transplant. A year and a half later I was given a second chance and a second gift of life.' },
+      { text: 'My physical being has certainly undergone a transformation, but the major transformation has been spiritual. The hopelessness has been replaced by abundant hope and sincere faith.', highlight: 'blue' },
+      { text: 'Today my life is filled with miracles big and small, not one of which would ever have come to pass had I not found the door of Alcoholics Anonymous.' }
+    ]
+  },
+
+  "building-a-new-life": {
+    highlights: [],
+    paragraphs: [
+      { text: 'We had been in the fields all day baling hay. When the work was done, the men brought out a gallon of muscatel. I took a few drinks because I wanted to be like the men. I was six years old.' },
+      { text: 'My early years were spent on my aunt and uncle\'s farm. Life was hard work in those days. By age eight I was guiding a horse-drawn plow by myself.' },
+      { text: 'At thirteen I was tall, strong, and looked older. I went around with guys who were eighteen, and they took me to a Halloween party. By the end of the night, I had passed out in the outhouse.' },
+      { text: 'By fifteen, I was sneaking out nightly to drink beer in the fields with the other pickers. Primed with beer, I could talk to girls and go to dances.' },
+      { text: 'Two days before Christmas I was on the way to basic training. On the train, we bought liquor to celebrate Christmas. We were warned that the M.P.\'s were throwing bottles out the windows, so we drank ours hard and fast.' },
+      { text: 'At home on leave, I married a young woman from my hometown, and our first daughter was born the next year. When I came home from the air force, the party really started.' },
+      { text: 'I got too smart and forgot all that company had done for me. I complained about money I thought they had promised, and they fired me. That\'s when I really started drinking.' },
+      { text: 'For the next five years, I drank every day. Finally I was injured on the job. On the fourth day the boss came to my house to check on me. I returned, drunk, before they left.' },
+      { text: 'Three more daughters had been born. I took whatever construction work I could get. I wondered why I should make all this money for other people. I should become a contractor myself.' },
+      { text: 'I curtailed my drinking a little and business started getting good, so I started drinking more. By the third year I spent all my time in bars. I lost my business.' },
+      { text: 'My wife went on welfare, and I even stopped contributing after a while. I had to have enough to drink. I continued to work construction, but I wasn\'t very dependable.' },
+      { text: 'I was arrested driving while intoxicated, but it was reduced to reckless driving. That was at the same time as my first try at A.A. I couldn\'t get sober, and I couldn\'t get drunk.' },
+      { text: 'After that I moved to California. I did a lot of drinking on the job. I would go to the all-night store every morning to buy a bottle of wine for my thermos.' },
+      { text: 'I went on a ten-day binge. By mid-January I was having hallucinations that would not go away. I called a residential treatment program and said I wanted help.' },
+      { text: 'I began to think I was in prison and these guys wanted to kill me. When they opened the door, I ran for a window. The staff called the sheriff\'s department, and it took three deputies, two counselors, and two nurses to hold me down.' },
+      { text: 'It was three days later when I woke up, naked and stinking. They cleaned me up and I felt great. I went to the treatment sessions and listened to everything. I wanted what the A.A.\'s had.' },
+      { text: 'I have been sober ever since. I was finally accountable for my own recovery. I was responsible for taking the action. To me sobriety is a gift from God.', highlight: 'blue' },
+      { text: 'Once I was sober, my wife took me back. I felt that I had to go back to take care of the kids I had once left on welfare. I have beautiful relationships with all my kids.' },
+      { text: 'There have been some hard times during these years of sobriety. When I was five years sober, the daughter who drove me to the treatment program disappeared. When I lost a second daughter to cancer, I went to lots of meetings.' },
+      { text: 'What I\'ve learned is that it doesn\'t matter what hardships I\'ve endured in sobriety, I have not had to go back to drinking. As long as I work the program, keep being of service, and keep my spiritual life together, I can live a decent life.', highlight: 'blue' }
+    ]
   }
 };
