@@ -361,5 +361,63 @@ export const CHAPTER_CONTENT = {
       { text: 'I learned that handicapped is not a dirty word. I learned that I was not bad—that I was one of God\'s special children, that God had a plan for my life.', highlight: 'blue' },
       { text: 'Since A.A., it doesn\'t matter how bad things get—I always have a feeling that everything is going to be all right.', highlight: 'blue' }
     ]
+  },
+
+  "my-bottle-my-resentments-and-me": {
+    highlights: [],
+    paragraphs: [
+      { text: 'When I rode into a small mountain town in an empty freight car, my matted beard and filthy hair would have reached nearly to my belt, if I\'d had a belt. I wore a lice-infested, grimy Mexican poncho over a reeking pajama top, and a ragged pair of jeans stuffed into cowboy boots with no heels.' },
+      { text: 'I carried a knife in one boot and a .38 revolver in the other. For six years I\'d been fighting for survival on skid rows and riding across the country in freights. I hadn\'t eaten in a long time, so was half starved and down to 130 pounds. I was mean and I was drunk.' },
+      { text: 'I believe my alcoholism really began when I was eleven years old and my mother was brutally murdered. Until then my life had been much the same as any of the other boys who lived in a small town during that period.' },
+      { text: 'One night my mother failed to return home from her job at a car manufacturing plant. A few days later the police came and arrested my father. They had found mom\'s mutilated body in a field outside of town. In that instant the family life I knew was destroyed!' },
+      { text: 'At school the gossip was vicious. At home there was chaos and no one would tell me what was happening, so I withdrew and began to block out the reality around me. I became extremely lonely and defiant.' },
+      { text: 'After several years of semidelinquent adolescence, I was old enough to join the marines. The discipline, the authority, the tight schedule went against my very nature. Every night found me at a bar drinking until they threw me out.' },
+      { text: 'I left with my hatred, resentment, and the clothes on my back. In the largest city close by I could be found, dead broke, drinking myself into oblivion on skid row.' },
+      { text: 'For the next six years I went from skid row to skid row. One boxcar headed in any direction was as good as another. I had no place to go. One thing about it, I never got lost, because I never cared where I was!' },
+      { text: 'One scorching day, when I was in a desert town drinking, I felt as though I had reached the point where I couldn\'t go on. I fell to the ground and moaned, "Oh, God! Please help me." Today I know it was that my Higher Power took over my life.' },
+      { text: 'I ran into one of my old hobo buddies, an older man. He told me he\'d quit drinking, and how he\'d managed to do it. My first thought was If he can do that, I can do that—and much better, because I\'m only thirty-three.' },
+      { text: 'The next day we both quit drinking. There are no words to explain why it happened or how it happened; it just did. It was a miracle!' },
+      { text: 'My sponsor told me if I wanted to form a relationship with my Higher Power, it would be necessary for me to change. I had to surrender and accept I was an alcoholic. These resentments eased with time as I began to comprehend my own defects of character.' },
+      { text: 'Gradually the ice that was my heart melted and I changed as my relationship with my Higher Power grew. Life began to take on a whole new meaning.' },
+      { text: 'An article about my life appeared in a magazine. My oldest brother just happened to subscribe to this magazine and just happened to read the article. After more than thirty years, my family had found me. God has done for me what I could not do for myself!', highlight: 'blue' },
+      { text: 'I believe that I am living proof of the A.A. saying "Don\'t give up until the miracle happens."' }
+    ]
+  },
+
+  "he-lived-only-to-drink": {
+    highlights: [],
+    paragraphs: [
+      { text: 'On looking back at my life, I can\'t see anything that would have warned me or my family of the devastation that alcoholism had in store for us.' },
+      { text: 'My father was a minister, and I attended his church every Sunday. My parents were both educators and champions of community outreach. There was caring and togetherness among us.' },
+      { text: 'It was not until I was an adult, away from the family and doing graduate work at a prestigious East Coast university, that I had my first real drink of alcohol. I still remember that first sensation of the warm whiskey radiating through my body.' },
+      { text: 'But most of all I remember that first night. I belonged. I was at home in the universe; I was comfortable with people. What a discovery! What a revelation!' },
+      { text: 'The following year I began my career as a teacher. Before the school year ended, I had been asked to resign because of my drinking. From that first night at the bar, I had made a profound decision: Alcohol was my friend and I would follow it to the ends of the earth.' },
+      { text: 'I wound up in an insane asylum, which probably saved my life. I do not remember how I got there. When I was released, I moved to a large city to make a new beginning. My life had become a series of new beginnings.' },
+      { text: 'I sold my blood. I prostituted myself; I drank more. I became homeless and slept in the bus and train terminals. I drank my way to the men\'s municipal shelter and made it my home. By this time I lived only to drink.' },
+      { text: 'It was at this point that a woman who was a social worker on skid row and a sober member of Alcoholics Anonymous sat me down and told me her story. I had been preached to, analyzed, cursed, and counseled, but no one had ever said, "I identify with what\'s going on with you. It happened to me, and this is what I did about it."' },
+      { text: 'I genuinely believed that I was different until much later, when I had what I now know to be my first spiritual awakening: that I was an alcoholic and I didn\'t have to drink! I also learned that alcoholism, as an equal opportunity illness, does not discriminate.' },
+      { text: 'In early sobriety I had to continue to live in a flophouse filled with active drunks. I realized that I had to separate my sobriety from everything else that was going on in my life. No matter what happened or didn\'t happen, I couldn\'t drink.' },
+      { text: 'More important, I came to believe that I cannot do this alone. In A.A. I faced the pervasive "we" of the Twelve Steps and gradually realized that I can separate and protect my sobriety only inasmuch as I rely on the sober experience of other A.A. members.' },
+      { text: 'The rewards of sobriety are bountiful. Among these rewards for me are release from the prison of uniqueness, and the realization that participation in the A.A. way of life is a blessing and a privilege beyond estimate.', highlight: 'blue' }
+    ]
+  },
+
+  "safe-haven": {
+    highlights: [],
+    paragraphs: [
+      { text: 'Prison. What a wonderful life it is. Here I am, sitting in a cell waiting for my hotpot to heat up so I can have a cup of instant coffee and reminisce.' },
+      { text: 'I didn\'t grow up in a home that used alcohol, but when I took my first drink at the age of thirteen, I knew I would drink again.' },
+      { text: 'At age sixteen I got a part-time job as a disc jockey for a local radio station. Drinking and partying went hand in hand with this job. When the alcoholism became obvious to my employers, I would simply resign and seek employment with another broadcasting company.' },
+      { text: 'One night the storm was extremely turbulent. What no one knew was that all of those "professional" storm reports were called in from the safety of my back patio as I ad-libbed a little better with each fresh glass of bourbon and cola.' },
+      { text: 'I had experienced run-ins with the law several times. But nothing could compare with the time the police asked me to come downtown for questioning concerning a murder. This was quite enough to get my full attention though.' },
+      { text: 'I went home and called a friend who gave me her phone number and encouraged me to call if I would like to meet her friends. I admitted that I had a drinking problem and wanted to stop. She picked me up and took me to my first A.A. meeting.' },
+      { text: 'In Alcoholics Anonymous, I knew I had found a protective haven. But during the ensuing 4½ years I fell into the category known as a "chronic slipper."' },
+      { text: 'It was a beautiful September weekend just before Labor Day. I made the decision to buy a case of beer and a bottle of wine. I drank whiskey on top of the beer and wine, blacked out, committed a drunken crime, was arrested, and within ten days was convicted and sentenced to twenty years in prison.' },
+      { text: 'As a result of that episode, I ended up seeing a psychiatrist to find out what was wrong with me. She said she thought I was an alcoholic and gave me a copy of the Big Book.' },
+      { text: 'One day I heard something that was music to my ears. An A.A. meeting was to be held in the chapel. When I walked into the meeting, I took a seat in the circle of chairs, where I once again found a protective haven.' },
+      { text: 'As I pen this story, 3½ years have passed since that meeting in the chapel. A.A. has accomplished so many things in my life today. It has given me my sanity and an all-around sense of balance.' },
+      { text: 'The trial officials who convicted me and the victims of my crime have all decided to support my early release from prison. Coincidence? I think not. These are just samples of God doing for me what I couldn\'t do for myself.', highlight: 'blue' },
+      { text: 'From experience, I\'ve realized that I cannot go back and make a brand-new start. But through A.A., I can start from now and make a brand-new end.' }
+    ]
   }
 };
