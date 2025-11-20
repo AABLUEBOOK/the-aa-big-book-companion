@@ -319,5 +319,47 @@ export const CHAPTER_CONTENT = {
       { text: 'Our hope is that when this chip of a book is launched on the world tide of alcoholism, defeated drinkers will seize upon it, to follow its suggestions. Many, we are sure, will rise to their feet and march on.', highlight: 'blue' },
       { text: 'Abandon yourself to God as you understand God. Admit your faults to Him and to your fellows. Clear away the wreckage of your past. Give freely of what you find and join us. We shall be with you in the Fellowship of the Spirit.', highlight: 'blue' }
     ]
+  },
+
+  "tightrope": {
+    highlights: [],
+    paragraphs: [
+      { text: 'Drinking was always a part of my family background. All the men in my family drank. As long as a person held down a job, didn\'t embarrass his family or friends too frequently, and kept out of trouble, he was entitled to get drunk on a regular basis.' },
+      { text: 'I was raised in a conservative religion. Because I had a quick mind and was comfortable with academics, I became something of a teacher\'s pet. So when I went away to college, I was an alcoholic waiting to happen.' },
+      { text: 'It was at this time that I also began to struggle with the question of my sexuality. Drinking helped me to forget and evade. I always tried to project the image of the conservative, masculine, deep-voiced loner.' },
+      { text: 'I wound up living two separate and distinct lives—that of the gay man with friends and interests to match and that of the straight man with a totally separate set of friends and interests.' },
+      { text: 'The slide toward active alcoholism was slowly accelerating. By the end of my drinking, only two people were willing to have anything to do with me on a social basis, and both were heavy drinkers.' },
+      { text: 'Then a miracle occurred. The look of disgust and pity on the face of that stranger was the jolt I needed. I suddenly realized that my life was totally insane, that my drinking was out of control.' },
+      { text: 'I called my former lover, and he put me in contact with an individual who took me to my first meeting. I heard two things I have never forgotten. The first was "You don\'t have to drink again." The second thing I heard was "You don\'t have to be alone anymore."', highlight: 'blue' },
+      { text: 'When we saw others solve their problems by a simple reliance upon the Spirit of the Universe, we had to stop doubting the power of God.', highlight: 'blue' }
+    ]
+  },
+
+  "flooded-with-feeling": {
+    highlights: [],
+    paragraphs: [
+      { text: 'When I first came to A.A., I thought everyone had drunk more than I had. But I kept coming to meetings, and I came to realize that I was on the same road. I just hadn\'t gone as far—yet.' },
+      { text: 'I had my first drink in my senior year of high school. I never made that mistake again of bringing too little!' },
+      { text: 'I became a teacher and didn\'t drink too often for a while. My cure for drinking was isolation. Life had shrunk down to an endless, awful now.' },
+      { text: 'A new teacher came to my school, and I invited myself over to her place for a drink. I remember telling her, as I lifted the glass, that this might not be such a great idea but, "I believe it\'s worth the risk."' },
+      { text: 'A few days later a teacher came up to me at work and said that she was an alcoholic and that she was going to A.A. The next day I asked her how often she went to meetings.' },
+      { text: 'Halfway through the meeting I had the strangest idea. People were introducing themselves as alcoholics, and I had the urge to do the same. For the first time in years, I felt that I belonged.' },
+      { text: 'Something happened. A barrier collapsed. Without moving or speaking, I was carried away on a flood of emotion. I know that I took the Third Step that night.', highlight: 'blue' },
+      { text: 'I can say that doubting God\'s existence was no barrier at all to a spiritual experience. Alcoholics Anonymous gives me the freedom to believe and to doubt as much as I need to.' }
+    ]
+  },
+
+  "winner-takes-all": {
+    highlights: [],
+    paragraphs: [
+      { text: 'My parents were very much in love. When their son was about two years old, he followed some older children outside and was hit by a car. My parents were stricken with grief.' },
+      { text: 'When this little girl was born, she brought them great joy. They tried again to have another little boy, but they had me instead. Not only was I a girl, but I was also born legally blind.' },
+      { text: 'From the very beginning I felt different and unwanted. I came to the conclusion that I was bad and God knew I was bad, so God made me handicapped to punish me.' },
+      { text: 'It was during my high school years that I discovered alcohol, and my problems were over. Now I was pretty and smart. For the first time I felt as if I fit in.' },
+      { text: 'When I got on my knees and said, "God, change me or let me die," I called Alcoholics Anonymous and asked for help.' },
+      { text: 'They started to explain to me that alcoholism is a disease. I started going to meetings. One night a friend said that even though he had been in jail, he was no different from me. It was then that I knew I was not unique.' },
+      { text: 'I learned that handicapped is not a dirty word. I learned that I was not bad—that I was one of God\'s special children, that God had a plan for my life.', highlight: 'blue' },
+      { text: 'Since A.A., it doesn\'t matter how bad things get—I always have a feeling that everything is going to be all right.', highlight: 'blue' }
+    ]
   }
 };
