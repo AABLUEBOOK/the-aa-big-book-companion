@@ -2,52 +2,15 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { cn } from "@/lib/utils";
-
-// Chapter content data with highlighting preserved
-const CHAPTER_DATA = {
-  "preface": {
-    highlights: [
-      { text: "BASIC TEXT", type: "sidebar", position: "right" }
-    ],
-    content: `THIS IS the fourth edition of the book "Alcoholics Anonymous." The first edition appeared in April 1939, and in the following sixteen years, more than 300,000 copies went into circulation. The second edition, published in 1955, reached a total of more than 1,150,500 copies. The third edition, which came off press in 1976, achieved a circulation of approximately 19,550,000 in all formats.
-
-Because this book has become the basic text for our Society and has helped such large numbers of alcoholic men and women to recovery, there exists strong sentiment against any radical change being made in it. Therefore, the first portion of this volume, describing the A.A. recovery program, has been left largely untouched in the course of revisions made for the second, third, and fourth editions. The section called "The Doctor's Opinion" has been kept intact, just as it was originally written in 1939 by the late Dr. William D. Silkworth, our Society's great medical benefactor.
-
-The second edition added the appendices, the Twelve Traditions, and the directions for getting in touch with A.A. But the chief change was in the section of personal stories, which was expanded to reflect the Fellowship's growth. "Bill's Story," "Doctor Bob's`
-  },
-  
-  "foreword-first": {
-    highlights: [
-      { text: "PURPOSE OF THIS BOOK", type: "sidebar", position: "right" }
-    ],
-    content: `WE, OF Alcoholics Anonymous, are more than one hundred men and women who have recovered from a seemingly hopeless state of mind and body. To show other alcoholics precisely how we have recovered is the main purpose of this book. For them, we hope these pages will prove so convincing that no further authentication will be necessary. We think this account of our experiences will help every-one to better understand the alcoholic. Many do not comprehend that the alcoholic is a very sick person. And besides, we are sure that our way of living has its advantages for all.
-
-It is important that we remain anonymous because we are too few, at present to handle the overwhelming number of personal appeals which may result from this publication. Being mostly business or professional folk, we could not well carry on our occupations in such an event. We would like it understood that our alcoholic work is an avocation.
-
-When writing or speaking publicly about alcoholism, we urge each of our Fellowship to omit his personal name, designating himself instead as "a member of Alcoholics Anonymous."
-
-Very earnestly we ask the press also, to observe this request, for otherwise we shall be greatly handicapped.
-
-We are not an organization in the conventional`
-  },
-
-  "doctors-opinion": {
-    highlights: [
-      { text: "PHYSICAL ALLERGY", type: "sidebar", page: "xxv-23" },
-      { text: "ALLERGY", type: "yellow" },
-      { text: "PHENOMENON OF CRAVING", type: "yellow" },
-      { text: "EFFECTS BY ALCOHOL", type: "sidebar" }
-    ],
-    content: (continues with The Doctor's Opinion content...)
-  }
-  
-  // Additional chapters would be added here
-};
+import { FULL_CHAPTER_CONTENT } from "./FullChapterContent";
 
 export default function ChapterContent({ chapter, onNext, onPrevious }) {
   if (!chapter) return null;
 
-  const chapterData = CHAPTER_DATA[chapter.id] || { content: "Content coming soon..." };
+  const chapterData = FULL_CHAPTER_CONTENT[chapter.id] || { 
+    paragraphs: [{ text: "Content coming soon..." }],
+    highlights: []
+  };
 
   return (
     <div className="bg-white rounded-2xl shadow-xl border border-stone-200 overflow-hidden">
@@ -78,18 +41,36 @@ export default function ChapterContent({ chapter, onNext, onPrevious }) {
         ></div>
 
         <div className="prose prose-lg prose-stone max-w-none relative">
-          <div className="font-serif text-stone-800 leading-relaxed text-lg">
-            {chapterData.content.split('\n\n').map((paragraph, idx) => {
-              const hasHighlight = chapterData.highlights?.some(h => 
-                h.type !== 'sidebar' && paragraph.includes(h.text)
-              );
+          <div className="font-serif text-stone-800 leading-relaxed text-lg space-y-6">
+            {chapterData.paragraphs?.map((para, idx) => {
+              const baseClasses = "mb-6 first:mt-0 leading-relaxed";
+              const highlightClasses = {
+                'yellow': 'bg-yellow-100/70 px-2 py-1 rounded',
+                'pink': 'bg-pink-100/70 px-2 py-1 rounded',
+                'blue': 'bg-blue-100/70 px-2 py-1 rounded',
+                'basic-text': 'border-l-4 border-amber-400 pl-4 bg-amber-50/30 py-2'
+              };
               
               return (
-                <p key={idx} className="mb-6 first:mt-0">
-                  {hasHighlight ? (
-                    <HighlightedText text={paragraph} highlights={chapterData.highlights} />
+                <p 
+                  key={idx} 
+                  className={cn(
+                    baseClasses,
+                    para.highlight && highlightClasses[para.highlight]
+                  )}
+                >
+                  {para.highlightText ? (
+                    <>
+                      {para.text}{' '}
+                      <span className={cn(
+                        "inline-block",
+                        para.highlight && highlightClasses[para.highlight]
+                      )}>
+                        {para.highlightText}
+                      </span>
+                    </>
                   ) : (
-                    paragraph
+                    para.text
                   )}
                 </p>
               );
@@ -98,24 +79,29 @@ export default function ChapterContent({ chapter, onNext, onPrevious }) {
         </div>
 
         {/* Sidebar Annotations */}
-        {chapterData.highlights?.filter(h => h.type === 'sidebar').map((highlight, idx) => (
-          <div
-            key={idx}
-            className="hidden xl:block absolute right-0 top-24"
-            style={{ transform: 'translateX(calc(100% + 2rem))' }}
-          >
-            <div className="bg-gradient-to-br from-blue-50 to-blue-100 border-2 border-blue-300 rounded-lg px-4 py-3 shadow-md rotate-2 max-w-[200px]">
-              <div className="text-xs font-bold text-blue-900 uppercase tracking-wider text-center">
+        <div className="hidden xl:block absolute -right-64 top-24 w-56 space-y-4">
+          {chapterData.highlights?.filter(h => h.type === 'sidebar').map((highlight, idx) => (
+            <div
+              key={idx}
+              className="bg-gradient-to-br from-blue-50 to-blue-100 border-2 border-blue-300 rounded-lg px-4 py-3 shadow-md hover:shadow-lg transition-shadow"
+              style={{ transform: `rotate(${idx % 2 === 0 ? '1deg' : '-1deg'})` }}
+            >
+              <div className="text-xs font-bold text-blue-900 uppercase tracking-wider text-center leading-tight">
                 {highlight.text}
               </div>
-              {highlight.page && (
+              {highlight.subtext && (
                 <div className="text-xs text-blue-700 text-center mt-1">
+                  {highlight.subtext}
+                </div>
+              )}
+              {highlight.page && (
+                <div className="text-xs text-blue-600 text-center mt-1 font-mono">
                   P. {highlight.page}
                 </div>
               )}
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
 
       {/* Navigation Footer */}
@@ -146,41 +132,4 @@ export default function ChapterContent({ chapter, onNext, onPrevious }) {
       </div>
     </div>
   );
-}
-
-function HighlightedText({ text, highlights }) {
-  let result = text;
-  const yellowHighlights = highlights.filter(h => h.type === 'yellow');
-  const pinkHighlights = highlights.filter(h => h.type === 'pink');
-  const blueHighlights = highlights.filter(h => h.type === 'blue');
-
-  // Simple highlighting - wrap matched text
-  yellowHighlights.forEach(h => {
-    if (result.includes(h.text)) {
-      result = result.replace(
-        h.text,
-        `<mark class="bg-yellow-200 px-1 rounded">${h.text}</mark>`
-      );
-    }
-  });
-
-  pinkHighlights.forEach(h => {
-    if (result.includes(h.text)) {
-      result = result.replace(
-        h.text,
-        `<mark class="bg-pink-200 px-1 rounded">${h.text}</mark>`
-      );
-    }
-  });
-
-  blueHighlights.forEach(h => {
-    if (result.includes(h.text)) {
-      result = result.replace(
-        h.text,
-        `<mark class="bg-blue-200 px-1 rounded">${h.text}</mark>`
-      );
-    }
-  });
-
-  return <span dangerouslySetInnerHTML={{ __html: result }} />;
 }
