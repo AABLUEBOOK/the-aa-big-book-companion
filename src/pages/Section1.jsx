@@ -112,40 +112,36 @@ const CHAPTERS = [
 ];
 
 export default function Section1() {
-  const [currentChapterId, setCurrentChapterId] = useState("preface");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const queryClient = useQueryClient();
 
-  const { data: annotations = [] } = useQuery({
-    queryKey: ['annotations', currentChapterId],
-    queryFn: () => base44.entities.Annotation.filter({ chapter_id: currentChapterId }),
+  const { data: allAnnotations = [] } = useQuery({
+    queryKey: ['annotations'],
+    queryFn: () => base44.entities.Annotation.list(),
     initialData: []
   });
 
-  const { data: tabs = [] } = useQuery({
-    queryKey: ['bookTabs', currentChapterId],
-    queryFn: () => base44.entities.BookTab.filter({ chapter_id: currentChapterId }),
+  const { data: allTabs = [] } = useQuery({
+    queryKey: ['bookTabs'],
+    queryFn: () => base44.entities.BookTab.list(),
     initialData: []
   });
 
-  const settings = { is_locked: false };
-
-
-
-  const currentChapter = CHAPTERS.find(ch => ch.id === currentChapterId);
-  const currentIndex = CHAPTERS.findIndex(ch => ch.id === currentChapterId);
-
-  const goToNext = () => {
-    if (currentIndex < CHAPTERS.length - 1) {
-      setCurrentChapterId(CHAPTERS[currentIndex + 1].id);
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  const goToPrevious = () => {
-    if (currentIndex > 0) {
-      setCurrentChapterId(CHAPTERS[currentIndex - 1].id);
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+  const scrollToChapter = (chapterId) => {
+    const element = document.getElementById(chapterId);
+    if (element) {
+      const offset = 80; // Account for sticky header
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - offset;
+      
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+      setMobileMenuOpen(false);
     }
   };
 
