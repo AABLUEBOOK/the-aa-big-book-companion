@@ -1,10 +1,13 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { createPageUrl } from "./utils";
 import { ArrowLeft, BookOpen, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import ChapterContent from "../components/book/ChapterContent";
 import ChapterNav from "../components/book/ChapterNav";
+
+function createPageUrl(pageName) {
+  return `/${pageName}`;
+}
 
 const CHAPTERS = [
   {
