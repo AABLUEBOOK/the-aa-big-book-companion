@@ -609,7 +609,7 @@ export const CHAPTER_CONTENT = {
       { text: 'My drinking continued to escalate. I had two charges of driving under the influence, years apart, which I wrote off to bad luck.' },
       { text: 'One night, after a hard afternoon and late evening of drinking, I and my two fellow flight crew members were arrested. We were charged with violation of a federal law. I was devastated.' },
       { text: 'I arrived home the next day, sick at heart and unable to look my wife in the face. I was diagnosed as an alcoholic and in treatment that night. The news media picked up the story, and it was blared all over the world.' },
-      { text: 'I became notorious in commercial aviation. I lost my FAA medical certificate. My career was over via the six o'clock news. I was joke fodder for the late-night TV comics.' },
+      { text: 'I became notorious in commercial aviation. I lost my FAA medical certificate. My career was over via the six o\'clock news. I was joke fodder for the late-night TV comics.' },
       { text: 'I learned I was going to federal prison. With nothing left, I dedicated myself to learning about recovery. I worked as hard as I had worked to earn my wings, but this time my life was at stake.' },
       { text: 'I got out of treatment determined to complete ninety A.A. meetings in ninety days. I completed my ninety meetings in sixty-seven days. I went through an intense, media-covered three-week trial.' },
       { text: 'I was found guilty and sentenced to sixteen months in federal prison. I chose to go into prison and get it over. From somewhere I remembered: "Cowards die a thousand deaths, a brave man only once."' },
