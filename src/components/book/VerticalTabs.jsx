@@ -89,7 +89,7 @@ export default function VerticalTabs({ tabs = [], currentChapterId, isLocked }) 
                     "flex items-center justify-center px-1 py-2"
                   )}
                 >
-                  <div className="text-[9px] leading-tight font-bold text-white text-center break-words w-full px-1">
+                  <div className="text-[9px] leading-tight font-bold text-white text-center break-words w-full px-1 transform -rotate-90 whitespace-pre-line">
                     {tab.label}
                   </div>
                 </div>
@@ -114,10 +114,10 @@ export default function VerticalTabs({ tabs = [], currentChapterId, isLocked }) 
                     placeholder="Type tab text (2 lines) and press Enter"
                     value={tabLabel}
                     onChange={(e) => setTabLabel(e.target.value)}
-                    onKeyPress={handleKeyPress}
+                    onKeyDown={handleKeyPress}
                     rows={2}
                     maxLength={30}
-                    className="w-full mb-3 bg-[#222A31] border border-[#25DCE6]/30 text-[#FFFFFD] placeholder:text-[#FFFFFD]/40 rounded px-3 py-2 text-sm resize-none"
+                    className="w-full mb-3 bg-[#222A31] border border-[#25DCE6]/30 text-[#FFFFFD] placeholder:text-[#FFFFFD]/40 rounded px-3 py-2 text-sm resize-none focus:outline-none focus:ring-2 focus:ring-[#25DCE6]"
                   />
                   <div className="flex gap-2 mb-3 flex-wrap">
                     {Object.keys(tabColors).map(color => (
@@ -187,7 +187,7 @@ export default function VerticalTabs({ tabs = [], currentChapterId, isLocked }) 
                       "flex items-center justify-center p-1.5"
                     )}
                   >
-                    <div className="text-[8px] leading-tight font-bold text-white text-center break-words">
+                    <div className="text-[8px] leading-tight font-bold text-white text-center break-words whitespace-pre-line">
                       {tab.label}
                     </div>
                   </div>
@@ -211,10 +211,10 @@ export default function VerticalTabs({ tabs = [], currentChapterId, isLocked }) 
                       placeholder="Tab text (2 lines)"
                       value={tabLabel}
                       onChange={(e) => setTabLabel(e.target.value)}
-                      onKeyPress={handleKeyPress}
+                      onKeyDown={handleKeyPress}
                       rows={2}
                       maxLength={30}
-                      className="w-full mb-2 bg-[#222A31] border border-[#25DCE6]/30 text-[#FFFFFD] placeholder:text-[#FFFFFD]/40 rounded px-2 py-1.5 text-xs resize-none"
+                      className="w-full mb-2 bg-[#222A31] border border-[#25DCE6]/30 text-[#FFFFFD] placeholder:text-[#FFFFFD]/40 rounded px-2 py-1.5 text-xs resize-none focus:outline-none focus:ring-2 focus:ring-[#25DCE6]"
                     />
                     <div className="flex gap-1.5 mb-2 flex-wrap">
                       {Object.keys(tabColors).map(color => (
