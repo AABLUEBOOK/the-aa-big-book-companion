@@ -34,6 +34,33 @@ export default function Home() {
           <div className="mt-6 text-sm text-[#25DCE6]/70 uppercase tracking-wider">
             Fourth Edition
           </div>
+
+          {/* Highlighting Guide */}
+          <div className="mt-8 max-w-2xl mx-auto bg-[#2A3440] border border-[#25DCE6]/20 rounded-xl p-6">
+            <h3 className="text-lg font-bold text-[#FFFFFD] mb-4">Highlighting Guide</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
+              <div className="flex items-center gap-2">
+                <div className="w-4 h-4 bg-orange-500 rounded"></div>
+                <span className="text-[#FFFFFD]/80">Steps</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="w-4 h-4 bg-green-500 rounded"></div>
+                <span className="text-[#FFFFFD]/80">Prayers</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="w-4 h-4 bg-blue-500 rounded"></div>
+                <span className="text-[#FFFFFD]/80">Promises</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="w-4 h-4 bg-yellow-400 rounded"></div>
+                <span className="text-[#FFFFFD]/80">General Info</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="w-4 h-4 bg-pink-400 rounded"></div>
+                <span className="text-[#FFFFFD]/80">Tab Reference</span>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* Sections Grid */}

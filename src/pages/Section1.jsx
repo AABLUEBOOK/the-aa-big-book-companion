@@ -66,6 +66,48 @@ const CHAPTERS = [
     title: "We Agnostics",
     pageNum: "44",
     chapter: 4
+  },
+  {
+    id: "how-it-works",
+    title: "How It Works",
+    pageNum: "58",
+    chapter: 5
+  },
+  {
+    id: "into-action",
+    title: "Into Action",
+    pageNum: "72",
+    chapter: 6
+  },
+  {
+    id: "working-with-others",
+    title: "Working with Others",
+    pageNum: "89",
+    chapter: 7
+  },
+  {
+    id: "to-wives",
+    title: "To Wives",
+    pageNum: "104",
+    chapter: 8
+  },
+  {
+    id: "family-afterward",
+    title: "The Family Afterward",
+    pageNum: "122",
+    chapter: 9
+  },
+  {
+    id: "to-employers",
+    title: "To Employers",
+    pageNum: "136",
+    chapter: 10
+  },
+  {
+    id: "vision-for-you",
+    title: "A Vision for You",
+    pageNum: "151",
+    chapter: 11
   }
 ];
 
