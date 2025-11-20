@@ -1,73 +1,8 @@
-import React, { useState, useEffect } from "react";
-import { base44 } from "@/api/base44Client";
-import { useMutation, useQueryClient } from "@tanstack/react-query";
-import { Button } from "@/components/ui/button";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import React from "react";
 import { cn } from "@/lib/utils";
-import AnnotationToolbar from "./AnnotationToolbar";
-import PageTabs from "./PageTabs";
 import { CHAPTER_CONTENT } from "./allChapterContent";
 
-export default function ChapterContent({ chapter, currentIndex, totalChapters, annotations, isLocked, onNext, onPrevious, chapterTabs }) {
-  const [selectedText, setSelectedText] = useState(null);
-  const [toolbarPosition, setToolbarPosition] = useState(null);
-  const queryClient = useQueryClient();
-
-  const createAnnotationMutation = useMutation({
-    mutationFn: (data) => base44.entities.Annotation.create(data),
-    onSuccess: () => {
-      queryClient.invalidateQueries({ queryKey: ['annotations'] });
-      clearSelection();
-    }
-  });
-
-  useEffect(() => {
-    const handleSelection = () => {
-      if (isLocked) return;
-      
-      const selection = window.getSelection();
-      const text = selection.toString().trim();
-      
-      if (text) {
-        const range = selection.getRangeAt(0);
-        const rect = range.getBoundingClientRect();
-        setSelectedText(text);
-        setToolbarPosition({ x: rect.left + rect.width / 2, y: rect.top });
-      } else {
-        clearSelection();
-      }
-    };
-
-    document.addEventListener('mouseup', handleSelection);
-    return () => document.removeEventListener('mouseup', handleSelection);
-  }, [isLocked]);
-
-  const clearSelection = () => {
-    setSelectedText(null);
-    setToolbarPosition(null);
-    window.getSelection().removeAllRanges();
-  };
-
-  const handleHighlight = (color) => {
-    if (selectedText && chapter) {
-      createAnnotationMutation.mutate({
-        chapter_id: chapter.id,
-        text: selectedText,
-        type: 'highlight',
-        color: color
-      });
-    }
-  };
-
-  const handleUnderline = () => {
-    if (selectedText && chapter) {
-      createAnnotationMutation.mutate({
-        chapter_id: chapter.id,
-        text: selectedText,
-        type: 'underline'
-      });
-    }
-  };
+export default function ChapterContent({ chapter }) {
 
   if (!chapter) return null;
 
@@ -94,13 +29,6 @@ export default function ChapterContent({ chapter, currentIndex, totalChapters, a
         </div>
       </div>
 
-      {/* Page Tabs */}
-      <PageTabs 
-        tabs={chapterTabs || []}
-        chapterId={chapter.id}
-        isLocked={isLocked}
-      />
-
       {/* Chapter Body */}
       <div className="px-4 sm:px-8 lg:px-12 py-6 sm:py-10 lg:py-12 relative pr-20 sm:pr-28">
         
@@ -122,9 +50,6 @@ export default function ChapterContent({ chapter, currentIndex, totalChapters, a
                 'basic-text': 'border-l-4 border-[#25DCE6] pl-4 bg-[#25DCE6]/10 py-2'
               };
 
-              // Check if this text has user annotations
-              const textAnnotations = annotations?.filter(a => para.text.includes(a.text)) || [];
-              
               return (
                 <p 
                   key={idx} 
@@ -133,36 +58,12 @@ export default function ChapterContent({ chapter, currentIndex, totalChapters, a
                     para.highlight && highlightClasses[para.highlight]
                   )}
                 >
-                  {textAnnotations.length > 0 ? (
-                    <AnnotatedText text={para.text} annotations={textAnnotations} />
-                  ) : para.highlightText ? (
-                    <>
-                      {para.text}{' '}
-                      <span className={cn(
-                        "inline-block",
-                        para.highlight && highlightClasses[para.highlight]
-                      )}>
-                        {para.highlightText}
-                      </span>
-                    </>
-                  ) : (
-                    para.text
-                  )}
+                  {para.text}
                 </p>
               );
             })}
           </div>
         </div>
-
-        {selectedText && !isLocked && (
-          <AnnotationToolbar
-            selectedText={selectedText}
-            onHighlight={handleHighlight}
-            onUnderline={handleUnderline}
-            onClear={clearSelection}
-            position={toolbarPosition}
-          />
-        )}
 
         {/* Sidebar Annotations */}
         <div className="hidden xl:block absolute -right-64 top-24 w-56 space-y-4">
@@ -190,78 +91,5 @@ export default function ChapterContent({ chapter, currentIndex, totalChapters, a
         </div>
       </div>
     </div>
-  );
-}
-
-function AnnotatedText({ text, annotations }) {
-  let parts = [{ text, annotations: [] }];
-
-  // Split text by annotations
-  annotations.forEach(annotation => {
-    const newParts = [];
-    parts.forEach(part => {
-      if (part.annotations.length > 0) {
-        newParts.push(part);
-        return;
-      }
-
-      const index = part.text.indexOf(annotation.text);
-      if (index === -1) {
-        newParts.push(part);
-        return;
-      }
-
-      // Before
-      if (index > 0) {
-        newParts.push({ text: part.text.substring(0, index), annotations: [] });
-      }
-      
-      // Annotated part
-      newParts.push({ 
-        text: annotation.text, 
-        annotations: [annotation]
-      });
-      
-      // After
-      if (index + annotation.text.length < part.text.length) {
-        newParts.push({ 
-          text: part.text.substring(index + annotation.text.length), 
-          annotations: [] 
-        });
-      }
-    });
-    parts = newParts;
-  });
-
-  return (
-    <>
-      {parts.map((part, idx) => {
-        if (part.annotations.length === 0) {
-          return <span key={idx}>{part.text}</span>;
-        }
-
-        const annotation = part.annotations[0];
-        const colorClasses = {
-          yellow: 'bg-yellow-400/40 border-b-2 border-yellow-400 text-[#FFFFFD]',
-          pink: 'bg-pink-400/40 border-b-2 border-pink-400 text-[#FFFFFD]',
-          blue: 'bg-blue-400/40 border-b-2 border-blue-400 text-[#FFFFFD]',
-          green: 'bg-green-400/40 border-b-2 border-green-400 text-[#FFFFFD]'
-        };
-
-        if (annotation.type === 'highlight') {
-          return (
-            <mark key={idx} className={cn("px-1 rounded", colorClasses[annotation.color] || colorClasses.yellow)}>
-              {part.text}
-            </mark>
-          );
-        } else {
-          return (
-            <span key={idx} className="border-b-2 border-[#25DCE6] decoration-2 text-[#FFFFFD]">
-              {part.text}
-            </span>
-          );
-        }
-      })}
-    </>
   );
 }

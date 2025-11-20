@@ -1,11 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { base44 } from "@/api/base44Client";
-import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import { ArrowLeft, BookOpen } from "lucide-react";
 import ChapterContent from "../components/book/ChapterContent";
-import VerticalTabs from "../components/book/VerticalTabs";
 import BookNavigation, { MobileBookNavigation } from "../components/navigation/BookNavigation";
 
 function createPageUrl(pageName) {
@@ -113,18 +110,7 @@ const CHAPTERS = [
 
 export default function Section1() {
   const [currentChapterId, setCurrentChapterId] = useState(CHAPTERS[0]?.id || "");
-
-  const { data: allAnnotations = [] } = useQuery({
-    queryKey: ['annotations'],
-    queryFn: () => base44.entities.Annotation.list(),
-    initialData: []
-  });
-
-  const { data: allTabs = [] } = useQuery({
-    queryKey: ['bookTabs'],
-    queryFn: () => base44.entities.BookTab.list(),
-    initialData: []
-  });
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   // Track which chapter is in view
   useEffect(() => {
@@ -204,24 +190,11 @@ export default function Section1() {
 
           {/* Main Content - All Chapters */}
           <div className="flex-1 w-full lg:max-w-4xl lg:pr-12 xl:pr-16 space-y-8">
-            {CHAPTERS.map((chapter, index) => {
-              const chapterAnnotations = allAnnotations.filter(a => a.chapter_id === chapter.id);
-              const chapterTabs = allTabs.filter(t => t.chapter_id === chapter.id);
-              return (
-                <div key={chapter.id} id={chapter.id}>
-                  <ChapterContent
-                    chapter={chapter}
-                    currentIndex={index}
-                    totalChapters={CHAPTERS.length}
-                    annotations={chapterAnnotations}
-                    chapterTabs={chapterTabs}
-                    isLocked={false}
-                    onNext={null}
-                    onPrevious={null}
-                  />
-                </div>
-              );
-            })}
+            {CHAPTERS.map((chapter, index) => (
+              <div key={chapter.id} id={chapter.id}>
+                <ChapterContent chapter={chapter} />
+              </div>
+            ))}
 
             {/* Bottom Navigation */}
             <div className="bg-[#2A3440] rounded-xl border border-[#25DCE6]/20 p-6 sm:p-8 text-center space-y-4">
