@@ -81,8 +81,8 @@ export default function Section1() {
   });
 
   const { data: tabs = [] } = useQuery({
-    queryKey: ['bookTabs'],
-    queryFn: () => base44.entities.BookTab.list(),
+    queryKey: ['bookTabs', currentChapterId],
+    queryFn: () => base44.entities.BookTab.filter({ chapter_id: currentChapterId }),
     initialData: []
   });
 
@@ -230,9 +230,9 @@ export default function Section1() {
 
       {/* Vertical Tabs */}
       <VerticalTabs 
-        tabs={tabs} 
+        tabs={tabs}
+        currentChapterId={currentChapterId}
         isLocked={settings?.is_locked || false}
-        onTabClick={(chapterId) => setCurrentChapterId(chapterId)}
       />
     </div>
   );

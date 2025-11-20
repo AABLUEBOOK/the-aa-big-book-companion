@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
 
-export default function VerticalTabs({ tabs = [], isLocked, onTabClick }) {
+export default function VerticalTabs({ tabs = [], currentChapterId, isLocked }) {
   const [isAdding, setIsAdding] = useState(false);
   const [tabLabel, setTabLabel] = useState('');
   const [selectedColor, setSelectedColor] = useState('yellow');
@@ -15,10 +15,9 @@ export default function VerticalTabs({ tabs = [], isLocked, onTabClick }) {
   const createTabMutation = useMutation({
     mutationFn: (data) => base44.entities.BookTab.create(data),
     onSuccess: () => {
-      queryClient.invalidateQueries({ queryKey: ['bookTabs'] });
+      queryClient.invalidateQueries({ queryKey: ['bookTabs', currentChapterId] });
       setTabLabel('');
       setSelectedColor('yellow');
-      // Keep adding mode open if less than 6 tabs
       if (tabs.length >= 5) {
         setIsAdding(false);
       }
@@ -28,15 +27,16 @@ export default function VerticalTabs({ tabs = [], isLocked, onTabClick }) {
   const deleteTabMutation = useMutation({
     mutationFn: (id) => base44.entities.BookTab.delete(id),
     onSuccess: () => {
-      queryClient.invalidateQueries({ queryKey: ['bookTabs'] });
+      queryClient.invalidateQueries({ queryKey: ['bookTabs', currentChapterId] });
     }
   });
 
   const tabColors = {
-    red: 'bg-red-500',
-    blue: 'bg-blue-500',
     yellow: 'bg-yellow-400',
-    green: 'bg-green-500',
+    pink: 'bg-pink-400',
+    blue: 'bg-blue-400',
+    green: 'bg-green-400',
+    red: 'bg-red-500',
     purple: 'bg-purple-500',
     orange: 'bg-orange-500'
   };
@@ -45,7 +45,7 @@ export default function VerticalTabs({ tabs = [], isLocked, onTabClick }) {
     if (!tabLabel.trim() || tabs.length >= 6) return;
     
     createTabMutation.mutate({
-      chapter_id: 'current',
+      chapter_id: currentChapterId,
       label: tabLabel.trim(),
       color: selectedColor,
       position: tabs.length
@@ -78,43 +78,45 @@ export default function VerticalTabs({ tabs = [], isLocked, onTabClick }) {
           >
             {tab ? (
               // Filled slot with tab
-              <button
-                onClick={() => onTabClick(tab.chapter_id)}
-                className={cn(
-                  "w-16 h-24 rounded-l-lg shadow-lg transition-all hover:w-20 group",
-                  tabColors[tab.color] || tabColors.yellow
-                )}
-              >
-                <div className="flex flex-col items-center justify-center h-full relative">
-                  <span className="text-xs font-bold text-white transform -rotate-90 whitespace-nowrap">
-                    {tab.label}
-                  </span>
-                  {!isLocked && (
-                    <button
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        deleteTabMutation.mutate(tab.id);
-                      }}
-                      className="absolute top-1 right-1 opacity-0 group-hover:opacity-100 transition-opacity"
-                    >
-                      <X className="w-3 h-3 text-white" />
-                    </button>
+              <div className="relative group">
+                <div
+                  className={cn(
+                    "w-10 h-32 rounded-l-lg shadow-lg transition-all hover:w-12",
+                    tabColors[tab.color] || tabColors.yellow,
+                    "flex items-center justify-center px-1 py-2"
                   )}
+                >
+                  <div className="text-[9px] leading-tight font-bold text-white text-center break-words w-full px-1">
+                    {tab.label}
+                  </div>
                 </div>
-              </button>
+                {!isLocked && (
+                  <button
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      deleteTabMutation.mutate(tab.id);
+                    }}
+                    className="absolute -top-1 -right-1 opacity-0 group-hover:opacity-100 transition-opacity bg-red-500 rounded-full p-1"
+                  >
+                    <X className="w-3 h-3 text-white" />
+                  </button>
+                )}
+              </div>
             ) : isNextEmpty && !isLocked ? (
               // Empty slot - show + button only for the next available slot
               isAdding ? (
                 <div className="bg-[#2A3440] border-2 border-[#25DCE6] rounded-l-lg p-4 shadow-2xl w-64">
-                  <Input
+                  <textarea
                     autoFocus
-                    placeholder="Type tab text and press Enter"
+                    placeholder="Type tab text (2 lines) and press Enter"
                     value={tabLabel}
                     onChange={(e) => setTabLabel(e.target.value)}
                     onKeyPress={handleKeyPress}
-                    className="mb-3 bg-[#222A31] border-[#25DCE6]/30 text-[#FFFFFD] placeholder:text-[#FFFFFD]/40"
+                    rows={2}
+                    maxLength={30}
+                    className="w-full mb-3 bg-[#222A31] border border-[#25DCE6]/30 text-[#FFFFFD] placeholder:text-[#FFFFFD]/40 rounded px-3 py-2 text-sm resize-none"
                   />
-                  <div className="flex gap-2 mb-3">
+                  <div className="flex gap-2 mb-3 flex-wrap">
                     {Object.keys(tabColors).map(color => (
                       <button
                         key={color}
@@ -152,9 +154,9 @@ export default function VerticalTabs({ tabs = [], isLocked, onTabClick }) {
               ) : (
                 <button
                   onClick={() => setIsAdding(true)}
-                  className="bg-[#25DCE6] text-[#222A31] w-12 h-12 rounded-l-lg shadow-lg hover:w-16 transition-all flex items-center justify-center"
+                  className="bg-[#25DCE6] text-[#222A31] w-10 h-10 rounded-l-lg shadow-lg hover:w-12 transition-all flex items-center justify-center"
                 >
-                  <Plus className="w-5 h-5" />
+                  <Plus className="w-4 h-4" />
                 </button>
               )
             ) : null}
