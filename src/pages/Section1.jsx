@@ -159,6 +159,8 @@ export default function Section1() {
           <div className="flex-1 max-w-4xl">
             <ChapterContent
               chapter={currentChapter}
+              currentIndex={currentIndex}
+              totalChapters={CHAPTERS.length}
               onNext={currentIndex < CHAPTERS.length - 1 ? goToNext : null}
               onPrevious={currentIndex > 0 ? goToPrevious : null}
             />

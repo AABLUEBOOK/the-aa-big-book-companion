@@ -50,7 +50,7 @@ const CHAPTER_CONTENT = {
   }
 };
 
-export default function ChapterContent({ chapter, onNext, onPrevious }) {
+export default function ChapterContent({ chapter, currentIndex, totalChapters, onNext, onPrevious }) {
   if (!chapter) return null;
 
   const chapterData = CHAPTER_CONTENT[chapter.id] || { 
@@ -163,7 +163,7 @@ export default function ChapterContent({ chapter, onNext, onPrevious }) {
         </Button>
 
         <div className="text-sm text-[#25DCE6]/70 font-medium">
-          {currentIndex + 1} of {CHAPTERS.length}
+          {currentIndex + 1} of {totalChapters}
         </div>
 
         <Button
