@@ -49,9 +49,9 @@ export const CHAPTER_CONTENT = {
   "foreword-fourth": {
     highlights: [],
     paragraphs: [
-      { text: "This fourth edition of "Alcoholics Anonymous" came off press in November 2001, at the start of a new millennium. Since the third edition was published in 1976, worldwide membership of A.A. has just about doubled, to an estimated two million or more, with nearly 100,800 groups meeting in approximately 150 countries around the world." },
-      { text: "Literature has played a major role in A.A.'s growth, and a striking phenomenon of the past quarter-century has been the explosion of translations of our basic literature into many languages and dialects. In country after country where the A.A. seed was planted, it has taken root, slowly at first, then growing by leaps and bounds when literature has become available. Currently, "Alcoholics Anonymous" has been translated into forty-three languages." },
-      { text: "As the message of recovery has reached larger numbers of people, it has also touched the lives of a vastly greater variety of suffering alcoholics. When the phrase "We are people who normally would not mix" (page 17 of this book) was written in 1939, it referred to a Fellowship composed largely of men (and a few women) with quite similar social, ethnic, and economic backgrounds. Like so much of A.A.'s basic text, those words have proved to be far more visionary than the founding members could ever have imagined. The stories added to this edition represent a membership whose characteristics—of age, gender, race, and culture—have widened and have deepened to encompass virtually anyone who suffers from alcoholism." }
+      { text: 'This fourth edition came off press in November 2001, at the start of a new millennium. Since the third edition was published in 1976, worldwide membership of A.A. has just about doubled, to an estimated two million or more.' },
+      { text: 'Literature has played a major role in A.A. growth, and a striking phenomenon of the past quarter-century has been the explosion of translations of our basic literature into many languages and dialects.' },
+      { text: 'As the message of recovery has reached larger numbers of people, it has also touched the lives of a vastly greater variety of suffering alcoholics. The stories represent a membership whose characteristics have widened to encompass virtually anyone who suffers from alcoholism.' }
     ]
   },
 
@@ -61,13 +61,13 @@ export const CHAPTER_CONTENT = {
       { text: "ALLERGY", type: "sidebar", subtext: "PHYSICAL" }
     ],
     paragraphs: [
-      { text: "We of Alcoholics Anonymous believe that the reader will be interested in the medical estimate of the plan of recovery described in this book. Convincing testimony must surely come from medical men who have had experience with the sufferings of our members and have witnessed our return to health." },
-      { text: "A well-known doctor, chief physician at a nationally prominent hospital specializing in alcoholic and drug addiction, gave Alcoholics Anonymous this letter:" },
-      { text: ""I have specialized in the treatment of alcoholism for many years. In late 1934 I attended a patient who, though he had been a competent businessman of good earning capacity, was an alcoholic of a type I had come to regard as hopeless."" },
-      { text: ""In the course of his third treatment he acquired certain ideas concerning a possible means of recovery. As part of his rehabilitation he commenced to present his conceptions to other alcoholics, impressing upon them that they must do likewise with still others. This has become the basis of a rapidly growing fellowship of these men and their families. This man and over one hundred others appear to have recovered."" },
-      { text: ""I personally know scores of cases who were of the type with whom other methods had failed completely. These facts appear to be of extreme medical importance; because of the extraordinary possibilities of rapid growth inherent in this group they may mark a new epoch in the annals of alcoholism. These men may well have a remedy for thousands of such situations."", highlight: "yellow" },
-      { text: "The physician who, at our request, gave us this letter, has been kind enough to enlarge upon his views in another statement which follows. In this statement he confirms what we who have suffered alcoholic torture must believe—that the body of the alcoholic is quite as abnormal as his mind." },
-      { text: "The doctor's theory that we have an allergy to alcohol interests us. As laymen, our opinion as to its soundness may, of course, mean little. But as ex-problem drinkers, we can say that his explanation makes good sense. It explains many things for which we cannot otherwise account." },
+      { text: 'We of Alcoholics Anonymous believe that the reader will be interested in the medical estimate of the plan of recovery described in this book.' },
+      { text: 'A well-known doctor, chief physician at a nationally prominent hospital specializing in alcoholic and drug addiction, gave Alcoholics Anonymous this letter:' },
+      { text: 'The doctor wrote: I have specialized in the treatment of alcoholism for many years. In late 1934 I attended a patient who, though he had been a competent businessman of good earning capacity, was an alcoholic of a type I had come to regard as hopeless.' },
+      { text: 'In the course of his third treatment he acquired certain ideas concerning a possible means of recovery. As part of his rehabilitation he commenced to present his conceptions to other alcoholics. This man and over one hundred others appear to have recovered.' },
+      { text: 'I personally know scores of cases who were of the type with whom other methods had failed completely. These facts appear to be of extreme medical importance. These men may well have a remedy for thousands of such situations.', highlight: 'yellow' },
+      { text: 'The physician who gave us this letter confirms what we who have suffered alcoholic torture must believe—that the body of the alcoholic is quite as abnormal as his mind.' },
+      { text: 'The doctor\'s theory that we have an allergy to alcohol interests us. As ex-problem drinkers, we can say that his explanation makes good sense.' },
       { text: "Though we work out our solution on the spiritual as well as an altruistic plane, we favor hospitalization for the alcoholic who is very jittery or befogged. More often than not, it is imperative that a man's brain be cleared before he is approached, as he has then a better chance of understanding and accepting what we have to offer." }
     ]
   },
