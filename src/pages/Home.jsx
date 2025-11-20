@@ -2,7 +2,7 @@ import React from "react";
 import { base44 } from "@/api/base44Client";
 import { useQuery } from "@tanstack/react-query";
 import { Link } from "react-router-dom";
-import { BookOpen, ChevronRight, Lock } from "lucide-react";
+import { BookOpen, ChevronRight } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
 function createPageUrl(pageName) {
@@ -92,61 +92,39 @@ export default function Home() {
 }
 
 function SectionWidget({ section }) {
-  const content = (
-    <Card className={`group transition-all duration-300 border-2 ${
-      section.is_available 
-        ? 'hover:-translate-y-1 cursor-pointer hover:shadow-2xl hover:shadow-[#25DCE6]/20 hover:border-[#25DCE6]/50 border-[#25DCE6]/20' 
-        : 'opacity-40 border-[#25DCE6]/10'
-    }`}>
-      <CardContent className="p-8 bg-gradient-to-br from-[#2A3440] to-[#222A31] relative overflow-hidden">
-        
-        {/* Decorative Element */}
-        <div className="absolute top-0 right-0 w-32 h-32 bg-[#25DCE6]/10 rounded-full -translate-y-16 translate-x-16"></div>
-        
-        <div className="relative z-10">
-          <div className="flex items-start justify-between mb-4">
-            <div className="flex items-center gap-3">
-              <div className="w-12 h-12 rounded-xl bg-[#25DCE6]/10 border border-[#25DCE6]/30 flex items-center justify-center shadow-sm">
-                <span className="text-2xl font-serif font-bold text-[#25DCE6]">
-                  {section.section_number}
-                </span>
-              </div>
-              <div className="text-sm font-medium text-[#25DCE6]/70 uppercase tracking-wider">
-                Pages {section.page_range}
-              </div>
-            </div>
-            {section.is_available ? (
-              <ChevronRight className="w-6 h-6 text-[#25DCE6] group-hover:translate-x-1 transition-transform" />
-            ) : (
-              <Lock className="w-5 h-5 text-[#25DCE6]/40" />
-            )}
-          </div>
-
-          <h3 className="text-2xl font-serif font-bold text-[#FFFFFD] mb-3 leading-tight">
-            {section.title}
-          </h3>
+  return (
+    <Link to={createPageUrl(`Section${section.section_number}`)}>
+      <Card className="group transition-all duration-300 border-2 hover:-translate-y-1 cursor-pointer hover:shadow-2xl hover:shadow-[#25DCE6]/20 hover:border-[#25DCE6]/50 border-[#25DCE6]/20">
+        <CardContent className="p-8 bg-gradient-to-br from-[#2A3440] to-[#222A31] relative overflow-hidden">
           
-          <p className="text-[#FFFFFD]/70 leading-relaxed font-light">
-            {section.description}
-          </p>
-
-          {!section.is_available && (
-            <div className="mt-4 text-sm text-[#25DCE6]/50 italic">
-              Coming soon
+          {/* Decorative Element */}
+          <div className="absolute top-0 right-0 w-32 h-32 bg-[#25DCE6]/10 rounded-full -translate-y-16 translate-x-16"></div>
+          
+          <div className="relative z-10">
+            <div className="flex items-start justify-between mb-4">
+              <div className="flex items-center gap-3">
+                <div className="w-12 h-12 rounded-xl bg-[#25DCE6]/10 border border-[#25DCE6]/30 flex items-center justify-center shadow-sm">
+                  <span className="text-2xl font-serif font-bold text-[#25DCE6]">
+                    {section.section_number}
+                  </span>
+                </div>
+                <div className="text-sm font-medium text-[#25DCE6]/70 uppercase tracking-wider">
+                  Pages {section.page_range}
+                </div>
+              </div>
+              <ChevronRight className="w-6 h-6 text-[#25DCE6] group-hover:translate-x-1 transition-transform" />
             </div>
-          )}
-        </div>
-      </CardContent>
-    </Card>
+
+            <h3 className="text-2xl font-serif font-bold text-[#FFFFFD] mb-3 leading-tight">
+              {section.title}
+            </h3>
+            
+            <p className="text-[#FFFFFD]/70 leading-relaxed font-light">
+              {section.description}
+            </p>
+          </div>
+        </CardContent>
+      </Card>
+    </Link>
   );
-
-  if (section.is_available) {
-    return (
-      <Link to={createPageUrl(`Section${section.section_number}`)}>
-        {content}
-      </Link>
-    );
-  }
-
-  return content;
 }
