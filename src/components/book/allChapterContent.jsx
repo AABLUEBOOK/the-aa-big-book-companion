@@ -4,18 +4,19 @@ export const CHAPTER_CONTENT = {
     highlights: [],
     paragraphs: [
       { text: 'This is the fourth edition of the book "Alcoholics Anonymous." The first edition appeared in April 1939, and in the following sixteen years, more than 300,000 copies went into circulation. The second edition, published in 1955, reached a total of more than 1,150,500 copies. The third edition, which came off press in 1976, achieved a circulation of approximately 19,550,000 in all formats.' },
-      { text: 'Because this book has become the basic text for our Society and has helped such large numbers of alcoholic men and women to recovery, there exists strong sentiment against any radical changes being made in it. Therefore, the first portion of this volume, describing the A.A. recovery program, has been left largely untouched in the course of revisions made for the second, third, and fourth editions.' },
+      { text: 'Because this book has become the basic text for our Society and has helped such large numbers of alcoholic men and women to recovery, there exists strong sentiment against any radical changes being made in it. Therefore, the first portion of this volume, describing the A.A. recovery program, has been left largely untouched in the course of revisions made for the second, third, and fourth editions.', underline: true },
       { text: 'The second edition added the appendices, the Twelve Traditions, and the directions for getting in touch with A.A. The chief change was in the section of personal stories, which was expanded to reflect the Fellowship\'s growth.' },
       { text: 'In the third edition, Part I was left unchanged. Nine of the stories in Part II were carried over from the second edition; eight new stories were added. In Part III, eight stories were retained; five new ones were added.' },
       { text: 'This fourth edition includes the Twelve Concepts for World Service and revises the three sections of personal stories. New stories have been added across all parts to reflect current membership.' },
-      { text: 'All changes made over the years in the Big Book have had the same purpose: to represent the current membership of Alcoholics Anonymous more accurately, and thereby to reach more alcoholics.' }
+      { text: 'All changes made over the years in the Big Book have had the same purpose: to represent the current membership of Alcoholics Anonymous more accurately, and thereby to reach more alcoholics. If you have a drinking problem, we hope that you may pause in reading one of the forty-two personal stories and think: "Yes, that happened to me"; or, more important, "Yes, I\'ve felt like that"; or, most important, "Yes, I believe this program can work for me too."', underline: true }
     ]
   },
 
   "foreword-first": {
     highlights: [],
     paragraphs: [
-      { text: 'We, of Alcoholics Anonymous, are more than one hundred men and women who have recovered from a seemingly hopeless state of mind and body. To show other alcoholics precisely how we have recovered is the main purpose of this book.', highlight: 'blue' },
+      { text: 'FOREWORD TO FIRST EDITION. This is the Foreword as it appeared in the first printing of the first edition in 1939.', underline: true },
+      { text: 'We, of Alcoholics Anonymous, are more than one hundred men and women who have recovered from a seemingly hopeless state of mind and body. To show other alcoholics precisely how we have recovered is the main purpose of this book.', highlight: 'blue', underline: true },
       { text: 'For them, we hope these pages will prove so convincing that no further authentication will be necessary. We think this account of our experiences will help everyone to better understand the alcoholic.' },
       { text: 'It is important that we remain anonymous because we are too few at present to handle the overwhelming number of personal appeals which may result from this publication.' },
       { text: 'When writing or speaking publicly about alcoholism, we urge each of our Fellowship to omit his personal name, designating himself instead as a member of Alcoholics Anonymous.' },
@@ -27,12 +28,13 @@ export const CHAPTER_CONTENT = {
   "foreword-second": {
     highlights: [],
     paragraphs: [
+      { text: 'FOREWORD TO SECOND EDITION. Figures given in this foreword describe the Fellowship as it was in 1955.', underline: true },
       { text: 'Since the original Foreword to this book was written in 1939, a wholesale miracle has taken place. Our earliest printing voiced the hope that every alcoholic who journeys will find the Fellowship of Alcoholics Anonymous at his destination.' },
       { text: 'Sixteen years have elapsed between our first printing of this book and the presentation in 1955 of our second edition. In that brief space, Alcoholics Anonymous has mushroomed into nearly 6,000 groups whose membership is far above 150,000 recovered alcoholics.' },
       { text: 'The spark that was to flare into the first A.A. group was struck at Akron, Ohio, in June 1935, during a talk between a New York stockbroker and an Akron physician.' },
       { text: 'With the appearance of the new book a great deal began to happen. Dr. Harry Emerson Fosdick reviewed it with approval. By the end of 1939 it was estimated that 800 alcoholics were on their way to recovery.' },
       { text: 'In the spring of 1940, John D. Rockefeller, Jr. gave a dinner for many of his friends to which he invited A.A. members to tell their stories. By the close of 1941, A.A. numbered 8,000 members. A.A. had become a national institution.' },
-      { text: 'While the internal difficulties of our adolescent period were being ironed out, public acceptance of A.A. grew by leaps and bounds. Of alcoholics who came to A.A. and really tried, 50% got sober at once and remained that way; 25% sobered up after some relapses.' }
+      { text: 'While the internal difficulties of our adolescent period were being ironed out, public acceptance of A.A. grew by leaps and bounds. For this there were two principal reasons: the large numbers of recoveries, and reunited homes. These made their impressions everywhere. Of alcoholics who came to A.A. and really tried, 50% got sober at once and remained that way; 25% sobered up after some relapses, and among the remainder, those who stayed on with A.A. showed improvement.', underline: true }
     ]
   },
 

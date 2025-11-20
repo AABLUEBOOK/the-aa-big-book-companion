@@ -55,7 +55,8 @@ export default function ChapterContent({ chapter }) {
                   key={idx} 
                   className={cn(
                     baseClasses,
-                    para.highlight && highlightClasses[para.highlight]
+                    para.highlight && highlightClasses[para.highlight],
+                    para.underline && "border-b-2 border-[#25DCE6] pb-1"
                   )}
                 >
                   {para.text}
