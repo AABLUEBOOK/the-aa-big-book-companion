@@ -41,23 +41,23 @@ export default function Home() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
               <div className="flex items-center gap-2">
                 <div className="w-4 h-4 bg-orange-500 rounded"></div>
-                <span className="text-[#FFFFFD]/80">Steps</span>
+                <span className="text-[#FFFFFD]/80">Orange = Steps</span>
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-4 h-4 bg-green-500 rounded"></div>
-                <span className="text-[#FFFFFD]/80">Prayers</span>
+                <span className="text-[#FFFFFD]/80">Green = Prayers</span>
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-4 h-4 bg-blue-500 rounded"></div>
-                <span className="text-[#FFFFFD]/80">Promises</span>
+                <span className="text-[#FFFFFD]/80">Blue = Promises</span>
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-4 h-4 bg-yellow-400 rounded"></div>
-                <span className="text-[#FFFFFD]/80">General Info</span>
+                <span className="text-[#FFFFFD]/80">Yellow = General Info</span>
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-4 h-4 bg-pink-400 rounded"></div>
-                <span className="text-[#FFFFFD]/80">Tab Reference</span>
+                <span className="text-[#FFFFFD]/80">Pink = Tab Reference</span>
               </div>
             </div>
           </div>
