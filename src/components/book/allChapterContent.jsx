@@ -68,7 +68,7 @@ export const CHAPTER_CONTENT = {
       { text: 'I personally know scores of cases who were of the type with whom other methods had failed completely. These facts appear to be of extreme medical importance. These men may well have a remedy for thousands of such situations.', highlight: 'yellow' },
       { text: 'The physician who gave us this letter confirms what we who have suffered alcoholic torture must believe—that the body of the alcoholic is quite as abnormal as his mind.' },
       { text: 'The doctor\'s theory that we have an allergy to alcohol interests us. As ex-problem drinkers, we can say that his explanation makes good sense.' },
-      { text: "Though we work out our solution on the spiritual as well as an altruistic plane, we favor hospitalization for the alcoholic who is very jittery or befogged. More often than not, it is imperative that a man's brain be cleared before he is approached, as he has then a better chance of understanding and accepting what we have to offer." }
+      { text: 'Though we work out our solution on the spiritual as well as an altruistic plane, we favor hospitalization for the alcoholic who is very jittery or befogged.' }
     ]
   },
 
