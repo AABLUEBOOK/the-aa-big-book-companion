@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { base44 } from "@/api/base44Client";
@@ -113,6 +113,7 @@ const CHAPTERS = [
 
 export default function Section1() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [currentChapterId, setCurrentChapterId] = useState(CHAPTERS[0]?.id || "");
 
   const { data: allAnnotations = [] } = useQuery({
     queryKey: ['annotations'],
@@ -125,6 +126,27 @@ export default function Section1() {
     queryFn: () => base44.entities.BookTab.list(),
     initialData: []
   });
+
+  // Track which chapter is in view
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && entry.intersectionRatio > 0.5) {
+            setCurrentChapterId(entry.target.id);
+          }
+        });
+      },
+      { threshold: [0.5], rootMargin: '-100px 0px -100px 0px' }
+    );
+
+    CHAPTERS.forEach((chapter) => {
+      const element = document.getElementById(chapter.id);
+      if (element) observer.observe(element);
+    });
+
+    return () => observer.disconnect();
+  }, []);
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -186,7 +208,7 @@ export default function Section1() {
             <div className="sticky top-20">
               <ChapterNav
                 chapters={CHAPTERS}
-                currentChapterId=""
+                currentChapterId={currentChapterId}
                 onChapterChange={scrollToChapter}
               />
             </div>
@@ -205,7 +227,7 @@ export default function Section1() {
                 </div>
                 <ChapterNav
                   chapters={CHAPTERS}
-                  currentChapterId=""
+                  currentChapterId={currentChapterId}
                   onChapterChange={scrollToChapter}
                 />
               </div>
@@ -256,8 +278,8 @@ export default function Section1() {
 
       {/* Bottom Tabs */}
       <VerticalTabs 
-        tabs={allTabs}
-        currentChapterId=""
+        tabs={allTabs.filter(t => t.chapter_id === currentChapterId)}
+        currentChapterId={currentChapterId}
         isLocked={false}
       />
     </div>

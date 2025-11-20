@@ -15,7 +15,7 @@ export default function VerticalTabs({ tabs = [], currentChapterId, isLocked }) 
   const createTabMutation = useMutation({
     mutationFn: (data) => base44.entities.BookTab.create(data),
     onSuccess: () => {
-      queryClient.invalidateQueries({ queryKey: ['bookTabs', currentChapterId] });
+      queryClient.invalidateQueries({ queryKey: ['bookTabs'] });
       setTabLabel('');
       setSelectedColor('yellow');
       if (tabs.length >= 5) {
@@ -27,7 +27,7 @@ export default function VerticalTabs({ tabs = [], currentChapterId, isLocked }) 
   const deleteTabMutation = useMutation({
     mutationFn: (id) => base44.entities.BookTab.delete(id),
     onSuccess: () => {
-      queryClient.invalidateQueries({ queryKey: ['bookTabs', currentChapterId] });
+      queryClient.invalidateQueries({ queryKey: ['bookTabs'] });
     }
   });
 
