@@ -8,7 +8,8 @@ import { cn } from "@/lib/utils";
 
 export default function VerticalTabs({ tabs = [], isLocked, onTabClick }) {
   const [isAdding, setIsAdding] = useState(false);
-  const [newTab, setNewTab] = useState({ label: '', color: 'yellow', position: 50 });
+  const [tabLabel, setTabLabel] = useState('');
+  const [selectedColor, setSelectedColor] = useState('yellow');
   const queryClient = useQueryClient();
 
   const createTabMutation = useMutation({
@@ -16,7 +17,8 @@ export default function VerticalTabs({ tabs = [], isLocked, onTabClick }) {
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['bookTabs'] });
       setIsAdding(false);
-      setNewTab({ label: '', color: 'yellow', position: 50 });
+      setTabLabel('');
+      setSelectedColor('yellow');
     }
   });
 
@@ -36,18 +38,36 @@ export default function VerticalTabs({ tabs = [], isLocked, onTabClick }) {
     orange: 'bg-orange-500'
   };
 
+  const handleAddTab = () => {
+    if (!tabLabel.trim() || tabs.length >= 6) return;
+    
+    const position = tabs.length * 15; // Space them 15% apart
+    createTabMutation.mutate({
+      chapter_id: 'current', // We'll store which chapter later
+      label: tabLabel.trim(),
+      color: selectedColor,
+      position: position
+    });
+  };
+
+  const handleKeyPress = (e) => {
+    if (e.key === 'Enter') {
+      handleAddTab();
+    }
+  };
+
   return (
     <div className="fixed right-0 top-1/4 z-30">
       {/* Tabs */}
-      {tabs.map((tab) => (
+      {tabs.slice(0, 6).map((tab, index) => (
         <button
           key={tab.id}
           onClick={() => onTabClick(tab.chapter_id)}
           className={cn(
-            "absolute right-0 w-16 h-24 rounded-l-lg shadow-lg transition-all hover:w-20 group",
+            "right-0 w-16 h-24 rounded-l-lg shadow-lg transition-all hover:w-20 group",
             tabColors[tab.color] || tabColors.yellow
           )}
-          style={{ top: `${tab.position}%` }}
+          style={{ position: 'absolute', top: `${index * 15}%` }}
         >
           <div className="flex flex-col items-center justify-center h-full relative">
             <span className="text-xs font-bold text-white transform -rotate-90 whitespace-nowrap">
@@ -69,25 +89,27 @@ export default function VerticalTabs({ tabs = [], isLocked, onTabClick }) {
       ))}
 
       {/* Add Tab Button */}
-      {!isLocked && (
-        <div className="absolute right-0 bottom-0">
+      {!isLocked && tabs.length < 6 && (
+        <div className="absolute right-0" style={{ top: `${tabs.length * 15 + 2}%` }}>
           {isAdding ? (
             <div className="bg-[#2A3440] border-2 border-[#25DCE6] rounded-l-lg p-4 shadow-2xl w-64">
               <Input
-                placeholder="Tab label"
-                value={newTab.label}
-                onChange={(e) => setNewTab({...newTab, label: e.target.value})}
-                className="mb-3 bg-[#222A31] border-[#25DCE6]/30 text-[#FFFFFD]"
+                autoFocus
+                placeholder="Type tab text and press Enter"
+                value={tabLabel}
+                onChange={(e) => setTabLabel(e.target.value)}
+                onKeyPress={handleKeyPress}
+                className="mb-3 bg-[#222A31] border-[#25DCE6]/30 text-[#FFFFFD] placeholder:text-[#FFFFFD]/40"
               />
               <div className="flex gap-2 mb-3">
                 {Object.keys(tabColors).map(color => (
                   <button
                     key={color}
-                    onClick={() => setNewTab({...newTab, color})}
+                    onClick={() => setSelectedColor(color)}
                     className={cn(
                       "w-8 h-8 rounded border-2",
                       tabColors[color],
-                      newTab.color === color ? 'border-[#FFFFFD]' : 'border-transparent'
+                      selectedColor === color ? 'border-[#FFFFFD]' : 'border-transparent'
                     )}
                   />
                 ))}
@@ -95,8 +117,8 @@ export default function VerticalTabs({ tabs = [], isLocked, onTabClick }) {
               <div className="flex gap-2">
                 <Button
                   size="sm"
-                  onClick={() => createTabMutation.mutate(newTab)}
-                  disabled={!newTab.label}
+                  onClick={handleAddTab}
+                  disabled={!tabLabel.trim()}
                   className="flex-1 bg-[#25DCE6] text-[#222A31] hover:bg-[#25DCE6]/90"
                 >
                   Add
@@ -104,7 +126,10 @@ export default function VerticalTabs({ tabs = [], isLocked, onTabClick }) {
                 <Button
                   size="sm"
                   variant="ghost"
-                  onClick={() => setIsAdding(false)}
+                  onClick={() => {
+                    setIsAdding(false);
+                    setTabLabel('');
+                  }}
                   className="text-[#FFFFFD]/60"
                 >
                   Cancel
