@@ -68,27 +68,35 @@ export default function ChapterContent({ chapter }) {
 
         {/* Sidebar Annotations */}
         <div className="hidden xl:block absolute -right-64 top-24 w-56 space-y-4">
-          {chapterData.highlights?.filter(h => h.type === 'sidebar').map((highlight, idx) => (
-            <div
-              key={idx}
-              className="bg-[#25DCE6]/10 border-2 border-[#25DCE6]/40 rounded-lg px-4 py-3 shadow-lg hover:shadow-xl hover:bg-[#25DCE6]/15 transition-all backdrop-blur-sm"
-              style={{ transform: `rotate(${idx % 2 === 0 ? '1deg' : '-1deg'})` }}
-            >
-              <div className="text-xs font-bold text-[#25DCE6] uppercase tracking-wider text-center leading-tight">
-                {highlight.text}
+          {chapterData.highlights?.filter(h => h.type === 'sidebar').map((highlight, idx) => {
+            const colorClasses = {
+              yellow: 'bg-[#25DCE6]/10 border-[#25DCE6]/40 text-[#25DCE6]',
+              pink: 'bg-pink-500/10 border-pink-400/40 text-pink-400'
+            };
+            const bgClass = highlight.color ? colorClasses[highlight.color] : 'bg-[#25DCE6]/10 border-[#25DCE6]/40 text-[#25DCE6]';
+            
+            return (
+              <div
+                key={idx}
+                className={`${bgClass} border-2 rounded-lg px-4 py-3 shadow-lg hover:shadow-xl transition-all backdrop-blur-sm`}
+                style={{ transform: `rotate(${idx % 2 === 0 ? '1deg' : '-1deg'})` }}
+              >
+                <div className="text-xs font-bold uppercase tracking-wider text-center leading-tight">
+                  {highlight.text}
+                </div>
+                {highlight.subtext && (
+                  <div className="text-xs text-[#FFFFFD]/70 text-center mt-1">
+                    {highlight.subtext}
+                  </div>
+                )}
+                {highlight.page && (
+                  <div className="text-xs opacity-80 text-center mt-1 font-mono">
+                    P. {highlight.page}
+                  </div>
+                )}
               </div>
-              {highlight.subtext && (
-                <div className="text-xs text-[#FFFFFD]/70 text-center mt-1">
-                  {highlight.subtext}
-                </div>
-              )}
-              {highlight.page && (
-                <div className="text-xs text-[#25DCE6]/80 text-center mt-1 font-mono">
-                  P. {highlight.page}
-                </div>
-              )}
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </div>

@@ -1,7 +1,9 @@
 // Complete Big Book Content - populated from the full text
 export const CHAPTER_CONTENT = {
   "preface": {
-    highlights: [],
+    highlights: [
+      { text: "BASIC TEXT", type: "sidebar", color: "pink" }
+    ],
     paragraphs: [
       { text: 'This is the fourth edition of the book "Alcoholics Anonymous." The first edition appeared in April 1939, and in the following sixteen years, more than 300,000 copies went into circulation. The second edition, published in 1955, reached a total of more than 1,150,500 copies. The third edition, which came off press in 1976, achieved a circulation of approximately 19,550,000 in all formats.' },
       { text: 'Because this book has become the basic text for our Society and has helped such large numbers of alcoholic men and women to recovery, there exists strong sentiment against any radical changes being made in it. Therefore, the first portion of this volume, describing the A.A. recovery program, has been left largely untouched in the course of revisions made for the second, third, and fourth editions.', underline: true },
@@ -13,7 +15,9 @@ export const CHAPTER_CONTENT = {
   },
 
   "foreword-first": {
-    highlights: [],
+    highlights: [
+      { text: "PURPOSE OF THIS BOOK", type: "sidebar", color: "pink" }
+    ],
     paragraphs: [
       { text: 'FOREWORD TO FIRST EDITION. This is the Foreword as it appeared in the first printing of the first edition in 1939.', underline: true },
       { text: 'We, of Alcoholics Anonymous, are more than one hundred men and women who have recovered from a seemingly hopeless state of mind and body. To show other alcoholics precisely how we have recovered is the main purpose of this book.', highlight: 'blue', underline: true },
@@ -76,7 +80,8 @@ export const CHAPTER_CONTENT = {
 
   "bills-story": {
     highlights: [
-      { text: "CHAPTER 1", type: "sidebar" }
+      { text: "CHAPTER 1", type: "sidebar" },
+      { text: "RECOVERED", type: "sidebar", color: "yellow" }
     ],
     paragraphs: [
       { text: 'War fever ran high in the New England town to which we new, young officers from Plattsburg were assigned, and we were flattered when the first citizens took us to their homes, making us feel heroic. I was part of life at last, and in the midst of the excitement I discovered liquor.' },
