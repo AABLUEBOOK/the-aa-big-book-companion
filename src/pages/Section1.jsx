@@ -238,6 +238,7 @@ export default function Section1() {
           <div className="flex-1 w-full lg:max-w-4xl lg:pr-12 xl:pr-16 space-y-8">
             {CHAPTERS.map((chapter, index) => {
               const chapterAnnotations = allAnnotations.filter(a => a.chapter_id === chapter.id);
+              const chapterTabs = allTabs.filter(t => t.chapter_id === chapter.id);
               return (
                 <div key={chapter.id} id={chapter.id}>
                   <ChapterContent
@@ -245,6 +246,7 @@ export default function Section1() {
                     currentIndex={index}
                     totalChapters={CHAPTERS.length}
                     annotations={chapterAnnotations}
+                    chapterTabs={chapterTabs}
                     isLocked={false}
                     onNext={null}
                     onPrevious={null}
@@ -276,12 +278,7 @@ export default function Section1() {
         </div>
       </div>
 
-      {/* Bottom Tabs */}
-      <VerticalTabs 
-        tabs={allTabs.filter(t => t.chapter_id === currentChapterId)}
-        currentChapterId={currentChapterId}
-        isLocked={false}
-      />
+
     </div>
   );
 }

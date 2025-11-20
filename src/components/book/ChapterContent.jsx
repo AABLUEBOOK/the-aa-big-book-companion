@@ -5,9 +5,10 @@ import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 import AnnotationToolbar from "./AnnotationToolbar";
+import PageTabs from "./PageTabs";
 import { CHAPTER_CONTENT } from "./allChapterContent";
 
-export default function ChapterContent({ chapter, currentIndex, totalChapters, annotations, isLocked, onNext, onPrevious }) {
+export default function ChapterContent({ chapter, currentIndex, totalChapters, annotations, isLocked, onNext, onPrevious, chapterTabs }) {
   const [selectedText, setSelectedText] = useState(null);
   const [toolbarPosition, setToolbarPosition] = useState(null);
   const queryClient = useQueryClient();
@@ -76,7 +77,7 @@ export default function ChapterContent({ chapter, currentIndex, totalChapters, a
   };
 
   return (
-    <div className="bg-[#2A3440] rounded-xl sm:rounded-2xl shadow-2xl border border-[#25DCE6]/20 overflow-hidden">
+    <div className="bg-[#2A3440] rounded-xl sm:rounded-2xl shadow-2xl border border-[#25DCE6]/20 overflow-hidden relative">
 
       {/* Chapter Header */}
       <div className="bg-gradient-to-r from-[#2A3440] to-[#222A31] border-b border-[#25DCE6]/20 px-4 sm:px-8 lg:px-12 py-4 sm:py-6 lg:py-8">
@@ -93,8 +94,15 @@ export default function ChapterContent({ chapter, currentIndex, totalChapters, a
         </div>
       </div>
 
+      {/* Page Tabs */}
+      <PageTabs 
+        tabs={chapterTabs || []}
+        chapterId={chapter.id}
+        isLocked={isLocked}
+      />
+
       {/* Chapter Body */}
-      <div className="px-4 sm:px-8 lg:px-12 py-6 sm:py-10 lg:py-12 relative">
+      <div className="px-4 sm:px-8 lg:px-12 py-6 sm:py-10 lg:py-12 relative pr-20 sm:pr-28">
         
         {/* Decorative page texture */}
         <div className="absolute inset-0 opacity-[0.02] pointer-events-none"
