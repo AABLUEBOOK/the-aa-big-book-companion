@@ -3,7 +3,6 @@ import { cn } from "@/lib/utils";
 import { CHAPTER_CONTENT } from "./allChapterContent";
 import AudioPlayer from "./AudioPlayer";
 import BookmarkButton from "./BookmarkButton";
-import VerticalTabsLeft from "./VerticalTabsLeft";
 
 export default function ChapterContent({ chapter, sectionRoute }) {
 
@@ -42,9 +41,6 @@ export default function ChapterContent({ chapter, sectionRoute }) {
         <AudioPlayer content={chapterData} />
       </div>
 
-      {/* Left Side Tabs */}
-      <VerticalTabsLeft tabs={chapterData.tabs} />
-
       {/* Chapter Body */}
       <div className="px-4 sm:px-8 lg:px-12 py-6 sm:py-10 lg:py-12 relative pr-20 sm:pr-28">
         
@@ -57,65 +53,15 @@ export default function ChapterContent({ chapter, sectionRoute }) {
 
         <div className="prose prose-sm sm:prose-base lg:prose-lg max-w-none relative select-text">
           <div className="font-serif text-[#FFFFFD] leading-relaxed text-base sm:text-lg space-y-4 sm:space-y-6">
-            {chapterData.paragraphs?.map((para, idx) => {
-              const baseClasses = "mb-6 first:mt-0 leading-relaxed";
-              const highlightClasses = {
-                'yellow': 'bg-yellow-400/30 px-2 py-1 rounded',
-                'pink': 'bg-pink-400/30 px-2 py-1 rounded',
-                'blue': 'bg-blue-400/30 px-2 py-1 rounded',
-                'purple': 'bg-purple-400/30 px-2 py-1 rounded',
-                'orange': 'bg-orange-400/30 px-2 py-1 rounded',
-                'green': 'bg-green-400/30 px-2 py-1 rounded'
-              };
-
-              return (
-                <p 
-                  key={idx} 
-                  className={cn(
-                    baseClasses,
-                    para.highlight && highlightClasses[para.highlight],
-                    para.underline && "border-b-2 border-purple-400 pb-1"
-                  )}
-                >
-                  {para.text}
-                </p>
-              );
-            })}
+            {chapterData.paragraphs?.map((para, idx) => (
+              <p key={idx} className="mb-6 first:mt-0 leading-relaxed">
+                {para.text}
+              </p>
+            ))}
           </div>
         </div>
 
-        {/* Sidebar Annotations */}
-        <div className="hidden xl:block absolute -right-64 top-24 w-56 space-y-4">
-          {chapterData.highlights?.filter(h => h.type === 'sidebar').map((highlight, idx) => {
-            const colorClasses = {
-              yellow: 'bg-[#25DCE6]/10 border-[#25DCE6]/40 text-[#25DCE6]',
-              pink: 'bg-pink-500/10 border-pink-400/40 text-pink-400'
-            };
-            const bgClass = highlight.color ? colorClasses[highlight.color] : 'bg-[#25DCE6]/10 border-[#25DCE6]/40 text-[#25DCE6]';
-            
-            return (
-              <div
-                key={idx}
-                className={`${bgClass} border-2 rounded-lg px-4 py-3 shadow-lg hover:shadow-xl transition-all backdrop-blur-sm`}
-                style={{ transform: `rotate(${idx % 2 === 0 ? '1deg' : '-1deg'})` }}
-              >
-                <div className="text-xs font-bold uppercase tracking-wider text-center leading-tight">
-                  {highlight.text}
-                </div>
-                {highlight.subtext && (
-                  <div className="text-xs text-[#FFFFFD]/70 text-center mt-1">
-                    {highlight.subtext}
-                  </div>
-                )}
-                {highlight.page && (
-                  <div className="text-xs opacity-80 text-center mt-1 font-mono">
-                    P. {highlight.page}
-                  </div>
-                )}
-              </div>
-            );
-          })}
-        </div>
+
       </div>
     </div>
   );
