@@ -53,11 +53,27 @@ export default function ChapterContent({ chapter, sectionRoute }) {
 
         <div className="prose prose-sm sm:prose-base lg:prose-lg max-w-none relative select-text">
           <div className="font-serif text-[#FFFFFD] leading-relaxed text-base sm:text-lg space-y-4 sm:space-y-6">
-            {chapterData.paragraphs?.map((para, idx) => (
-              <p key={idx} className="mb-6 first:mt-0 leading-relaxed">
-                {para.text}
-              </p>
-            ))}
+            {chapterData.paragraphs?.map((para, idx) => {
+              const highlightClasses = {
+                'yellow': 'bg-yellow-400/30 px-2 py-1 rounded',
+                'pink': 'bg-pink-400/40 px-2 py-1 rounded',
+                'blue': 'bg-blue-400/30 px-2 py-1 rounded',
+                'orange': 'bg-orange-400/30 px-2 py-1 rounded',
+                'green': 'bg-green-400/30 px-2 py-1 rounded'
+              };
+
+              return (
+                <p 
+                  key={idx} 
+                  className={cn(
+                    "mb-6 first:mt-0 leading-relaxed",
+                    para.highlight && highlightClasses[para.highlight]
+                  )}
+                >
+                  {para.text}
+                </p>
+              );
+            })}
           </div>
         </div>
 
