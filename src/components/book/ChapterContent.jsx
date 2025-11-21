@@ -55,13 +55,31 @@ export default function ChapterContent({ chapter, sectionRoute }) {
           <div className="font-serif text-[#FFFFFD] leading-relaxed text-base sm:text-lg space-y-4 sm:space-y-6">
             {chapterData.paragraphs?.map((para, idx) => {
               const highlightClasses = {
-                'yellow': 'bg-yellow-400/30 px-2 py-1 rounded',
-                'pink': 'bg-pink-400/40 px-2 py-1 rounded',
-                'blue': 'bg-blue-400/30 px-2 py-1 rounded',
-                'orange': 'bg-orange-400/30 px-2 py-1 rounded',
-                'green': 'bg-green-400/30 px-2 py-1 rounded'
+                'yellow': 'bg-yellow-400/30 px-1 py-0.5 rounded',
+                'pink': 'bg-pink-400/40 px-1 py-0.5 rounded',
+                'blue': 'bg-blue-400/30 px-1 py-0.5 rounded',
+                'orange': 'bg-orange-400/30 px-1 py-0.5 rounded',
+                'green': 'bg-green-400/30 px-1 py-0.5 rounded'
               };
 
+              // Handle inline highlights
+              if (para.segments) {
+                return (
+                  <p key={idx} className="mb-6 first:mt-0 leading-relaxed">
+                    {para.segments.map((segment, segIdx) => (
+                      segment.highlight ? (
+                        <span key={segIdx} className={highlightClasses[segment.highlight]}>
+                          {segment.text}
+                        </span>
+                      ) : (
+                        <span key={segIdx}>{segment.text}</span>
+                      )
+                    ))}
+                  </p>
+                );
+              }
+
+              // Handle paragraph-level highlights (legacy)
               return (
                 <p 
                   key={idx} 

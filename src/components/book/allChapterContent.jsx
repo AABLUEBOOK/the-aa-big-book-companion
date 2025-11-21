@@ -22,8 +22,20 @@ export const CHAPTER_CONTENT = {
       { text: 'Because this book has become the basic text for our Society and has helped such large numbers of alcoholic men and women to recovery, there exists strong sentiment against any radical changes being made in it. Therefore, the first portion of this volume, describing the A.A. recovery program, has been left largely untouched in the course of revisions made for the second, third, and fourth editions.' },
       { text: 'The second edition added the appendices, the Twelve Traditions, and the directions for getting in touch with A.A. The chief change was in the section of personal stories, which was expanded to reflect the Fellowship\'s growth.', highlight: 'pink' },
       { text: 'In the third edition, Part I was left unchanged. Nine of the stories in Part II were carried over from the second edition; eight new stories were added. In Part III, eight stories were retained; five new ones were added.' },
-      { text: 'This fourth edition includes the Twelve Concepts for World Service and revises the three sections of personal stories. New stories have been added across all parts to reflect current membership.', highlight: 'pink' },
-      { text: 'All changes made over the years in the Big Book have had the same purpose: to represent the current membership of Alcoholics Anonymous more accurately, and thereby to reach more alcoholics. If you have a drinking problem, we hope that you may pause in reading one of the forty-two personal stories and think: "Yes, that happened to me"; or, more important, "Yes, I\'ve felt like that"; or, most important, "Yes, I believe this program can work for me too."', highlight: 'pink' }
+      { 
+        segments: [
+          { text: 'This fourth edition includes the Twelve Concepts for World Service and revises the three sections of ' },
+          { text: 'personal stories', highlight: 'pink' },
+          { text: '. New stories have been added across all parts to reflect current membership.' }
+        ]
+      },
+      { 
+        segments: [
+          { text: 'All changes made over the years in the Big Book have had the same purpose: to represent the current membership of Alcoholics Anonymous more accurately, and thereby to reach more alcoholics. If you have a drinking problem, we hope that you may pause in reading one of the forty-two ' },
+          { text: 'personal stories', highlight: 'pink' },
+          { text: ' and think: "Yes, that happened to me"; or, more important, "Yes, I\'ve felt like that"; or, most important, "Yes, I believe this program can work for me too."' }
+        ]
+      }
     ]
   },
 
@@ -32,7 +44,17 @@ export const CHAPTER_CONTENT = {
     tabs: [],
     paragraphs: [
       { text: 'FOREWORD TO FIRST EDITION. This is the Foreword as it appeared in the first printing of the first edition in 1939.' },
-      { text: 'We, of Alcoholics Anonymous, are more than one hundred men and women who have recovered from a seemingly hopeless state of mind and body. To show other alcoholics precisely how we have recovered is the main purpose of this book.', highlight: 'pink' },
+      { 
+        segments: [
+          { text: 'We, of Alcoholics Anonymous, are more than one hundred men and women who have ' },
+          { text: 'recovered', highlight: 'pink' },
+          { text: ' from a seemingly hopeless state of mind and body. To show other alcoholics precisely how we have ' },
+          { text: 'recovered', highlight: 'pink' },
+          { text: ' is the main ' },
+          { text: 'purpose of this book', highlight: 'pink' },
+          { text: '.' }
+        ]
+      },
       { text: 'For them, we hope these pages will prove so convincing that no further authentication will be necessary. We think this account of our experiences will help everyone to better understand the alcoholic.' },
       { text: 'It is important that we remain anonymous because we are too few at present to handle the overwhelming number of personal appeals which may result from this publication.' },
       { text: 'When writing or speaking publicly about alcoholism, we urge each of our Fellowship to omit his personal name, designating himself instead as a member of Alcoholics Anonymous.' },
@@ -47,7 +69,13 @@ export const CHAPTER_CONTENT = {
     paragraphs: [
       { text: 'FOREWORD TO SECOND EDITION. Figures given in this foreword describe the Fellowship as it was in 1955.' },
       { text: 'Since the original Foreword to this book was written in 1939, a wholesale miracle has taken place. Our earliest printing voiced the hope that every alcoholic who journeys will find the Fellowship of Alcoholics Anonymous at his destination.' },
-      { text: 'Sixteen years have elapsed between our first printing of this book and the presentation in 1955 of our second edition. In that brief space, Alcoholics Anonymous has mushroomed into nearly 6,000 groups whose membership is far above 150,000 recovered alcoholics.', highlight: 'pink' },
+      { 
+        segments: [
+          { text: 'Sixteen years have elapsed between our first printing of this book and the presentation in 1955 of our second edition. In that brief space, Alcoholics Anonymous has mushroomed into nearly 6,000 groups whose membership is far above 150,000 ' },
+          { text: 'recovered', highlight: 'pink' },
+          { text: ' alcoholics.' }
+        ]
+      },
       { text: 'The spark that was to flare into the first A.A. group was struck at Akron, Ohio, in June 1935, during a talk between a New York stockbroker and an Akron physician.' },
       { text: 'With the appearance of the new book a great deal began to happen. Dr. Harry Emerson Fosdick reviewed it with approval. By the end of 1939 it was estimated that 800 alcoholics were on their way to recovery.' },
       { text: 'In the spring of 1940, John D. Rockefeller, Jr. gave a dinner for many of his friends to which he invited A.A. members to tell their stories. By the close of 1941, A.A. numbered 8,000 members. A.A. had become a national institution.' },

@@ -70,8 +70,11 @@ export const doctorsOpinionContent = {
       text: `Of course an alcoholic ought to be freed from his physical craving for liquor, and this often requires a definite hospital procedure, before psychological measures can be of maximum benefit.`
     },
     {
-      text: `We believe, and so suggested a few years ago, that the action of alcohol on these chronic alcoholics is a manifestation of an allergy; that the phenomenon of craving is limited to this class and never occurs in the average temperate drinker. These allergic types can never safely use alcohol in any form at all; and once having formed the habit and found they cannot break it, once having lost their self-confidence, their reliance upon things human, their problems pile up on them and become astonishingly difficult to solve.`,
-      highlight: 'pink'
+      segments: [
+        { text: `We believe, and so suggested a few years ago, that the action of alcohol on these chronic alcoholics is a ` },
+        { text: `manifestation of an allergy`, highlight: 'pink' },
+        { text: `; that the phenomenon of craving is limited to this class and never occurs in the average temperate drinker. These allergic types can never safely use alcohol in any form at all; and once having formed the habit and found they cannot break it, once having lost their self-confidence, their reliance upon things human, their problems pile up on them and become astonishingly difficult to solve.` }
+      ]
     },
     {
       text: `Frothy emotional appeal seldom suffices. The message which can interest and hold these alcoholic people must have depth and weight. In nearly all cases, their ideals must be grounded in a power greater than themselves, if they are to re-create their lives.`
