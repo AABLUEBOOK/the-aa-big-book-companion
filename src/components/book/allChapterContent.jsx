@@ -15,9 +15,8 @@ import { appendicesContent } from "./content/appendicesContent";
 
 export const CHAPTER_CONTENT = {
   "preface": {
-    highlights: [
-      { text: "BASIC TEXT", type: "sidebar", color: "pink" }
-    ],
+    highlights: [],
+    tabs: [],
     paragraphs: [
       { text: 'This is the fourth edition of the book "Alcoholics Anonymous." The first edition appeared in April 1939, and in the following sixteen years, more than 300,000 copies went into circulation. The second edition, published in 1955, reached a total of more than 1,150,500 copies. The third edition, which came off press in 1976, achieved a circulation of approximately 19,550,000 in all formats.' },
       { text: 'Because this book has become the basic text for our Society and has helped such large numbers of alcoholic men and women to recovery, there exists strong sentiment against any radical changes being made in it. Therefore, the first portion of this volume, describing the A.A. recovery program, has been left largely untouched in the course of revisions made for the second, third, and fourth editions.' },
@@ -29,9 +28,8 @@ export const CHAPTER_CONTENT = {
   },
 
   "foreword-first": {
-    highlights: [
-      { text: "PURPOSE OF THIS BOOK", type: "sidebar", color: "pink" }
-    ],
+    highlights: [],
+    tabs: [],
     paragraphs: [
       { text: 'FOREWORD TO FIRST EDITION. This is the Foreword as it appeared in the first printing of the first edition in 1939.' },
       { text: 'We, of Alcoholics Anonymous, are more than one hundred men and women who have recovered from a seemingly hopeless state of mind and body. To show other alcoholics precisely how we have recovered is the main purpose of this book.' },
@@ -45,8 +43,9 @@ export const CHAPTER_CONTENT = {
 
   "foreword-second": {
     highlights: [],
+    tabs: [],
     paragraphs: [
-      { text: 'FOREWORD TO SECOND EDITION. Figures given in this foreword describe the Fellowship as it was in 1955.', underline: true },
+      { text: 'FOREWORD TO SECOND EDITION. Figures given in this foreword describe the Fellowship as it was in 1955.' },
       { text: 'Since the original Foreword to this book was written in 1939, a wholesale miracle has taken place. Our earliest printing voiced the hope that every alcoholic who journeys will find the Fellowship of Alcoholics Anonymous at his destination.' },
       { text: 'Sixteen years have elapsed between our first printing of this book and the presentation in 1955 of our second edition. In that brief space, Alcoholics Anonymous has mushroomed into nearly 6,000 groups whose membership is far above 150,000 recovered alcoholics.' },
       { text: 'The spark that was to flare into the first A.A. group was struck at Akron, Ohio, in June 1935, during a talk between a New York stockbroker and an Akron physician.' },
@@ -58,6 +57,7 @@ export const CHAPTER_CONTENT = {
 
   "foreword-third": {
     highlights: [],
+    tabs: [],
     paragraphs: [
       { text: 'By March 1976, when this edition went to the printer, the total worldwide membership of Alcoholics Anonymous was conservatively estimated at more than 1,000,000, with almost 28,000 groups meeting in over 90 countries.' },
       { text: 'Surveys of groups in the United States and Canada indicate that A.A. is reaching out to more and more people. Women now make up more than one-fourth of the membership.' },
@@ -68,6 +68,7 @@ export const CHAPTER_CONTENT = {
 
   "foreword-fourth": {
     highlights: [],
+    tabs: [],
     paragraphs: [
       { text: 'This fourth edition came off press in November 2001, at the start of a new millennium. Since the third edition was published in 1976, worldwide membership of A.A. has just about doubled, to an estimated two million or more.' },
       { text: 'Literature has played a major role in A.A. growth, and a striking phenomenon of the past quarter-century has been the explosion of translations of our basic literature into many languages and dialects.' },
@@ -76,10 +77,8 @@ export const CHAPTER_CONTENT = {
   },
 
   "doctors-opinion": {
-    highlights: [
-      { text: "MEDICAL VIEW", type: "sidebar" },
-      { text: "ALLERGY", type: "sidebar", subtext: "PHYSICAL" }
-    ],
+    highlights: [],
+    tabs: [],
     paragraphs: [
       { text: 'We of Alcoholics Anonymous believe that the reader will be interested in the medical estimate of the plan of recovery described in this book.' },
       { text: 'A well-known doctor, chief physician at a nationally prominent hospital specializing in alcoholic and drug addiction, gave Alcoholics Anonymous this letter:' },
@@ -100,10 +99,8 @@ export const CHAPTER_CONTENT = {
   "into-action": intoActionContent,
 
   "working-with-others": {
-    highlights: [
-      { text: "CHAPTER 1", type: "sidebar" },
-      { text: "RECOVERED", type: "sidebar", color: "yellow" }
-    ],
+    highlights: [],
+    tabs: [],
     paragraphs: [
       { text: 'War fever ran high in the New England town to which we new, young officers from Plattsburg were assigned, and we were flattered when the first citizens took us to their homes, making us feel heroic. I was part of life at last, and in the midst of the excitement I discovered liquor.' },
       { text: 'We landed in England. I visited Winchester Cathedral. Much moved, I wandered outside. My attention was caught by a doggerel on an old tombstone. Ominous warning—which I failed to heed.' },
@@ -142,9 +139,8 @@ export const CHAPTER_CONTENT = {
   },
 
   "there-is-solution": {
-    highlights: [
-      { text: "CHAPTER 2", type: "sidebar" }
-    ],
+    highlights: [],
+    tabs: [],
     paragraphs: [
       { text: "We, of ALCOHOLICS ANONYMOUS, know thousands of men and women who were once just as hopeless as Bill. Nearly all have recovered. They have solved the drink problem." },
       { text: "We are average Americans. All sections of this country and many of its occupations are represented, as well as many political, economic, social, and religious backgrounds. We are people who normally would not mix. But there exists among us a fellowship, a friendliness, and an understanding which is indescribably wonderful." },
@@ -172,9 +168,8 @@ export const CHAPTER_CONTENT = {
   },
 
   "more-about-alcoholism": {
-    highlights: [
-      { text: "CHAPTER 3", type: "sidebar" }
-    ],
+    highlights: [],
+    tabs: [],
     paragraphs: [
       { text: "Most of us have been unwilling to admit we were real alcoholics. No person likes to think he is bodily and mentally different from his fellows. Therefore, it is not surprising that our drinking careers have been characterized by countless vain attempts to prove we could drink like other people." },
       { text: "The idea that somehow, someday he will control and enjoy his drinking is the great obsession of every abnormal drinker. The persistence of this illusion is astonishing. Many pursue it into the gates of insanity or death." },
@@ -206,13 +201,11 @@ export const CHAPTER_CONTENT = {
   },
 
   "we-agnostics": {
-    highlights: [
-      { text: "CHAPTER 4", type: "sidebar" },
-      { text: "HIGHER POWER", type: "sidebar", subtext: "YOUR CONCEPTION" }
-    ],
+    highlights: [],
+    tabs: [],
     paragraphs: [
       { text: "In the preceding chapters you have learned something of alcoholism. We hope we have made clear the distinction between the alcoholic and the non-alcoholic. If, when you honestly want to, you find you cannot quit entirely, or if when drinking, you have little control over the amount you take, you are probably alcoholic." },
-      { text: "If that be the case, you may be suffering from an illness which only a spiritual experience will conquer. To one who feels he is an atheist or agnostic such an experience seems impossible, but to continue as he is means disaster, especially if he is an alcoholic of the hopeless variety.", highlight: "blue" },
+      { text: "If that be the case, you may be suffering from an illness which only a spiritual experience will conquer. To one who feels he is an atheist or agnostic such an experience seems impossible, but to continue as he is means disaster, especially if he is an alcoholic of the hopeless variety." },
       { text: "To be doomed to an alcoholic death or to live on a spiritual basis are not always easy alternatives to face. But it isn't so difficult. About half our original fellowship were of exactly that type. At first some of us tried to avoid the issue, hoping against hope we were not true alcoholics. But after a while we had to face the fact that we must find a spiritual basis of life—or else." },
       { text: "If a mere code of morals or a better philosophy of life were sufficient to overcome alcoholism, many of us would have recovered long ago. But we found that such codes and philosophies did not save us, no matter how much we tried. Our human resources, as marshalled by the will, were not sufficient; they failed utterly.", highlight: "yellow" },
       { text: "Lack of power, that was our dilemma. We had to find a power by which we could live, and it had to be a Power greater than ourselves. Obviously. But where and how were we to find this Power? Well, that's exactly what this book is about. Its main object is to enable you to find a Power greater than yourself which will solve your problem.", highlight: "blue" },

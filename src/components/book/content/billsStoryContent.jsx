@@ -1,4 +1,3 @@
-
 export const billsStoryContent = {
   paragraphs: [
     { text: "War fever ran high in the New England town to which we new, young officers from Plattsburg were assigned, and we were flattered when the first citizens took us to their homes, making us feel heroic. Here was love, applause, war; moments sublime with intervals hilarious. I was part of life at last, and in the midst of the excitement I discovered liquor. I forgot the strong warnings and the prejudices of my people concerning drink. In time we sailed for \"Over There.\" I was very lonely and again turned to alcohol." },

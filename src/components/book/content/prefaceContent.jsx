@@ -1,9 +1,7 @@
+
 export const prefaceContent = {
   highlights: [],
-  tabs: [
-    { label: "BASIC\nTEXT", color: "yellow", position: 8 },
-    { label: "PERSONAL\nSTORIES", color: "yellow", position: 65 }
-  ],
+  tabs: [],
   paragraphs: [
     {
       text: `THIS IS the fourth edition of the book "Alcoholics Anonymous." The first edition appeared in April 1939, and in the following sixteen years, more than 300,000 copies went into circulation. The second edition, published in 1955, reached a total of more than 1,150,500 copies. The third edition, which came off press in 1976, achieved a circulation of approximately 19,550,000 in all formats.`

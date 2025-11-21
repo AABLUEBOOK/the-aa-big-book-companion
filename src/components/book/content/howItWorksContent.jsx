@@ -1,4 +1,3 @@
-
 export const howItWorksContent = {
   paragraphs: [
     { text: "Rarely have we seen a person fail who has thoroughly followed our path. Those who do not recover are people who cannot or will not completely give themselves to this simple program, usually men and women who are constitutionally incapable of being honest with themselves." },
