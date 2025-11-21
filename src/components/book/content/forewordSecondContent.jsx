@@ -51,7 +51,7 @@ export const forewordSecondContent = {
     },
     {
       text: `Alcoholics Anonymous is not a religious organization. Neither does A.A. take any particular medical point of view, though we cooperate widely with the men of medicine as well as with the men of religion.`,
-      highlight: 'yellow'
+      highlight: 'pink'
     },
     {
       text: `Alcohol being no respecter of persons, we are an accurate cross section of America, and in distant lands, the same democratic evening-up process is now going on. By personal religious affiliation, we include Catholics, Protestants, Jews, Hindus, and a sprinkling of Moslems and Buddhists. More than 15% of us are women.`
