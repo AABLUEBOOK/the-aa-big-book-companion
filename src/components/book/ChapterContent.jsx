@@ -3,6 +3,7 @@ import { cn } from "@/lib/utils";
 import { CHAPTER_CONTENT } from "./allChapterContent";
 import AudioPlayer from "./AudioPlayer";
 import BookmarkButton from "./BookmarkButton";
+import VerticalTabsLeft from "./VerticalTabsLeft";
 
 export default function ChapterContent({ chapter, sectionRoute }) {
 
@@ -40,6 +41,9 @@ export default function ChapterContent({ chapter, sectionRoute }) {
       <div className="px-4 sm:px-8 lg:px-12 pt-6">
         <AudioPlayer content={chapterData} />
       </div>
+
+      {/* Left Side Tabs */}
+      <VerticalTabsLeft tabs={chapterData.tabs} />
 
       {/* Chapter Body */}
       <div className="px-4 sm:px-8 lg:px-12 py-6 sm:py-10 lg:py-12 relative pr-20 sm:pr-28">

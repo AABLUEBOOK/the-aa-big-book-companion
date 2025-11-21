@@ -1,12 +1,12 @@
 export const prefaceContent = {
-  highlights: [
-    { text: "BASIC TEXT", type: "sidebar" },
-    { text: "PERSONAL STORIES", type: "sidebar", subtext: "3 QUESTIONS" }
+  highlights: [],
+  tabs: [
+    { label: "BASIC\nTEXT", color: "yellow", position: 8 },
+    { label: "PERSONAL\nSTORIES", color: "yellow", position: 65 }
   ],
   paragraphs: [
     {
-      text: `THIS IS the fourth edition of the book "Alcoholics Anonymous." The first edition appeared in April 1939, and in the following sixteen years, more than 300,000 copies went into circulation. The second edition, published in 1955, reached a total of more than 1,150,500 copies. The third edition, which came off press in 1976, achieved a circulation of approximately 19,550,000 in all formats.`,
-      highlight: "basic-text"
+      text: `THIS IS the fourth edition of the book "Alcoholics Anonymous." The first edition appeared in April 1939, and in the following sixteen years, more than 300,000 copies went into circulation. The second edition, published in 1955, reached a total of more than 1,150,500 copies. The third edition, which came off press in 1976, achieved a circulation of approximately 19,550,000 in all formats.`
     },
     {
       text: `Because this book has become the basic text for our Society and has helped such large numbers of alcoholic men and women to recovery, there exists strong sentiment against any radical change being made in it. Therefore, the first portion of this volume, describing the A.A. recovery program, has been left largely untouched in the course of revisions made for the second, third, and fourth editions. The section called "The Doctor's Opinion" has been kept intact, just as it was originally written in 1939 by the late Dr. William D. Silkworth, our Society's great medical benefactor.`
@@ -24,8 +24,7 @@ export const prefaceContent = {
       text: `All changes made over the years in the Big Book (A.A. members' fond nickname for this volume) have had the same purpose: to represent the current membership of Alcoholics Anonymous more accurately, and thereby to reach more alcoholics.`
     },
     {
-      text: `If you have a drinking problem, we hope that you may pause in reading one of the forty-two personal stories and think: "Yes, that happened to me"; or, more important, "Yes, I've felt like that"; or, most important, "Yes, I believe this program can work for me too."`,
-      highlight: "yellow"
+      text: `If you have a drinking problem, we hope that you may pause in reading one of the forty-two personal stories and think: "Yes, that happened to me"; or, more important, "Yes, I've felt like that"; or, most important, "Yes, I believe this program can work for me too."`
     }
   ]
 };
