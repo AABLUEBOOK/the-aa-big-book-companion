@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, BookOpen } from "lucide-react";
+import { ArrowLeft, BookOpen, BookmarkCheck } from "lucide-react";
 import ChapterContent from "../components/book/ChapterContent";
 import BookNavigation, { MobileBookNavigation } from "../components/navigation/BookNavigation";
+import BookmarksList from "../components/book/BookmarksList";
 
 function createPageUrl(pageName) {
   return `/${pageName}`;
@@ -111,6 +112,7 @@ const CHAPTERS = [
 export default function Section1() {
   const [currentChapterId, setCurrentChapterId] = useState(CHAPTERS[0]?.id || "");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [bookmarksOpen, setBookmarksOpen] = useState(false);
 
   // Track which chapter is in view
   useEffect(() => {
@@ -172,11 +174,30 @@ export default function Section1() {
                 </span>
               </div>
 
+              <Button
+                onClick={() => setBookmarksOpen(!bookmarksOpen)}
+                variant="ghost"
+                size="sm"
+                className="text-[#25DCE6] hover:bg-[#25DCE6]/10 h-8 w-8 sm:h-9 sm:w-9 p-0"
+              >
+                <BookmarkCheck className="w-4 h-4 sm:w-5 sm:h-5" />
+              </Button>
+
               <MobileBookNavigation />
             </div>
           </div>
         </div>
       </div>
+
+      {/* Bookmarks Panel */}
+      {bookmarksOpen && (
+        <div className="fixed inset-0 z-40">
+          <div className="absolute inset-0 bg-black/50" onClick={() => setBookmarksOpen(false)} />
+          <div className="absolute right-0 top-0 h-full w-full sm:w-96 bg-[#2A3440] shadow-2xl overflow-y-auto p-6">
+            <BookmarksList onClose={() => setBookmarksOpen(false)} />
+          </div>
+        </div>
+      )}
 
       <div className="w-full px-3 sm:px-4 lg:px-6 xl:px-8 py-4 sm:py-6 lg:py-8 max-w-[1600px] mx-auto">
         <div className="flex gap-4 lg:gap-8">
