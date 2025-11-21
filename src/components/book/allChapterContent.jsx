@@ -321,29 +321,8 @@ export const CHAPTER_CONTENT = {
     ]
   },
 
-  "to-employers": {
-    highlights: [
-      { text: "CHAPTER 10", type: "sidebar" }
-    ],
-    paragraphs: [
-      { text: 'No man should be fired just because he is alcoholic. If he wants to stop, he should be afforded a real chance. If he cannot or does not want to stop, he should be discharged.', highlight: 'yellow' },
-      { text: 'Can you discard the feeling that you are dealing only with habit, with stubbornness, or a weak will? The employee is a gravely ill person.', highlight: 'yellow' },
-      { text: 'Your understanding treatment of their cases will pay dividends. The right kind of man, the kind who recovers, will work like the devil and thank you to his dying day.', highlight: 'blue' }
-    ]
-  },
-
-  "vision-for-you": {
-    highlights: [
-      { text: "CHAPTER 11", type: "sidebar" }
-    ],
-    paragraphs: [
-      { text: 'For most normal folks, drinking means conviviality, companionship and colorful imagination. But not so with us in those last days of heavy drinking. The old pleasures were gone.', highlight: 'yellow' },
-      { text: 'You are going to meet these new friends in your own community. Near you, alcoholics are dying helplessly like people in a sinking ship. Among them you will make lifelong friends.', highlight: 'blue' },
-      { text: 'You will learn the full meaning of "Love thy neighbor as thyself."', highlight: 'blue' },
-      { text: 'Our hope is that when this chip of a book is launched on the world tide of alcoholism, defeated drinkers will seize upon it, to follow its suggestions. Many, we are sure, will rise to their feet and march on.', highlight: 'blue' },
-      { text: 'Abandon yourself to God as you understand God. Admit your faults to Him and to your fellows. Clear away the wreckage of your past. Give freely of what you find and join us. We shall be with you in the Fellowship of the Spirit.', highlight: 'blue' }
-    ]
-  },
+  "to-employers": toEmployersContent,
+  "vision-for-you": visionForYouContent,
 
   "tightrope": {
     highlights: [],
