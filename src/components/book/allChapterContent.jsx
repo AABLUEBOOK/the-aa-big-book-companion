@@ -1,4 +1,11 @@
 // Complete Big Book Content - populated from the full text
+import { billsStoryContent } from "./content/billsStoryContent";
+import { thereIsSolutionContent } from "./content/thereIsSolutionContent";
+import { moreAboutAlcoholismContent } from "./content/moreAboutAlcoholismContent";
+import { weAgnosticsContent } from "./content/weAgnosticsContent";
+import { howItWorksContent } from "./content/howItWorksContent";
+import { intoActionContent } from "./content/intoActionContent";
+
 export const CHAPTER_CONTENT = {
   "preface": {
     highlights: [
@@ -78,7 +85,14 @@ export const CHAPTER_CONTENT = {
     ]
   },
 
-  "bills-story": {
+  "bills-story": billsStoryContent,
+  "there-is-solution": thereIsSolutionContent,
+  "more-about-alcoholism": moreAboutAlcoholismContent,
+  "we-agnostics": weAgnosticsContent,
+  "how-it-works": howItWorksContent,
+  "into-action": intoActionContent,
+
+  "working-with-others": {
     highlights: [
       { text: "CHAPTER 1", type: "sidebar" },
       { text: "RECOVERED", type: "sidebar", color: "yellow" }
