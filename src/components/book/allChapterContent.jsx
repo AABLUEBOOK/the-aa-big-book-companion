@@ -522,6 +522,7 @@ export const CHAPTER_CONTENT = {
 
   "a-vision-of-recovery": {
     highlights: [],
+    tabs: [],
     paragraphs: [
       { text: 'I thought I was different because I\'m an Indian. I heard that statement from many Natives at my early A.A. meetings. I would only shrug and say: You think you\'re different, what about me? I\'m a red-headed Indian.' },
       { text: 'I grew up on a reservation in Canada. As a young fellow, I was a proud Mic-Mac Indian. My family had a reputation: They were hard drinkers, violent and tough.' },
@@ -537,13 +538,14 @@ export const CHAPTER_CONTENT = {
       { text: 'I can certainly identify with our co-founder Bill W. when he says on page 4 of the Big Book: "the old fierce determination to win came back." I would take a drink, and then I knew everything was going to be all right.' },
       { text: 'One evening during a party at my home, an argument led to fighting. One of my brothers stabbed me in the back with a knife, and I fell to the floor unconscious.' },
       { text: 'I can honestly say that nothing worked for me until I joined Alcoholics Anonymous. Eventually I ended up in a treatment center, and after a twenty-eight-day program, I began attending A.A. meetings on a regular basis.' },
-      { text: 'After three months in A.A., I returned home one evening to hear the music of a party next door. I was full of fear. I called my sponsor, but there was no answer. I went into my bedroom and said: "Well, Buddy, I guess there\'s just you and me." That feeble request to God worked.', highlight: 'blue' },
-      { text: 'Over the next few months I worked on Step One. I listened to speakers and began a Big Book study. For a guy who has spent years in jails, hospitals, psychiatric wards, there was only one answer—Alcoholics Anonymous and the Twelve Steps.', highlight: 'blue' }
+      { text: 'After three months in A.A., I returned home one evening to hear the music of a party next door. I was full of fear. I called my sponsor, but there was no answer. I went into my bedroom and said: "Well, Buddy, I guess there\'s just you and me." That feeble request to God worked.' },
+      { text: 'Over the next few months I worked on Step One. I listened to speakers and began a Big Book study. For a guy who has spent years in jails, hospitals, psychiatric wards, there was only one answer—Alcoholics Anonymous and the Twelve Steps.' }
     ]
   },
 
   "gutter-bravado": {
     highlights: [],
+    tabs: [],
     paragraphs: [
       { text: 'I was born in a major midwestern city at the tail end of the baby boom. My parents were not well-to-do, but they were employed and pursuing the American dream.' },
       { text: 'Growing up, my big brother and I went to church on Sundays and attended parochial schools. I was a smart but mischievous kid, and at some point I decided it was easier to lie than to suffer the consequences.' },
@@ -565,14 +567,15 @@ export const CHAPTER_CONTENT = {
       { text: 'However, there was one man on the staff who seemed different. He mentioned being a member of Alcoholics Anonymous. He may have saved my life just by being there, and to this day he doesn\'t even know it.' },
       { text: 'I walked out of there on a sunny afternoon. I intended to go to a meeting that night. Soon my old instincts began to take over. I sat down at the bar. Couldn\'t I make it just one day without drinking?' },
       { text: 'I realized that yes, I probably could make it just one day. Besides, I was going to a meeting that night. I could drink tomorrow if I wanted to—and that\'s just what I planned to do.' },
-      { text: 'At my first meeting that night the people made me welcome. I met others like me and it felt good. The tomorrows came and went, and to this day, I still haven\'t found it necessary to take another drink.', highlight: 'blue' },
-      { text: 'The meetings gave me what my sponsor likes to call one of the most important words in the Big Book: A.A. put a "we" in my life. I no longer had to be alone.', highlight: 'blue' },
-      { text: 'I took to A.A. immediately and believed like a child that if I leveled my pride enough to thoroughly follow their path, I\'d get what they had. And it worked.', highlight: 'blue' }
+      { text: 'At my first meeting that night the people made me welcome. I met others like me and it felt good. The tomorrows came and went, and to this day, I still haven\'t found it necessary to take another drink.' },
+      { text: 'The meetings gave me what my sponsor likes to call one of the most important words in the Big Book: A.A. put a "we" in my life. I no longer had to be alone.' },
+      { text: 'I took to A.A. immediately and believed like a child that if I leveled my pride enough to thoroughly follow their path, I\'d get what they had. And it worked.' }
     ]
   },
 
   "empty-on-the-inside": {
     highlights: [],
+    tabs: [],
     paragraphs: [
       { text: 'I spent my life "acting as if"—either acting as if I knew or acting as if I didn\'t care. I always felt as though everyone else had been given the directions to life and I had been somewhere else when God was handing them out.' },
       { text: 'I don\'t know where I learned the attitude that it wasn\'t all right not to know, but it was a certainty in my life, and it almost killed me.' },
@@ -594,17 +597,18 @@ export const CHAPTER_CONTENT = {
       { text: 'By the end of two weeks of drinking, I was out of money. I had less than one dollar. If there had been one more dollar, I might not be sober today. By the grace of God, I was out of plans.' },
       { text: 'Mom deposited me at the local detox center. Detox told me I already knew everything treatment was going to teach me. I had never expected to live to see thirty. I knew I would live, and that was far more terrifying. I had surrendered.' },
       { text: 'The first night out of detox, a woman spoke about not wanting to work or care for her daughter, she just wanted to drink. That was me! She became my first sponsor.' },
-      { text: 'The second night I sat in the "new guy chair." When it came time to hold hands and pray, I had no hand to hold. I felt my hand being taken—someone had taken the time to be sure that the circle was complete.', highlight: 'blue' },
+      { text: 'The second night I sat in the "new guy chair." When it came time to hold hands and pray, I had no hand to hold. I felt my hand being taken—someone had taken the time to be sure that the circle was complete.' },
       { text: 'The local clubhouse had a noon Big Book meeting every day, and I went, every day. I was not one of those people who walked into meetings and said, "Thank God, I\'m home." I just didn\'t want what I had anymore.' },
-      { text: 'When I was two weeks sober, a man\'s nine-year-old daughter was killed by a drunk driver. Three days later he was at a meeting saying maybe one alcoholic would get sober because of it. I realized I could call my children and tell them I loved them. My life changed that day.', highlight: 'blue' },
+      { text: 'When I was two weeks sober, a man\'s nine-year-old daughter was killed by a drunk driver. Three days later he was at a meeting saying maybe one alcoholic would get sober because of it. I realized I could call my children and tell them I loved them. My life changed that day.' },
       { text: 'I remarried in Alcoholics Anonymous. We agreed to never be higher than third on each other\'s list, with God always first and Alcoholics Anonymous second. He is my partner and my best friend.' },
       { text: 'Our son is the third generation of A.A.\'s in my family. After a suicide attempt at age fourteen, we found out he too was an alcoholic. We trust Alcoholics Anonymous.' },
-      { text: 'I have learned how to be a good A.A. member by watching good A.A. members and doing what they do. And I finally have the freedom of believing that it is all right not to know.', highlight: 'blue' }
+      { text: 'I have learned how to be a good A.A. member by watching good A.A. members and doing what they do. And I finally have the freedom of believing that it is all right not to know.' }
     ]
   },
 
   "grounded": {
     highlights: [],
+    tabs: [],
     paragraphs: [
       { text: 'I am an alcoholic. I am part Comanche Indian and grew up poor but in a loving home until alcoholism took both of my parents. I vowed I would never be an alcoholic.' },
       { text: 'I graduated from high school at seventeen and joined the marine corps. I found a home there. Four and a half years later I was given an opportunity to go into flight training.' },
@@ -618,19 +622,20 @@ export const CHAPTER_CONTENT = {
       { text: 'I learned I was going to federal prison. With nothing left, I dedicated myself to learning about recovery. I worked as hard as I had worked to earn my wings, but this time my life was at stake.' },
       { text: 'I got out of treatment determined to complete ninety A.A. meetings in ninety days. I completed my ninety meetings in sixty-seven days. I went through an intense, media-covered three-week trial.' },
       { text: 'I was found guilty and sentenced to sixteen months in federal prison. I chose to go into prison and get it over. From somewhere I remembered: "Cowards die a thousand deaths, a brave man only once."' },
-      { text: 'On the day I entered prison, nine of my fellow pilots began making our family\'s house payments, which they did for nearly four years.', highlight: 'blue' },
+      { text: 'On the day I entered prison, nine of my fellow pilots began making our family\'s house payments, which they did for nearly four years.' },
       { text: 'I started an A.A. meeting in prison, which was opposed by the prison administration. The weekly meeting was a quiet oasis in the desert.' },
       { text: 'For a long time I did not consider flying again, but I could not purge the dream from my heart. I had to begin at the very bottom, with a private license.' },
       { text: 'My lawyer worked for three years after my conviction without taking a cent from me. He was one more person who entered my life in a manner I could only ascribe to Divine Providence.' },
       { text: 'I knew no one would ever hire me to fly passengers. I was an ex-con, a convicted felon, a drunk. It took several months for the FAA to process my licenses.' },
-      { text: 'On the exact day they arrived, I received a phone call that the president of the airline had decided personally to reinstate me. I marveled at the courage of such a man and such an airline.', highlight: 'blue' },
+      { text: 'On the exact day they arrived, I received a phone call that the president of the airline had decided personally to reinstate me. I marveled at the courage of such a man and such an airline.' },
       { text: 'Almost four years after my arrest, I signed my back-to-work agreement. Restored to full seniority! My back-to-work agreement said I would retire as a copilot. Last year I was notified that I could once again be a captain.' },
-      { text: 'I retired at age sixty, and I checked out as a 747 captain. The circle, so sacred to my Indian people, will once again have been completed.', highlight: 'blue' }
+      { text: 'I retired at age sixty, and I checked out as a 747 captain. The circle, so sacred to my Indian people, will once again have been completed.' }
     ]
   },
 
   "another-chance": {
     highlights: [],
+    tabs: [],
     paragraphs: [
       { text: 'I am an African-American alcoholic. I don\'t know when I became an alcoholic, but I do believe I became one because I drank too much too often.' },
       { text: 'I always blamed my drinking on being poor, or on anything other than the truth—that I liked what booze did for me, that when I had a drink I was as big and had as much as the next person.' },
@@ -643,15 +648,16 @@ export const CHAPTER_CONTENT = {
       { text: 'For the next few days every time I went to my favorite watering hole, I was surrounded by people talking about sobering up. My bartender wanted to quit drinking.' },
       { text: 'By the end of two weeks of drinking, I was out of money. I called Mom, and she deposited me at the local detox center. She told me I could go in or not but that she was done with me.' },
       { text: 'Detox told me I already knew everything treatment was going to teach me. I had never expected to live to see thirty. I knew I would live, and that was far more terrifying. I had surrendered.' },
-      { text: 'The first night out of detox, a woman spoke. That was me! She became my first sponsor. The second night when it came time to hold hands and pray, someone took the time to be sure that the circle was complete.', highlight: 'blue' },
+      { text: 'The first night out of detox, a woman spoke. That was me! She became my first sponsor. The second night when it came time to hold hands and pray, someone took the time to be sure that the circle was complete.' },
       { text: 'I went to a noon Big Book meeting every day. I was not one of those people who said, "Thank God, I\'m home." I just didn\'t want what I had anymore.' },
-      { text: 'When I was two weeks sober, a man\'s daughter was killed by a drunk driver. He said maybe one alcoholic would get sober because of it. I realized I could call my children. My life changed that day.', highlight: 'blue' },
-      { text: 'I remarried in A.A. We agreed to never be higher than third on each other\'s list, with God always first and Alcoholics Anonymous second.', highlight: 'blue' }
+      { text: 'When I was two weeks sober, a man\'s daughter was killed by a drunk driver. He said maybe one alcoholic would get sober because of it. I realized I could call my children. My life changed that day.' },
+      { text: 'I remarried in A.A. We agreed to never be higher than third on each other\'s list, with God always first and Alcoholics Anonymous second.' }
     ]
   },
 
   "a-late-start": {
     highlights: [],
+    tabs: [],
     paragraphs: [
       { text: 'I am a seventy-five-year-old alcoholic. For fifty-five of those years I led what is known as a normal middle-class life. Alcohol had as little part in it as candied yams.' },
       { text: 'I attended private school and later a midwestern college. I married, had children, worked, experienced the pain of the death of my parents and of a child. I enjoyed horseback riding, swimming, tennis.' },
@@ -668,16 +674,17 @@ export const CHAPTER_CONTENT = {
       { text: 'Then one day I was called on to share. I announced that in no way was I a "grateful alcoholic," that I hated my condition, that I did not enjoy the meetings.' },
       { text: 'My healing began with the arrogance of that statement. One woman came to me and said I was about to "go out." She offered to help me find a sponsor. With the patience of unconditional love, she led me through the steps.' },
       { text: 'The Third Step was the most difficult for me. But having completed it, I found that I could face the other steps if I could remember to relax, trust the program, and implement the step rather than fight it.' },
-      { text: 'A.A. has given me serenity of purpose and the opportunity to be of service to God and to the people about me. I will have peace of mind in exact proportion to the peace of mind I bring into the lives of other people.', highlight: 'blue' },
+      { text: 'A.A. has given me serenity of purpose and the opportunity to be of service to God and to the people about me. I will have peace of mind in exact proportion to the peace of mind I bring into the lives of other people.' },
       { text: 'I\'ve had many spiritual experiences. One morning I realized I had to get rid of my resentment against my mother or I was going to get drunk. In my prayers I asked God to point out some way to be free of this resentment.' },
-      { text: 'A friend brought me magazines, and I found an article by a clergyman: "If you have a resentment you want to be free of, if you will pray for the person or thing that you resent, you will be free."', highlight: 'orange' },
-      { text: 'It worked for me then, and it has worked for me many times since. This great experience released me from the bondage of hatred and replaced it with love.', highlight: 'blue' },
-      { text: 'It\'s been ten years since I retired, seven years since I joined A.A. Now I can truly say that I am a grateful alcoholic. A.A. has filled my days with friends, laughter, growth, and the feeling of worth.', highlight: 'blue' }
+      { text: 'A friend brought me magazines, and I found an article by a clergyman: "If you have a resentment you want to be free of, if you will pray for the person or thing that you resent, you will be free."' },
+      { text: 'It worked for me then, and it has worked for me many times since. This great experience released me from the bondage of hatred and replaced it with love.' },
+      { text: 'It\'s been ten years since I retired, seven years since I joined A.A. Now I can truly say that I am a grateful alcoholic. A.A. has filled my days with friends, laughter, growth, and the feeling of worth.' }
     ]
   },
 
   "freedom-from-bondage": {
     highlights: [],
+    tabs: [],
     paragraphs: [
       { text: 'The mental twists that led up to my drinking began many years before I ever took a drink, for I am one of those whose history proves conclusively that my drinking was "a symptom of a deeper trouble."' },
       { text: 'I am an only child, and when I was seven years old, my parents separated very abruptly. With no explanation at all, I was taken from my home in Florida to my grandparents\' home in the Midwest.' },
@@ -692,17 +699,18 @@ export const CHAPTER_CONTENT = {
       { text: 'About this time I met a man who had three motherless children. It seemed logical that if I married this man and took responsibility for these children that they would keep me sober. The children kept me sober for three weeks.' },
       { text: 'I was drunk for sixty days around the clock, and it was my intention, literally, to drink myself to death. Finally, in desperation, my family appealed to a doctor, and he suggested A.A.' },
       { text: 'I was put in a sanitarium to be defogged. I realized for the first time that as a practicing alcoholic, I had no rights. I had lived with no sense of social obligation nor moral responsibility.' },
-      { text: 'I attended my first A.A. meeting eight years ago. I have not had a drink since that time. One of the truly great things A.A. has taught me is that reality has two sides; I had only known the grim side before.', highlight: 'blue' },
-      { text: 'A.A. has taught me that I will have peace of mind in exact proportion to the peace of mind I bring into the lives of other people.', highlight: 'blue' },
-      { text: 'One morning I realized I had to get rid of my resentment against my mother. In my prayers I asked God to point out some way to be free. A friend brought magazines, and I found this: "If you will pray for the person you resent, you will be free."', highlight: 'orange' },
-      { text: 'It worked for me then, and it has worked for me many times since. This great experience released me from the bondage of hatred and replaced it with love.', highlight: 'blue' }
+      { text: 'I attended my first A.A. meeting eight years ago. I have not had a drink since that time. One of the truly great things A.A. has taught me is that reality has two sides; I had only known the grim side before.' },
+      { text: 'A.A. has taught me that I will have peace of mind in exact proportion to the peace of mind I bring into the lives of other people.' },
+      { text: 'One morning I realized I had to get rid of my resentment against my mother. In my prayers I asked God to point out some way to be free. A friend brought magazines, and I found this: "If you will pray for the person you resent, you will be free."' },
+      { text: 'It worked for me then, and it has worked for me many times since. This great experience released me from the bondage of hatred and replaced it with love.' }
     ]
   },
 
   "a-a-taught-him-to-handle-sobriety": {
     highlights: [],
+    tabs: [],
     paragraphs: [
-      { text: 'When I had been in A.A. only a short while, an oldtimer told me something that has affected my life ever since. "A.A. does not teach us how to handle our drinking," he said. "It teaches us how to handle sobriety."', highlight: 'yellow' },
+      { text: 'When I had been in A.A. only a short while, an oldtimer told me something that has affected my life ever since. "A.A. does not teach us how to handle our drinking," he said. "It teaches us how to handle sobriety."' },
       { text: 'I guess I always knew that the way to handle my drinking was to quit. After my very first drink—a tiny glass of sherry my father gave me at age thirteen—I went up to bed and prayed I wouldn\'t drink anymore!' },
       { text: 'I was raised in Kansas, the only child of loving parents who just drank socially. We moved frequently. In each new place, I was the new kid—a skinny, shy kid—to be tested and beaten up.' },
       { text: 'By the time I reached high school, I was an overachiever. An honor student in college, I became editor of the yearbook. I sold my first article to a national magazine while still an undergraduate.' },
@@ -719,16 +727,17 @@ export const CHAPTER_CONTENT = {
       { text: 'The doctors told me that if I ever took another drink, it might be my last. I thought I had learned my lesson. But within two months I was drinking again. In the next half-year I experienced two more esophageal hemorrhages.' },
       { text: 'My doctor sent me to a psychiatrist who happened to be Dr. Harry Tiebout, the psychiatrist who probably knew more about alcoholism than any other. He was a nonalcoholic trustee on the General Service Board of A.A.' },
       { text: 'It was Dr. Tiebout who persuaded me to seek help through A.A. I acquired a sponsor and began attending meetings but continued to drink. Within a few days I found myself drying out on a drunk farm.' },
-      { text: 'As the sober days grew into sober months and then into sober years, a new and beautiful life began to emerge. My relationship with my wife was restored to a love and happiness we had not known.', highlight: 'blue' },
-      { text: 'All these things and many more, A.A. gave me. But above all, it taught me how to handle sobriety. I have learned how to relate to people; before A.A., I could never do that comfortably without alcohol.', highlight: 'blue' },
-      { text: 'God willing, we members of A.A. may never again have to deal with drinking, but we have to deal with sobriety every day. How do we do it? By learning through practicing the Twelve Steps.', highlight: 'yellow' },
-      { text: 'We are taught to differentiate between our wants (which are never satisfied) and our needs (which are always provided for). We cast off the burdens of the past and the anxieties of the future.', highlight: 'yellow' },
-      { text: 'Above all, we reject fantasizing and accept reality. A.A. led me gently from fantasizing to embrace reality with open arms. And I found it beautiful! For, at last, I was at peace with myself.', highlight: 'blue' }
+      { text: 'As the sober days grew into sober months and then into sober years, a new and beautiful life began to emerge. My relationship with my wife was restored to a love and happiness we had not known.' },
+      { text: 'All these things and many more, A.A. gave me. But above all, it taught me how to handle sobriety. I have learned how to relate to people; before A.A., I could never do that comfortably without alcohol.' },
+      { text: 'God willing, we members of A.A. may never again have to deal with drinking, but we have to deal with sobriety every day. How do we do it? By learning through practicing the Twelve Steps.' },
+      { text: 'We are taught to differentiate between our wants (which are never satisfied) and our needs (which are always provided for). We cast off the burdens of the past and the anxieties of the future.' },
+      { text: 'Above all, we reject fantasizing and accept reality. A.A. led me gently from fantasizing to embrace reality with open arms. And I found it beautiful! For, at last, I was at peace with myself.' }
     ]
   },
 
   "me-an-alcoholic": {
     highlights: [],
+    tabs: [],
     paragraphs: [
       { text: 'When I try to reconstruct what my life was like "before," I see a coin with two faces. One side I turned to myself and the world was respectable—even distinguished.' },
       { text: 'I was father, husband, taxpayer, home owner. I was clubman, athlete, artist, musician, author, editor, aircraft pilot, and world traveler. I was listed in Who\'s Who in America.' },
@@ -753,6 +762,7 @@ export const CHAPTER_CONTENT = {
 
   "the-perpetual-quest": {
     highlights: [],
+    tabs: [],
     paragraphs: [
       { text: 'When I was a newly minted lawyer starting out in criminal law, there were five of us in our law office. Within a dozen years, three of these five promising lawyers were dead from alcoholism, struck down at the peak of their careers.' },
       { text: 'My husband and I met and married in law school in a romantic haze of alcohol, twinkling lights, and much promise. We worked and played hard, threw fabulous parties, and prided ourselves on staying away from drugs.' },
@@ -771,13 +781,13 @@ export const CHAPTER_CONTENT = {
       { text: 'My last hangover was on a Friday before a long summer weekend. Later that Friday night, I was dragging myself up the deserted street thinking that the whole world had someplace to go, and someone to go with.' },
       { text: 'Instead of going to a bar or home with my regular giant weekend supply of booze, I went to my club to swim. I wrapped myself in a bathrobe and sat in a dark corner of the locker room for two hours, feeling desperately sorry for myself.' },
       { text: 'Close to eight o\'clock, I leaped up and raced off to a meeting I\'d had no intention of attending. It was a bit like getting a rap on the head with an invisible hammer and having my brain flip over.' },
-      { text: 'Late that night at home, there was a presence in the room with me, even though I lived alone. The next morning I knew I didn\'t have to drink.', highlight: 'blue' },
+      { text: 'Late that night at home, there was a presence in the room with me, even though I lived alone. The next morning I knew I didn\'t have to drink.' },
       { text: 'In the weeks and months that followed, I did everything that was suggested to me. I went to a meeting every day, read the books, and got a sponsor who told me to have a quiet time every morning.' },
       { text: 'I joined a downtown group that met near my office right after work at 5:15. I would not have made it to 8:00 p.m. Soon, I got into service and was given bank books and told to keep the meeting going.' },
       { text: 'I became as compulsive about A.A. as I had been about drinking. I went to every A.A. get-together possible. I listened to tapes. I read and reread the literature, laughing into the night over Dr. Bob and the Good Oldtimers.' },
       { text: 'Many years later, although alcohol is not part of my life and I no longer have the compulsion to drink, it can still occur to me what a good drink tastes like. Such thoughts are like red flags, telling me something is not right.' },
-      { text: 'The hardest thing I had to deal with in sobriety was my own anger and the violence I lived through in my childhood. I would never have recovered from violence and alcoholism without A.A.\'s Twelve Steps.', highlight: 'blue' },
-      { text: 'When I was five years sober, I met a man in A.A. who was also five years sober. He said that the rocks in my head fit the holes in his. Today we have a daughter who has never seen her parents drink.', highlight: 'blue' }
+      { text: 'The hardest thing I had to deal with in sobriety was my own anger and the violence I lived through in my childhood. I would never have recovered from violence and alcoholism without A.A.\'s Twelve Steps.' },
+      { text: 'When I was five years sober, I met a man in A.A. who was also five years sober. He said that the rocks in my head fit the holes in his. Today we have a daughter who has never seen her parents drink.' }
     ]
   },
 
@@ -802,18 +812,19 @@ export const CHAPTER_CONTENT = {
       { text: 'I saw the counselor once a week, and I went to this men\'s meeting once a week, and everything was getting better. After my three months were up, I got my pocket piece.' },
       { text: 'A couple of weeks later the large company I was with had a large staff cutback, and I was fired. I was very upset. After all, I was better now.' },
       { text: 'Between losing my job and my flight to a convention, I decided maybe I was not an alcoholic and I needed to test that theory. If I could have one drink and no more, I was not an alcoholic.' },
-      { text: 'On the plane I said, "Yes" to drinks. I drank for the whole flight. As we approached our destination, I found my ninety-day pocket piece. Wow, those guys at the meeting were right—I am powerless over alcohol.', highlight: 'blue' },
-      { text: 'I put that coin back in my pocket and from that day to this, some 15½ years later, I have had no urge to drink. When I got back to my meeting, I told them what had happened.', highlight: 'blue' },
+      { text: 'On the plane I said, "Yes" to drinks. I drank for the whole flight. As we approached our destination, I found my ninety-day pocket piece. Wow, those guys at the meeting were right—I am powerless over alcohol.' },
+      { text: 'I put that coin back in my pocket and from that day to this, some 15½ years later, I have had no urge to drink. When I got back to my meeting, I told them what had happened.' },
       { text: 'They suggested I get a sponsor, go to more meetings, and identify, not compare. They suggested I find a Higher Power. I wanted no part of God.' },
       { text: 'With this resistance I plodded along for a few months. Whenever people asked how I was doing, I would say, "Fine, just fine," no matter how hard I was crying inside.' },
       { text: 'I was sober about six months, and I was not getting any better. I contemplated suicide almost every day. I decided I had had enough. I went to my Tuesday night meeting, fully intent on sharing honestly.' },
-      { text: 'I arrived at the meeting and no one else was there. Then a man walked through the door. He suggested we have a meeting. For the next forty-five minutes I talked. I made completely honest contact with another human being.', highlight: 'blue' },
-      { text: 'When I had finished, he told me something simple: "You don\'t have to drink over it." Here was a man telling me that, independent of my life situation, I did not have to drink. He gave me hope.', highlight: 'blue' }
+      { text: 'I arrived at the meeting and no one else was there. Then a man walked through the door. He suggested we have a meeting. For the next forty-five minutes I talked. I made completely honest contact with another human being.' },
+      { text: 'When I had finished, he told me something simple: "You don\'t have to drink over it." Here was a man telling me that, independent of my life situation, I did not have to drink. He gave me hope.' }
     ]
   },
 
   "acceptance-was-the-answer": {
     highlights: [],
+    tabs: [],
     paragraphs: [
       { text: 'If there ever was anyone who came to A.A. by mistake, it was I. I just didn\'t belong here. Never in my wildest moments had it occurred to me that I might like to be an alcoholic.' },
       { text: 'My major problems were marital. "If you had my wife, you\'d drink too." Max and I had been married for twenty-eight years when I ended up in A.A. It started as a good marriage, but it deteriorated.' },
@@ -826,29 +837,30 @@ export const CHAPTER_CONTENT = {
       { text: 'Eventually, I was taking forty-five milligrams of long-acting Benzedrine and forty-five of short-acting just to get out of bed. I took more through the day. When I overshot the mark, I\'d take tranquilizers to level off.' },
       { text: 'I just loved intravenous Demerol, but I found it hard to practice good medicine while shooting morphine. For a period I was injecting Pentothal intravenously to put myself to sleep.' },
       { text: 'I never in my life took a tranquilizer, sedative, or pep pill because I was a pillhead. I always took it because I had the symptom that only that pill would relieve. Every pill was medically indicated.' },
-      { text: 'Today, I find I can\'t work my A.A. program while taking pills. I can\'t say, "Thy will be done," and take a pill. Giving up alcohol alone was not enough; I\'ve had to give up all mood- and mind-affecting chemicals.', highlight: 'orange' },
+      { text: 'Today, I find I can\'t work my A.A. program while taking pills. I can\'t say, "Thy will be done," and take a pill. Giving up alcohol alone was not enough; I\'ve had to give up all mood- and mind-affecting chemicals.' },
       { text: 'On two occasions I decided I would take absolutely nothing. On each occasion I had a convulsion on Sunday morning. The neurologist couldn\'t figure out why and decided to send me to the Mayo Clinic.' },
       { text: 'After nine days of tests at Mayo, I was put in the locked ward. When we got home, I got a bottle of Scotch and went to bed. The next day, Max called the neurologist who arranged for me to see a local psychiatrist.' },
       { text: 'Time went by very slowly on my second nut ward. They wanted me to make leather belts! Had I gone to school all those years just to make leather belts?' },
-      { text: 'In the hospital I hung on to the idea that if I could just control the external environment, the internal environment would become comfortable. Today we have turned our wills and lives over to the care of God.', highlight: 'orange' },
+      { text: 'In the hospital I hung on to the idea that if I could just control the external environment, the internal environment would become comfortable. Today we have turned our wills and lives over to the care of God.' },
       { text: 'One day my psychiatrist asked, "How\'d you like to talk to the man from A.A.?" My reaction was that I\'d already helped all the patients on the ward. But by the look on his face, I could tell it would make him happy if I agreed.' },
       { text: 'Against my better judgment, I went to a meeting that night, and a strange thing began to happen. The psychiatrist became quite interested and would ask me all kinds of questions about the A.A. meetings.' },
       { text: 'Eventually the psychiatrist discharged me, and Max and I began going to meetings ourselves. Right from the start, I felt they weren\'t doing anything for me, but they sure were helping Max.' },
       { text: 'Although we enjoyed the laughter in the early days, I heard a lot of things that I thought were stupid. I interpreted "sober" as meaning "drinking but not being drunk."' },
-      { text: 'Finally, after seven months, I decided to try it. I am amazed at how many of my problems have become manageable or have simply disappeared since I quit drinking.', highlight: 'blue' },
+      { text: 'Finally, after seven months, I decided to try it. I am amazed at how many of my problems have become manageable or have simply disappeared since I quit drinking.' },
       { text: 'It helped me to become convinced that alcoholism was a disease, not a moral issue; that I had been drinking as a result of a compulsion; and that sobriety was not a matter of willpower.' },
-      { text: 'At last, acceptance proved to be the key to my drinking problem. After seven months, I was finally able to say, "Okay, God. I really am an alcoholic. And it\'s all right with me. Now, what am I going to do about it?"', highlight: 'blue' },
-      { text: 'When I stopped living in the problem and began living in the answer, the problem went away. From that moment on, I have not had a single compulsion to drink.', highlight: 'blue' },
-      { text: 'And acceptance is the answer to all my problems today. When I am disturbed, it is because I find some person, place, thing, or situation unacceptable to me, and I can find no serenity until I accept that it is exactly the way it is supposed to be at this moment.', highlight: 'blue' },
-      { text: 'Nothing, absolutely nothing, happens in God\'s world by mistake. Until I could accept my alcoholism, I could not stay sober; unless I accept life completely on life\'s terms, I cannot be happy.', highlight: 'blue' },
-      { text: 'I need to concentrate not so much on what needs to be changed in the world as on what needs to be changed in me and in my attitudes.', highlight: 'yellow' },
+      { text: 'At last, acceptance proved to be the key to my drinking problem. After seven months, I was finally able to say, "Okay, God. I really am an alcoholic. And it\'s all right with me. Now, what am I going to do about it?"' },
+      { text: 'When I stopped living in the problem and began living in the answer, the problem went away. From that moment on, I have not had a single compulsion to drink.' },
+      { text: 'And acceptance is the answer to all my problems today. When I am disturbed, it is because I find some person, place, thing, or situation unacceptable to me, and I can find no serenity until I accept that it is exactly the way it is supposed to be at this moment.' },
+      { text: 'Nothing, absolutely nothing, happens in God\'s world by mistake. Until I could accept my alcoholism, I could not stay sober; unless I accept life completely on life\'s terms, I cannot be happy.' },
+      { text: 'I need to concentrate not so much on what needs to be changed in the world as on what needs to be changed in me and in my attitudes.' },
       { text: 'Shakespeare said, "All the world\'s a stage, and all the men and women merely players." He forgot to mention that I was the chief critic. I was always able to see the flaw in every person, every situation.' },
-      { text: 'For years I was sure the worst thing that could happen would be that I would turn out to be an alcoholic. Today I find it\'s the best thing that has ever happened to me.', highlight: 'blue' }
+      { text: 'For years I was sure the worst thing that could happen would be that I would turn out to be an alcoholic. Today I find it\'s the best thing that has ever happened to me.' }
     ]
   },
 
   "window-of-opportunity": {
     highlights: [],
+    tabs: [],
     paragraphs: [
       { text: 'I got sober while I was still in college. Once, outside of a meeting, I overheard a conversation. A nurse was describing the common perception of students as arrogant and self-centered.' },
       { text: 'She said: "Two years ago a student was brought in by ambulance. He had gotten drunk, walked through a second-story window, and fallen twenty feet headfirst into a concrete window well. He was the single most obnoxious person I have ever met."' },
@@ -869,24 +881,24 @@ export const CHAPTER_CONTENT = {
       { text: 'A few days went by. With the pressure lifted, my life did not look so unmanageable. So I thanked the dean but told him I would be okay on my own. I did not go to a rehab. Two weeks later I walked through a second-story window.' },
       { text: 'After insulting the emergency room personnel, I slipped into unconsciousness, where I remained for five days. I awoke in a neck brace with complete double vision. I was flown home and the future looked bleak.' },
       { text: 'My college was assessing how to respond to student alcohol abuse and were waiting to try out their latest idea: Alcoholics Anonymous. I was the test case. They told me I would never get back into this college unless I went to A.A.' },
-      { text: 'One definition of a bottom is the point when the last thing you lost or the next thing you are about to lose is more important to you than booze. For me, it was clear. I was willing to do anything to get back into school.', highlight: 'yellow' },
+      { text: 'One definition of a bottom is the point when the last thing you lost or the next thing you are about to lose is more important to you than booze. For me, it was clear. I was willing to do anything to get back into school.' },
       { text: 'I went to my first A.A. meeting with no idea what A.A. was about. A.A., like prison, was shameful and was never discussed. I also had no idea what alcoholism was.' },
       { text: 'I was surprised by my first meeting. The room was filled with well-dressed, smiling, happy people. No rancid coats. No bloodshot eyes. But laughter.' },
-      { text: 'Then a woman introduced herself and said she was an alcoholic. She spoke about feelings, of insecurity replaced by confidence, fear replaced by faith, resentment replaced by love, and despair replaced by joy.', highlight: 'blue' },
-      { text: 'After the meeting, people welcomed me with open arms and gave me their telephone numbers. The speaker said, "If you\'re an apple, you can be the best apple you can be, but you can never be an orange." I was an apple all right, and for the first time I understood I had spent my life trying to be an orange.', highlight: 'blue' },
+      { text: 'Then a woman introduced herself and said she was an alcoholic. She spoke about feelings, of insecurity replaced by confidence, fear replaced by faith, resentment replaced by love, and despair replaced by joy.' },
+      { text: 'After the meeting, people welcomed me with open arms and gave me their telephone numbers. The speaker said, "If you\'re an apple, you can be the best apple you can be, but you can never be an orange." I was an apple all right, and for the first time I understood I had spent my life trying to be an orange.' },
       { text: 'My progress in A.A. was slow. I refused to go to meetings outside of my neighborhood. I would not go to meetings on other nights. I bounced from one sick relationship to another. I was too proud to ask what a sponsor was.' },
       { text: 'I plodded along for a few months. I was sober about six months, and I was not getting any better. I contemplated suicide almost every day. My emotions swung between paralyzing despair and murderous rage.' },
       { text: 'I decided I had had enough. I went to my Tuesday night meeting, fully intent on sharing honestly. I arrived and no one else was there. Then a man walked through the door.' },
-      { text: 'He asked me how I was doing. The pain, fear, misery, anger, loss, resentment, and despair came pouring out. For the first time I made completely honest contact with another human being. I was met with acceptance and love.', highlight: 'blue' },
-      { text: 'When I had finished, he told me something simple: "You don\'t have to drink over it." If I stuck with A.A., I could stay sober under any and all conditions. He gave me hope.', highlight: 'blue' },
-      { text: 'I began to change. I began to pray. I became actively involved in working the steps. I began working with a sponsor and became active in my home group. My life began to change.', highlight: 'blue' },
+      { text: 'He asked me how I was doing. The pain, fear, misery, anger, loss, resentment, and despair came pouring out. For the first time I made completely honest contact with another human being. I was met with acceptance and love.' },
+      { text: 'When I had finished, he told me something simple: "You don\'t have to drink over it." If I stuck with A.A., I could stay sober under any and all conditions. He gave me hope.' },
+      { text: 'I began to change. I began to pray. I became actively involved in working the steps. I began working with a sponsor and became active in my home group. My life began to change.' },
       { text: 'Just before my first anniversary, I was readmitted to my college. I arrived back terrified. The answer was simple—I threw myself into A.A. Very loving people took me under their wings.' },
       { text: 'After graduation I attended law school. I was sure I would get drunk because "those people weren\'t doing it right!" Driven by fear and conceit, I set out to remake A.A. in my image.' },
-      { text: 'After some time my sponsor asked: "These people who aren\'t doing it right, are they staying sober?" I admitted they were. "Now it\'s time for you to listen to figure out how they are staying sober." Slowly but surely, some wisdom and humility began to creep in.', highlight: 'yellow' },
-      { text: 'I was fortunate to spend time abroad during law school. I have been in meetings in probably a dozen countries and have always been amazed at the message that transcends all differences. There is a solution. Together, we can live soberly, joyously, and freely.', highlight: 'blue' },
+      { text: 'After some time my sponsor asked: "These people who aren\'t doing it right, are they staying sober?" I admitted they were. "Now it\'s time for you to listen to figure out how they are staying sober." Slowly but surely, some wisdom and humility began to creep in.' },
+      { text: 'I was fortunate to spend time abroad during law school. I have been in meetings in probably a dozen countries and have always been amazed at the message that transcends all differences. There is a solution. Together, we can live soberly, joyously, and freely.' },
       { text: 'I am now thirty-three years old. In one month I will celebrate my fourteenth sober A.A. anniversary. I am surrounded by loving friends. I have reconciled with my parents.' },
-      { text: 'I was married shortly after my ninth anniversary. One week before my twelfth anniversary, our son was born. Through him I learned more about unconditional love, the value of wonder, and the sheer joy of being alive.', highlight: 'blue' },
-      { text: 'I once knew a woman who was crying before a meeting. She was approached by a five-year-old girl who told her, "You don\'t have to cry here. This is a good place. They took my daddy and they made him better." That is exactly what A.A. did for me.', highlight: 'blue' }
+      { text: 'I was married shortly after my ninth anniversary. One week before my twelfth anniversary, our son was born. Through him I learned more about unconditional love, the value of wonder, and the sheer joy of being alive.' },
+      { text: 'I once knew a woman who was crying before a meeting. She was approached by a five-year-old girl who told her, "You don\'t have to cry here. This is a good place. They took my daddy and they made him better." That is exactly what A.A. did for me.' }
     ]
   }
 };
