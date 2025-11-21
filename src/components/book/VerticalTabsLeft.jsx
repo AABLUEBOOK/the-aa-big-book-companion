@@ -15,21 +15,21 @@ export default function VerticalTabsLeft({ tabs = [] }) {
   if (!tabs || tabs.length === 0) return null;
 
   return (
-    <div className="hidden xl:block absolute -left-16 top-0 bottom-0 w-16 pointer-events-none">
+    <div className="absolute -left-12 sm:-left-14 lg:-left-16 top-0 w-12 sm:w-14 lg:w-16 pointer-events-none z-30">
       <div className="sticky top-32 space-y-3">
         {tabs.map((tab, idx) => (
           <div
             key={idx}
             className={cn(
-              "w-14 h-20 rounded-l-lg shadow-lg flex items-center justify-center p-2",
+              "w-10 sm:w-12 lg:w-14 h-16 sm:h-18 lg:h-20 rounded-l-lg shadow-xl flex items-center justify-center p-1.5 sm:p-2",
               tabColors[tab.color] || tabColors.yellow
             )}
             style={{ 
               clipPath: 'polygon(0% 0%, 80% 0%, 100% 50%, 80% 100%, 0% 100%)',
-              marginTop: idx === 0 ? `${tab.position || 0}%` : undefined
+              marginTop: idx === 0 ? `${tab.position || 0}vh` : undefined
             }}
           >
-            <div className="text-[10px] leading-[1.1] font-bold text-white text-center break-words whitespace-pre-line">
+            <div className="text-[9px] sm:text-[10px] leading-[1.1] font-bold text-white text-center break-words whitespace-pre-line">
               {tab.label}
             </div>
           </div>

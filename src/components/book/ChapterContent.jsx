@@ -15,7 +15,7 @@ export default function ChapterContent({ chapter, sectionRoute }) {
   };
 
   return (
-    <div className="bg-[#2A3440] rounded-xl sm:rounded-2xl shadow-2xl border border-[#25DCE6]/20 overflow-hidden relative">
+    <div className="bg-[#2A3440] rounded-xl sm:rounded-2xl shadow-2xl border border-[#25DCE6]/20 overflow-visible relative">
 
       {/* Chapter Header */}
       <div className="bg-gradient-to-r from-[#2A3440] to-[#222A31] border-b border-[#25DCE6]/20 px-4 sm:px-8 lg:px-12 py-4 sm:py-6 lg:py-8">
@@ -60,10 +60,12 @@ export default function ChapterContent({ chapter, sectionRoute }) {
             {chapterData.paragraphs?.map((para, idx) => {
               const baseClasses = "mb-6 first:mt-0 leading-relaxed";
               const highlightClasses = {
-                'yellow': 'bg-[#25DCE6]/20 px-2 py-1 rounded border-l-2 border-[#25DCE6]',
-                'pink': 'bg-pink-500/20 px-2 py-1 rounded border-l-2 border-pink-400',
-                'blue': 'bg-blue-500/20 px-2 py-1 rounded border-l-2 border-blue-400',
-                'basic-text': 'border-l-4 border-[#25DCE6] pl-4 bg-[#25DCE6]/10 py-2'
+                'yellow': 'bg-yellow-400/30 px-2 py-1 rounded',
+                'pink': 'bg-pink-400/30 px-2 py-1 rounded',
+                'blue': 'bg-blue-400/30 px-2 py-1 rounded',
+                'purple': 'bg-purple-400/30 px-2 py-1 rounded',
+                'orange': 'bg-orange-400/30 px-2 py-1 rounded',
+                'green': 'bg-green-400/30 px-2 py-1 rounded'
               };
 
               return (
@@ -72,7 +74,7 @@ export default function ChapterContent({ chapter, sectionRoute }) {
                   className={cn(
                     baseClasses,
                     para.highlight && highlightClasses[para.highlight],
-                    para.underline && "border-b-2 border-[#25DCE6] pb-1"
+                    para.underline && "border-b-2 border-purple-400 pb-1"
                   )}
                 >
                   {para.text}
