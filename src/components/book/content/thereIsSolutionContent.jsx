@@ -1,4 +1,6 @@
 export const thereIsSolutionContent = {
+  highlights: [],
+  tabs: [],
   paragraphs: [
     { text: "We, of ALCOHOLICS ANONYMOUS, know thousands of men and women who were once just as hopeless as Bill. Nearly all have recovered. They have solved the drink problem." },
     { text: "We are average Americans. All sections of this country and many of its occupations are represented. We are people who normally would not mix. But there exists among us a fellowship, a friendliness, and an understanding which is indescribably wonderful." },
@@ -23,6 +25,5 @@ export const thereIsSolutionContent = {
     { text: "Upon hearing this, our friend was somewhat relieved, for he reflected that, after all, he was a good church member. This hope, however, was destroyed by the doctor's telling him that while his religious convictions were very good, in his case they did not spell the necessary vital spiritual experience." },
     { text: "We, in our turn, sought the same escape with all the desperation of drowning men. What seemed at first a flimsy reed, has proved to be the loving and powerful hand of God. A new life has been given us or, if you prefer, \"a design for living\" that really works." },
     { text: "If what we have learned and felt and seen means anything at all, it means that all of us, whatever our race, creed, or color are the children of a living Creator with whom we may form a relationship upon simple and understandable terms as soon as we are willing and honest enough to try." }
-  ],
-  highlights: []
+  ]
 };

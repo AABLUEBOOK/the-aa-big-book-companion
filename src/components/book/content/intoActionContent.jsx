@@ -1,4 +1,6 @@
 export const intoActionContent = {
+  highlights: [],
+  tabs: [],
   paragraphs: [
     { text: "Having made our personal inventory, what shall we do about it? We have admitted certain defects; we have ascertained in a rough way what the trouble is; we have put our finger on the weak items in our personal inventory. Now these are about to be cast out. This requires action on our part, which brings us to the Fifth Step in the program of recovery." },
     { text: "This is perhaps difficult—especially discussing our defects with another person. Many of us thought it necessary to go much further. We will be more reconciled to discussing ourselves with another person when we see good reasons why we should do so." },
@@ -35,6 +37,5 @@ export const intoActionContent = {
     { text: "We usually conclude the period of meditation with a prayer that we be shown all through the day what our next step is to be, that we be given whatever we need to take care of such problems. We ask especially for freedom from self-will, and are careful to make no request for ourselves only." },
     { text: "As we go through the day we pause, when agitated or doubtful, and ask for the right thought or action. We constantly remind ourselves we are no longer running the show, humbly saying to ourselves many times each day \"Thy will be done.\"" },
     { text: "It works—it really does. We alcoholics are undisciplined. So we let God discipline us in the simple way we have just outlined. But this is not all. There is action and more action. \"Faith without works is dead.\"" }
-  ],
-  highlights: []
+  ]
 };

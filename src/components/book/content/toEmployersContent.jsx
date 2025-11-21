@@ -1,4 +1,6 @@
 export const toEmployersContent = {
+  highlights: [],
+  tabs: [],
   paragraphs: [
     { text: "Among many employers nowadays, we think of one member who has spent much of his life in the world of big business. He has hired and fired hundreds of men. He knows the alcoholic as the employer sees him. His present views ought to prove exceptionally useful to business men everywhere." },
     { text: "I was at one time assistant manager of a corporation department employing sixty-six hundred men. One day my secretary came in saying that Mr. B— insisted on speaking with me. I told her to say that I was not interested. I had warned him several times that he had but one more chance." },
@@ -35,6 +37,5 @@ export const toEmployersContent = {
     { text: "Perhaps this is a typical attitude. We, who have collectively seen a great deal of business life, at least from the alcoholic angle, had to smile at this gentleman's sincere opinion. He might be shocked if he knew how much alcoholism is costing his organization a year." },
     { text: "It is not to be expected that an alcoholic employee will receive a disproportionate amount of time and attention. He should not be made a favorite. The right kind of man, the kind who recovers, will not want this sort of thing. He will not impose. Far from it. He will work like the devil and thank you to his dying day." },
     { text: "Today I own a little company. There are two alcoholic employees, who produce as much as five normal salesmen. But why not? They have a new attitude, and they have been saved from a living death. I have enjoyed every moment spent in getting them straightened out." }
-  ],
-  highlights: []
+  ]
 };

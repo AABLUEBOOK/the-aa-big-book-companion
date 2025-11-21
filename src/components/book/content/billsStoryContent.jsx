@@ -1,4 +1,6 @@
 export const billsStoryContent = {
+  highlights: [],
+  tabs: [],
   paragraphs: [
     { text: "War fever ran high in the New England town to which we new, young officers from Plattsburg were assigned, and we were flattered when the first citizens took us to their homes, making us feel heroic. Here was love, applause, war; moments sublime with intervals hilarious. I was part of life at last, and in the midst of the excitement I discovered liquor. I forgot the strong warnings and the prejudices of my people concerning drink. In time we sailed for \"Over There.\" I was very lonely and again turned to alcohol." },
     { text: "We landed in England. I visited Winchester Cathedral. Much moved, I wandered outside. My attention was caught by a doggerel on an old tombstone:" },
@@ -29,6 +31,5 @@ export const billsStoryContent = {
     { text: "My wife and I abandoned ourselves with enthusiasm to the idea of helping other alcoholics to a solution of their problems. Many times I have gone to my old hospital in despair. On talking to a man there, I would be amazingly lifted up and set on my feet. It is a design for living that works in rough going." },
     { text: "We commenced to make many fast friends and a fellowship has grown up among us of which it is a wonderful thing to feel a part. The joy of living we really have, even under pressure and difficulty." },
     { text: "Most of us feel we need look no further for Utopia. We have it with us right here and now. Each day my friend's simple talk in our kitchen multiplies itself in a widening circle of peace on earth and good will to men." }
-  ],
-  highlights: []
+  ]
 };

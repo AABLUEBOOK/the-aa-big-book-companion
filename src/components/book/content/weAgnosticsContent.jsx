@@ -1,4 +1,6 @@
 export const weAgnosticsContent = {
+  highlights: [],
+  tabs: [],
   paragraphs: [
     { text: "In the preceding chapters you have learned something of alcoholism. We hope we have made clear the distinction between the alcoholic and the non-alcoholic. If, when you honestly want to, you find you cannot quit entirely, or if when drinking, you have little control over the amount you take, you are probably alcoholic. If that be the case, you may be suffering from an illness which only a spiritual experience will conquer." },
     { text: "To one who feels he is an atheist or agnostic such an experience seems impossible, but to continue as he is means disaster, especially if he is an alcoholic of the hopeless variety. To be doomed to an alcoholic death or to live on a spiritual basis are not always easy alternatives to face." },
@@ -30,6 +32,5 @@ export const weAgnosticsContent = {
     { text: "Thus was our friend's cornerstone fixed in place. His alcoholic problem was taken away. That very night, years ago, it disappeared. Seemingly he could not drink even if he would. God had restored his sanity." },
     { text: "What is this but a miracle of healing? Yet its elements are simple. Circumstances made him willing to believe. He humbly offered himself to his Maker—then he knew." },
     { text: "Even so has God restored us all to our right minds. To this man, the revelation was sudden. Some of us grow into it more slowly. But He has come to all who have honestly sought Him. When we drew near to Him He disclosed Himself to us!" }
-  ],
-  highlights: []
+  ]
 };

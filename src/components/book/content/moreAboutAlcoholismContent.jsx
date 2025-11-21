@@ -1,4 +1,6 @@
 export const moreAboutAlcoholismContent = {
+  highlights: [],
+  tabs: [],
   paragraphs: [
     { text: "Most of us have been unwilling to admit we were real alcoholics. No person likes to think he is bodily and mentally different from his fellows. Therefore, it is not surprising that our drinking careers have been characterized by countless vain attempts to prove we could drink like other people. The idea that somehow, someday he will control and enjoy his drinking is the great obsession of every abnormal drinker." },
     { text: "We learned that we had to fully concede to our innermost selves that we were alcoholics. This is the first step in recovery. The delusion that we are like other people, or presently may be, has to be smashed." },
@@ -26,6 +28,5 @@ export const moreAboutAlcoholismContent = {
     { text: "\"I saw that will power and self-knowledge would not help in those strange mental blank spots. I knew from that moment that I had an alcoholic mind. I saw that will power and self-knowledge would not help in those strange mental blank spots. Finally I knew I must turn in all things to the Father of Light who presides over us all.\"" },
     { text: "A doctor said to us: \"What you say about the general hopelessness of the average alcoholic's plight is, in my opinion, correct. As to two of you men, whose stories I have heard, there is no doubt in my mind that you were 100% hopeless, apart from divine help.\"" },
     { text: "Once more: The alcoholic at certain times has no effective mental defense against the first drink. Except in a few rare cases, neither he nor any other human being can provide such a defense. His defense must come from a Higher Power." }
-  ],
-  highlights: []
+  ]
 };

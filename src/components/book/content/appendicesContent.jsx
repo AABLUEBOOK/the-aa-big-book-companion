@@ -1,5 +1,6 @@
-
 export const appendicesContent = {
+  highlights: [],
+  tabs: [],
   paragraphs: [
     { text: "THE TWELVE TRADITIONS" },
     { text: "1. Our common welfare should come first; personal recovery depends upon A.A. unity." },
@@ -37,6 +38,5 @@ export const appendicesContent = {
     { text: "Some of us have had difficulties with drugs, sex, money, food, or other compulsive behaviors in addition to alcohol. We have found that the Twelve Steps work on any problem where we are powerless and our lives have become unmanageable." },
     { text: "However, A.A.'s primary purpose is to help alcoholics recover from alcoholism. We focus on the solution to our drinking problem. When we get sober and work the steps, we often find that our other problems become more manageable or resolve themselves." },
     { text: "For those with other primary addictions, there are fellowships patterned after A.A.: Narcotics Anonymous, Overeaters Anonymous, Gamblers Anonymous, and many others. These fellowships use the same basic Twelve Step program adapted to their specific problem." }
-  ],
-  highlights: []
+  ]
 };

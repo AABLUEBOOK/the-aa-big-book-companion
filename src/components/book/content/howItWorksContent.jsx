@@ -1,4 +1,6 @@
 export const howItWorksContent = {
+  highlights: [],
+  tabs: [],
   paragraphs: [
     { text: "Rarely have we seen a person fail who has thoroughly followed our path. Those who do not recover are people who cannot or will not completely give themselves to this simple program, usually men and women who are constitutionally incapable of being honest with themselves." },
     { text: "Our stories disclose in a general way what we used to be like, what happened, and what we are like now. If you have decided you want what we have and are willing to go to any length to get it—then you are ready to take certain steps." },
@@ -37,6 +39,5 @@ export const howItWorksContent = {
     { text: "Now about sex. We reviewed our own conduct over the years past. Where had we been selfish, dishonest, or inconsiderate? In this way we tried to shape a sane and sound ideal for our future sex life. Whatever our ideal turns out to be, we must be willing to grow toward it." },
     { text: "If we have been thorough about our personal inventory, we have written down a lot. We have listed and analyzed our resentments. We have begun to comprehend their futility and their fatality. We have commenced to see their terrible destructiveness. We have begun to learn tolerance, patience and good will toward all men, even our enemies, for we look on them as sick people." },
     { text: "In this book you read again and again that faith did for us what we could not do for ourselves. We hope you are convinced now that God can remove whatever self-will has blocked you off from Him. If you have already made a decision, and an inventory of your grosser handicaps, you have made a good beginning." }
-  ],
-  highlights: []
+  ]
 };

@@ -1,4 +1,6 @@
 export const visionForYouContent = {
+  highlights: [],
+  tabs: [],
   paragraphs: [
     { text: "For most normal folks, drinking means conviviality, companionship and colorful imagination. It means release from care, boredom and worry. It is joyous intimacy with friends and a feeling that life is good. But not so with us in those last days of heavy drinking. The old pleasures were gone. They were but memories." },
     { text: "Never could we recapture the great moments of the past. There was an insistent yearning to enjoy life as we once did and a heartbreaking obsession that some new miracle of control would enable us to do it. There was always one more attempt—and one more failure." },
@@ -43,6 +45,5 @@ export const visionForYouContent = {
     { text: "Our book is meant to be suggestive only. We realize we know only a little. God will constantly disclose more to you and to us. Ask Him in your morning meditation what you can do each day for the man who is still sick. The answers will come, if your own house is in order." },
     { text: "Abandon yourself to God as you understand God. Admit your faults to Him and to your fellows. Clear away the wreckage of your past. Give freely of what you find and join us. We shall be with you in the Fellowship of the Spirit, and you will surely meet some of us as you trudge the Road of Happy Destiny." },
     { text: "May God bless you and keep you—until then." }
-  ],
-  highlights: []
+  ]
 };
