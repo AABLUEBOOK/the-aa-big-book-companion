@@ -21,7 +21,7 @@ export default function VerticalTabsLeft({ tabs = [] }) {
           <div
             key={idx}
             className={cn(
-              "w-10 sm:w-12 lg:w-14 h-16 sm:h-18 lg:h-20 rounded-l-lg shadow-xl flex items-center justify-center p-1.5 sm:p-2",
+              "w-10 sm:w-12 lg:w-14 h-32 sm:h-36 lg:h-40 rounded-l-lg shadow-xl flex items-center justify-center p-1.5 sm:p-2",
               tabColors[tab.color] || tabColors.yellow
             )}
             style={{ 
@@ -29,7 +29,14 @@ export default function VerticalTabsLeft({ tabs = [] }) {
               marginTop: idx === 0 ? `${tab.position || 0}vh` : undefined
             }}
           >
-            <div className="text-[9px] sm:text-[10px] leading-[1.1] font-bold text-white text-center break-words whitespace-pre-line">
+            <div 
+              className="text-[8px] sm:text-[9px] lg:text-[10px] font-bold text-white text-center whitespace-nowrap"
+              style={{ 
+                writingMode: 'vertical-rl',
+                textOrientation: 'mixed',
+                letterSpacing: '0.05em'
+              }}
+            >
               {tab.label}
             </div>
           </div>
