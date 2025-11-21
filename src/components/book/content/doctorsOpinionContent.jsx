@@ -37,10 +37,12 @@ export const doctorsOpinionContent = {
       text: `Very truly yours, William D. Silkworth, M.D.`
     },
     {
-      text: `The physician who, at our request, gave us this letter, has been kind enough to enlarge upon his views in another statement which follows. In this statement he confirms what we who have suffered alcoholic torture must believe—that the body of the alcoholic is quite as abnormal as his mind. It did not satisfy us to be told that we could not control our drinking just because we were maladjusted to life, that we were in full flight from reality, or were outright mental defectives. These things were true to some extent, in fact, to a considerable extent with some of us. But we are sure that our bodies were sickened as well. In our belief, any picture of the alcoholic which leaves out this physical factor is incomplete.`
+      text: `The physician who, at our request, gave us this letter, has been kind enough to enlarge upon his views in another statement which follows. In this statement he confirms what we who have suffered alcoholic torture must believe—that the body of the alcoholic is quite as abnormal as his mind. It did not satisfy us to be told that we could not control our drinking just because we were maladjusted to life, that we were in full flight from reality, or were outright mental defectives. These things were true to some extent, in fact, to a considerable extent with some of us. But we are sure that our bodies were sickened as well. In our belief, any picture of the alcoholic which leaves out this physical factor is incomplete.`,
+      highlight: 'yellow'
     },
     {
-      text: `The doctor's theory that we have an allergy to alcohol interests us. As laymen, our opinion as to its soundness may, of course, mean little. But as ex-problem drinkers, we can say that his explanation makes good sense. It explains many things for which we cannot otherwise account.`
+      text: `The doctor's theory that we have an allergy to alcohol interests us. As laymen, our opinion as to its soundness may, of course, mean little. But as ex-problem drinkers, we can say that his explanation makes good sense. It explains many things for which we cannot otherwise account.`,
+      highlight: 'blue'
     },
     {
       text: `Though we work out our solution on the spiritual as well as an altruistic plane, we favor hospitalization for the alcoholic who is very jittery or befogged. More often than not, it is imperative that a man's brain be cleared before he is approached, as he has then a better chance of understanding and accepting what we have to offer.`
@@ -70,7 +72,8 @@ export const doctorsOpinionContent = {
       text: `Of course an alcoholic ought to be freed from his physical craving for liquor, and this often requires a definite hospital procedure, before psychological measures can be of maximum benefit.`
     },
     {
-      text: `We believe, and so suggested a few years ago, that the action of alcohol on these chronic alcoholics is a manifestation of an allergy; that the phenomenon of craving is limited to this class and never occurs in the average temperate drinker. These allergic types can never safely use alcohol in any form at all; and once having formed the habit and found they cannot break it, once having lost their self-confidence, their reliance upon things human, their problems pile up on them and become astonishingly difficult to solve.`
+      text: `We believe, and so suggested a few years ago, that the action of alcohol on these chronic alcoholics is a manifestation of an allergy; that the phenomenon of craving is limited to this class and never occurs in the average temperate drinker. These allergic types can never safely use alcohol in any form at all; and once having formed the habit and found they cannot break it, once having lost their self-confidence, their reliance upon things human, their problems pile up on them and become astonishingly difficult to solve.`,
+      highlight: 'pink'
     },
     {
       text: `Frothy emotional appeal seldom suffices. The message which can interest and hold these alcoholic people must have depth and weight. In nearly all cases, their ideals must be grounded in a power greater than themselves, if they are to re-create their lives.`
@@ -79,7 +82,8 @@ export const doctorsOpinionContent = {
       text: `If any feel that as psychiatrists directing a hospital for alcoholics we appear somewhat sentimental, let them stand with us a while on the firing line, see the tragedies, the despairing wives, the little children; let the solving of these problems become a part of their daily work, and even of their sleeping moments, and the most cynical will not wonder that we have accepted and encouraged this movement. We feel, after many years of experience, that we have found nothing which has contributed more to the rehabilitation of these men than the altruistic movement now growing up among them.`
     },
     {
-      text: `Men and women drink essentially because they like the effect produced by alcohol. The sensation is so elusive that, while they admit it is injurious, they cannot after a time differentiate the true from the false. To them, their alcoholic life seems the only normal one. They are restless, irritable and discontented, unless they can again experience the sense of ease and comfort which comes at once by taking a few drinks—drinks which they see others taking with impunity. After they have succumbed to the desire again, as so many do, and the phenomenon of craving develops, they pass through the well-known stages of a spree, emerging remorseful, with a firm resolution not to drink again. This is repeated over and over, and unless this person can experience an entire psychic change there is very little hope of his recovery.`
+      text: `Men and women drink essentially because they like the effect produced by alcohol. The sensation is so elusive that, while they admit it is injurious, they cannot after a time differentiate the true from the false. To them, their alcoholic life seems the only normal one. They are restless, irritable and discontented, unless they can again experience the sense of ease and comfort which comes at once by taking a few drinks—drinks which they see others taking with impunity. After they have succumbed to the desire again, as so many do, and the phenomenon of craving develops, they pass through the well-known stages of a spree, emerging remorseful, with a firm resolution not to drink again. This is repeated over and over, and unless this person can experience an entire psychic change there is very little hope of his recovery.`,
+      highlight: 'yellow'
     },
     {
       text: `On the other hand—and strange as this may seem to those who do not understand—once a psychic change has occurred, the very same person who seemed doomed, who had so many problems he despaired of ever solving them, suddenly finds himself easily able to control his desire for alcohol, the only effort necessary being that required to follow a few simple rules.`
@@ -97,13 +101,16 @@ export const doctorsOpinionContent = {
       text: `There are many situations which arise out of the phenomenon of craving which cause men to make the supreme sacrifice rather than continue to fight.`
     },
     {
-      text: `The classification of alcoholics seems most difficult, and in much detail is outside the scope of this book. There are, of course, the psychopaths who are emotionally unstable. We are all familiar with this type. They are always "going on the wagon for keeps." They are over-remorseful and make many resolutions, but never a decision.`
+      text: `The classification of alcoholics seems most difficult, and in much detail is outside the scope of this book. There are, of course, the psychopaths who are emotionally unstable. We are all familiar with this type. They are always "going on the wagon for keeps." They are over-remorseful and make many resolutions, but never a decision.`,
+      highlight: 'pink'
     },
     {
-      text: `There is the type of man who is unwilling to admit that he cannot take a drink. He plans various ways of drinking. He changes his brand or his environment. There is the type who always believes that after being entirely free from alcohol for a period of time he can take a drink without danger. There is the manic-depressive type, who is, perhaps, the least understood by his friends, and about whom a whole chapter could be written.`
+      text: `There is the type of man who is unwilling to admit that he cannot take a drink. He plans various ways of drinking. He changes his brand or his environment. There is the type who always believes that after being entirely free from alcohol for a period of time he can take a drink without danger. There is the manic-depressive type, who is, perhaps, the least understood by his friends, and about whom a whole chapter could be written.`,
+      highlight: 'pink'
     },
     {
-      text: `Then there are types entirely normal in every respect except in the effect alcohol has upon them. They are often able, intelligent, friendly people.`
+      text: `Then there are types entirely normal in every respect except in the effect alcohol has upon them. They are often able, intelligent, friendly people.`,
+      highlight: 'pink'
     },
     {
       text: `All these, and many others, have one symptom in common: they cannot start drinking without developing the phenomenon of craving. This phenomenon, as we have suggested, may be the manifestation of an allergy which differentiates these people, and sets them apart as a distinct entity. It has never been, by any treatment with which we are familiar, permanently eradicated. The only relief we have to suggest is entire abstinence.`

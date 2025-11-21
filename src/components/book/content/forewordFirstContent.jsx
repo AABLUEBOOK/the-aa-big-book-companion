@@ -5,7 +5,8 @@ export const forewordFirstContent = {
   ],
   paragraphs: [
     {
-      text: `WE, OF Alcoholics Anonymous, are more than one hundred men and women who have recovered from a seemingly hopeless state of mind and body. To show other alcoholics precisely how we have recovered is the main purpose of this book.`
+      text: `WE, OF Alcoholics Anonymous, are more than one hundred men and women who have recovered from a seemingly hopeless state of mind and body. To show other alcoholics precisely how we have recovered is the main purpose of this book.`,
+      highlight: 'blue'
     },
     {
       text: `For them, we hope these pages will prove so convincing that no further authentication will be necessary. We think this account of our experiences will help everyone to better understand the alcoholic. Many do not comprehend that the alcoholic is a very sick person. And besides, we are sure that our way of living has its advantages for all.`

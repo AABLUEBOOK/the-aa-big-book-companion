@@ -50,7 +50,8 @@ export const forewordSecondContent = {
       text: `Another reason for the wide acceptance of A.A. was the ministration of friends—friends in medicine, religion, and the press, together with innumerable others who became our able and persistent advocates. Without such support, A.A. could have made only the slowest progress. Some of the recommendations of A.A.'s early medical and religious friends will be found further on in this book.`
     },
     {
-      text: `Alcoholics Anonymous is not a religious organization. Neither does A.A. take any particular medical point of view, though we cooperate widely with the men of medicine as well as with the men of religion.`
+      text: `Alcoholics Anonymous is not a religious organization. Neither does A.A. take any particular medical point of view, though we cooperate widely with the men of medicine as well as with the men of religion.`,
+      highlight: 'yellow'
     },
     {
       text: `Alcohol being no respecter of persons, we are an accurate cross section of America, and in distant lands, the same democratic evening-up process is now going on. By personal religious affiliation, we include Catholics, Protestants, Jews, Hindus, and a sprinkling of Moslems and Buddhists. More than 15% of us are women.`
