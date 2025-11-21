@@ -1,6 +1,7 @@
 import React from "react";
 import { cn } from "@/lib/utils";
 import { CHAPTER_CONTENT } from "./allChapterContent";
+import AudioPlayer from "./AudioPlayer";
 
 export default function ChapterContent({ chapter }) {
 
@@ -27,6 +28,11 @@ export default function ChapterContent({ chapter }) {
         <div className="mt-2 sm:mt-3 text-xs sm:text-sm text-[#25DCE6]/60">
           Page {chapter.pageNum}
         </div>
+      </div>
+
+      {/* Audio Player */}
+      <div className="px-4 sm:px-8 lg:px-12 pt-6">
+        <AudioPlayer content={chapterData} />
       </div>
 
       {/* Chapter Body */}
