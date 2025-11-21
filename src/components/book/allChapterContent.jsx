@@ -5,6 +5,9 @@ import { moreAboutAlcoholismContent } from "./content/moreAboutAlcoholismContent
 import { weAgnosticsContent } from "./content/weAgnosticsContent";
 import { howItWorksContent } from "./content/howItWorksContent";
 import { intoActionContent } from "./content/intoActionContent";
+import { toEmployersContent } from "./content/toEmployersContent";
+import { visionForYouContent } from "./content/visionForYouContent";
+import { appendicesContent } from "./content/appendicesContent";
 
 export const CHAPTER_CONTENT = {
   "preface": {
@@ -796,6 +799,8 @@ export const CHAPTER_CONTENT = {
       { text: 'When I was five years sober, I met a man in A.A. who was also five years sober. He said that the rocks in my head fit the holes in his. Today we have a daughter who has never seen her parents drink.', highlight: 'blue' }
     ]
   },
+
+  "appendices": appendicesContent,
 
   "a-drunk-like-you": {
     highlights: [],
