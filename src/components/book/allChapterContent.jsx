@@ -102,7 +102,7 @@ export const CHAPTER_CONTENT = {
     highlights: [],
     tabs: [],
     paragraphs: [
-      { text: 'War fever ran high in the New England town to which we new, young officers from Plattsburg were assigned, and we were flattered when the first citizens took us to their homes, making us feel heroic. I was part of life at last, and in the midst of the excitement I discovered liquor.' },
+      { text: 'Practical experience shows that nothing will so much insure immunity from drinking as intensive work with other alcoholics. It works when other activities fail.' },
       { text: 'We landed in England. I visited Winchester Cathedral. Much moved, I wandered outside. My attention was caught by a doggerel on an old tombstone. Ominous warning—which I failed to heed.' },
       { text: 'Twenty-two, and a veteran of foreign wars, I went home at last. I fancied myself a leader, for had not the men of my battery given me a special token of appreciation?' },
       { text: 'I took a night law course, and obtained employment as investigator for a surety company. The drive for success was on. My work took me about Wall Street and little by little I became interested in the market.' },
@@ -235,44 +235,41 @@ export const CHAPTER_CONTENT = {
   },
 
   "how-it-works": {
-    highlights: [
-      { text: "CHAPTER 5", type: "sidebar" },
-      { text: "12 STEPS", type: "sidebar", subtext: "P. 59-60" }
-    ],
+    highlights: [],
+    tabs: [],
     paragraphs: [
-      { text: 'Rarely have we seen a person fail who has thoroughly followed our path. Those who do not recover are people who cannot or will not completely give themselves to this simple program, usually men and women who are constitutionally incapable of being honest with themselves. There are such unfortunates. They are not at fault; they seem to have been born that way.', highlight: 'yellow' },
-      { text: 'Our stories disclose in a general way what we used to be like, what happened, and what we are like now. If you have decided you want what we have and are willing to go to any length to get it—then you are ready to take certain steps.', highlight: 'blue' },
-      { text: 'Remember that we deal with alcohol—cunning, baffling, powerful! Without help it is too much for us. But there is One who has all power—that One is God. May you find Him now!', highlight: 'blue' },
-      { text: 'Half measures availed us nothing. We stood at the turning point. We asked His protection and care with complete abandon.', highlight: 'blue' },
-      { text: 'Here are the steps we took, which are suggested as a program of recovery:', highlight: 'orange' },
-      { text: '1. We admitted we were powerless over alcohol—that our lives had become unmanageable.\n2. Came to believe that a Power greater than ourselves could restore us to sanity.\n3. Made a decision to turn our will and our lives over to the care of God as we understood Him.\n4. Made a searching and fearless moral inventory of ourselves.\n5. Admitted to God, to ourselves, and to another human being the exact nature of our wrongs.\n6. Were entirely ready to have God remove all these defects of character.\n7. Humbly asked Him to remove our shortcomings.\n8. Made a list of all persons we had harmed, and became willing to make amends to them all.\n9. Made direct amends to such people wherever possible, except when to do so would injure them or others.\n10. Continued to take personal inventory and when we were wrong promptly admitted it.\n11. Sought through prayer and meditation to improve our conscious contact with God as we understood Him, praying only for knowledge of His will for us and the power to carry that out.\n12. Having had a spiritual awakening as the result of these steps, we tried to carry this message to alcoholics, and to practice these principles in all our affairs.', highlight: 'orange' },
-      { text: 'Being convinced, we were at Step Three, which is that we decided to turn our will and our life over to God as we understood Him. The first requirement is that we be convinced that any life run on self-will can hardly be a success.', highlight: 'orange' },
-      { text: 'Selfishness—self-centeredness! That, we think, is the root of our troubles. Driven by a hundred forms of fear, self-delusion, self-seeking, and self-pity, we step on the toes of our fellows and they retaliate.', highlight: 'yellow' },
-      { text: 'Many of us said to our Maker, as we understood Him: "God, I offer myself to Thee—to build with me and to do with me as Thou wilt. Relieve me of the bondage of self, that I may better do Thy will. Take away my difficulties, that victory over them may bear witness to those I would help of Thy Power, Thy Love, and Thy Way of life. May I do Thy will always!"', highlight: 'green' },
-      { text: 'Resentment is the "number one" offender. It destroys more alcoholics than anything else. From it stem all forms of spiritual disease, for we have been not only mentally and physically ill, we have been spiritually sick.', highlight: 'yellow' },
-      { text: 'In dealing with resentments, we set them on paper. We listed people, institutions or principles with whom we were angry. We asked ourselves why we were angry.', highlight: 'orange' },
-      { text: 'This was our course: We realized that the people who wronged us were perhaps spiritually sick. Though we did not like their symptoms and the way these disturbed us, they, like ourselves, were sick too.', highlight: 'yellow' }
+      { text: 'Rarely have we seen a person fail who has thoroughly followed our path. Those who do not recover are people who cannot or will not completely give themselves to this simple program, usually men and women who are constitutionally incapable of being honest with themselves. There are such unfortunates. They are not at fault; they seem to have been born that way.' },
+      { text: 'Our stories disclose in a general way what we used to be like, what happened, and what we are like now. If you have decided you want what we have and are willing to go to any length to get it—then you are ready to take certain steps.' },
+      { text: 'Remember that we deal with alcohol—cunning, baffling, powerful! Without help it is too much for us. But there is One who has all power—that One is God. May you find Him now!' },
+      { text: 'Half measures availed us nothing. We stood at the turning point. We asked His protection and care with complete abandon.' },
+      { text: 'Here are the steps we took, which are suggested as a program of recovery:' },
+      { text: '1. We admitted we were powerless over alcohol—that our lives had become unmanageable.\n2. Came to believe that a Power greater than ourselves could restore us to sanity.\n3. Made a decision to turn our will and our lives over to the care of God as we understood Him.\n4. Made a searching and fearless moral inventory of ourselves.\n5. Admitted to God, to ourselves, and to another human being the exact nature of our wrongs.\n6. Were entirely ready to have God remove all these defects of character.\n7. Humbly asked Him to remove our shortcomings.\n8. Made a list of all persons we had harmed, and became willing to make amends to them all.\n9. Made direct amends to such people wherever possible, except when to do so would injure them or others.\n10. Continued to take personal inventory and when we were wrong promptly admitted it.\n11. Sought through prayer and meditation to improve our conscious contact with God as we understood Him, praying only for knowledge of His will for us and the power to carry that out.\n12. Having had a spiritual awakening as the result of these steps, we tried to carry this message to alcoholics, and to practice these principles in all our affairs.' },
+      { text: 'Being convinced, we were at Step Three, which is that we decided to turn our will and our life over to God as we understood Him. The first requirement is that we be convinced that any life run on self-will can hardly be a success.' },
+      { text: 'Selfishness—self-centeredness! That, we think, is the root of our troubles. Driven by a hundred forms of fear, self-delusion, self-seeking, and self-pity, we step on the toes of our fellows and they retaliate.' },
+      { text: 'Many of us said to our Maker, as we understood Him: "God, I offer myself to Thee—to build with me and to do with me as Thou wilt. Relieve me of the bondage of self, that I may better do Thy will. Take away my difficulties, that victory over them may bear witness to those I would help of Thy Power, Thy Love, and Thy Way of life. May I do Thy will always!"' },
+      { text: 'Resentment is the "number one" offender. It destroys more alcoholics than anything else. From it stem all forms of spiritual disease, for we have been not only mentally and physically ill, we have been spiritually sick.' },
+      { text: 'In dealing with resentments, we set them on paper. We listed people, institutions or principles with whom we were angry. We asked ourselves why we were angry.' },
+      { text: 'This was our course: We realized that the people who wronged us were perhaps spiritually sick. Though we did not like their symptoms and the way these disturbed us, they, like ourselves, were sick too.' }
     ]
   },
 
   "into-action": {
-    highlights: [
-      { text: "CHAPTER 6", type: "sidebar" }
-    ],
+    highlights: [],
+    tabs: [],
     paragraphs: [
-      { text: 'This brings us to the Fifth Step in the program of recovery. We admitted to God, to ourselves, and to another human being, the exact nature of our defects.', highlight: 'orange' },
-      { text: 'If we skip this vital step, we may not overcome drinking. Time after time newcomers have tried to keep to themselves certain facts about their lives. Trying to avoid this humbling experience, they have turned to easier methods. Almost invariably they got drunk.', highlight: 'yellow' },
-      { text: 'We must be entirely honest with somebody if we expect to live long or happily in this world.', highlight: 'yellow' },
-      { text: 'Once we have taken this step, withholding nothing, we are delighted. We can look the world in the eye. We can be alone at perfect peace and ease. Our fears fall from us. We begin to feel the nearness of our Creator.', highlight: 'blue' },
-      { text: 'If we are painstaking about this phase of our development, we will be amazed before we are half way through. We are going to know a new freedom and a new happiness. We will not regret the past nor wish to shut the door on it.', highlight: 'blue' },
-      { text: 'We will comprehend the word serenity and we will know peace. No matter how far down the scale we have gone, we will see how our experience can benefit others. That feeling of uselessness and self-pity will disappear.', highlight: 'blue' },
-      { text: 'We will lose interest in selfish things and gain interest in our fellows. Self-seeking will slip away. Our whole attitude and outlook upon life will change. Fear of people and of economic insecurity will leave us.', highlight: 'blue' },
-      { text: 'We will intuitively know how to handle situations which used to baffle us. We will suddenly realize that God is doing for us what we could not do for ourselves. Are these extravagant promises? We think not. They are being fulfilled among us—sometimes quickly, sometimes slowly.', highlight: 'blue' },
-      { text: 'Continue to watch for selfishness, dishonesty, resentment, and fear. When these crop up, we ask God at once to remove them. We discuss them with someone immediately and make amends quickly if we have harmed anyone.', highlight: 'orange' },
-      { text: 'Love and tolerance of others is our code. And we have ceased fighting anything or anyone—even alcohol.', highlight: 'blue' },
-      { text: 'We are not cured of alcoholism. What we really have is a daily reprieve contingent on the maintenance of our spiritual condition.', highlight: 'yellow' },
-      { text: 'When we retire at night, we constructively review our day. Were we resentful, selfish, dishonest or afraid? Do we owe an apology? Have we kept something to ourselves which should be discussed with another person at once?', highlight: 'orange' },
-      { text: 'On awakening let us think about the twenty-four hours ahead. Before we begin, we ask God to direct our thinking, especially asking that it be divorced from self-pity, dishonest or self-seeking motives.', highlight: 'green' }
+      { text: 'This brings us to the Fifth Step in the program of recovery. We admitted to God, to ourselves, and to another human being, the exact nature of our defects.' },
+      { text: 'If we skip this vital step, we may not overcome drinking. Time after time newcomers have tried to keep to themselves certain facts about their lives. Trying to avoid this humbling experience, they have turned to easier methods. Almost invariably they got drunk.' },
+      { text: 'We must be entirely honest with somebody if we expect to live long or happily in this world.' },
+      { text: 'Once we have taken this step, withholding nothing, we are delighted. We can look the world in the eye. We can be alone at perfect peace and ease. Our fears fall from us. We begin to feel the nearness of our Creator.' },
+      { text: 'If we are painstaking about this phase of our development, we will be amazed before we are half way through. We are going to know a new freedom and a new happiness. We will not regret the past nor wish to shut the door on it.' },
+      { text: 'We will comprehend the word serenity and we will know peace. No matter how far down the scale we have gone, we will see how our experience can benefit others. That feeling of uselessness and self-pity will disappear.' },
+      { text: 'We will lose interest in selfish things and gain interest in our fellows. Self-seeking will slip away. Our whole attitude and outlook upon life will change. Fear of people and of economic insecurity will leave us.' },
+      { text: 'We will intuitively know how to handle situations which used to baffle us. We will suddenly realize that God is doing for us what we could not do for ourselves. Are these extravagant promises? We think not. They are being fulfilled among us—sometimes quickly, sometimes slowly.' },
+      { text: 'Continue to watch for selfishness, dishonesty, resentment, and fear. When these crop up, we ask God at once to remove them. We discuss them with someone immediately and make amends quickly if we have harmed anyone.' },
+      { text: 'Love and tolerance of others is our code. And we have ceased fighting anything or anyone—even alcohol.' },
+      { text: 'We are not cured of alcoholism. What we really have is a daily reprieve contingent on the maintenance of our spiritual condition.' },
+      { text: 'When we retire at night, we constructively review our day. Were we resentful, selfish, dishonest or afraid? Do we owe an apology? Have we kept something to ourselves which should be discussed with another person at once?' },
+      { text: 'On awakening let us think about the twenty-four hours ahead. Before we begin, we ask God to direct our thinking, especially asking that it be divorced from self-pity, dishonest or self-seeking motives.' }
     ]
   },
 
@@ -293,28 +290,26 @@ export const CHAPTER_CONTENT = {
   },
 
   "to-wives": {
-    highlights: [
-      { text: "CHAPTER 8", type: "sidebar" }
-    ],
+    highlights: [],
+    tabs: [],
     paragraphs: [
-      { text: 'With few exceptions, our book thus far has spoken of men. But what we have said applies quite as much to women. Our activities in behalf of women who drink are on the increase.', highlight: 'yellow' },
-      { text: 'Try not to condemn your alcoholic husband no matter what he says or does. He is just another very sick, unreasonable person. Treat him, when you can, as though he had pneumonia.', highlight: 'yellow' },
-      { text: 'The first principle of success is that you should never be angry. Even though your husband becomes unbearable and you have to leave him temporarily, you should, if you can, go without rancor.', highlight: 'yellow' },
-      { text: 'Be determined that your husband\'s drinking is not going to spoil your relations with your children or your friends. They need your companionship and your help. It is possible to have a full and useful life, though your husband continues to drink.', highlight: 'yellow' },
-      { text: 'We wives found that, like everybody else, we were afflicted with pride, self-pity, vanity and all the things which go to make up the self-centered person. Now we try to put spiritual principles to work in every department of our lives.', highlight: 'yellow' }
+      { text: 'With few exceptions, our book thus far has spoken of men. But what we have said applies quite as much to women. Our activities in behalf of women who drink are on the increase.' },
+      { text: 'Try not to condemn your alcoholic husband no matter what he says or does. He is just another very sick, unreasonable person. Treat him, when you can, as though he had pneumonia.' },
+      { text: 'The first principle of success is that you should never be angry. Even though your husband becomes unbearable and you have to leave him temporarily, you should, if you can, go without rancor.' },
+      { text: 'Be determined that your husband\'s drinking is not going to spoil your relations with your children or your friends. They need your companionship and your help. It is possible to have a full and useful life, though your husband continues to drink.' },
+      { text: 'We wives found that, like everybody else, we were afflicted with pride, self-pity, vanity and all the things which go to make up the self-centered person. Now we try to put spiritual principles to work in every department of our lives.' }
     ]
   },
 
   "family-afterward": {
-    highlights: [
-      { text: "CHAPTER 9", type: "sidebar" }
-    ],
+    highlights: [],
+    tabs: [],
     paragraphs: [
-      { text: 'Successful readjustment means the opposite of wrapping in cotton wool. All members of the family should meet upon the common ground of tolerance, understanding and love.', highlight: 'yellow' },
-      { text: 'Cessation of drinking is but the first step away from a highly strained, abnormal condition. Let families realize, as they start their journey, that all will not be fair weather.', highlight: 'yellow' },
-      { text: 'The alcoholic\'s past becomes the principal asset of the family and frequently it is almost the only one! This painful past may be of infinite value to other families still struggling with their problem.', highlight: 'blue' },
-      { text: 'We are sure God wants us to be happy, joyous, and free. We cannot subscribe to the belief that this life is a vale of tears, though it once was just that for many of us.', highlight: 'blue' },
-      { text: 'We have three little mottoes which are apropos: First Things First, Live and Let Live, Easy Does It.', highlight: 'yellow' }
+      { text: 'Successful readjustment means the opposite of wrapping in cotton wool. All members of the family should meet upon the common ground of tolerance, understanding and love.' },
+      { text: 'Cessation of drinking is but the first step away from a highly strained, abnormal condition. Let families realize, as they start their journey, that all will not be fair weather.' },
+      { text: 'The alcoholic\'s past becomes the principal asset of the family and frequently it is almost the only one! This painful past may be of infinite value to other families still struggling with their problem.' },
+      { text: 'We are sure God wants us to be happy, joyous, and free. We cannot subscribe to the belief that this life is a vale of tears, though it once was just that for many of us.' },
+      { text: 'We have three little mottoes which are apropos: First Things First, Live and Let Live, Easy Does It.' }
     ]
   },
 
@@ -323,6 +318,7 @@ export const CHAPTER_CONTENT = {
 
   "tightrope": {
     highlights: [],
+    tabs: [],
     paragraphs: [
       { text: 'Drinking was always a part of my family background. All the men in my family drank. As long as a person held down a job, didn\'t embarrass his family or friends too frequently, and kept out of trouble, he was entitled to get drunk on a regular basis.' },
       { text: 'I was raised in a conservative religion. Because I had a quick mind and was comfortable with academics, I became something of a teacher\'s pet. So when I went away to college, I was an alcoholic waiting to happen.' },
@@ -330,13 +326,14 @@ export const CHAPTER_CONTENT = {
       { text: 'I wound up living two separate and distinct lives—that of the gay man with friends and interests to match and that of the straight man with a totally separate set of friends and interests.' },
       { text: 'The slide toward active alcoholism was slowly accelerating. By the end of my drinking, only two people were willing to have anything to do with me on a social basis, and both were heavy drinkers.' },
       { text: 'Then a miracle occurred. The look of disgust and pity on the face of that stranger was the jolt I needed. I suddenly realized that my life was totally insane, that my drinking was out of control.' },
-      { text: 'I called my former lover, and he put me in contact with an individual who took me to my first meeting. I heard two things I have never forgotten. The first was "You don\'t have to drink again." The second thing I heard was "You don\'t have to be alone anymore."', highlight: 'blue' },
-      { text: 'When we saw others solve their problems by a simple reliance upon the Spirit of the Universe, we had to stop doubting the power of God.', highlight: 'blue' }
+      { text: 'I called my former lover, and he put me in contact with an individual who took me to my first meeting. I heard two things I have never forgotten. The first was "You don\'t have to drink again." The second thing I heard was "You don\'t have to be alone anymore."' },
+      { text: 'When we saw others solve their problems by a simple reliance upon the Spirit of the Universe, we had to stop doubting the power of God.' }
     ]
   },
 
   "flooded-with-feeling": {
     highlights: [],
+    tabs: [],
     paragraphs: [
       { text: 'When I first came to A.A., I thought everyone had drunk more than I had. But I kept coming to meetings, and I came to realize that I was on the same road. I just hadn\'t gone as far—yet.' },
       { text: 'I had my first drink in my senior year of high school. I never made that mistake again of bringing too little!' },
@@ -344,13 +341,14 @@ export const CHAPTER_CONTENT = {
       { text: 'A new teacher came to my school, and I invited myself over to her place for a drink. I remember telling her, as I lifted the glass, that this might not be such a great idea but, "I believe it\'s worth the risk."' },
       { text: 'A few days later a teacher came up to me at work and said that she was an alcoholic and that she was going to A.A. The next day I asked her how often she went to meetings.' },
       { text: 'Halfway through the meeting I had the strangest idea. People were introducing themselves as alcoholics, and I had the urge to do the same. For the first time in years, I felt that I belonged.' },
-      { text: 'Something happened. A barrier collapsed. Without moving or speaking, I was carried away on a flood of emotion. I know that I took the Third Step that night.', highlight: 'blue' },
+      { text: 'Something happened. A barrier collapsed. Without moving or speaking, I was carried away on a flood of emotion. I know that I took the Third Step that night.' },
       { text: 'I can say that doubting God\'s existence was no barrier at all to a spiritual experience. Alcoholics Anonymous gives me the freedom to believe and to doubt as much as I need to.' }
     ]
   },
 
   "winner-takes-all": {
     highlights: [],
+    tabs: [],
     paragraphs: [
       { text: 'My parents were very much in love. When their son was about two years old, he followed some older children outside and was hit by a car. My parents were stricken with grief.' },
       { text: 'When this little girl was born, she brought them great joy. They tried again to have another little boy, but they had me instead. Not only was I a girl, but I was also born legally blind.' },
@@ -358,13 +356,14 @@ export const CHAPTER_CONTENT = {
       { text: 'It was during my high school years that I discovered alcohol, and my problems were over. Now I was pretty and smart. For the first time I felt as if I fit in.' },
       { text: 'When I got on my knees and said, "God, change me or let me die," I called Alcoholics Anonymous and asked for help.' },
       { text: 'They started to explain to me that alcoholism is a disease. I started going to meetings. One night a friend said that even though he had been in jail, he was no different from me. It was then that I knew I was not unique.' },
-      { text: 'I learned that handicapped is not a dirty word. I learned that I was not bad—that I was one of God\'s special children, that God had a plan for my life.', highlight: 'blue' },
-      { text: 'Since A.A., it doesn\'t matter how bad things get—I always have a feeling that everything is going to be all right.', highlight: 'blue' }
+      { text: 'I learned that handicapped is not a dirty word. I learned that I was not bad—that I was one of God\'s special children, that God had a plan for my life.' },
+      { text: 'Since A.A., it doesn\'t matter how bad things get—I always have a feeling that everything is going to be all right.' }
     ]
   },
 
   "my-bottle-my-resentments-and-me": {
     highlights: [],
+    tabs: [],
     paragraphs: [
       { text: 'When I rode into a small mountain town in an empty freight car, my matted beard and filthy hair would have reached nearly to my belt, if I\'d had a belt. I wore a lice-infested, grimy Mexican poncho over a reeking pajama top, and a ragged pair of jeans stuffed into cowboy boots with no heels.' },
       { text: 'I carried a knife in one boot and a .38 revolver in the other. For six years I\'d been fighting for survival on skid rows and riding across the country in freights. I hadn\'t eaten in a long time, so was half starved and down to 130 pounds. I was mean and I was drunk.' },
@@ -379,13 +378,14 @@ export const CHAPTER_CONTENT = {
       { text: 'The next day we both quit drinking. There are no words to explain why it happened or how it happened; it just did. It was a miracle!' },
       { text: 'My sponsor told me if I wanted to form a relationship with my Higher Power, it would be necessary for me to change. I had to surrender and accept I was an alcoholic. These resentments eased with time as I began to comprehend my own defects of character.' },
       { text: 'Gradually the ice that was my heart melted and I changed as my relationship with my Higher Power grew. Life began to take on a whole new meaning.' },
-      { text: 'An article about my life appeared in a magazine. My oldest brother just happened to subscribe to this magazine and just happened to read the article. After more than thirty years, my family had found me. God has done for me what I could not do for myself!', highlight: 'blue' },
+      { text: 'An article about my life appeared in a magazine. My oldest brother just happened to subscribe to this magazine and just happened to read the article. After more than thirty years, my family had found me. God has done for me what I could not do for myself!' },
       { text: 'I believe that I am living proof of the A.A. saying "Don\'t give up until the miracle happens."' }
     ]
   },
 
   "he-lived-only-to-drink": {
     highlights: [],
+    tabs: [],
     paragraphs: [
       { text: 'On looking back at my life, I can\'t see anything that would have warned me or my family of the devastation that alcoholism had in store for us.' },
       { text: 'My father was a minister, and I attended his church every Sunday. My parents were both educators and champions of community outreach. There was caring and togetherness among us.' },
@@ -398,12 +398,13 @@ export const CHAPTER_CONTENT = {
       { text: 'I genuinely believed that I was different until much later, when I had what I now know to be my first spiritual awakening: that I was an alcoholic and I didn\'t have to drink! I also learned that alcoholism, as an equal opportunity illness, does not discriminate.' },
       { text: 'In early sobriety I had to continue to live in a flophouse filled with active drunks. I realized that I had to separate my sobriety from everything else that was going on in my life. No matter what happened or didn\'t happen, I couldn\'t drink.' },
       { text: 'More important, I came to believe that I cannot do this alone. In A.A. I faced the pervasive "we" of the Twelve Steps and gradually realized that I can separate and protect my sobriety only inasmuch as I rely on the sober experience of other A.A. members.' },
-      { text: 'The rewards of sobriety are bountiful. Among these rewards for me are release from the prison of uniqueness, and the realization that participation in the A.A. way of life is a blessing and a privilege beyond estimate.', highlight: 'blue' }
+      { text: 'The rewards of sobriety are bountiful. Among these rewards for me are release from the prison of uniqueness, and the realization that participation in the A.A. way of life is a blessing and a privilege beyond estimate.' }
     ]
   },
 
   "safe-haven": {
     highlights: [],
+    tabs: [],
     paragraphs: [
       { text: 'Prison. What a wonderful life it is. Here I am, sitting in a cell waiting for my hotpot to heat up so I can have a cup of instant coffee and reminisce.' },
       { text: 'I didn\'t grow up in a home that used alcohol, but when I took my first drink at the age of thirteen, I knew I would drink again.' },
@@ -416,13 +417,14 @@ export const CHAPTER_CONTENT = {
       { text: 'As a result of that episode, I ended up seeing a psychiatrist to find out what was wrong with me. She said she thought I was an alcoholic and gave me a copy of the Big Book.' },
       { text: 'One day I heard something that was music to my ears. An A.A. meeting was to be held in the chapel. When I walked into the meeting, I took a seat in the circle of chairs, where I once again found a protective haven.' },
       { text: 'As I pen this story, 3½ years have passed since that meeting in the chapel. A.A. has accomplished so many things in my life today. It has given me my sanity and an all-around sense of balance.' },
-      { text: 'The trial officials who convicted me and the victims of my crime have all decided to support my early release from prison. Coincidence? I think not. These are just samples of God doing for me what I couldn\'t do for myself.', highlight: 'blue' },
+      { text: 'The trial officials who convicted me and the victims of my crime have all decided to support my early release from prison. Coincidence? I think not. These are just samples of God doing for me what I couldn\'t do for myself.' },
       { text: 'From experience, I\'ve realized that I cannot go back and make a brand-new start. But through A.A., I can start from now and make a brand-new end.' }
     ]
   },
 
   "listening-to-the-wind": {
     highlights: [],
+    tabs: [],
     paragraphs: [
       { text: 'I started drinking when I was around eleven years old. I stayed with my brother and his wife just outside of Gallup, New Mexico. We were poor. The smell of beans and fresh tortillas symbolized home to me.' },
       { text: 'I had a hard time reading and understanding school work, so I skipped school every chance I got. I met a boy and together we ditched school and stole a truck. We drank tequila and explored the red mesas together.' },
@@ -440,15 +442,16 @@ export const CHAPTER_CONTENT = {
       { text: 'One evening during a party at my home, a woman there was writing something down on a small piece of paper. She came right up to me and handed me the small blue paper: "If you ever want to stop drinking, call Alcoholics Anonymous, 24 hours a day."' },
       { text: 'I was afraid to go on the street, so I turned to Mothers\' Aid. One morning I woke up alone. I needed a drink, and the bottle on the bedside table was dry. I found my empty purse on the floor. I remembered the number in the pocket of my jeans.' },
       { text: 'Five minutes later she pulled into my driveway. She must have been some kind of an angel. How had she appeared from nowhere that day in the laundromat?' },
-      { text: 'The A.A. woman made sure I had no more alcohol in the house. I went to meetings every day and started taking the steps. That feeble request to God worked. From that day on, I knew that I had found a Higher Power and that He would help me.', highlight: 'blue' },
+      { text: 'The A.A. woman made sure I had no more alcohol in the house. I went to meetings every day and started taking the steps. That feeble request to God worked. From that day on, I knew that I had found a Higher Power and that He would help me.' },
       { text: 'The Twelve Steps worked like a crowbar, prying into my dishonesty and fear. I made some friends for the first time in my life. Real friends that cared, even when I was broke and feeling desperate.' },
       { text: 'I met my current husband in an A.A. meeting. Together we carry the message to Indian people on reservations all over the country. Our daughter was born during my early sobriety.' },
-      { text: 'My life is filled with honesty today. I am in love and proud to be a Native American. I stand at the top of the sacred mountain, and I listen to the wind. I have a conscious daily contact with my Creator today, and He loves me.', highlight: 'blue' }
+      { text: 'My life is filled with honesty today. I am in love and proud to be a Native American. I stand at the top of the sacred mountain, and I listen to the wind. I have a conscious daily contact with my Creator today, and He loves me.' }
     ]
   },
 
   "twice-gifted": {
     highlights: [],
+    tabs: [],
     paragraphs: [
       { text: 'Today is Sunday, my favorite day of the week. Things are usually peaceful, and I always get that wonderfully humbling, it\'s amazing to be alive, feeling.' },
       { text: 'Sunday used to be pretty wild in the old days. I cannot remember a time without booze in my life. By the time I actually reached legal drinking age, I had definitely gone beyond weekend party drinking.' },
@@ -462,13 +465,14 @@ export const CHAPTER_CONTENT = {
       { text: 'My new doctor gave me a referral to a liver transplant clinic. The doctors made it clear that if I wanted to live, I was going to have to prove that alcohol was no longer going to be part of my life.' },
       { text: 'That meeting more of what the people in A.A. were saying started to pass through my ears, and into my head, and finally into my heart. I found myself willing, and after some weeks of just showing up, I began to believe that this program could work for me.' },
       { text: 'During the six months of evaluation, I had a blood test at least weekly. After a six-month period I was officially listed as a candidate for a liver transplant. A year and a half later I was given a second chance and a second gift of life.' },
-      { text: 'My physical being has certainly undergone a transformation, but the major transformation has been spiritual. The hopelessness has been replaced by abundant hope and sincere faith.', highlight: 'blue' },
+      { text: 'My physical being has certainly undergone a transformation, but the major transformation has been spiritual. The hopelessness has been replaced by abundant hope and sincere faith.' },
       { text: 'Today my life is filled with miracles big and small, not one of which would ever have come to pass had I not found the door of Alcoholics Anonymous.' }
     ]
   },
 
   "building-a-new-life": {
     highlights: [],
+    tabs: [],
     paragraphs: [
       { text: 'We had been in the fields all day baling hay. When the work was done, the men brought out a gallon of muscatel. I took a few drinks because I wanted to be like the men. I was six years old.' },
       { text: 'My early years were spent on my aunt and uncle\'s farm. Life was hard work in those days. By age eight I was guiding a horse-drawn plow by myself.' },
@@ -486,15 +490,16 @@ export const CHAPTER_CONTENT = {
       { text: 'I went on a ten-day binge. By mid-January I was having hallucinations that would not go away. I called a residential treatment program and said I wanted help.' },
       { text: 'I began to think I was in prison and these guys wanted to kill me. When they opened the door, I ran for a window. The staff called the sheriff\'s department, and it took three deputies, two counselors, and two nurses to hold me down.' },
       { text: 'It was three days later when I woke up, naked and stinking. They cleaned me up and I felt great. I went to the treatment sessions and listened to everything. I wanted what the A.A.\'s had.' },
-      { text: 'I have been sober ever since. I was finally accountable for my own recovery. I was responsible for taking the action. To me sobriety is a gift from God.', highlight: 'blue' },
+      { text: 'I have been sober ever since. I was finally accountable for my own recovery. I was responsible for taking the action. To me sobriety is a gift from God.' },
       { text: 'Once I was sober, my wife took me back. I felt that I had to go back to take care of the kids I had once left on welfare. I have beautiful relationships with all my kids.' },
       { text: 'There have been some hard times during these years of sobriety. When I was five years sober, the daughter who drove me to the treatment program disappeared. When I lost a second daughter to cancer, I went to lots of meetings.' },
-      { text: 'What I\'ve learned is that it doesn\'t matter what hardships I\'ve endured in sobriety, I have not had to go back to drinking. As long as I work the program, keep being of service, and keep my spiritual life together, I can live a decent life.', highlight: 'blue' }
+      { text: 'What I\'ve learned is that it doesn\'t matter what hardships I\'ve endured in sobriety, I have not had to go back to drinking. As long as I work the program, keep being of service, and keep my spiritual life together, I can live a decent life.' }
     ]
   },
 
   "on-the-move": {
     highlights: [],
+    tabs: [],
     paragraphs: [
       { text: 'I thought my life had come to an end when I arrived at my first meeting of Alcoholics Anonymous at twenty-eight years old. I had been drinking since my early teens, and booze had been the answer to my problems.' },
       { text: 'As a very young boy, perhaps ten or eleven years old, I had begun to steal drinks when my parents were not looking, or my friends and I would convince someone to buy us beer.' },
@@ -508,10 +513,10 @@ export const CHAPTER_CONTENT = {
       { text: 'I didn\'t like A.A. and the people in it for a long time. I didn\'t trust anyone. It never occurred to me that they had sponsors and were working the Twelve Steps.' },
       { text: 'Then something happened that I now believe helped me to stay sober. I woke up one morning and couldn\'t feel my legs. Several months later, I was diagnosed with multiple sclerosis.' },
       { text: 'After white-knuckling it for almost two years in A.A., I finally broke down and saw that I could not stay sober all by myself. I did the unimaginable—I informed my sponsor that I was ready to work the Twelve Steps.' },
-      { text: 'That man took me through the steps in a loving, gentle way. He taught me to look inward at my soul, to welcome a Higher Power into my life, and to reach out to others.', highlight: 'blue' },
+      { text: 'That man took me through the steps in a loving, gentle way. He taught me to look inward at my soul, to welcome a Higher Power into my life, and to reach out to others.' },
       { text: 'When I was four years sober, I took a trip back to my home city. I made amends to the man I had attempted to kill when I was fifteen years old.' },
-      { text: 'A.A., and the steps of recovery, have shown me how to look at events in a different way. I can now understand how some things which once seemed like major disasters, turned out to be blessings.', highlight: 'blue' },
-      { text: 'I am truly a grateful alcoholic today. I do not regret the past nor wish to shut the door on it. I am aware that I am not the only person on this earth with problems.', highlight: 'blue' }
+      { text: 'A.A., and the steps of recovery, have shown me how to look at events in a different way. I can now understand how some things which once seemed like major disasters, turned out to be blessings.' },
+      { text: 'I am truly a grateful alcoholic today. I do not regret the past nor wish to shut the door on it. I am aware that I am not the only person on this earth with problems.' }
     ]
   },
 
