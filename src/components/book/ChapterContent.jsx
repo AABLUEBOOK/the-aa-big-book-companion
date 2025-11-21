@@ -2,8 +2,9 @@ import React from "react";
 import { cn } from "@/lib/utils";
 import { CHAPTER_CONTENT } from "./allChapterContent";
 import AudioPlayer from "./AudioPlayer";
+import BookmarkButton from "./BookmarkButton";
 
-export default function ChapterContent({ chapter }) {
+export default function ChapterContent({ chapter, sectionRoute }) {
 
   if (!chapter) return null;
 
@@ -17,16 +18,21 @@ export default function ChapterContent({ chapter }) {
 
       {/* Chapter Header */}
       <div className="bg-gradient-to-r from-[#2A3440] to-[#222A31] border-b border-[#25DCE6]/20 px-4 sm:px-8 lg:px-12 py-4 sm:py-6 lg:py-8">
-        {chapter.chapter && (
-          <div className="text-xs sm:text-sm font-medium text-[#25DCE6]/70 uppercase tracking-widest mb-1 sm:mb-2">
-            Chapter {chapter.chapter}
+        <div className="flex items-start justify-between gap-4">
+          <div className="flex-1">
+            {chapter.chapter && (
+              <div className="text-xs sm:text-sm font-medium text-[#25DCE6]/70 uppercase tracking-widest mb-1 sm:mb-2">
+                Chapter {chapter.chapter}
+              </div>
+            )}
+            <h1 className="text-xl sm:text-3xl lg:text-4xl xl:text-5xl font-serif font-bold text-[#FFFFFD] leading-tight">
+              {chapter.title}
+            </h1>
+            <div className="mt-2 sm:mt-3 text-xs sm:text-sm text-[#25DCE6]/60">
+              Page {chapter.pageNum}
+            </div>
           </div>
-        )}
-        <h1 className="text-xl sm:text-3xl lg:text-4xl xl:text-5xl font-serif font-bold text-[#FFFFFD] leading-tight">
-          {chapter.title}
-        </h1>
-        <div className="mt-2 sm:mt-3 text-xs sm:text-sm text-[#25DCE6]/60">
-          Page {chapter.pageNum}
+          <BookmarkButton chapter={chapter} sectionRoute={sectionRoute} />
         </div>
       </div>
 

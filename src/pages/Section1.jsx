@@ -192,7 +192,7 @@ export default function Section1() {
           <div className="flex-1 w-full lg:max-w-4xl lg:pr-12 xl:pr-16 space-y-8">
             {CHAPTERS.map((chapter, index) => (
               <div key={chapter.id} id={chapter.id}>
-                <ChapterContent chapter={chapter} />
+                <ChapterContent chapter={chapter} sectionRoute="Section1" />
               </div>
             ))}
 
