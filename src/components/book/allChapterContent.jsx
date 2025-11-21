@@ -19,8 +19,20 @@ export const CHAPTER_CONTENT = {
     tabs: [],
     paragraphs: [
       { text: 'This is the fourth edition of the book "Alcoholics Anonymous." The first edition appeared in April 1939, and in the following sixteen years, more than 300,000 copies went into circulation. The second edition, published in 1955, reached a total of more than 1,150,500 copies. The third edition, which came off press in 1976, achieved a circulation of approximately 19,550,000 in all formats.' },
-      { text: 'Because this book has become the basic text for our Society and has helped such large numbers of alcoholic men and women to recovery, there exists strong sentiment against any radical changes being made in it. Therefore, the first portion of this volume, describing the A.A. recovery program, has been left largely untouched in the course of revisions made for the second, third, and fourth editions.' },
-      { text: 'The second edition added the appendices, the Twelve Traditions, and the directions for getting in touch with A.A. The chief change was in the section of personal stories, which was expanded to reflect the Fellowship\'s growth.', highlight: 'pink' },
+      { 
+        segments: [
+          { text: 'Because this book has become the basic text for our Society and has helped such large numbers of alcoholic men and women to ' },
+          { text: 'recovery', highlight: 'pink' },
+          { text: ', there exists strong sentiment against any radical changes being made in it. Therefore, the first portion of this volume, describing the A.A. recovery program, has been left largely untouched in the course of revisions made for the second, third, and fourth editions.' }
+        ]
+      },
+      { 
+        segments: [
+          { text: 'The second edition added the appendices, the Twelve Traditions, and the directions for getting in touch with A.A. The chief change was in the section of ' },
+          { text: 'personal stories', highlight: 'pink' },
+          { text: ', which was expanded to reflect the Fellowship\'s growth.' }
+        ]
+      },
       { text: 'In the third edition, Part I was left unchanged. Nine of the stories in Part II were carried over from the second edition; eight new stories were added. In Part III, eight stories were retained; five new ones were added.' },
       { 
         segments: [
@@ -111,7 +123,15 @@ export const CHAPTER_CONTENT = {
       { text: 'We of Alcoholics Anonymous believe that the reader will be interested in the medical estimate of the plan of recovery described in this book.' },
       { text: 'A well-known doctor, chief physician at a nationally prominent hospital specializing in alcoholic and drug addiction, gave Alcoholics Anonymous this letter:' },
       { text: 'The doctor wrote: I have specialized in the treatment of alcoholism for many years. In late 1934 I attended a patient who, though he had been a competent businessman of good earning capacity, was an alcoholic of a type I had come to regard as hopeless.' },
-      { text: 'In the course of his third treatment he acquired certain ideas concerning a possible means of recovery. As part of his rehabilitation he commenced to present his conceptions to other alcoholics. This man and over one hundred others appear to have recovered.' },
+      { 
+        segments: [
+          { text: 'In the course of his third treatment he acquired certain ideas concerning a possible means of ' },
+          { text: 'recovery', highlight: 'pink' },
+          { text: '. As part of his rehabilitation he commenced to present his conceptions to other alcoholics. This man and over one hundred others appear to have ' },
+          { text: 'recovered', highlight: 'pink' },
+          { text: '.' }
+        ]
+      },
       { text: 'I personally know scores of cases who were of the type with whom other methods had failed completely. These facts appear to be of extreme medical importance. These men may well have a remedy for thousands of such situations.' },
       { text: 'The physician who gave us this letter confirms what we who have suffered alcoholic torture must believe—that the body of the alcoholic is quite as abnormal as his mind.' },
       { text: 'The doctor\'s theory that we have an allergy to alcohol interests us. As ex-problem drinkers, we can say that his explanation makes good sense.' },
@@ -170,14 +190,26 @@ export const CHAPTER_CONTENT = {
     highlights: [],
     tabs: [],
     paragraphs: [
-      { text: "We, of ALCOHOLICS ANONYMOUS, know thousands of men and women who were once just as hopeless as Bill. Nearly all have recovered. They have solved the drink problem." },
+      { 
+        segments: [
+          { text: "We, of ALCOHOLICS ANONYMOUS, know thousands of men and women who were once just as hopeless as Bill. Nearly all have " },
+          { text: "recovered", highlight: 'pink' },
+          { text: ". They have solved the drink problem." }
+        ]
+      },
       { text: "We are average Americans. All sections of this country and many of its occupations are represented, as well as many political, economic, social, and religious backgrounds. We are people who normally would not mix. But there exists among us a fellowship, a friendliness, and an understanding which is indescribably wonderful." },
       { text: "The tremendous fact for every one of us is that we have discovered a common solution. We have a way out on which we can absolutely agree, and upon which we can join in brotherly and harmonious action. This is the great news this book carries to those who suffer from alcoholism." },
       { text: "An illness of this sort—and we have come to believe it an illness—involves those about us in a way no other human sickness can. If a person has cancer all are sorry for him and no one is angry or hurt. But not so with the alcoholic illness, for with it there goes annihilation of all the things worth while in life." },
       { text: "We hope this volume will inform and comfort those who are, or who may be affected. There are many. Highly competent psychiatrists who have dealt with us have found it sometimes impossible to persuade an alcoholic to discuss his situation without reserve. Strangely enough, wives, parents and intimate friends usually find us even more unapproachable than do the psychiatrist and the doctor." },
       { text: "But the ex-problem drinker who has found this solution, who is properly armed with facts about himself, can generally win the entire confidence of another alcoholic in a few hours. Until such an understanding is reached, little or nothing can be accomplished." },
       { text: "That the man who is making the approach has had the same difficulty, that he obviously knows what he is talking about, that his whole deportment shouts at the new prospect that he is a man with a real answer, that he has no attitude of Holier Than Thou, nothing whatever except the sincere desire to be helpful; that there are no fees to pay, no axes to grind, no people to please, no lectures to be endured—these are the conditions we have found most effective." },
-      { text: 'You may already have asked yourself why it is that all of us became so very ill from drinking. Doubtless you are curious to discover how and why, in the face of expert opinion to the contrary, we have recovered from a hopeless condition of mind and body. If you are an alcoholic who wants to get over it, you may already be asking—"What do I have to do?"' },
+      { 
+        segments: [
+          { text: 'You may already have asked yourself why it is that all of us became so very ill from drinking. Doubtless you are curious to discover how and why, in the face of expert opinion to the contrary, we have ' },
+          { text: 'recovered', highlight: 'pink' },
+          { text: ' from a hopeless condition of mind and body. If you are an alcoholic who wants to get over it, you may already be asking—"What do I have to do?"' }
+        ]
+      },
       { text: 'How many times people have said to us: "I can take it or leave it alone. Why can\'t he?" "Why don\'t you drink like a gentleman or quit?" "That fellow can\'t handle his liquor." "Why don\'t you try beer and wine?" "His will power must be weak." "The doctor told him that if he ever drank again it would kill him, but there he is all lit up again."' },
       { text: "Moderate drinkers have little trouble in giving up liquor entirely if they have good reason for it. They can take it or leave it alone. Then we have a certain type of hard drinker. He may have the habit badly enough to gradually impair him physically and mentally. If a sufficiently strong reason becomes operative, this man can also stop or moderate, although he may find it difficult and troublesome." },
       { text: "But what about the real alcoholic? He may start off as a moderate drinker; he may or may not become a continuous hard drinker; but at some stage of his drinking career he begins to lose all control of his liquor consumption, once he starts to drink." },
