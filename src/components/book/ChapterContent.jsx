@@ -14,21 +14,21 @@ export default function ChapterContent({ chapter, sectionRoute }) {
   };
 
   return (
-    <div className="bg-[#2A3440] rounded-xl sm:rounded-2xl shadow-2xl border border-[#25DCE6]/20 overflow-visible relative">
+    <div className="bg-white rounded-xl sm:rounded-2xl shadow-2xl border border-gray-200 overflow-visible relative">
 
       {/* Chapter Header */}
-      <div className="bg-gradient-to-r from-[#2A3440] to-[#222A31] border-b border-[#25DCE6]/20 px-4 sm:px-8 lg:px-12 py-4 sm:py-6 lg:py-8">
+      <div className="bg-gradient-to-r from-gray-100 to-gray-50 border-b border-gray-200 px-4 sm:px-8 lg:px-12 py-4 sm:py-6 lg:py-8">
         <div className="flex items-start justify-between gap-4">
           <div className="flex-1">
             {chapter.chapter && (
-              <div className="text-xs sm:text-sm font-medium text-[#25DCE6]/70 uppercase tracking-widest mb-1 sm:mb-2">
+              <div className="text-xs sm:text-sm font-medium text-[#25DCE6] uppercase tracking-widest mb-1 sm:mb-2">
                 Chapter {chapter.chapter}
               </div>
             )}
-            <h1 className="text-xl sm:text-3xl lg:text-4xl xl:text-5xl font-serif font-bold text-[#FFFFFD] leading-tight">
+            <h1 className="text-xl sm:text-3xl lg:text-4xl xl:text-5xl font-serif font-bold text-gray-900 leading-tight">
               {chapter.title}
             </h1>
-            <div className="mt-2 sm:mt-3 text-xs sm:text-sm text-[#25DCE6]/60">
+            <div className="mt-2 sm:mt-3 text-xs sm:text-sm text-gray-500">
               Page {chapter.pageNum}
             </div>
           </div>
@@ -52,7 +52,7 @@ export default function ChapterContent({ chapter, sectionRoute }) {
         ></div>
 
         <div className="prose prose-sm sm:prose-base lg:prose-lg max-w-none relative select-text">
-          <div className="font-serif text-[#FFFFFD] leading-relaxed text-base sm:text-lg space-y-4 sm:space-y-6">
+          <div className="font-serif text-gray-800 leading-relaxed text-base sm:text-lg space-y-4 sm:space-y-6">
             {chapterData.paragraphs?.map((para, idx) => {
               const highlightClasses = {
                 'yellow': 'bg-yellow-400/30 px-1 py-0.5 rounded',

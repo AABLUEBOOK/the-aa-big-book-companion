@@ -116,7 +116,7 @@ export default function AudioPlayer({ content }) {
   const progress = texts.length > 0 ? ((currentIndex + 1) / texts.length) * 100 : 0;
 
   return (
-    <div className="sticky top-20 z-40 bg-[#2A3440]/95 backdrop-blur-sm border border-[#25DCE6]/30 rounded-xl shadow-2xl p-4 mb-6">
+    <div className="sticky top-20 z-40 bg-gray-100 backdrop-blur-sm border border-gray-300 rounded-xl shadow-lg p-4 mb-6">
       <div className="flex items-center gap-4">
         <Button
           onClick={handlePlayPause}
@@ -128,15 +128,15 @@ export default function AudioPlayer({ content }) {
 
         <div className="flex-1">
           <div className="flex items-center justify-between mb-2">
-            <span className="text-xs text-[#FFFFFD]/60">
+            <span className="text-xs text-gray-600">
               Paragraph {currentIndex + 1} of {texts.length}
             </span>
-            <span className="text-xs text-[#FFFFFD]/60">
+            <span className="text-xs text-gray-600">
               Speed: {speed}x
             </span>
           </div>
           
-          <div className="w-full bg-[#222A31] rounded-full h-2 overflow-hidden">
+          <div className="w-full bg-gray-300 rounded-full h-2 overflow-hidden">
             <div 
               className="bg-[#25DCE6] h-full transition-all duration-300"
               style={{ width: `${progress}%` }}
@@ -155,7 +155,7 @@ export default function AudioPlayer({ content }) {
           </Button>
 
           <div className="flex items-center gap-2 min-w-[120px]">
-            <span className="text-xs text-[#FFFFFD]/60 whitespace-nowrap">0.5x</span>
+            <span className="text-xs text-gray-600 whitespace-nowrap">0.5x</span>
             <Slider
               value={[speed]}
               onValueChange={handleSpeedChange}
@@ -164,25 +164,25 @@ export default function AudioPlayer({ content }) {
               step={0.25}
               className="w-20"
             />
-            <span className="text-xs text-[#FFFFFD]/60 whitespace-nowrap">2x</span>
+            <span className="text-xs text-gray-600 whitespace-nowrap">2x</span>
           </div>
         </div>
       </div>
       
       {/* Voice Selector */}
-      <div className="mt-3 pt-3 border-t border-[#25DCE6]/20">
+      <div className="mt-3 pt-3 border-t border-gray-300">
         <div className="flex items-center gap-3">
-          <span className="text-xs text-[#FFFFFD]/60 whitespace-nowrap">Voice:</span>
+          <span className="text-xs text-gray-600 whitespace-nowrap">Voice:</span>
           <Select value={selectedVoice} onValueChange={setSelectedVoice}>
-            <SelectTrigger className="flex-1 h-8 text-xs bg-[#222A31] border-[#25DCE6]/30 text-[#FFFFFD]">
+            <SelectTrigger className="flex-1 h-8 text-xs bg-white border-gray-300 text-gray-800">
               <SelectValue placeholder="Select a voice" />
             </SelectTrigger>
-            <SelectContent className="max-h-60 bg-[#2A3440] border-[#25DCE6]/30">
+            <SelectContent className="max-h-60 bg-white border-gray-300">
               {voices.map((voice) => (
                 <SelectItem 
                   key={voice.name} 
                   value={voice.name}
-                  className="text-xs text-[#FFFFFD] focus:bg-[#25DCE6]/20"
+                  className="text-xs text-gray-800 focus:bg-gray-100"
                 >
                   {voice.name} ({voice.lang})
                 </SelectItem>
