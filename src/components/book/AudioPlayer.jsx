@@ -1,18 +1,39 @@
 import React, { useState, useEffect, useRef } from "react";
-import { Play, Pause, Volume2, VolumeX } from "lucide-react";
+import { Play, Pause, Volume2, VolumeX, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Slider } from "@/components/ui/slider";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 
 export default function AudioPlayer({ content }) {
   const [isPlaying, setIsPlaying] = useState(false);
   const [speed, setSpeed] = useState(1);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isMuted, setIsMuted] = useState(false);
+  const [voices, setVoices] = useState([]);
+  const [selectedVoice, setSelectedVoice] = useState("");
   const utteranceRef = useRef(null);
   const synthRef = useRef(null);
 
   useEffect(() => {
     synthRef.current = window.speechSynthesis;
+    
+    const loadVoices = () => {
+      const availableVoices = synthRef.current.getVoices();
+      setVoices(availableVoices);
+      if (availableVoices.length > 0 && !selectedVoice) {
+        const defaultVoice = availableVoices.find(v => v.default) || availableVoices[0];
+        setSelectedVoice(defaultVoice.name);
+      }
+    };
+
+    loadVoices();
+    synthRef.current.onvoiceschanged = loadVoices;
     
     return () => {
       if (synthRef.current) {
@@ -34,6 +55,11 @@ export default function AudioPlayer({ content }) {
     utteranceRef.current = new SpeechSynthesisUtterance(text);
     utteranceRef.current.rate = speed;
     utteranceRef.current.volume = isMuted ? 0 : 1;
+    
+    const voice = voices.find(v => v.name === selectedVoice);
+    if (voice) {
+      utteranceRef.current.voice = voice;
+    }
     
     utteranceRef.current.onend = () => {
       const texts = extractText();
@@ -140,6 +166,29 @@ export default function AudioPlayer({ content }) {
             />
             <span className="text-xs text-[#FFFFFD]/60 whitespace-nowrap">2x</span>
           </div>
+        </div>
+      </div>
+      
+      {/* Voice Selector */}
+      <div className="mt-3 pt-3 border-t border-[#25DCE6]/20">
+        <div className="flex items-center gap-3">
+          <span className="text-xs text-[#FFFFFD]/60 whitespace-nowrap">Voice:</span>
+          <Select value={selectedVoice} onValueChange={setSelectedVoice}>
+            <SelectTrigger className="flex-1 h-8 text-xs bg-[#222A31] border-[#25DCE6]/30 text-[#FFFFFD]">
+              <SelectValue placeholder="Select a voice" />
+            </SelectTrigger>
+            <SelectContent className="max-h-60 bg-[#2A3440] border-[#25DCE6]/30">
+              {voices.map((voice) => (
+                <SelectItem 
+                  key={voice.name} 
+                  value={voice.name}
+                  className="text-xs text-[#FFFFFD] focus:bg-[#25DCE6]/20"
+                >
+                  {voice.name} ({voice.lang})
+                </SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
         </div>
       </div>
     </div>
