@@ -87,16 +87,17 @@ export default function Home() {
       </div>
 
       {/* Chapter List */}
-      <main className="max-w-3xl mx-auto px-2 sm:px-4 py-4 sm:py-6">
-        <div className="flex flex-col">
+      <main className="max-w-3xl mx-auto px-3 sm:px-4 py-4 sm:py-6">
+        <div className="flex flex-col gap-2 sm:gap-2.5">
           {CHAPTERS.map((chapter, index) => (
             <Link
               key={chapter.id}
               to={`${createPageUrl(chapter.section)}#${chapter.id}`}
               className="flex items-center justify-between px-3 sm:px-4 py-3 sm:py-3.5 
-                         border-b border-[#25DCE6]/10 
-                         hover:bg-[#25DCE6]/10 active:bg-[#25DCE6]/15
-                         transition-colors duration-150"
+                         border border-[#25DCE6]/30 rounded-lg
+                         bg-[#2A3440] hover:bg-[#25DCE6]/10 active:bg-[#25DCE6]/20
+                         hover:border-[#25DCE6]/50 active:scale-[0.99]
+                         transition-all duration-150 shadow-sm"
             >
               <div className="flex items-center gap-2 sm:gap-3 min-w-0 flex-1">
                 {chapter.chapter && (
