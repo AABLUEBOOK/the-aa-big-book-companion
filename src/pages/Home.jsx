@@ -48,14 +48,14 @@ const CHAPTERS = [
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[#222A31]">
+    <div className="min-h-screen min-h-[100dvh] w-full bg-[#222A31] overflow-x-hidden">
       {/* Header */}
-      <header className="bg-[#2A3440] border-b border-[#25DCE6]/20 px-4 py-4 sm:py-6">
-        <div className="max-w-3xl mx-auto text-center">
-          <h1 className="text-xl sm:text-2xl font-serif font-bold text-[#FFFFFD]">
+      <header className="bg-[#2A3440] border-b border-[#25DCE6]/20 px-3 sm:px-4 py-4 sm:py-6 w-full">
+        <div className="max-w-3xl mx-auto text-center px-2">
+          <h1 className="text-lg sm:text-xl md:text-2xl font-serif font-bold text-[#FFFFFD] leading-tight">
             Alcoholics Anonymous
           </h1>
-          <p className="text-xs sm:text-sm text-[#25DCE6] mt-1">
+          <p className="text-[11px] sm:text-xs md:text-sm text-[#25DCE6] mt-1 leading-snug">
             The Story of How Many Thousands of Men and Women Have Recovered from Alcoholism
           </p>
         </div>
