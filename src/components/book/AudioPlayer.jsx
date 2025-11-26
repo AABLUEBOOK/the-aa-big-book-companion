@@ -116,14 +116,15 @@ export default function AudioPlayer({ content }) {
   const progress = texts.length > 0 ? ((currentIndex + 1) / texts.length) * 100 : 0;
 
   return (
-    <div className="sticky top-20 z-40 bg-gray-100 backdrop-blur-sm border border-gray-300 rounded-xl shadow-lg p-4 mb-6">
-      <div className="flex items-center gap-4">
+    <div className="sticky top-14 sm:top-16 z-30 bg-gray-100 backdrop-blur-sm border border-gray-300 rounded-lg sm:rounded-xl shadow-md sm:shadow-lg p-3 sm:p-4 mb-4 sm:mb-6">
+      <div className="flex items-center gap-2 sm:gap-4">
         <Button
           onClick={handlePlayPause}
           size="lg"
-          className="bg-[#25DCE6] hover:bg-[#25DCE6]/80 text-[#222A31] rounded-full w-12 h-12 p-0"
+          className="bg-[#25DCE6] hover:bg-[#25DCE6]/80 active:bg-[#25DCE6]/70 text-[#222A31] rounded-full w-11 h-11 sm:w-12 sm:h-12 p-0 flex-shrink-0"
+          aria-label={isPlaying ? "Pause" : "Play"}
         >
-          {isPlaying ? <Pause className="w-5 h-5" /> : <Play className="w-5 h-5 ml-0.5" />}
+          {isPlaying ? <Pause className="w-4 h-4 sm:w-5 sm:h-5" /> : <Play className="w-4 h-4 sm:w-5 sm:h-5 ml-0.5" />}
         </Button>
 
         <div className="flex-1">
@@ -144,37 +145,38 @@ export default function AudioPlayer({ content }) {
           </div>
         </div>
 
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2 sm:gap-3">
           <Button
             onClick={handleMuteToggle}
             variant="ghost"
             size="sm"
-            className="text-[#25DCE6] hover:bg-[#25DCE6]/10 rounded-full w-9 h-9 p-0"
+            className="text-[#25DCE6] hover:bg-[#25DCE6]/10 active:bg-[#25DCE6]/20 rounded-full w-10 h-10 sm:w-9 sm:h-9 p-0 flex-shrink-0"
+            aria-label={isMuted ? "Unmute" : "Mute"}
           >
             {isMuted ? <VolumeX className="w-4 h-4" /> : <Volume2 className="w-4 h-4" />}
           </Button>
 
-          <div className="flex items-center gap-2 min-w-[120px]">
-            <span className="text-xs text-gray-600 whitespace-nowrap">0.5x</span>
+          <div className="hidden sm:flex items-center gap-2 min-w-[100px]">
+            <span className="text-[10px] sm:text-xs text-gray-600 whitespace-nowrap">0.5x</span>
             <Slider
               value={[speed]}
               onValueChange={handleSpeedChange}
               min={0.5}
               max={2}
               step={0.25}
-              className="w-20"
+              className="w-16 sm:w-20"
             />
-            <span className="text-xs text-gray-600 whitespace-nowrap">2x</span>
+            <span className="text-[10px] sm:text-xs text-gray-600 whitespace-nowrap">2x</span>
           </div>
         </div>
       </div>
       
       {/* Voice Selector */}
-      <div className="mt-3 pt-3 border-t border-gray-300">
-        <div className="flex items-center gap-3">
-          <span className="text-xs text-gray-600 whitespace-nowrap">Voice:</span>
+      <div className="mt-2 sm:mt-3 pt-2 sm:pt-3 border-t border-gray-300">
+        <div className="flex items-center gap-2 sm:gap-3">
+          <span className="text-[10px] sm:text-xs text-gray-600 whitespace-nowrap">Voice:</span>
           <Select value={selectedVoice} onValueChange={setSelectedVoice}>
-            <SelectTrigger className="flex-1 h-8 text-xs bg-white border-gray-300 text-gray-800">
+            <SelectTrigger className="flex-1 h-9 sm:h-8 text-xs bg-white border-gray-300 text-gray-800 min-h-[36px]">
               <SelectValue placeholder="Select a voice" />
             </SelectTrigger>
             <SelectContent className="max-h-60 bg-white border-gray-300">
@@ -182,7 +184,7 @@ export default function AudioPlayer({ content }) {
                 <SelectItem 
                   key={voice.name} 
                   value={voice.name}
-                  className="text-xs text-gray-800 focus:bg-gray-100"
+                  className="text-xs text-gray-800 focus:bg-gray-100 min-h-[40px]"
                 >
                   {voice.name} ({voice.lang})
                 </SelectItem>
