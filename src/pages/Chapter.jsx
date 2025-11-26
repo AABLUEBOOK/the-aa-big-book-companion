@@ -76,10 +76,11 @@ export default function Chapter() {
             <Link 
               to={createPageUrl("Home")} 
               className="flex items-center gap-1.5 sm:gap-2 text-[#25DCE6] hover:text-[#FFFFFD] active:text-[#FFFFFD] transition-colors min-h-[44px] min-w-[44px] px-1"
-              aria-label="Back to home"
+              aria-label="Back to Table of Contents"
             >
               <ArrowLeft className="w-5 h-5 sm:w-5 sm:h-5" />
-              <span className="font-medium text-sm sm:text-base">Back</span>
+              <span className="font-medium text-sm sm:text-base hidden xs:inline">Table of Contents</span>
+              <span className="font-medium text-sm sm:text-base xs:hidden">Contents</span>
             </Link>
             
             <div className="flex items-center gap-2 sm:gap-3 md:gap-4">
