@@ -64,23 +64,23 @@ export default function Home() {
       {/* Highlighting Guide - Compact */}
       <div className="bg-white border-b border-gray-200 px-4 py-3">
         <div className="max-w-3xl mx-auto">
-          <p className="text-[10px] sm:text-xs text-gray-500 text-center mb-2">Highlighting Guide</p>
+          <p className="text-[10px] sm:text-xs text-black font-medium text-center mb-2">Highlighting Guide</p>
           <div className="flex flex-wrap justify-center gap-x-4 gap-y-1">
             <div className="flex items-center gap-1.5">
-              <span className="w-3 h-3 rounded-sm bg-yellow-400/30"></span>
-              <span className="text-[10px] sm:text-xs text-gray-600">Problem</span>
+              <span className="w-4 h-4 rounded-sm bg-yellow-400"></span>
+              <span className="text-[10px] sm:text-xs text-black font-medium">Problem</span>
             </div>
             <div className="flex items-center gap-1.5">
-              <span className="w-3 h-3 rounded-sm bg-pink-400/40"></span>
-              <span className="text-[10px] sm:text-xs text-gray-600">Solution</span>
+              <span className="w-4 h-4 rounded-sm bg-pink-400"></span>
+              <span className="text-[10px] sm:text-xs text-black font-medium">Solution</span>
             </div>
             <div className="flex items-center gap-1.5">
-              <span className="w-3 h-3 rounded-sm bg-blue-400/30"></span>
-              <span className="text-[10px] sm:text-xs text-gray-600">Action</span>
+              <span className="w-4 h-4 rounded-sm bg-blue-400"></span>
+              <span className="text-[10px] sm:text-xs text-black font-medium">Action</span>
             </div>
             <div className="flex items-center gap-1.5">
-              <span className="w-3 h-3 rounded-sm bg-green-400/30"></span>
-              <span className="text-[10px] sm:text-xs text-gray-600">Result</span>
+              <span className="w-4 h-4 rounded-sm bg-green-400"></span>
+              <span className="text-[10px] sm:text-xs text-black font-medium">Result</span>
             </div>
           </div>
         </div>
