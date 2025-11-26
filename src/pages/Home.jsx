@@ -48,18 +48,18 @@ const CHAPTERS = [
 
 export default function Home() {
   return (
-    <div className="min-h-screen min-h-[100dvh] w-full bg-[#222A31] overflow-x-hidden">
-      {/* Header */}
-      <header className="bg-[#2A3440] border-b border-[#25DCE6]/20 px-3 sm:px-4 py-4 sm:py-6 w-full">
-        <div className="max-w-3xl mx-auto text-center px-2">
-          <h1 className="text-lg sm:text-xl md:text-2xl font-serif font-bold text-[#FFFFFD] leading-tight">
-            Alcoholics Anonymous
-          </h1>
-          <p className="text-[11px] sm:text-xs md:text-sm text-[#25DCE6] mt-1 leading-snug">
-            The Story of How Many Thousands of Men and Women Have Recovered from Alcoholism
-          </p>
-        </div>
-      </header>
+    <div className="min-h-screen min-h-[100dvh] w-full bg-[#222A31] overflow-x-hidden overflow-y-auto">
+        {/* Header */}
+        <header className="bg-[#2A3440] border-b border-[#25DCE6]/20 px-3 sm:px-4 py-4 sm:py-6 w-full position-relative z-10">
+          <div className="max-w-3xl mx-auto text-center px-2">
+            <h1 className="text-lg sm:text-xl md:text-2xl font-serif font-bold text-[#FFFFFD] leading-tight mt-0 pt-2">
+              Alcoholics Anonymous
+            </h1>
+            <p className="text-[11px] sm:text-xs md:text-sm text-[#25DCE6] mt-1 leading-snug">
+              The Story of How Many Thousands of Men and Women Have Recovered from Alcoholism
+            </p>
+          </div>
+        </header>
 
       {/* Highlighting Guide - Compact */}
       <div className="px-4 py-3">
@@ -67,20 +67,24 @@ export default function Home() {
           <p className="text-[10px] sm:text-xs text-[#FFFFFD]/70 font-medium text-center mb-2">Highlighting Guide</p>
           <div className="flex flex-wrap justify-center gap-x-4 gap-y-1">
             <div className="flex items-center gap-1.5">
-              <span className="w-4 h-4 rounded-sm bg-yellow-400"></span>
-              <span className="text-[10px] sm:text-xs text-[#FFFFFD] font-medium">Problem</span>
-            </div>
-            <div className="flex items-center gap-1.5">
-              <span className="w-4 h-4 rounded-sm bg-pink-400"></span>
-              <span className="text-[10px] sm:text-xs text-[#FFFFFD] font-medium">Solution</span>
-            </div>
-            <div className="flex items-center gap-1.5">
-              <span className="w-4 h-4 rounded-sm bg-blue-400"></span>
-              <span className="text-[10px] sm:text-xs text-[#FFFFFD] font-medium">Action</span>
+              <span className="w-4 h-4 rounded-sm bg-orange-400"></span>
+              <span className="text-[10px] sm:text-xs text-[#FFFFFD] font-medium">Steps</span>
             </div>
             <div className="flex items-center gap-1.5">
               <span className="w-4 h-4 rounded-sm bg-green-400"></span>
-              <span className="text-[10px] sm:text-xs text-[#FFFFFD] font-medium">Result</span>
+              <span className="text-[10px] sm:text-xs text-[#FFFFFD] font-medium">Prayers</span>
+            </div>
+            <div className="flex items-center gap-1.5">
+              <span className="w-4 h-4 rounded-sm bg-blue-400"></span>
+              <span className="text-[10px] sm:text-xs text-[#FFFFFD] font-medium">Promises</span>
+            </div>
+            <div className="flex items-center gap-1.5">
+              <span className="w-4 h-4 rounded-sm bg-yellow-400"></span>
+              <span className="text-[10px] sm:text-xs text-[#FFFFFD] font-medium">General Info</span>
+            </div>
+            <div className="flex items-center gap-1.5">
+              <span className="w-4 h-4 rounded-sm bg-pink-400"></span>
+              <span className="text-[10px] sm:text-xs text-[#FFFFFD] font-medium">Tab Reference</span>
             </div>
           </div>
         </div>
