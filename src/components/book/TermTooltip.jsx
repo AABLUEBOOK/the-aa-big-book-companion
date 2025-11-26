@@ -73,12 +73,36 @@ export function wrapTermsInText(text) {
 }
 
 export default function TermTooltip({ term, definition }) {
+  const [showTooltip, setShowTooltip] = React.useState(false);
+
+  const handleTouchStart = (e) => {
+    e.preventDefault();
+    setShowTooltip(true);
+  };
+
+  const handleTouchEnd = () => {
+    setShowTooltip(false);
+  };
+
+  const handleClick = (e) => {
+    e.preventDefault();
+    setShowTooltip(!showTooltip);
+  };
+
   return (
-    <span className="big-book-term" tabIndex={0}>
+    <span 
+      className="big-book-term" 
+      tabIndex={0}
+      onTouchStart={handleTouchStart}
+      onTouchEnd={handleTouchEnd}
+      onClick={handleClick}
+    >
       {term}
-      <span className="big-book-tooltip">
-        <strong>1930s Meaning:</strong> {definition}
-      </span>
+      {showTooltip && (
+        <span className="big-book-tooltip big-book-tooltip-visible">
+          <strong>1930s Meaning:</strong> {definition}
+        </span>
+      )}
     </span>
   );
 }

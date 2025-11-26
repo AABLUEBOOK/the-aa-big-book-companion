@@ -6,24 +6,17 @@ export default function Layout({ children }) {
       <style>{`
         /* Interactive Big Book Term Tooltips */
         .big-book-term {
-            border: 1.5px solid #25DCE6;
-            border-radius: 3px;
-            padding: 1px 4px;
+            text-decoration: underline;
+            text-decoration-color: #25DCE6;
+            text-underline-offset: 3px;
             cursor: pointer;
             position: relative;
             display: inline;
-            color: #25DCE6; 
-            text-decoration: none;
-            font-weight: 500;
-            background-color: rgba(37, 220, 230, 0.1);
-            transition: background-color 0.2s ease;
-        }
-        .big-book-term:hover,
-        .big-book-term:focus {
-            background-color: rgba(37, 220, 230, 0.25);
+            color: inherit; 
+            font-weight: inherit;
         }
         .big-book-tooltip {
-            visibility: hidden;
+            display: none;
             width: 260px; 
             background-color: #1a2530;
             color: #ffffff;
@@ -35,12 +28,13 @@ export default function Layout({ children }) {
             bottom: calc(100% + 12px); 
             left: 50%;
             transform: translateX(-50%);
-            opacity: 0;
-            transition: opacity 0.25s ease-in-out, visibility 0.25s;
             font-size: 0.85em;
             line-height: 1.5;
             box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
             border: 1px solid rgba(37, 220, 230, 0.3);
+        }
+        .big-book-tooltip-visible {
+            display: block;
         }
         .big-book-tooltip::after {
             content: "";
@@ -51,11 +45,6 @@ export default function Layout({ children }) {
             border-width: 10px;
             border-style: solid;
             border-color: #1a2530 transparent transparent transparent;
-        }
-        .big-book-term:hover .big-book-tooltip,
-        .big-book-term:focus .big-book-tooltip {
-            visibility: visible;
-            opacity: 1;
         }
         .big-book-tooltip strong {
             color: #25DCE6;
