@@ -62,25 +62,25 @@ export default function Home() {
       </header>
 
       {/* Highlighting Guide - Compact */}
-      <div className="bg-[#2A3440]/80 border-b border-[#25DCE6]/10 px-4 py-3">
+      <div className="bg-white border-b border-gray-200 px-4 py-3">
         <div className="max-w-3xl mx-auto">
-          <p className="text-[10px] sm:text-xs text-[#FFFFFD]/60 text-center mb-2">Highlighting Guide</p>
+          <p className="text-[10px] sm:text-xs text-gray-500 text-center mb-2">Highlighting Guide</p>
           <div className="flex flex-wrap justify-center gap-x-4 gap-y-1">
             <div className="flex items-center gap-1.5">
-              <span className="w-3 h-3 rounded-sm bg-yellow-400/40"></span>
-              <span className="text-[10px] sm:text-xs text-[#FFFFFD]/70">Problem</span>
+              <span className="w-3 h-3 rounded-sm bg-yellow-400/30"></span>
+              <span className="text-[10px] sm:text-xs text-gray-600">Problem</span>
             </div>
             <div className="flex items-center gap-1.5">
-              <span className="w-3 h-3 rounded-sm bg-pink-400/50"></span>
-              <span className="text-[10px] sm:text-xs text-[#FFFFFD]/70">Solution</span>
+              <span className="w-3 h-3 rounded-sm bg-pink-400/40"></span>
+              <span className="text-[10px] sm:text-xs text-gray-600">Solution</span>
             </div>
             <div className="flex items-center gap-1.5">
-              <span className="w-3 h-3 rounded-sm bg-blue-400/40"></span>
-              <span className="text-[10px] sm:text-xs text-[#FFFFFD]/70">Action</span>
+              <span className="w-3 h-3 rounded-sm bg-blue-400/30"></span>
+              <span className="text-[10px] sm:text-xs text-gray-600">Action</span>
             </div>
             <div className="flex items-center gap-1.5">
-              <span className="w-3 h-3 rounded-sm bg-green-400/40"></span>
-              <span className="text-[10px] sm:text-xs text-[#FFFFFD]/70">Result</span>
+              <span className="w-3 h-3 rounded-sm bg-green-400/30"></span>
+              <span className="text-[10px] sm:text-xs text-gray-600">Result</span>
             </div>
           </div>
         </div>
