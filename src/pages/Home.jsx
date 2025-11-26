@@ -92,7 +92,7 @@ export default function Home() {
           {CHAPTERS.map((chapter, index) => (
             <Link
               key={chapter.id}
-              to={`${createPageUrl(chapter.section)}#${chapter.id}`}
+              to={`${createPageUrl("Chapter")}?id=${chapter.id}`}
               className="flex items-center justify-between px-3 sm:px-4 py-3 sm:py-3.5 
                          border border-[#25DCE6]/30 rounded-lg
                          bg-[#2A3440] hover:bg-[#25DCE6]/10 active:bg-[#25DCE6]/20
