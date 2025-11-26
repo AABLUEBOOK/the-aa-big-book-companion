@@ -155,21 +155,25 @@ export default function Section1() {
   };
 
   return (
-    <div className="min-h-screen bg-[#222A31] pb-24">
+    <div className="min-h-screen min-h-[100dvh] bg-[#222A31] pb-20 sm:pb-24">
       
       {/* Top Navigation */}
-      <div className="bg-[#2A3440]/95 backdrop-blur-sm border-b border-[#25DCE6]/20 sticky top-0 z-40 shadow-lg">
-        <div className="w-full px-3 sm:px-4 lg:px-6">
-          <div className="flex items-center justify-between h-14 sm:h-16">
-            <Link to={createPageUrl("Home")} className="flex items-center gap-1.5 sm:gap-2 text-[#25DCE6] hover:text-[#FFFFFD] transition-colors">
-              <ArrowLeft className="w-4 h-4 sm:w-5 sm:h-5" />
+      <header className="bg-[#2A3440]/95 backdrop-blur-sm border-b border-[#25DCE6]/20 sticky top-0 z-40 shadow-lg">
+        <nav className="w-full px-3 sm:px-4 lg:px-6" aria-label="Main navigation">
+          <div className="flex items-center justify-between h-12 sm:h-14 md:h-16">
+            <Link 
+              to={createPageUrl("Home")} 
+              className="flex items-center gap-1.5 sm:gap-2 text-[#25DCE6] hover:text-[#FFFFFD] active:text-[#FFFFFD] transition-colors min-h-[44px] min-w-[44px] px-1"
+              aria-label="Back to home"
+            >
+              <ArrowLeft className="w-5 h-5 sm:w-5 sm:h-5" />
               <span className="font-medium text-sm sm:text-base">Back</span>
             </Link>
             
-            <div className="flex items-center gap-2 sm:gap-4">
-              <div className="flex items-center gap-1.5 sm:gap-2">
+            <div className="flex items-center gap-2 sm:gap-3 md:gap-4">
+              <div className="hidden xs:flex items-center gap-1.5 sm:gap-2">
                 <BookOpen className="w-4 h-4 sm:w-5 sm:h-5 text-[#25DCE6]" />
-                <span className="font-serif font-semibold text-[#FFFFFD] text-xs sm:text-base">
+                <span className="font-serif font-semibold text-[#FFFFFD] text-xs sm:text-sm md:text-base">
                   Pages 1-164
                 </span>
               </div>
@@ -178,59 +182,64 @@ export default function Section1() {
                 onClick={() => setBookmarksOpen(!bookmarksOpen)}
                 variant="ghost"
                 size="sm"
-                className="text-[#25DCE6] hover:bg-[#25DCE6]/10 h-8 w-8 sm:h-9 sm:w-9 p-0"
+                className="text-[#25DCE6] hover:bg-[#25DCE6]/10 active:bg-[#25DCE6]/20 h-11 w-11 sm:h-10 sm:w-10 p-0"
+                aria-label="Open bookmarks"
               >
-                <BookmarkCheck className="w-4 h-4 sm:w-5 sm:h-5" />
+                <BookmarkCheck className="w-5 h-5 sm:w-5 sm:h-5" />
               </Button>
 
               <MobileBookNavigation />
             </div>
           </div>
-        </div>
-      </div>
+        </nav>
+      </header>
 
       {/* Bookmarks Panel */}
       {bookmarksOpen && (
-        <div className="fixed inset-0 z-40">
-          <div className="absolute inset-0 bg-black/50" onClick={() => setBookmarksOpen(false)} />
-          <div className="absolute right-0 top-0 h-full w-full sm:w-96 bg-[#2A3440] shadow-2xl overflow-y-auto p-6">
+        <div className="fixed inset-0 z-50" role="dialog" aria-modal="true" aria-label="Bookmarks">
+          <div 
+            className="absolute inset-0 bg-black/50 backdrop-blur-sm" 
+            onClick={() => setBookmarksOpen(false)} 
+            aria-hidden="true"
+          />
+          <aside className="absolute right-0 top-0 h-full w-full sm:w-96 max-w-full bg-[#2A3440] shadow-2xl overflow-y-auto overscroll-contain p-4 sm:p-6">
             <BookmarksList onClose={() => setBookmarksOpen(false)} />
-          </div>
+          </aside>
         </div>
       )}
 
-      <div className="w-full px-3 sm:px-4 lg:px-6 xl:px-8 py-4 sm:py-6 lg:py-8 max-w-[1600px] mx-auto">
-        <div className="flex gap-4 lg:gap-8">
+      <main className="w-full px-2 sm:px-4 lg:px-6 xl:px-8 py-3 sm:py-5 lg:py-8 max-w-[1600px] mx-auto">
+        <div className="flex gap-3 lg:gap-6 xl:gap-8">
           
           {/* Side Navigation - Desktop */}
-          <div className="hidden lg:block w-64 xl:w-80 flex-shrink-0">
+          <aside className="hidden lg:block w-60 xl:w-72 flex-shrink-0" aria-label="Chapter navigation">
             <div className="sticky top-20 bg-[#2A3440] rounded-xl border border-[#25DCE6]/20 shadow-lg">
               <BookNavigation />
             </div>
-          </div>
+          </aside>
 
           {/* Main Content - All Chapters */}
-          <div className="flex-1 w-full lg:max-w-4xl lg:pr-12 xl:pr-16 space-y-8">
+          <div className="flex-1 w-full min-w-0 lg:max-w-4xl space-y-6 sm:space-y-8">
             {CHAPTERS.map((chapter, index) => (
-              <div key={chapter.id} id={chapter.id}>
+              <article key={chapter.id} id={chapter.id} className="scroll-mt-16">
                 <ChapterContent chapter={chapter} sectionRoute="Section1" />
-              </div>
+              </article>
             ))}
 
             {/* Bottom Navigation */}
-            <div className="bg-[#2A3440] rounded-xl border border-[#25DCE6]/20 p-6 sm:p-8 text-center space-y-4">
-              <h3 className="text-xl font-serif font-bold text-[#FFFFFD]">End of Section 1</h3>
-              <p className="text-[#FFFFFD]/70">Continue to the next section or return to top</p>
-              <div className="flex flex-col sm:flex-row gap-3 justify-center">
+            <div className="bg-[#2A3440] rounded-xl border border-[#25DCE6]/20 p-4 sm:p-6 md:p-8 text-center space-y-3 sm:space-y-4">
+              <h3 className="text-lg sm:text-xl font-serif font-bold text-[#FFFFFD]">End of Section 1</h3>
+              <p className="text-sm sm:text-base text-[#FFFFFD]/70">Continue to the next section or return to top</p>
+              <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 justify-center">
                 <Button
                   onClick={scrollToTop}
                   variant="outline"
-                  className="border-[#25DCE6]/40 text-[#25DCE6] hover:bg-[#25DCE6]/10"
+                  className="border-[#25DCE6]/40 text-[#25DCE6] hover:bg-[#25DCE6]/10 active:bg-[#25DCE6]/20 min-h-[44px]"
                 >
                   Back to Top
                 </Button>
-                <Link to={createPageUrl("Home")}>
-                  <Button className="w-full sm:w-auto bg-[#25DCE6] text-[#222A31] hover:bg-[#25DCE6]/90">
+                <Link to={createPageUrl("Home")} className="w-full sm:w-auto">
+                  <Button className="w-full bg-[#25DCE6] text-[#222A31] hover:bg-[#25DCE6]/90 active:bg-[#25DCE6]/80 min-h-[44px]">
                     Table of Contents
                   </Button>
                 </Link>
@@ -238,8 +247,7 @@ export default function Section1() {
             </div>
           </div>
         </div>
-      </div>
-
+      </main>
 
     </div>
   );
