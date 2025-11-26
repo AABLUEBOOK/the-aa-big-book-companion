@@ -116,28 +116,7 @@ export const CHAPTER_CONTENT = {
     ]
   },
 
-  "doctors-opinion": {
-    highlights: [],
-    tabs: [],
-    paragraphs: [
-      { text: 'We of Alcoholics Anonymous believe that the reader will be interested in the medical estimate of the plan of recovery described in this book.' },
-      { text: 'A well-known doctor, chief physician at a nationally prominent hospital specializing in alcoholic and drug addiction, gave Alcoholics Anonymous this letter:' },
-      { text: 'The doctor wrote: I have specialized in the treatment of alcoholism for many years. In late 1934 I attended a patient who, though he had been a competent businessman of good earning capacity, was an alcoholic of a type I had come to regard as hopeless.' },
-      { 
-        segments: [
-          { text: 'In the course of his third treatment he acquired certain ideas concerning a possible means of ' },
-          { text: 'recovery', highlight: 'pink' },
-          { text: '. As part of his rehabilitation he commenced to present his conceptions to other alcoholics. This man and over one hundred others appear to have ' },
-          { text: 'recovered', highlight: 'pink' },
-          { text: '.' }
-        ]
-      },
-      { text: 'I personally know scores of cases who were of the type with whom other methods had failed completely. These facts appear to be of extreme medical importance. These men may well have a remedy for thousands of such situations.' },
-      { text: 'The physician who gave us this letter confirms what we who have suffered alcoholic torture must believe—that the body of the alcoholic is quite as abnormal as his mind.' },
-      { text: 'The doctor\'s theory that we have an allergy to alcohol interests us. As ex-problem drinkers, we can say that his explanation makes good sense.' },
-      { text: 'Though we work out our solution on the spiritual as well as an altruistic plane, we favor hospitalization for the alcoholic who is very jittery or befogged.' }
-    ]
-  },
+  "doctors-opinion": doctorsOpinionContent,
 
   "bills-story": billsStoryContent,
   "there-is-solution": thereIsSolutionContent,
