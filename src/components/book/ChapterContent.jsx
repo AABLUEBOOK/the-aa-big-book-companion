@@ -3,6 +3,7 @@ import { cn } from "@/lib/utils";
 import { CHAPTER_CONTENT } from "./allChapterContent";
 import AudioPlayer from "./AudioPlayer";
 import BookmarkButton from "./BookmarkButton";
+import { renderTextWithTerms } from "./TermTooltip";
 
 export default function ChapterContent({ chapter, sectionRoute }) {
 
@@ -75,10 +76,10 @@ export default function ChapterContent({ chapter, sectionRoute }) {
                     {para.segments.map((segment, segIdx) => (
                       segment.highlight ? (
                         <span key={segIdx} className={highlightClasses[segment.highlight]}>
-                          {segment.text}
+                          {renderTextWithTerms(segment.text)}
                         </span>
                       ) : (
-                        <span key={segIdx}>{segment.text}</span>
+                        <span key={segIdx}>{renderTextWithTerms(segment.text)}</span>
                       )
                     ))}
                   </p>
@@ -94,7 +95,7 @@ export default function ChapterContent({ chapter, sectionRoute }) {
                     para.highlight && highlightClasses[para.highlight]
                   )}
                 >
-                  {para.text}
+                  {renderTextWithTerms(para.text)}
                 </p>
               );
             })}
