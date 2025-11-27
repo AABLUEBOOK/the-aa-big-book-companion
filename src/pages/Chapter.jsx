@@ -1,9 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, memo, useMemo, Suspense, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, BookOpen, BookmarkCheck } from "lucide-react";
-import ChapterContent from "../components/book/ChapterContent";
-import BookmarksList from "../components/book/BookmarksList";
+import { ArrowLeft, BookOpen, BookmarkCheck, Loader2 } from "lucide-react";
+import { preloadChapter } from "../components/book/chapterLoader";
+
+// Lazy load heavy components
+const ChapterContent = React.lazy(() => import("../components/book/ChapterContent"));
+const BookmarksList = React.lazy(() => import("../components/book/BookmarksList"));
 
 function createPageUrl(pageName) {
   return `/${pageName}`;
@@ -49,20 +52,29 @@ const ALL_CHAPTERS = [
   { id: "twelve-concepts", title: "Twelve Concepts (Short Form)", pageNum: "574", pages: "574-575" },
 ];
 
-export default function Chapter() {
+const Chapter = memo(function Chapter() {
   const [bookmarksOpen, setBookmarksOpen] = useState(false);
   
   // Get chapter ID from URL
   const urlParams = new URLSearchParams(window.location.search);
   const chapterId = urlParams.get('id') || 'preface';
   
-  // Find current chapter
-  const currentIndex = ALL_CHAPTERS.findIndex(c => c.id === chapterId);
-  const chapter = ALL_CHAPTERS[currentIndex] || ALL_CHAPTERS[0];
+  // Memoize chapter lookup
+  const { chapter, prevChapter, nextChapter } = useMemo(() => {
+    const currentIndex = ALL_CHAPTERS.findIndex(c => c.id === chapterId);
+    return {
+      chapter: ALL_CHAPTERS[currentIndex] || ALL_CHAPTERS[0],
+      prevChapter: currentIndex > 0 ? ALL_CHAPTERS[currentIndex - 1] : null,
+      nextChapter: currentIndex < ALL_CHAPTERS.length - 1 ? ALL_CHAPTERS[currentIndex + 1] : null
+    };
+  }, [chapterId]);
   
-  // Get prev/next chapters
-  const prevChapter = currentIndex > 0 ? ALL_CHAPTERS[currentIndex - 1] : null;
-  const nextChapter = currentIndex < ALL_CHAPTERS.length - 1 ? ALL_CHAPTERS[currentIndex + 1] : null;
+  // Preload next chapter for smoother navigation
+  useEffect(() => {
+    if (nextChapter) {
+      preloadChapter(nextChapter.id);
+    }
+  }, [nextChapter]);
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -116,7 +128,9 @@ export default function Chapter() {
             aria-hidden="true"
           />
           <aside className="absolute right-0 top-0 h-full w-full sm:w-96 max-w-full bg-[#2A3440] shadow-2xl overflow-y-auto overscroll-contain p-4 sm:p-6">
-            <BookmarksList onClose={() => setBookmarksOpen(false)} />
+            <Suspense fallback={<div className="flex justify-center p-8"><Loader2 className="w-6 h-6 animate-spin text-[#25DCE6]" /></div>}>
+              <BookmarksList onClose={() => setBookmarksOpen(false)} />
+            </Suspense>
           </aside>
         </div>
       )}
@@ -125,7 +139,13 @@ export default function Chapter() {
         
         {/* Chapter Content */}
         <article className="scroll-mt-16">
-          <ChapterContent chapter={chapter} sectionRoute="Chapter" />
+          <Suspense fallback={
+            <div className="bg-white rounded-xl shadow-lg border border-gray-200 p-8 flex items-center justify-center min-h-[300px]">
+              <Loader2 className="w-8 h-8 animate-spin text-[#25DCE6]" />
+            </div>
+          }>
+            <ChapterContent chapter={chapter} sectionRoute="Chapter" />
+          </Suspense>
         </article>
 
         {/* Bottom Navigation */}
@@ -178,6 +198,8 @@ export default function Chapter() {
         </div>
       </main>
 
-    </div>
-  );
-}
+      </div>
+      );
+      });
+
+      export default Chapter;
