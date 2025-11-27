@@ -10,61 +10,87 @@ export default function Layout({ children }) {
             text-decoration-color: #25DCE6;
             text-underline-offset: 3px;
             cursor: pointer;
-            position: relative;
             display: inline;
             color: inherit; 
-            font-weight: inherit;
+            font-weight: bold;
         }
-        .big-book-tooltip {
-            display: none;
-            width: 260px; 
-            background-color: #1a2530;
+
+        /* Modal Overlay */
+        .big-book-modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            padding: 20px;
+        }
+
+        /* Modal Popup */
+        .big-book-modal-popup {
+            background: #ffffff;
+            border-radius: 12px;
+            border: 2px solid #25DCE6;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            max-width: 340px;
+            width: 100%;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .big-book-modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 14px 18px;
+            background: #222A31;
+            border-bottom: 1px solid #25DCE6;
+        }
+
+        .big-book-modal-term {
+            font-weight: bold;
+            font-size: 1.1em;
             color: #ffffff;
-            text-align: left;
-            border-radius: 10px;
-            padding: 14px 16px;
-            position: absolute;
-            z-index: 1000; 
-            bottom: calc(100% + 12px); 
-            left: 50%;
-            transform: translateX(-50%);
-            font-size: 0.85em;
-            line-height: 1.5;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
-            border: 1px solid rgba(37, 220, 230, 0.3);
+            text-transform: capitalize;
         }
-        .big-book-tooltip-visible {
-            display: block;
-        }
-        .big-book-tooltip::after {
-            content: "";
-            position: absolute;
-            top: 100%;
-            left: 50%;
-            transform: translateX(-50%);
-            border-width: 10px;
-            border-style: solid;
-            border-color: #1a2530 transparent transparent transparent;
-        }
-        .big-book-tooltip strong {
+
+        .big-book-modal-close {
+            background: none;
+            border: none;
             color: #25DCE6;
-            display: block;
-            margin-bottom: 6px;
-            font-size: 0.85em;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
+            font-size: 1.8em;
+            cursor: pointer;
+            line-height: 1;
+            padding: 0;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
-        @media (max-width: 640px) {
-            .big-book-tooltip {
-                width: 220px;
-                font-size: 0.8em;
-                padding: 12px;
-                left: 0;
-                transform: translateX(-20%);
-            }
-            .big-book-tooltip::after {
-                left: 30%;
-            }
+
+        .big-book-modal-close:hover {
+            color: #ffffff;
+        }
+
+        .big-book-modal-label {
+            padding: 12px 18px 4px;
+            font-size: 0.75em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #25DCE6;
+            font-weight: 600;
+        }
+
+        .big-book-modal-definition {
+            padding: 4px 18px 18px;
+            font-size: 1em;
+            line-height: 1.6;
+            color: #333333;
         }
       `}</style>
       {children}

@@ -10,6 +10,7 @@ import Section8 from './pages/Section8';
 import Section9 from './pages/Section9';
 import Section10 from './pages/Section10';
 import Chapter from './pages/Chapter';
+import __Layout from './Layout.jsx';
 
 
 export const PAGES = {
@@ -30,4 +31,5 @@ export const PAGES = {
 export const pagesConfig = {
     mainPage: "Home",
     Pages: PAGES,
+    Layout: __Layout,
 };
