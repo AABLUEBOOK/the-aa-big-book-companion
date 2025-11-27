@@ -578,7 +578,7 @@ export const CHAPTER_CONTENT = {
       { text: 'Today, I find I can\'t work my A.A. program while taking pills. I can\'t say, "Thy will be done," and take a pill. Giving up alcohol alone was not enough; I\'ve had to give up all mood- and mind-affecting chemicals.' },
       { text: 'On two occasions I decided I would take absolutely nothing. On each occasion I had a convulsion on Sunday morning. The neurologist couldn\'t figure out why and decided to send me to the Mayo Clinic.' },
       { text: 'After nine days of tests at Mayo, I was put in the locked ward. When we got home, I got a bottle of Scotch and went to bed. The next day, Max called the neurologist who arranged for me to see a local psychiatrist.' },
-      { text: 'Time went by very slowly on my second nut ward. They wanted me to make leather belts! Had I gone to school all those years just to make leather belts?'Manuel ' },
+      { text: 'Time went by very slowly on my second nut ward. They wanted me to make leather belts! Had I gone to school all those years just to make leather belts?' },
       { text: 'In the hospital I hung on to the idea that if I could just control the external environment, the internal environment would become comfortable. Today we have turned our wills and lives over to the care of God.' },
       { text: 'One day my psychiatrist asked, "How\'d you like to talk to the man from A.A.?" My reaction was that I\'d already helped all the patients on the ward. But by the look on his face, I could tell it would make him happy if I agreed.' },
       { text: 'Against my better judgment, I went to a meeting that night, and a strange thing began to happen. The psychiatrist became quite interested and would ask me all kinds of questions about the A.A. meetings.' },
