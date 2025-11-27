@@ -9,6 +9,7 @@ import { moreAboutAlcoholismContent } from "./content/moreAboutAlcoholismContent
 import { weAgnosticsContent } from "./content/weAgnosticsContent";
 import { howItWorksContent } from "./content/howItWorksContent";
 import { intoActionContent } from "./content/intoActionContent";
+import { workingWithOthersContent } from "./content/workingWithOthersContent";
 import { toEmployersContent } from "./content/toEmployersContent";
 import { visionForYouContent } from "./content/visionForYouContent";
 import { appendicesContent } from "./content/appendicesContent";
@@ -99,45 +100,7 @@ export const CHAPTER_CONTENT = {
   "how-it-works": howItWorksContent,
   "into-action": intoActionContent,
 
-  "working-with-others": {
-    highlights: [],
-    tabs: [],
-    paragraphs: [
-      { text: 'Practical experience shows that nothing will so much insure immunity from drinking as intensive work with other alcoholics. It works when other activities fail.' },
-      { text: 'We landed in England. I visited Winchester Cathedral. Much moved, I wandered outside. My attention was caught by a doggerel on an old tombstone. Ominous warning—which I failed to heed.' },
-      { text: 'Twenty-two, and a veteran of foreign wars, I went home at last. I fancied myself a leader, for had not the men of my battery given me a special token of appreciation?' },
-      { text: 'I took a night law course, and obtained employment as investigator for a surety company. The drive for success was on. My work took me about Wall Street and little by little I became interested in the market.' },
-      { text: 'By the time I had completed the course, I knew the law was not for me. The inviting maelstrom of Wall Street had me in its grip.' },
-      { text: 'For the next few years fortune threw money and applause my way. I had arrived. Drink was taking an important and exhilarating part in my life.' },
-      { text: 'In 1929 I contracted golf fever. Liquor caught up with me much faster. I began to be jittery in the morning. Golf permitted drinking every day and every night.' },
-      { text: 'Abruptly in October 1929 hell broke loose on the New York stock exchange. I was staring at an inch of the tape. I was finished and so were many friends. I went back to the bar.' },
-      { text: 'My friends had dropped several million—so what? Tomorrow was another day. As I drank, the old fierce determination to win came back. But drinking caught up with me again. This time we stayed broke.' },
-      { text: 'We went to live with my wife\'s parents. I found a job; then lost it as the result of a brawl with a taxi driver. My wife began to work in a department store, coming home exhausted to find me drunk.' },
-      { text: 'Liquor ceased to be a luxury; it became a necessity. Bathtub gin, two bottles a day, and often three, got to be routine. I began to waken very early in the morning shaking violently.' },
-      { text: 'Then I got a promising business opportunity. Then I went on a prodigious bender, and that chance vanished. I woke up. This had to be stopped. I saw I could not take so much as one drink. I was through forever.' },
-      { text: 'Shortly afterward I came home drunk. There had been no fight. Where had been my high resolve? I simply didn\'t know. Someone had pushed a drink my way, and I had taken it. Was I crazy?' },
-      { text: 'The remorse, horror and hopelessness of the next morning are unforgettable. The courage to do battle was not there. My brain raced uncontrollably. The market had gone to hell again. Well, so had I. The market would recover, but I wouldn\'t.' },
-      { text: 'My brother-in-law is a physician, and through his kindness and that of my mother I was placed in a nationally-known hospital for the mental and physical rehabilitation of alcoholics. I met a kind doctor who explained that though certainly selfish and foolish, I had been seriously ill, bodily and mentally.' },
-      { text: 'For three or four months the goose hung high. I went to town regularly and even made a little money. Surely this was the answer—self-knowledge. But it was not, for the frightful day came when I drank once more.' },
-      { text: 'Trembling, I stepped from the hospital a broken man. Fear sobered me for a bit. Then came the insidious insanity of that first drink. How dark it is before the dawn! In reality that was the beginning of my last debauch. I was soon to be catapulted into what I like to call the fourth dimension of existence.' },
-      { text: 'Near the end of that bleak November, I sat drinking in my kitchen. With a certain satisfaction I reflected there was enough gin concealed about the house to carry me through that night and the next day.' },
-      { text: 'My musing was interrupted by the telephone. The cheery voice of an old school friend asked if he might come over. He was sober. Rumor had it that he had been committed for alcoholic insanity.' },
-      { text: 'The door opened and he stood there, fresh-skinned and glowing. There was something about his eyes. He was inexplicably different. I pushed a drink across the table. He refused it. Simply, but smilingly, he said he had got religion.' },
-      { text: 'I was aghast. So that was it—last summer an alcoholic crackpot; now, I suspected, a little cracked about religion. But he did no ranting. In a matter of fact way he told how two men had appeared in court, persuading the judge to suspend his commitment. That was two months ago and the result was self-evident. It worked!' },
-      { text: 'He had come to pass his experience along to me—if I cared to have it. I was shocked, but interested. Certainly I was interested. I had to be, for I was hopeless. He talked for hours.' },
-      { text: 'I had always believed in a Power greater than myself. I had often pondered these things. I was not an atheist.' },
-      { text: 'But my friend sat before me, and he made the point-blank declaration that God had done for him what he could not do for himself. His human will had failed. Doctors had pronounced him incurable. Then he had, in effect, been raised from the dead, suddenly taken from the scrap heap to a level of life better than the best he had ever known!' },
-      { text: 'My friend suggested what then seemed a novel idea. He said, why don\'t you choose your own conception of God? That statement hit me hard. It melted the icy intellectual mountain in whose shadow I had lived and shivered many years. I stood in the sunlight at last.' },
-      { text: 'At the hospital I was separated from alcohol for the last time. There I humbly offered myself to God, as I then understood Him, to do with me as He would. I placed myself unreservedly under His care and direction.' },
-      { text: 'My schoolmate visited me, and I fully acquainted him with my problems and deficiencies. We made a list of people I had hurt or toward whom I felt resentment. I expressed my entire willingness to approach these individuals, admitting my wrong.' },
-      { text: 'I was to test my thinking by the new God-consciousness within. I was to sit quietly when in doubt, asking only for direction and strength to meet my problems as He would have me.' },
-      { text: 'Simple, but not easy; a price had to be paid. It meant destruction of self-centeredness. These were revolutionary and drastic proposals, but the moment I fully accepted them, the effect was electric. There was a sense of victory, followed by such a peace and serenity as I had never known.' },
-      { text: 'While I lay in the hospital the thought came that there were thousands of hopeless alcoholics who might be glad to have what had been so freely given me. Perhaps I could help some of them. They in turn might work with others.' },
-      { text: 'My wife and I abandoned ourselves with enthusiasm to the idea of helping other alcoholics to a solution of their problems. Many times I have gone to my old hospital in despair. On talking to a man there, I would be amazingly lifted up and set on my feet.' },
-      { text: 'We commenced to make many fast friends and a fellowship has grown up among us of which it is a wonderful thing to feel a part. The joy of living we really have, even under pressure and difficulty.' },
-      { text: 'An alcoholic in his cups is an unlovely creature. Our struggles with them are variously strenuous, comic, and tragic. But there is a vast amount of fun about it all. Most of us feel we need look no further for Utopia. We have it with us right here and now.' }
-    ]
-  },
+  "working-with-others": workingWithOthersContent,
 
   "there-is-solution": {
     highlights: [],
