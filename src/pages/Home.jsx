@@ -32,6 +32,7 @@ const CHAPTERS = [
   { id: "how-forty-two", title: "How Forty-Two Alcoholics Recovered From Their Malady", pages: "165-166", section: "Section2" },
   
   // Personal Stories Sections
+  { id: "dr-bob-nightmare", title: "Doctor Bob\'s Nightmare", pages: "171-181", chapter: null, section: "Section3" },
   { id: "pioneers", title: "Pioneers of A.A.", pages: "169-276", section: "Section3" },
   { id: "stopped-in-time", title: "They Stopped in Time", pages: "277-431", section: "Section4" },
   { id: "lost-nearly-all", title: "They Lost Nearly All", pages: "435-559", section: "Section5" },

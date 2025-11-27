@@ -13,6 +13,9 @@ import { workingWithOthersContent } from "./content/workingWithOthersContent";
 import { toEmployersContent } from "./content/toEmployersContent";
 import { visionForYouContent } from "./content/visionForYouContent";
 import { appendicesContent } from "./content/appendicesContent";
+import { toWivesContent } from "./content/toWivesContent";
+import { familyAfterwardContent } from "./content/familyAfterwardContent";
+import { doctorBobsNightmareContent } from "./content/doctorBobsNightmareContent";
 
 export const CHAPTER_CONTENT = {
   "preface": {
@@ -265,29 +268,9 @@ export const CHAPTER_CONTENT = {
     ]
   },
 
-  "to-wives": {
-    highlights: [],
-    tabs: [],
-    paragraphs: [
-      { text: 'With few exceptions, our book thus far has spoken of men. But what we have said applies quite as much to women. Our activities in behalf of women who drink are on the increase.' },
-      { text: 'Try not to condemn your alcoholic husband no matter what he says or does. He is just another very sick, unreasonable person. Treat him, when you can, as though he had pneumonia.' },
-      { text: 'The first principle of success is that you should never be angry. Even though your husband becomes unbearable and you have to leave him temporarily, you should, if you can, go without rancor.' },
-      { text: 'Be determined that your husband\'s drinking is not going to spoil your relations with your children or your friends. They need your companionship and your help. It is possible to have a full and useful life, though your husband continues to drink.' },
-      { text: 'We wives found that, like everybody else, we were afflicted with pride, self-pity, vanity and all the things which go to make up the self-centered person. Now we try to put spiritual principles to work in every department of our lives.' }
-    ]
-  },
+  "to-wives": toWivesContent,
 
-  "family-afterward": {
-    highlights: [],
-    tabs: [],
-    paragraphs: [
-      { text: 'Successful readjustment means the opposite of wrapping in cotton wool. All members of the family should meet upon the common ground of tolerance, understanding and love.' },
-      { text: 'Cessation of drinking is but the first step away from a highly strained, abnormal condition. Let families realize, as they start their journey, that all will not be fair weather.' },
-      { text: 'The alcoholic\'s past becomes the principal asset of the family and frequently it is almost the only one! This painful past may be of infinite value to other families still struggling with their problem.' },
-      { text: 'We are sure God wants us to be happy, joyous, and free. We cannot subscribe to the belief that this life is a vale of tears, though it once was just that for many of us.' },
-      { text: 'We have three little mottoes which are apropos: First Things First, Live and Let Live, Easy Does It.' }
-    ]
-  },
+  "family-afterward": familyAfterwardContent,
 
   "to-employers": toEmployersContent,
   "vision-for-you": visionForYouContent,
