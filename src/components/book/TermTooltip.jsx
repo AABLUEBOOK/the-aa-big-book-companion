@@ -75,35 +75,39 @@ export function wrapTermsInText(text) {
 export default function TermTooltip({ term, definition }) {
   const [showTooltip, setShowTooltip] = React.useState(false);
 
-  const handleTouchStart = (e) => {
+  const handleClick = (e) => {
     e.preventDefault();
+    e.stopPropagation();
     setShowTooltip(true);
   };
 
-  const handleTouchEnd = () => {
+  const handleClose = () => {
     setShowTooltip(false);
   };
 
-  const handleClick = (e) => {
-    e.preventDefault();
-    setShowTooltip(!showTooltip);
-  };
-
   return (
-    <span 
-      className="big-book-term" 
-      tabIndex={0}
-      onTouchStart={handleTouchStart}
-      onTouchEnd={handleTouchEnd}
-      onClick={handleClick}
-    >
-      {term}
+    <>
+      <span 
+        className="big-book-term" 
+        tabIndex={0}
+        onClick={handleClick}
+        onKeyDown={(e) => e.key === 'Enter' && handleClick(e)}
+      >
+        {term}
+      </span>
       {showTooltip && (
-        <span className="big-book-tooltip big-book-tooltip-visible">
-          <strong>1930s Meaning:</strong> {definition}
-        </span>
+        <div className="big-book-modal-overlay" onClick={handleClose}>
+          <div className="big-book-modal-popup" onClick={(e) => e.stopPropagation()}>
+            <div className="big-book-modal-header">
+              <span className="big-book-modal-term">{term}</span>
+              <button className="big-book-modal-close" onClick={handleClose}>×</button>
+            </div>
+            <div className="big-book-modal-label">1930s Meaning</div>
+            <div className="big-book-modal-definition">{definition}</div>
+          </div>
+        </div>
       )}
-    </span>
+    </>
   );
 }
 
