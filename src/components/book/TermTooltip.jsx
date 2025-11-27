@@ -1,4 +1,5 @@
 import React from "react";
+import ReactDOM from "react-dom";
 
 // 1930s Dictionary of Key Terms - Complete Big Book Dictionary
 const TERM_DEFINITIONS = {
@@ -1580,6 +1581,9 @@ export default function TermTooltip({ term, definition }) {
     setShowTooltip(true);
     // Prevent body scroll on mobile when modal is open
     document.body.style.overflow = 'hidden';
+    document.body.style.position = 'fixed';
+    document.body.style.width = '100%';
+    document.body.style.top = `-${window.scrollY}px`;
   };
 
   const handleClose = (e) => {
@@ -1587,17 +1591,67 @@ export default function TermTooltip({ term, definition }) {
       e.preventDefault();
       e.stopPropagation();
     }
-    setShowTooltip(false);
-    // Restore body scroll
+    // Restore body scroll and position
+    const scrollY = document.body.style.top;
     document.body.style.overflow = '';
+    document.body.style.position = '';
+    document.body.style.width = '';
+    document.body.style.top = '';
+    window.scrollTo(0, parseInt(scrollY || '0') * -1);
+    setShowTooltip(false);
   };
 
   // Clean up on unmount
   React.useEffect(() => {
     return () => {
       document.body.style.overflow = '';
+      document.body.style.position = '';
+      document.body.style.width = '';
+      document.body.style.top = '';
     };
   }, []);
+
+  // Use portal to render modal at document body level
+  const modalContent = showTooltip ? ReactDOM.createPortal(
+    <div 
+      className="big-book-modal-overlay" 
+      onClick={handleClose}
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="term-title"
+      style={{
+        position: 'fixed',
+        top: 0,
+        left: 0,
+        right: 0,
+        bottom: 0,
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        zIndex: 999999
+      }}
+    >
+      <div 
+        className="big-book-modal-popup" 
+        onClick={(e) => e.stopPropagation()}
+      >
+        <div className="big-book-modal-header">
+          <span id="term-title" className="big-book-modal-term">{term}</span>
+          <button 
+            className="big-book-modal-close" 
+            onClick={handleClose}
+            aria-label="Close definition"
+            type="button"
+          >
+            ×
+          </button>
+        </div>
+        <div className="big-book-modal-label">1930s Meaning</div>
+        <div className="big-book-modal-definition">{definition}</div>
+      </div>
+    </div>,
+    document.body
+  ) : null;
 
   return (
     <>
@@ -1611,34 +1665,7 @@ export default function TermTooltip({ term, definition }) {
       >
         {term}
       </span>
-      {showTooltip && (
-        <div 
-          className="big-book-modal-overlay" 
-          onClick={handleClose}
-          role="dialog"
-          aria-modal="true"
-          aria-labelledby="term-title"
-        >
-          <div 
-            className="big-book-modal-popup" 
-            onClick={(e) => e.stopPropagation()}
-          >
-            <div className="big-book-modal-header">
-              <span id="term-title" className="big-book-modal-term">{term}</span>
-              <button 
-                className="big-book-modal-close" 
-                onClick={handleClose}
-                aria-label="Close definition"
-                type="button"
-              >
-                ×
-              </button>
-            </div>
-            <div className="big-book-modal-label">1930s Meaning</div>
-            <div className="big-book-modal-definition">{definition}</div>
-          </div>
-        </div>
-      )}
+      {modalContent}
     </>
   );
 }
