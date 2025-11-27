@@ -1,14 +1,13 @@
-import React, { useState } from "react";
-import { BookmarkCheck, Trash2, StickyNote, X } from "lucide-react";
+import React, { useState, memo, useCallback } from "react";
+import { BookmarkCheck, Trash2, StickyNote } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { base44 } from "@/api/base44Client";
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import { useNavigate } from "react-router-dom";
 import { toast } from "sonner";
 
-export default function BookmarksList({ onClose }) {
+const BookmarksList = memo(function BookmarksList({ onClose }) {
   const navigate = useNavigate();
   const queryClient = useQueryClient();
   const [editingNote, setEditingNote] = useState(null);
@@ -37,22 +36,22 @@ export default function BookmarksList({ onClose }) {
     },
   });
 
-  const handleNavigate = (bookmark) => {
+  const handleNavigate = useCallback((bookmark) => {
     navigate(`/${bookmark.section_route}#${bookmark.chapter_id}`);
     if (onClose) onClose();
-  };
+  }, [navigate, onClose]);
 
-  const handleSaveNote = (bookmarkId) => {
+  const handleSaveNote = useCallback((bookmarkId) => {
     updateBookmark.mutate({
       id: bookmarkId,
       data: { note: noteText }
     });
-  };
+  }, [noteText, updateBookmark]);
 
-  const handleEditNote = (bookmark) => {
+  const handleEditNote = useCallback((bookmark) => {
     setEditingNote(bookmark.id);
     setNoteText(bookmark.note || "");
-  };
+  }, []);
 
   return (
     <div className="space-y-4">
@@ -153,4 +152,6 @@ export default function BookmarksList({ onClose }) {
       )}
     </div>
   );
-}
+});
+
+export default BookmarksList;
