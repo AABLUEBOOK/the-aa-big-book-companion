@@ -1036,11 +1036,26 @@ export default function TermTooltip({ term, definition }) {
     e.preventDefault();
     e.stopPropagation();
     setShowTooltip(true);
+    // Prevent body scroll on mobile when modal is open
+    document.body.style.overflow = 'hidden';
   };
 
-  const handleClose = () => {
+  const handleClose = (e) => {
+    if (e) {
+      e.preventDefault();
+      e.stopPropagation();
+    }
     setShowTooltip(false);
+    // Restore body scroll
+    document.body.style.overflow = '';
   };
+
+  // Clean up on unmount
+  React.useEffect(() => {
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, []);
 
   return (
     <>
@@ -1049,15 +1064,33 @@ export default function TermTooltip({ term, definition }) {
         tabIndex={0}
         onClick={handleClick}
         onKeyDown={(e) => e.key === 'Enter' && handleClick(e)}
+        role="button"
+        aria-label={`Definition of ${term}`}
       >
         {term}
       </span>
       {showTooltip && (
-        <div className="big-book-modal-overlay" onClick={handleClose}>
-          <div className="big-book-modal-popup" onClick={(e) => e.stopPropagation()}>
+        <div 
+          className="big-book-modal-overlay" 
+          onClick={handleClose}
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="term-title"
+        >
+          <div 
+            className="big-book-modal-popup" 
+            onClick={(e) => e.stopPropagation()}
+          >
             <div className="big-book-modal-header">
-              <span className="big-book-modal-term">{term}</span>
-              <button className="big-book-modal-close" onClick={handleClose}>×</button>
+              <span id="term-title" className="big-book-modal-term">{term}</span>
+              <button 
+                className="big-book-modal-close" 
+                onClick={handleClose}
+                aria-label="Close definition"
+                type="button"
+              >
+                ×
+              </button>
             </div>
             <div className="big-book-modal-label">1930s Meaning</div>
             <div className="big-book-modal-definition">{definition}</div>
