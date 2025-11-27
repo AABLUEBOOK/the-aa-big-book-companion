@@ -1,4 +1,3 @@
-
 // Complete Big Book Content - populated from the full text
 import { prefaceContent } from "./content/prefaceContent";
 import { forewordFirstContent } from "./content/forewordFirstContent";
@@ -520,7 +519,7 @@ export const CHAPTER_CONTENT = {
       { text: 'My last hangover was on a Friday before a long summer weekend. Later that Friday night, I was dragging myself up the deserted street thinking that the whole world had someplace to go, and someone to go with.' },
       { text: 'Instead of going to a bar or home with my regular giant weekend supply of booze, I went to my club to swim. I wrapped myself in a bathrobe and sat in a dark corner of the locker room for two hours, feeling desperately sorry for myself.' },
       { text: 'Close to eight o\'clock, I leaped up and raced off to a meeting I\'d had no intention of attending. It was a bit like getting a rap on the head with an invisible hammer and having my brain flip over.' },
-      { text: 'Late that night at home, there was a presence in the room with me, even though I lived alone. The next morning I knew I didn\'t have to drink.'Manuel ' },
+      { text: 'Late that night at home, there was a presence in the room with me, even though I lived alone. The next morning I knew I didn\'t have to drink.' },
       { text: 'In the weeks and months that followed, I did everything that was suggested to me. I went to a meeting every day, read the books, and got a sponsor who told me to have a quiet time every morning.' },
       { text: 'I joined a downtown group that met near my office right after work at 5:15. I would not have made it to 8:00 p.m. Soon, I got into service and was given bank books and told to keep the meeting going.' },
       { text: 'I became as compulsive about A.A. as I had been about drinking. I went to every A.A. get-together possible. I listened to tapes. I read and reread the literature, laughing into the night over Dr. Bob and the Good Oldtimers.' },
