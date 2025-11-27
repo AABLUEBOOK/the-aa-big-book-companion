@@ -15,38 +15,43 @@ export default function Layout({ children }) {
             font-weight: bold;
         }
 
-        /* Modal Overlay - Mobile Optimized */
+        /* Modal Overlay - Mobile Optimized with Portal */
         .big-book-modal-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.6);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 99999;
-            padding: 16px;
+            position: fixed !important;
+            top: 0 !important;
+            left: 0 !important;
+            right: 0 !important;
+            bottom: 0 !important;
+            width: 100vw !important;
+            height: 100vh !important;
+            height: 100dvh !important;
+            background: rgba(0, 0, 0, 0.7) !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            z-index: 999999 !important;
+            padding: 20px !important;
+            box-sizing: border-box !important;
             -webkit-overflow-scrolling: touch;
-            overflow-y: auto;
+            overflow: hidden !important;
         }
 
         /* Modal Popup - Mobile Optimized */
         .big-book-modal-popup {
-            background: #ffffff;
-            border-radius: 16px;
-            border: 2px solid #25DCE6;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
-            max-width: 320px;
-            width: calc(100% - 32px);
-            padding: 0;
-            overflow: hidden;
-            margin: auto;
-            position: relative;
-            transform: none;
-            max-height: calc(100vh - 100px);
-            overflow-y: auto;
+            background: #ffffff !important;
+            border-radius: 16px !important;
+            border: 3px solid #25DCE6 !important;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5) !important;
+            max-width: 320px !important;
+            width: calc(100% - 40px) !important;
+            padding: 0 !important;
+            overflow: hidden !important;
+            margin: 0 !important;
+            position: relative !important;
+            transform: none !important;
+            max-height: calc(100vh - 80px) !important;
+            max-height: calc(100dvh - 80px) !important;
+            overflow-y: auto !important;
         }
 
         .big-book-modal-header {
@@ -55,7 +60,7 @@ export default function Layout({ children }) {
             align-items: center;
             padding: 16px 18px;
             background: #222A31;
-            border-bottom: 1px solid #25DCE6;
+            border-bottom: 2px solid #25DCE6;
             position: sticky;
             top: 0;
             z-index: 1;
@@ -69,58 +74,60 @@ export default function Layout({ children }) {
         }
 
         .big-book-modal-close {
-            background: #25DCE6;
-            border: none;
-            color: #222A31;
-            font-size: 1.5em;
-            cursor: pointer;
-            line-height: 1;
-            padding: 0;
-            width: 36px;
-            height: 36px;
-            min-width: 36px;
-            min-height: 36px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            font-weight: bold;
-            -webkit-tap-highlight-color: transparent;
+            background: #25DCE6 !important;
+            border: none !important;
+            color: #222A31 !important;
+            font-size: 1.5em !important;
+            cursor: pointer !important;
+            line-height: 1 !important;
+            padding: 0 !important;
+            width: 40px !important;
+            height: 40px !important;
+            min-width: 40px !important;
+            min-height: 40px !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            border-radius: 50% !important;
+            font-weight: bold !important;
+            -webkit-tap-highlight-color: transparent !important;
+            flex-shrink: 0 !important;
         }
 
         .big-book-modal-close:hover,
         .big-book-modal-close:active {
-            background: #ffffff;
-            color: #222A31;
+            background: #ffffff !important;
+            color: #222A31 !important;
         }
 
         .big-book-modal-label {
-            padding: 14px 18px 6px;
-            font-size: 0.75em;
+            padding: 16px 18px 8px;
+            font-size: 0.8em;
             text-transform: uppercase;
             letter-spacing: 1px;
             color: #25DCE6;
             font-weight: 600;
+            background: #f8f9fa;
         }
 
         .big-book-modal-definition {
-            padding: 6px 18px 20px;
-            font-size: 1.05em;
+            padding: 12px 18px 24px;
+            font-size: 1.1em;
             line-height: 1.7;
             color: #333333;
+            background: #ffffff;
         }
 
         /* Extra mobile optimizations */
         @media (max-width: 480px) {
             .big-book-modal-overlay {
-                padding: 12px;
-                align-items: center;
+                padding: 16px !important;
             }
 
             .big-book-modal-popup {
-                max-width: 100%;
-                width: calc(100% - 24px);
-                border-radius: 12px;
+                max-width: 100% !important;
+                width: calc(100% - 32px) !important;
+                border-radius: 14px !important;
             }
 
             .big-book-modal-header {
@@ -128,12 +135,12 @@ export default function Layout({ children }) {
             }
 
             .big-book-modal-term {
-                font-size: 1.1em;
+                font-size: 1.15em;
             }
 
             .big-book-modal-definition {
-                font-size: 1em;
-                padding: 6px 16px 18px;
+                font-size: 1.05em;
+                padding: 10px 16px 20px;
             }
         }
       `}</style>
