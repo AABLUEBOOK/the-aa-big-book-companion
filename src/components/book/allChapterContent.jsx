@@ -624,7 +624,7 @@ export const CHAPTER_CONTENT = {
       { text: 'I was surprised by my first meeting. The room was filled with well-dressed, smiling, happy people. No rancid coats. No bloodshot eyes. But laughter.' },
       { text: 'Then a woman introduced herself and said she was an alcoholic. She spoke about feelings, of insecurity replaced by confidence, fear replaced by faith, resentment replaced by love, and despair replaced by joy.' },
       { text: 'After the meeting, people welcomed me with open arms and gave me their telephone numbers. The speaker said, "If you\'re an apple, you can be the best apple you can be, but you can never be an orange." I was an apple all right, and for the first time I understood I had spent my life trying to be an orange.' },
-      { text: 'My progress in A.A. was slow. I refused to go to meetings outside of my neighborhood. I would not go to meetings on other nights. I bounced from one sick relationship to another. I was too proud to ask what a sponsor was.'Manuel ' },
+      { text: 'My progress in A.A. was slow. I refused to go to meetings outside of my neighborhood. I would not go to meetings on other nights. I bounced from one sick relationship to another. I was too proud to ask what a sponsor was.' },
       { text: 'I plodded along for a few months. I was sober about six months, and I was not getting any better. I contemplated suicide almost every day. My emotions swung between paralyzing despair and murderous rage.' },
       { text: 'I decided I had had enough. I went to my Tuesday night meeting, fully intent on sharing honestly.' },
       { text: 'I arrived and no one else was there. Then a man walked through the door.' },
