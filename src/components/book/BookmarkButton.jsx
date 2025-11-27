@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, memo, useCallback } from "react";
 import { Bookmark, BookmarkCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { base44 } from "@/api/base44Client";
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import { toast } from "sonner";
 
-export default function BookmarkButton({ chapter, sectionRoute }) {
+const BookmarkButton = memo(function BookmarkButton({ chapter, sectionRoute }) {
   const queryClient = useQueryClient();
   const [isHovered, setIsHovered] = useState(false);
 
@@ -32,7 +32,7 @@ export default function BookmarkButton({ chapter, sectionRoute }) {
     },
   });
 
-  const handleToggle = () => {
+  const handleToggle = useCallback(() => {
     if (isBookmarked) {
       const bookmark = bookmarks.find(b => b.chapter_id === chapter.id);
       if (bookmark) {
@@ -46,7 +46,7 @@ export default function BookmarkButton({ chapter, sectionRoute }) {
         page_number: chapter.pageNum
       });
     }
-  };
+  }, [isBookmarked, bookmarks, chapter, sectionRoute, addBookmark, removeBookmark]);
 
   return (
     <Button
@@ -64,4 +64,6 @@ export default function BookmarkButton({ chapter, sectionRoute }) {
       )}
     </Button>
   );
-}
+});
+
+export default BookmarkButton;

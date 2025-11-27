@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useRef } from "react";
-import { Play, Pause, Volume2, VolumeX, ChevronDown } from "lucide-react";
+import React, { useState, useEffect, useRef, useCallback, memo } from "react";
+import { Play, Pause, Volume2, VolumeX } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Slider } from "@/components/ui/slider";
 import {
@@ -10,7 +10,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 
-export default function AudioPlayer({ content }) {
+const AudioPlayer = memo(function AudioPlayer({ content }) {
   const [isPlaying, setIsPlaying] = useState(false);
   const [speed, setSpeed] = useState(1);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -195,4 +195,6 @@ export default function AudioPlayer({ content }) {
       </div>
     </div>
   );
-}
+});
+
+export default AudioPlayer;
