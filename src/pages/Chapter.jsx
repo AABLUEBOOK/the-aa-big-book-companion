@@ -33,6 +33,7 @@ const ALL_CHAPTERS = [
   
   // Personal Stories
   { id: "how-forty-two", title: "How Forty-Two Alcoholics Recovered", pageNum: "165", pages: "165-166" },
+  { id: "dr-bob-nightmare", title: "Doctor Bob's Nightmare", pageNum: "171", pages: "171-181" },
   { id: "dr-bob-nightmare", title: "Doctor Bob\'s Nightmare", pageNum: "171", pages: "171-181" },
   { id: "pioneers", title: "Pioneers of A.A.", pageNum: "169", pages: "169-276" },
   { id: "stopped-in-time", title: "They Stopped in Time", pageNum: "277", pages: "277-431" },

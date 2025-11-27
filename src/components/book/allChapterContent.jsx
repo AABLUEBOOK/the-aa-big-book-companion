@@ -16,6 +16,9 @@ import { appendicesContent } from "./content/appendicesContent";
 import { toWivesContent } from "./content/toWivesContent";
 import { familyAfterwardContent } from "./content/familyAfterwardContent";
 import { doctorBobsNightmareContent } from "./content/doctorBobsNightmareContent";
+import { toWivesContent } from "./content/toWivesContent";
+import { familyAfterwardContent } from "./content/familyAfterwardContent";
+import { doctorBobsNightmareContent } from "./content/doctorBobsNightmareContent";
 
 export const CHAPTER_CONTENT = {
   "preface": {
@@ -274,6 +277,7 @@ export const CHAPTER_CONTENT = {
 
   "to-employers": toEmployersContent,
   "vision-for-you": visionForYouContent,
+  "dr-bob-nightmare": doctorBobsNightmareContent,
 
   "tightrope": {
     highlights: [],
