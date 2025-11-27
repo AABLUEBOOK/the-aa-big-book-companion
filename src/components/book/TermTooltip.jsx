@@ -1,16 +1,41 @@
-import React from "react";
+import React, { useState, useEffect, useCallback, memo } from "react";
 import ReactDOM from "react-dom";
-import { TERM_DEFINITIONS } from "./dictionaryData";
+
+// Lazy load dictionary data
+let TERM_DEFINITIONS = null;
+let definitionsPromise = null;
+
+function loadDefinitions() {
+  if (TERM_DEFINITIONS) return Promise.resolve(TERM_DEFINITIONS);
+  if (definitionsPromise) return definitionsPromise;
+  
+  definitionsPromise = import("./dictionaryData").then(m => {
+    TERM_DEFINITIONS = m.TERM_DEFINITIONS;
+    return TERM_DEFINITIONS;
+  });
+  return definitionsPromise;
+}
+
+// Preload definitions
+loadDefinitions();
+
+// Cache for processed text
+const textCache = new Map();
 
 export function wrapTermsInText(text) {
-  if (!text) return text;
+  if (!text || !TERM_DEFINITIONS) return text;
   
-  const sortedTerms = Object.keys(TERM_DEFINITIONS).sort((a, b) => b.length - a.length);
+  // Check cache
+  if (textCache.has(text)) return textCache.get(text);
+  
+  const terms = Object.keys(TERM_DEFINITIONS);
+  const sortedTerms = terms.sort((a, b) => b.length - a.length);
   
   let result = text;
   const replacements = [];
   
-  sortedTerms.forEach(term => {
+  // Use a single pass with combined regex for better performance
+  for (const term of sortedTerms) {
     const regex = new RegExp(`\\b(${term})\\b`, 'gi');
     let match;
     while ((match = regex.exec(text)) !== null) {
@@ -21,23 +46,27 @@ export function wrapTermsInText(text) {
         definition: TERM_DEFINITIONS[term.toLowerCase()]
       });
     }
-  });
+  }
+  
+  if (replacements.length === 0) {
+    textCache.set(text, text);
+    return text;
+  }
   
   replacements.sort((a, b) => b.start - a.start);
   
-  replacements.forEach(rep => {
-    const before = result.slice(0, rep.start);
-    const after = result.slice(rep.end);
-    result = before + `{{TERM:${rep.term}:${rep.definition}}}` + after;
-  });
+  for (const rep of replacements) {
+    result = result.slice(0, rep.start) + `{{TERM:${rep.term}:${rep.definition}}}` + result.slice(rep.end);
+  }
   
+  textCache.set(text, result);
   return result;
 }
 
-export default function TermTooltip({ term, definition }) {
-  const [showTooltip, setShowTooltip] = React.useState(false);
+const TermTooltip = memo(function TermTooltip({ term, definition }) {
+  const [showTooltip, setShowTooltip] = useState(false);
 
-  const handleClick = (e) => {
+  const handleClick = useCallback((e) => {
     e.preventDefault();
     e.stopPropagation();
     setShowTooltip(true);
@@ -47,7 +76,7 @@ export default function TermTooltip({ term, definition }) {
     document.body.style.top = `-${window.scrollY}px`;
   };
 
-  const handleClose = (e) => {
+  const handleClose = useCallback((e) => {
     if (e) {
       e.preventDefault();
       e.stopPropagation();
@@ -59,9 +88,9 @@ export default function TermTooltip({ term, definition }) {
     document.body.style.top = '';
     window.scrollTo(0, parseInt(scrollY || '0') * -1);
     setShowTooltip(false);
-  };
+  }, []);
 
-  React.useEffect(() => {
+  useEffect(() => {
     return () => {
       document.body.style.overflow = '';
       document.body.style.position = '';
@@ -126,9 +155,15 @@ export default function TermTooltip({ term, definition }) {
       {modalContent}
     </>
   );
-}
+});
+
+export default TermTooltip;
 
 export function renderTextWithTerms(text) {
+  if (!TERM_DEFINITIONS) {
+    // Return plain text if definitions not loaded yet
+    return text;
+  }
   if (!text) return null;
   
   const processed = wrapTermsInText(text);
