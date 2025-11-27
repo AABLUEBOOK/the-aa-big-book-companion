@@ -1,6 +1,6 @@
-import React from "react";
+import React, { memo } from "react";
 
-export default function Layout({ children }) {
+const Layout = memo(function Layout({ children }) {
   return (
     <div className="min-h-screen bg-[#222A31]">
       <style>{`
@@ -147,4 +147,6 @@ export default function Layout({ children }) {
       {children}
     </div>
   );
-}
+});
+
+export default Layout;
