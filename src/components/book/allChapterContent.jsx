@@ -1,3 +1,4 @@
+
 // Complete Big Book Content - populated from the full text
 import { prefaceContent } from "./content/prefaceContent";
 import { forewordFirstContent } from "./content/forewordFirstContent";
@@ -10,72 +11,17 @@ import { weAgnosticsContent } from "./content/weAgnosticsContent";
 import { howItWorksContent } from "./content/howItWorksContent";
 import { intoActionContent } from "./content/intoActionContent";
 import { workingWithOthersContent } from "./content/workingWithOthersContent";
+import { toWivesContent } from "./content/toWivesContent";
+import { familyAfterwardContent } from "./content/familyAfterwardContent";
 import { toEmployersContent } from "./content/toEmployersContent";
 import { visionForYouContent } from "./content/visionForYouContent";
+import { doctorBobsNightmareContent } from "./content/doctorBobsNightmareContent";
 import { appendicesContent } from "./content/appendicesContent";
-import { toWivesContent } from "./content/toWivesContent";
-import { familyAfterwardContent } from "./content/familyAfterwardContent";
-import { doctorBobsNightmareContent } from "./content/doctorBobsNightmareContent";
-import { toWivesContent } from "./content/toWivesContent";
-import { familyAfterwardContent } from "./content/familyAfterwardContent";
-import { doctorBobsNightmareContent } from "./content/doctorBobsNightmareContent";
 
 export const CHAPTER_CONTENT = {
-  "preface": {
-    highlights: [],
-    tabs: [],
-    paragraphs: [
-      { text: 'THIS IS the fourth edition of the book "Alcoholics Anonymous." The first edition appeared in April 1939, and in the following sixteen years, more than 300,000 copies went into circulation. The second edition, published in 1955, reached a total of more than 1,150,500 copies. The third edition, which came off press in 1976, achieved a circulation of approximately 19,550,000 in all formats.' },
-      { text: 'Because this book has become the basic text for our Society and has helped such large numbers of alcoholic men and women to recovery, there exists strong sentiment against any radical changes being made in it. Therefore, the first portion of this volume, describing the A.A. recovery program, has been left largely untouched in the course of revisions made for the second, third, and fourth editions. The section called "The Doctor\'s Opinion" has been kept intact, just as it was originally written in 1939 by the late Dr. William D. Silkworth, our Society\'s great medical benefactor.' },
-      { text: 'The second edition added the appendices, the Twelve Traditions, and the directions for getting in touch with A.A. But the chief change was in the section of personal stories, which was expanded to reflect the Fellowship\'s growth. "Bill\'s Story," "Doctor Bob\'s Nightmare," and one other personal history from the first edition were retained intact; three were edited and one of these was retitled; new versions of two stories were written, with new titles; thirty completely new stories were added; and the story section was divided into three parts, under the same headings that are used now.' },
-      { text: 'In the third edition, Part I ("Pioneers of A.A.") was left unchanged. Nine of the stories in Part II ("They Stopped in Time") were carried over from the second edition; eight new stories were added. In Part III ("They Lost Nearly All"), eight stories were retained; five new ones were added.' },
-      { text: 'This fourth edition includes the Twelve Concepts for World Service and revises the three sections of personal stories as follows. One new story has been added to Part I, and two that originally appeared in Part III have been repositioned there; six stories have been deleted. Six of the stories in Part II have been carried over, eleven new ones have been added, and eleven taken out. Part III now includes twelve new stories; eight were removed (in addition to the two that were transferred to Part I).' },
-      { text: 'All changes made over the years in the Big Book (A.A. members\' fond nickname for this volume) have had the same purpose: to represent the current membership of Alcoholics Anonymous more accurately, and thereby to reach more alcoholics. If you have a drinking problem, we hope that you may pause in reading one of the forty-two personal stories and think: "Yes, that happened to me"; or, more important, "Yes, I\'ve felt like that"; or, most important, "Yes, I believe this program can work for me too."' }
-    ]
-  },
-
-  "foreword-first": {
-    highlights: [],
-    tabs: [],
-    paragraphs: [
-      { text: 'This is the Foreword as it appeared in the first printing of the first edition in 1939.' },
-      { text: 'WE, OF Alcoholics Anonymous, are more than one hundred men and women who have recovered from a seemingly hopeless state of mind and body. To show other alcoholics precisely how we have recovered is the main purpose of this book.' },
-      { text: 'For them, we hope these pages will prove so convincing that no further authentication will be necessary. We think this account of our experiences will help everyone to better understand the alcoholic. Many do not comprehend that the alcoholic is a very sick person. And besides, we are sure that our way of living has its advantages for all.' },
-      { text: 'It is important that we remain anonymous because we are too few, at present to handle the overwhelming number of personal appeals which may result from this publication. Being mostly business or professional folk, we could not well carry on our occupations in such an event. We would like it understood that our alcoholic work is an avocation.' },
-      { text: 'When writing or speaking publicly about alcoholism, we urge each of our Fellowship to omit his personal name, designating himself instead as "a member of Alcoholics Anonymous."' },
-      { text: 'Very earnestly we ask the press also, to observe this request, for otherwise we shall be greatly handicapped.' },
-      { text: 'We are not an organization in the conventional sense of the word. There are no fees or dues whatsoever. The only requirement for membership is an honest desire to stop drinking. We are not allied with any particular faith, sect or denomination, nor do we oppose anyone. We simply wish to be helpful to those who are afflicted.' },
-      { text: 'We shall be interested to hear from those who are getting results from this book, particularly from those who have commenced work with other alcoholics. We should like to be helpful to such cases.' },
-      { text: 'Inquiry by scientific, medical, and religious societies will be welcomed.' },
-      { text: 'ALCOHOLICS ANONYMOUS.' }
-    ]
-  },
-
-  "foreword-second": {
-    highlights: [],
-    tabs: [],
-    paragraphs: [
-      { text: 'Figures given in this foreword describe the Fellowship as it was in 1955.' },
-      { text: 'Since the original Foreword to this book was written in 1939, a wholesale miracle has taken place. Our earliest printing voiced the hope "that every alcoholic who journeys will find the Fellowship of Alcoholics Anonymous at his destination. Already," continues the early text "twos and threes and fives of us have sprung up in other communities."' },
-      { text: 'Sixteen years have elapsed between our first printing of this book and the presentation in 1955 of our second edition. In that brief space, Alcoholics Anonymous has mushroomed into nearly 6,000 groups whose membership is far above 150,000 recovered alcoholics. Groups are to be found in each of the United States and all of the provinces of Canada. A.A. has flourishing communities in the British Isles, the Scandinavian countries, South Africa, South America, Mexico, Alaska, Australia and Hawaii. All told, promising beginnings have been made in some 50 foreign countries and U.S. possessions. Some are just now taking shape in Asia. Many of our friends encourage us by saying that this is but a beginning, only the augury of a much larger future ahead.' },
-      { text: 'The spark that was to flare into the first A.A. group was struck at Akron, Ohio, in June 1935, during a talk between a New York stockbroker and an Akron physician. Six months earlier, the broker had been relieved of his drink obsession by a sudden spiritual experience, following a meeting with an alcoholic friend who had been in contact with the Oxford Groups of that day. He had also been greatly helped by the late Dr. William D. Silkworth, a New York specialist in alcoholism who is now accounted no less than a medical saint by A.A. members, and whose story of the early days of our Society appears in the next pages. From this doctor, the broker had learned the grave nature of alcoholism. Though he could not accept all the tenets of the Oxford Groups, he was convinced of the need for moral inventory, confession of personality defects, restitution to those harmed, helpfulness to others, and the necessity of belief in and dependence upon God.' },
-      { text: 'Prior to his journey to Akron, the broker had worked hard with many alcoholics on the theory that only an alcoholic could help an alcoholic, but he had succeeded only in keeping sober himself. The broker had gone to Akron on a business venture which had collapsed, leaving him greatly in fear that he might start drinking again. He suddenly realized that in order to save himself he must carry his message to another alcoholic. That alcoholic turned out to be the Akron physician.' },
-      { text: 'This physician had repeatedly tried spiritual means to resolve his alcoholic dilemma but had failed. But when the broker gave him Dr. Silkworth\'s description of alcoholism and its hopelessness, the physician began to pursue the spiritual remedy for his malady with a willingness he had never before been able to muster. He sobered, never to drink again up to the moment of his death in 1950. This seemed to prove that one alcoholic could affect another as no nonalcoholic could. It also indicated that strenuous work, one alcoholic with another, was vital to permanent recovery.' },
-      { text: 'Hence the two men set to work almost frantically upon alcoholics arriving in the ward of the Akron City Hospital. Their very first case, a desperate one, recovered immediately and became A.A. number three. He never had another drink. This work at Akron continued through the summer of 1935. There were many failures, but there was an occasional heartening success. When the broker returned to New York in the fall of 1935, the first A.A. group had actually been formed, though no one realized it at the time.' },
-      { text: 'A second small group promptly took shape at New York, to be followed in 1937 with the start of a third at Cleveland. Besides these, there were scattered alcoholics who had picked up the basic ideas in Akron or New York who were trying to form groups in other cities. By late 1937, the number of members having substantial sobriety time behind them was sufficient to convince the membership that a new light had entered the dark world of the alcoholic.' },
-      { text: 'It was now time, the struggling groups thought, to place their message and unique experience before the world. This determination bore fruit in the spring of 1939 by the publication of this volume. The membership had then reached about 100 men and women. The fledgling society, which had been nameless, now began to be called Alcoholics Anonymous, from the title of its own book. The flying-blind period ended and A.A. entered a new phase of its pioneering time.' },
-      { text: 'With the appearance of the new book a great deal began to happen. Dr. Harry Emerson Fosdick, the noted clergyman, reviewed it with approval. In the fall of 1939 Fulton Oursler, then editor of Liberty, printed a piece in his magazine, called "Alcoholics and God." This brought a rush of 800 frantic inquiries into the little New York office which meanwhile had been established. Each inquiry was painstakingly answered; pamphlets and books were sent out. Businessmen, traveling out of existing groups, were referred to these prospective newcomers. New groups started up and it was found, to the astonishment of everyone, that A.A.\'s message could be transmitted in the mail as well as by word of mouth. By the end of 1939 it was estimated that 800 alcoholics were on their way to recovery.' },
-      { text: 'In the spring of 1940, John D. Rockefeller, Jr. gave a dinner for many of his friends to which he invited A.A. members to tell their stories. News of this got on the world wires; inquiries poured in again and many people went to the bookstores to get the book "Alcoholics Anonymous." By March 1941 the membership had shot up to 2,000. Then Jack Alexander wrote a feature article in the Saturday Evening Post and placed such a compelling picture of A.A. before the general public that alcoholics in need of help really deluged us. By the close of 1941, A.A. numbered 8,000 members. The mushrooming process was in full swing. A.A. had become a national institution.' },
-      { text: 'Our Society then entered a fearsome and exciting adolescent period. The test that it faced was this: Could these large numbers of erstwhile erratic alcoholics successfully meet and work together? Would there be quarrels over membership, leadership, and money? Would there be strivings for power and prestige? Would there be schisms which would split A.A. apart? Soon A.A. was beset by these very problems on every side and in every group. But out of this frightening and at first disrupting experience the conviction grew that A.A.\'s had to hang together or die separately. We had to unify our Fellowship or pass off the scene.' },
-      { text: 'As we discovered the principles by which the individual alcoholic could live, so we had to evolve principles by which the A.A. groups and A.A. as a whole could survive and function effectively. It was thought that no alcoholic man or woman could be excluded from our Society; that our leaders might serve but never govern; that each group was to be autonomous and there was to be no professional class of therapy. There were to be no fees or dues; our expenses were to be met by our own voluntary contributions. There was to be the least possible organization, even in our service centers. Our public relations were to be based upon attraction rather than promotion. It was decided that all members ought to be anonymous at the level of press, radio, TV and films. And in no circumstances should we give endorsements, make alliances, or enter public controversies.' },
-      { text: 'This was the substance of A.A.\'s Twelve Traditions, which are stated in full on page 562 of this book. Though none of these principles had the force of rules or laws, they had become so widely accepted by 1950 that they were confirmed by our first International Conference held at Cleveland. Today the remarkable unity of A.A. is one of the greatest assets that our Society has.' },
-      { text: 'While the internal difficulties of our adolescent period were being ironed out, public acceptance of A.A. grew by leaps and bounds. For this there were two principal reasons: the large numbers of recoveries, and reunited homes. These made their impressions everywhere. Of alcoholics who came to A.A. and really tried, 50% got sober at once and remained that way; 25% sobered up after some relapses, and among the remainder, those who stayed on with A.A. showed improvement. Other thousands came to a few A.A. meetings and at first decided they didn\'t want the program. But great numbers of these—about two out of three—began to return as time passed.' },
-      { text: 'Another reason for the wide acceptance of A.A. was the ministration of friends—friends in medicine, religion, and the press, together with innumerable others who became our able and persistent advocates. Without such support, A.A. could have made only the slowest progress. Some of the recommendations of A.A.\'s early medical and religious friends will be found further on in this book.' },
-      { text: 'Alcoholics Anonymous is not a religious organization. Neither does A.A. take any particular medical point of view, though we cooperate widely with the men of medicine as well as with the men of religion. Alcohol being no respecter of persons, we are an accurate cross section of America, and in distant lands, the same democratic evening-up process is now going on. By personal religious affiliation, we include Catholics, Protestants, Jews, Hindus, and a sprinkling of Moslems and Buddhists. More than 15% of us are women.' },
-      { text: 'At present, our membership is pyramiding at the rate of about twenty per cent a year. So far, upon the total problem of several million actual and potential alcoholics in the world, we have made only a scratch. In all probability, we shall never be able to touch more than a fair fraction of the alcohol problem in all its ramifications. Upon therapy for the alcoholic himself, we surely have no monopoly. Yet it is our great hope that all those who have as yet found no answer may begin to find one in the pages of this book and will presently join us on the high road to a new freedom.' }
-    ]
-  },
-
+  "preface": prefaceContent,
+  "foreword-first": forewordFirstContent,
+  "foreword-second": forewordSecondContent,
   "foreword-third": {
     highlights: [],
     tabs: [],
@@ -86,7 +32,6 @@ export const CHAPTER_CONTENT = {
       { text: 'In spite of the great increase in the size and the span of this Fellowship, at its core it remains simple and personal. Each day, somewhere in the world, recovery begins when one alcoholic talks with another alcoholic, sharing experience, strength, and hope.' }
     ]
   },
-
   "foreword-fourth": {
     highlights: [],
     tabs: [],
@@ -96,185 +41,16 @@ export const CHAPTER_CONTENT = {
       { text: 'As the message of recovery has reached larger numbers of people, it has also touched the lives of a vastly greater variety of suffering alcoholics. When the phrase "We are people who normally would not mix" (page 17 of this book) was written in 1939, it referred to a Fellowship composed largely of men (and a few women) with quite similar social, ethnic, and economic backgrounds. Like so much of A.A.\'s basic text, those words have proved to be far more visionary than the founding members could ever have imagined. The stories added to this edition represent a membership whose characteristics—of age, gender, race, and culture—have widened and have deepened to encompass virtually anyone the early members could have imagined would be affected by alcoholism.' }
     ]
   },
-
   "doctors-opinion": doctorsOpinionContent,
-
   "bills-story": billsStoryContent,
   "there-is-solution": thereIsSolutionContent,
   "more-about-alcoholism": moreAboutAlcoholismContent,
   "we-agnostics": weAgnosticsContent,
   "how-it-works": howItWorksContent,
   "into-action": intoActionContent,
-
   "working-with-others": workingWithOthersContent,
-
-  "there-is-solution": {
-    highlights: [],
-    tabs: [],
-    paragraphs: [
-      { 
-        segments: [
-          { text: "We, of ALCOHOLICS ANONYMOUS, know thousands of men and women who were once just as hopeless as Bill. Nearly all have " },
-          { text: "recovered", highlight: 'pink' },
-          { text: ". They have solved the drink problem." }
-        ]
-      },
-      { text: "We are average Americans. All sections of this country and many of its occupations are represented, as well as many political, economic, social, and religious backgrounds. We are people who normally would not mix. But there exists among us a fellowship, a friendliness, and an understanding which is indescribably wonderful." },
-      { text: "The tremendous fact for every one of us is that we have discovered a common solution. We have a way out on which we can absolutely agree, and upon which we can join in brotherly and harmonious action. This is the great news this book carries to those who suffer from alcoholism." },
-      { text: "An illness of this sort—and we have come to believe it an illness—involves those about us in a way no other human sickness can. If a person has cancer all are sorry for him and no one is angry or hurt. But not so with the alcoholic illness, for with it there goes annihilation of all the things worth while in life." },
-      { text: "We hope this volume will inform and comfort those who are, or who may be affected. There are many. Highly competent psychiatrists who have dealt with us have found it sometimes impossible to persuade an alcoholic to discuss his situation without reserve. Strangely enough, wives, parents and intimate friends usually find us even more unapproachable than do the psychiatrist and the doctor." },
-      { text: "But the ex-problem drinker who has found this solution, who is properly armed with facts about himself, can generally win the entire confidence of another alcoholic in a few hours. Until such an understanding is reached, little or nothing can be accomplished." },
-      { text: "That the man who is making the approach has had the same difficulty, that he obviously knows what he is talking about, that his whole deportment shouts at the new prospect that he is a man with a real answer, that he has no attitude of Holier Than Thou, nothing whatever except the sincere desire to be helpful; that there are no fees to pay, no axes to grind, no people to please, no lectures to be endured—these are the conditions we have found most effective." },
-      { 
-        segments: [
-          { text: 'You may already have asked yourself why it is that all of us became so very ill from drinking. Doubtless you are curious to discover how and why, in the face of expert opinion to the contrary, we have ' },
-          { text: 'recovered', highlight: 'pink' },
-          { text: ' from a hopeless condition of mind and body. If you are an alcoholic who wants to get over it, you may already be asking—"What do I have to do?"' }
-        ]
-      },
-      { text: 'How many times people have said to us: "I can take it or leave it alone. Why can\'t he?" "Why don\'t you drink like a gentleman or quit?" "That fellow can\'t handle his liquor." "Why don\'t you try beer and wine?" "His will power must be weak." "The doctor told him that if he ever drank again it would kill him, but there he is all lit up again."' },
-      { text: "Moderate drinkers have little trouble in giving up liquor entirely if they have good reason for it. They can take it or leave it alone. Then we have a certain type of hard drinker. He may have the habit badly enough to gradually impair him physically and mentally. If a sufficiently strong reason becomes operative, this man can also stop or moderate, although he may find it difficult and troublesome." },
-      { text: "But what about the real alcoholic? He may start off as a moderate drinker; he may or may not become a continuous hard drinker; but at some stage of his drinking career he begins to lose all control of his liquor consumption, once he starts to drink." },
-      { text: "Here is the fellow who has been puzzling you, especially in his lack of control. He does absurd, incredible, tragic things while drinking. He is a real Dr. Jekyll and Mr. Hyde. He is seldom mildly intoxicated. He is always more or less insanely drunk." },
-      { text: "Why does he behave like this? If hundreds of experiences have shown him that one drink means another debacle with all its attendant suffering and humiliation, why is it he takes that one drink? Why can't he stay on the water wagon? What has become of the common sense and will power that he still sometimes displays with respect to other matters?" },
-      { text: "We know that while the alcoholic keeps away from drink, as he may do for months or years, he reacts much like other men. We are equally positive that once he takes any alcohol whatever into his system, something happens, both in the bodily and mental sense, which makes it virtually impossible for him to stop." },
-      { text: "Therefore, the main problem of the alcoholic centers in his mind, rather than in his body. If you ask him why he started on that last bender, the chances are he will offer you any one of a hundred alibis. Sometimes these excuses have a certain plausibility, but none of them really makes sense in the light of the havoc an alcoholic's drinking bout creates." },
-      { text: "Once in a while he may tell the truth. And the truth, strange to say, is usually that he has no more idea why he took that first drink than you have. Once this malady has a real hold, they are a baffled lot. There is the obsession that somehow, someday, they will beat the game." },
-      { text: "The tragic truth is that if the man be a real alcoholic, the happy day may not arrive. He has lost control. At a certain point in the drinking of every alcoholic, he passes into a state where the most powerful desire to stop drinking is of absolutely no avail. This tragic situation has already arrived in practically every case long before it is suspected." },
-      { text: "The fact is that most alcoholics, for reasons yet obscure, have lost the power of choice in drink. Our so-called will power becomes practically nonexistent. We are unable, at certain times, to bring into our consciousness with sufficient force the memory of the suffering and humiliation of even a week or a month ago. We are without defense against the first drink." },
-      { text: "When this sort of thinking is fully established in an individual with alcoholic tendencies, he has probably placed himself beyond human aid, and unless locked up, may die or go permanently insane. These stark and ugly facts have been confirmed by legions of alcoholics throughout history." },
-      { text: "There is a solution. Almost none of us liked the self-searching, the leveling of our pride, the confession of shortcomings which the process requires for its successful consummation. But we saw that it really worked in others, and we had come to believe in the hopelessness and futility of life as we had been living it." },
-      { text: "The great fact is just this, and nothing less: That we have had deep and effective spiritual experiences which have revolutionized our whole attitude toward life, toward our fellows and toward God's universe. The central fact of our lives today is the absolute certainty that our Creator has entered into our hearts and lives in a way which is indeed miraculous." },
-      { text: "If you are as seriously alcoholic as we were, we believe there is no middle-of-the-road solution. We were in a position where life was becoming impossible, and if we had passed into the region from which there is no return through human aid, we had but two alternatives: One was to go on to the bitter end, blotting out the consciousness of our intolerable situation as best we could; and the other, to accept spiritual help." }
-    ]
-  },
-
-  "more-about-alcoholism": {
-    highlights: [],
-    tabs: [],
-    paragraphs: [
-      { text: "Most of us have been unwilling to admit we were real alcoholics. No person likes to think he is bodily and mentally different from his fellows. Therefore, it is not surprising that our drinking careers have been characterized by countless vain attempts to prove we could drink like other people." },
-      { text: "The idea that somehow, someday he will control and enjoy his drinking is the great obsession of every abnormal drinker. The persistence of this illusion is astonishing. Many pursue it into the gates of insanity or death." },
-      { text: "We learned that we had to fully concede to our innermost selves that we were alcoholics. This is the first step in recovery. The delusion that we are like other people, or presently may be, has to be smashed." },
-      { text: "We alcoholics are men and women who have lost the ability to control our drinking. We know that no real alcoholic ever recovers control. All of us felt at times that we were regaining control, but such intervals—usually brief—were inevitably followed by still less control, which led in time to pitiful and incomprehensible demoralization." },
-      { text: "We are convinced to a man that alcoholics of our type are in the grip of a progressive illness. Over any considerable period we get worse, never better. We are like men who have lost their legs; they never grow new ones. Neither does there appear to be any kind of treatment which will make alcoholics of our kind like other men." },
-      { text: "Despite all we can say, many who are real alcoholics are not going to believe they are in that class. By every form of self-deception and experimentation, they will try to prove themselves exceptions to the rule, therefore nonalcoholic. If anyone who is showing inability to control his drinking can do the right-about-face and drink like a gentleman, our hats are off to him." },
-      { text: "We do not like to pronounce any individual as alcoholic, but you can quickly diagnose yourself. Step over to the nearest barroom and try some controlled drinking. Try to drink and stop abruptly. Try it more than once. It will not take long for you to decide, if you are honest with yourself about it." },
-      { text: "About one year prior to this experience a man was brought in to be treated for chronic alcoholism. He had but partially recovered from a gastric hemorrhage and seemed to be a case of pathological mental deterioration. He had lost everything worthwhile in life and was only living, one might say, to drink. He frankly admitted and believed that for him there was no hope." },
-      { text: "Following the elimination of alcohol, there was found to be no permanent brain injury. He accepted the plan outlined in this book. One year later he called to see me, and I experienced a very strange sensation. I knew the man by name, and partly recognized his features, but there all resemblance ended. From a trembling, despairing, nervous wreck, had emerged a man brimming over with self-reliance and contentment." },
-      { text: "When I need a mental uplift, I often think of another case brought in by a physician prominent in New York. The patient had made his own diagnosis, and deciding his situation hopeless, had hidden in a deserted barn determined to die. He was rescued by a searching party, and, in desperate condition, brought to me." },
-      { text: 'However, he did become "sold" on the ideas contained in this book. He has not had a drink for a great many years. I see him now and then and he is as fine a specimen of manhood as one could wish to meet.' },
-      { text: "For those who are unable to drink moderately the question is how to stop altogether. We are assuming, of course, that the reader desires to stop. Whether such a person can quit upon a nonspiritual basis depends upon the extent to which he has already lost the power to choose whether he will drink or not." },
-      { text: "So we shall describe some of the mental states that precede a relapse into drinking, for obviously this is the crux of the problem. What sort of thinking dominates an alcoholic who repeats time after time the desperate experiment of the first drink?" },
-      { text: "Our first example is a friend we shall call Jim. This man has a charming wife and family. He inherited a lucrative automobile agency. He is a good salesman. Everybody likes him. He is an intelligent man, normal so far as we can see, except for a nervous disposition. He did no drinking until he was thirty-five." },
-      { text: '"I came to work on Tuesday morning. I remember I felt irritated that I had to be a salesman for a concern I once owned. Then I decided to drive into the country and see one of my prospects for a car. On the way I felt hungry so I stopped at a roadside place where they have a bar. I had no intention of drinking. I just thought I would get a sandwich."' },
-      { text: '"Suddenly the thought crossed my mind that if I were to put an ounce of whiskey in my milk it couldn\'t hurt me on a full stomach. I ordered a whiskey and poured it into the milk. I vaguely sensed I was not being any too smart, but felt reassured as I was taking the whiskey on a full stomach."' },
-      { text: "Thus started one more journey to the asylum for Jim. Here was the threat of commitment, the loss of family and position, to say nothing of that intense mental and physical suffering which drinking always caused him. He had much knowledge about himself as an alcoholic. Yet all reasons for not drinking were easily pushed aside in favor of the foolish idea that he could take whiskey if only he mixed it with milk!" },
-      { text: "Whatever the precise definition of the word may be, we call this plain insanity. How can such a lack of proportion, of the ability to think straight, be called anything else? You may think this an extreme case. To us it is not far-fetched, for this kind of thinking has been characteristic of every single one of us." },
-      { text: "Fred is partner in a well known accounting firm. His income is good, he has a fine home, is happily married and the father of promising children of college age. He has so attractive a personality that he makes friends with everyone. If ever there was a successful business man, it is Fred. To all appearance he is a stable, well balanced individual. Yet, he is alcoholic." },
-      { text: '"I was much impressed with what you fellows said about alcoholism, and I frankly did not believe it would be possible for me to drink again. I reasoned I was not so far advanced as most of you fellows, that I had been usually successful in licking my other personal problems, and that I would therefore be successful where you men failed."' },
-      { text: '"One day I went to Washington to present some accounting evidence to a government bureau. Physically, I felt fine. Neither did I have any pressing problems or worries. My business came off well, I was pleased and knew my partners would be too. It was the end of a perfect day, not a cloud on the horizon."' },
-      { text: '"As I crossed the threshold of the dining room, the thought came to mind that it would be nice to have a couple of cocktails with dinner. That was all. Nothing more. I ordered a cocktail and my meal. Then I ordered another cocktail. After dinner I decided to take a walk. When I returned to the hotel it struck me a highball would be fine before going to bed, so I stepped into the bar and had one."' },
-      { text: '"As soon as I regained my ability to think, I went carefully over that evening in Washington. Not only had I been off guard, I had made no fight whatever against the first drink. This time I had not thought of the consequences at all. I had commenced to drink as carelessly as though the cocktails were ginger ale."' },
-      { text: '"Two of the members of Alcoholics Anonymous came to see me. They grinned, which I didn\'t like so much, and then asked me if I thought myself alcoholic and if I were really licked this time. I had to concede both propositions. They cited cases out of their own experience by the dozen. This process snuffed out the last flicker of conviction that I could do the job myself."' },
-      { text: '"Then they outlined the spiritual answer and program of action which a hundred of them had followed successfully. The moment I made up my mind to go through with the process, I had the curious feeling that my alcoholic condition was relieved, as in fact it proved to be."' },
-      { text: "Once more: The alcoholic at certain times has no effective mental defense against the first drink. Except in a few rare cases, neither he nor any other human being can provide such a defense. His defense must come from a Higher Power." }
-    ]
-  },
-
-  "we-agnostics": {
-    highlights: [],
-    tabs: [],
-    paragraphs: [
-      { text: "In the preceding chapters you have learned something of alcoholism. We hope we have made clear the distinction between the alcoholic and the non-alcoholic. If, when you honestly want to, you find you cannot quit entirely, or if when drinking, you have little control over the amount you take, you are probably alcoholic." },
-      { text: "If that be the case, you may be suffering from an illness which only a spiritual experience will conquer. To one who feels he is an atheist or agnostic such an experience seems impossible, but to continue as he is means disaster, especially if he is an alcoholic of the hopeless variety." },
-      { text: "To be doomed to an alcoholic death or to live on a spiritual basis are not always easy alternatives to face. But it isn't so difficult. About half our original fellowship were of exactly that type. At first some of us tried to avoid the issue, hoping against hope we were not true alcoholics. But after a while we had to face the fact that we must find a spiritual basis of life—or else." },
-      { text: "If a mere code of morals or a better philosophy of life were sufficient to overcome alcoholism, many of us would have recovered long ago. But we found that such codes and philosophies did not save us, no matter how much we tried. Our human resources, as marshalled by the will, were not sufficient; they failed utterly.", highlight: "yellow" },
-      { text: "Lack of power, that was our dilemma. We had to find a power by which we could live, and it had to be a Power greater than ourselves. Obviously. But where and how were we to find this Power? Well, that's exactly what this book is about. Its main object is to enable you to find a Power greater than yourself which will solve your problem.", highlight: "blue" },
-      { text: "Here difficulty arises with agnostics. Many times we talk to a new man and watch his hope rise as we discuss his alcoholic problems and explain our fellowship. But his face falls when we speak of spiritual matters, especially when we mention God, for we have re-opened a subject which our man thought he had neatly evaded or entirely ignored." },
-      { text: 'My friend suggested what then seemed a novel idea. He said, "Why don\'t you choose your own conception of God?" That statement hit me hard. It melted the icy intellectual mountain in whose shadow I had lived and shivered many years. I stood in the sunlight at last.' },
-      { text: "Much to our relief, we discovered we did not need to consider another's conception of God. Our own conception, however inadequate, was sufficient to make the approach and to effect a contact with Him. As soon as we admitted the possible existence of a Creative Intelligence, a Spirit of the Universe underlying the totality of things, we began to be possessed of a new sense of power and direction." },
-      { text: "When, therefore, we speak to you of God, we mean your own conception of God. This applies, too, to other spiritual expressions which you find in this book. Do not let any prejudice you may have against spiritual terms deter you from honestly asking yourself what they mean to you." },
-      { text: 'We needed to ask ourselves but one short question. "Do I now believe, or am I even willing to believe, that there is a Power greater than myself?" As soon as a man can say that he does believe, or is willing to believe, we emphatically assure him that he is on his way.' },
-      { text: "Besides a seeming inability to accept much on faith, we often found ourselves handicapped by obstinacy, sensitiveness, and unreasoning prejudice. Many of us have been so touchy that even casual reference to spiritual things made us bristle with antagonism. Faced with alcoholic destruction, we soon became as open minded on spiritual matters as we had tried to be on other questions." },
-      { text: "The practical individual of today is a stickler for facts and results. Nevertheless, the twentieth century readily accepts theories of all kinds, provided they are firmly grounded in fact. We have numerous theories, for example, about electricity. Everybody believes them without a murmur of doubt. Why this ready acceptance? Simply because it is impossible to explain what we see, feel, direct, and use, without a reasonable assumption as a starting point." },
-      { text: "When the perfectly logical assumption is suggested that underneath the material world and life as we see it, there is an All Powerful, Guiding, Creative Intelligence, right there our perverse streak comes to the surface and we laboriously set out to convince ourselves it isn't so." },
-      { text: "Instead of regarding ourselves as intelligent agents, spearheads of God's ever advancing Creation, we agnostics and atheists chose to believe that our human intelligence was the last word, the alpha and the omega, the beginning and end of all. Rather vain of us, wasn't it?" },
-      { text: "We, who have traveled this dubious path, beg you to lay aside prejudice, even against organized religion. We have learned that whatever the human frailties of various faiths may be, those faiths have given purpose and direction to millions. People of faith have a logical idea of what life is all about." },
-      { text: "On one proposition, however, these men and women are strikingly agreed. Every one of them has gained access to, and believes in, a Power greater than himself. This Power has in each case accomplished the miraculous, the humanly impossible." },
-      { text: "Here are thousands of men and women, worldly indeed. They flatly declare that since they have come to believe in a Power greater than themselves, to take a certain attitude toward that Power, and to do certain simple things, there has been a revolutionary change in their way of living and thinking." },
-      { text: "When we saw others solve their problems by a simple reliance upon the Spirit of the Universe, we had to stop doubting the power of God. Our ideas did not work. But the God idea did." },
-      { text: "Logic is great stuff. We liked it. We still like it. It is not by chance we were given the power to reason, to examine the evidence of our senses, and to draw conclusions. That is one of man's magnificent attributes." },
-      { text: "When we became alcoholics, crushed by a self-imposed crisis we could not postpone or evade, we had to fearlessly face the proposition that either God is everything or else He is nothing. God either is, or He isn't. What was our choice to be?" },
-      { text: "Imagine life without faith! Were nothing left but pure reason, it wouldn't be life. But we believed in life—of course we did. We could not prove life in the sense that you can prove a straight line is the shortest distance between two points, yet, there it was." },
-      { text: "Actually we were fooling ourselves, for deep down in every man, woman, and child, is the fundamental idea of God. It may be obscured by calamity, by pomp, by worship of other things, but in some form or other it is there. For faith in a Power greater than ourselves, and miraculous demonstrations of that power in human lives, are facts as old as man himself." },
-      { text: "We finally saw that faith in some kind of God was a part of our make-up, just as much as the feeling we have for a friend. Sometimes we had to search fearlessly, but He was there. He was as much a fact as we were. We found the Great Reality deep down within us. In the last analysis it is only there that He may be found." },
-      { text: 'One night, when confined in a hospital, he was approached by an alcoholic who had known a spiritual experience. Our friend\'s gorge rose as he bitterly cried out: "If there is a God, He certainly hasn\'t done anything for me!" But later, alone in his room, he asked himself this question: "Is it possible that all the religious people I have known are wrong?"' },
-      { text: 'Then, like a thunderbolt, a great thought came. It crowded out all else: "Who are you to say there is no God?" This man recounts that he tumbled out of bed to his knees. In a few seconds he was overwhelmed by a conviction of the Presence of God. It poured over and through him with the certainty and majesty of a great tide at flood.' },
-      { text: "Thus was our friend's cornerstone fixed in place. No later vicissitude has shaken it. His alcoholic problem was taken away. That very night, years ago, it disappeared. Save for a few brief moments of temptation the thought of drink has never returned; and at such times a great revulsion has risen up in him. Seemingly he could not drink even if he would. God had restored his sanity." },
-      { text: "What is this but a miracle of healing? Yet its elements are simple. Circumstances made him willing to believe. He humbly offered himself to his Maker—then he knew. Even so has God restored us all to our right minds. To this man, the revelation was sudden. Some of us grow into it more slowly. But He has come to all who have honestly sought Him. When we drew near to Him He disclosed Himself to us!" }
-    ]
-  },
-
-  "how-it-works": {
-    highlights: [],
-    tabs: [],
-    paragraphs: [
-      { text: 'Rarely have we seen a person fail who has thoroughly followed our path. Those who do not recover are people who cannot or will not completely give themselves to this simple program, usually men and women who are constitutionally incapable of being honest with themselves. There are such unfortunates. They are not at fault; they seem to have been born that way.' },
-      { text: 'Our stories disclose in a general way what we used to be like, what happened, and what we are like now. If you have decided you want what we have and are willing to go to any length to get it—then you are ready to take certain steps.' },
-      { text: 'Remember that we deal with alcohol—cunning, baffling, powerful! Without help it is too much for us. But there is One who has all power—that One is God. May you find Him now!' },
-      { text: 'Half measures availed us nothing. We stood at the turning point. We asked His protection and care with complete abandon.' },
-      { text: 'Here are the steps we took, which are suggested as a program of recovery:' },
-      { text: '1. We admitted we were powerless over alcohol—that our lives had become unmanageable.\n2. Came to believe that a Power greater than ourselves could restore us to sanity.\n3. Made a decision to turn our will and our lives over to the care of God as we understood Him.\n4. Made a searching and fearless moral inventory of ourselves.\n5. Admitted to God, to ourselves, and to another human being the exact nature of our wrongs.\n6. Were entirely ready to have God remove all these defects of character.\n7. Humbly asked Him to remove our shortcomings.\n8. Made a list of all persons we had harmed, and became willing to make amends to them all.\n9. Made direct amends to such people wherever possible, except when to do so would injure them or others.\n10. Continued to take personal inventory and when we were wrong promptly admitted it.\n11. Sought through prayer and meditation to improve our conscious contact with God as we understood Him, praying only for knowledge of His will for us and the power to carry that out.\n12. Having had a spiritual awakening as the result of these steps, we tried to carry this message to alcoholics, and to practice these principles in all our affairs.' },
-      { text: 'Being convinced, we were at Step Three, which is that we decided to turn our will and our life over to God as we understood Him. The first requirement is that we be convinced that any life run on self-will can hardly be a success.' },
-      { text: 'Selfishness—self-centeredness! That, we think, is the root of our troubles. Driven by a hundred forms of fear, self-delusion, self-seeking, and self-pity, we step on the toes of our fellows and they retaliate.' },
-      { text: 'Many of us said to our Maker, as we understood Him: "God, I offer myself to Thee—to build with me and to do with me as Thou wilt. Relieve me of the bondage of self, that I may better do Thy will. Take away my difficulties, that victory over them may bear witness to those I would help of Thy Power, Thy Love, and Thy Way of life. May I do Thy will always!"' },
-      { text: 'Resentment is the "number one" offender. It destroys more alcoholics than anything else. From it stem all forms of spiritual disease, for we have been not only mentally and physically ill, we have been spiritually sick.' },
-      { text: 'In dealing with resentments, we set them on paper. We listed people, institutions or principles with whom we were angry. We asked ourselves why we were angry.' },
-      { text: 'This was our course: We realized that the people who wronged us were perhaps spiritually sick. Though we did not like their symptoms and the way these disturbed us, they, like ourselves, were sick too.' }
-    ]
-  },
-
-  "into-action": {
-    highlights: [],
-    tabs: [],
-    paragraphs: [
-      { text: 'This brings us to the Fifth Step in the program of recovery. We admitted to God, to ourselves, and to another human being, the exact nature of our defects.' },
-      { text: 'If we skip this vital step, we may not overcome drinking. Time after time newcomers have tried to keep to themselves certain facts about their lives. Trying to avoid this humbling experience, they have turned to easier methods. Almost invariably they got drunk.' },
-      { text: 'We must be entirely honest with somebody if we expect to live long or happily in this world.' },
-      { text: 'Once we have taken this step, withholding nothing, we are delighted. We can look the world in the eye. We can be alone at perfect peace and ease. Our fears fall from us. We begin to feel the nearness of our Creator.' },
-      { text: 'If we are painstaking about this phase of our development, we will be amazed before we are half way through. We are going to know a new freedom and a new happiness. We will not regret the past nor wish to shut the door on it.' },
-      { text: 'We will comprehend the word serenity and we will know peace. No matter how far down the scale we have gone, we will see how our experience can benefit others. That feeling of uselessness and self-pity will disappear.' },
-      { text: 'We will lose interest in selfish things and gain interest in our fellows. Self-seeking will slip away. Our whole attitude and outlook upon life will change. Fear of people and of economic insecurity will leave us.' },
-      { text: 'We will intuitively know how to handle situations which used to baffle us. We will suddenly realize that God is doing for us what we could not do for ourselves. Are these extravagant promises? We think not. They are being fulfilled among us—sometimes quickly, sometimes slowly.' },
-      { text: 'Continue to watch for selfishness, dishonesty, resentment, and fear. When these crop up, we ask God at once to remove them. We discuss them with someone immediately and make amends quickly if we have harmed anyone.' },
-      { text: 'Love and tolerance of others is our code. And we have ceased fighting anything or anyone—even alcohol.' },
-      { text: 'We are not cured of alcoholism. What we really have is a daily reprieve contingent on the maintenance of our spiritual condition.' },
-      { text: 'When we retire at night, we constructively review our day. Were we resentful, selfish, dishonest or afraid? Do we owe an apology? Have we kept something to ourselves which should be discussed with another person at once?' },
-      { text: 'On awakening let us think about the twenty-four hours ahead. Before we begin, we ask God to direct our thinking, especially asking that it be divorced from self-pity, dishonest or self-seeking motives.' }
-    ]
-  },
-
-  "working-with-others": {
-    highlights: [
-      { text: "CHAPTER 7", type: "sidebar" }
-    ],
-    paragraphs: [
-      { text: 'Practical experience shows that nothing will so much insure immunity from drinking as intensive work with other alcoholics. It works when other activities fail.', highlight: 'blue' },
-      { text: 'Life will take on new meaning. To watch people recover, to see them help others, to watch loneliness vanish, to see a fellowship grow up about you, to have a host of friends—this is an experience you must not miss.', highlight: 'blue' },
-      { text: 'When you discover a prospect for Alcoholics Anonymous, find out all you can about him. If he does not want to stop drinking, don\'t waste time trying to persuade him.', highlight: 'yellow' },
-      { text: 'See your man alone, if possible. At first engage in general conversation. After a while, turn the talk to some phase of drinking. Tell him enough about your drinking habits, symptoms, and experiences to encourage him to speak of himself.', highlight: 'yellow' },
-      { text: 'If you are satisfied that he is a real alcoholic, begin to dwell on the hopeless feature of the malady. Show him, from your own experience, how the queer mental condition surrounding that first drink prevents normal functioning of the will power.', highlight: 'yellow' },
-      { text: 'Outline the program of action, explaining how you made a self-appraisal, how you straightened out your past and why you are now endeavoring to be helpful to him. It is important for him to realize that your attempt to pass this on to him plays a vital part in your own recovery.', highlight: 'yellow' },
-      { text: 'Never avoid these responsibilities, but be sure you are doing the right thing if you assume them. Helping others is the foundation stone of your recovery.', highlight: 'blue' },
-      { text: 'Burn the idea into the consciousness of every man that he can get well regardless of anyone. The only condition is that he trust in God and clean house.', highlight: 'blue' }
-    ]
-  },
-
   "to-wives": toWivesContent,
-
   "family-afterward": familyAfterwardContent,
-
   "to-employers": toEmployersContent,
   "vision-for-you": visionForYouContent,
   "dr-bob-nightmare": doctorBobsNightmareContent,
@@ -744,7 +520,7 @@ export const CHAPTER_CONTENT = {
       { text: 'My last hangover was on a Friday before a long summer weekend. Later that Friday night, I was dragging myself up the deserted street thinking that the whole world had someplace to go, and someone to go with.' },
       { text: 'Instead of going to a bar or home with my regular giant weekend supply of booze, I went to my club to swim. I wrapped myself in a bathrobe and sat in a dark corner of the locker room for two hours, feeling desperately sorry for myself.' },
       { text: 'Close to eight o\'clock, I leaped up and raced off to a meeting I\'d had no intention of attending. It was a bit like getting a rap on the head with an invisible hammer and having my brain flip over.' },
-      { text: 'Late that night at home, there was a presence in the room with me, even though I lived alone. The next morning I knew I didn\'t have to drink.' },
+      { text: 'Late that night at home, there was a presence in the room with me, even though I lived alone. The next morning I knew I didn\'t have to drink.'Manuel ' },
       { text: 'In the weeks and months that followed, I did everything that was suggested to me. I went to a meeting every day, read the books, and got a sponsor who told me to have a quiet time every morning.' },
       { text: 'I joined a downtown group that met near my office right after work at 5:15. I would not have made it to 8:00 p.m. Soon, I got into service and was given bank books and told to keep the meeting going.' },
       { text: 'I became as compulsive about A.A. as I had been about drinking. I went to every A.A. get-together possible. I listened to tapes. I read and reread the literature, laughing into the night over Dr. Bob and the Good Oldtimers.' },
@@ -803,7 +579,7 @@ export const CHAPTER_CONTENT = {
       { text: 'Today, I find I can\'t work my A.A. program while taking pills. I can\'t say, "Thy will be done," and take a pill. Giving up alcohol alone was not enough; I\'ve had to give up all mood- and mind-affecting chemicals.' },
       { text: 'On two occasions I decided I would take absolutely nothing. On each occasion I had a convulsion on Sunday morning. The neurologist couldn\'t figure out why and decided to send me to the Mayo Clinic.' },
       { text: 'After nine days of tests at Mayo, I was put in the locked ward. When we got home, I got a bottle of Scotch and went to bed. The next day, Max called the neurologist who arranged for me to see a local psychiatrist.' },
-      { text: 'Time went by very slowly on my second nut ward. They wanted me to make leather belts! Had I gone to school all those years just to make leather belts?' },
+      { text: 'Time went by very slowly on my second nut ward. They wanted me to make leather belts! Had I gone to school all those years just to make leather belts?'Manuel ' },
       { text: 'In the hospital I hung on to the idea that if I could just control the external environment, the internal environment would become comfortable. Today we have turned our wills and lives over to the care of God.' },
       { text: 'One day my psychiatrist asked, "How\'d you like to talk to the man from A.A.?" My reaction was that I\'d already helped all the patients on the ward. But by the look on his face, I could tell it would make him happy if I agreed.' },
       { text: 'Against my better judgment, I went to a meeting that night, and a strange thing began to happen. The psychiatrist became quite interested and would ask me all kinds of questions about the A.A. meetings.' },
@@ -849,9 +625,10 @@ export const CHAPTER_CONTENT = {
       { text: 'I was surprised by my first meeting. The room was filled with well-dressed, smiling, happy people. No rancid coats. No bloodshot eyes. But laughter.' },
       { text: 'Then a woman introduced herself and said she was an alcoholic. She spoke about feelings, of insecurity replaced by confidence, fear replaced by faith, resentment replaced by love, and despair replaced by joy.' },
       { text: 'After the meeting, people welcomed me with open arms and gave me their telephone numbers. The speaker said, "If you\'re an apple, you can be the best apple you can be, but you can never be an orange." I was an apple all right, and for the first time I understood I had spent my life trying to be an orange.' },
-      { text: 'My progress in A.A. was slow. I refused to go to meetings outside of my neighborhood. I would not go to meetings on other nights. I bounced from one sick relationship to another. I was too proud to ask what a sponsor was.' },
+      { text: 'My progress in A.A. was slow. I refused to go to meetings outside of my neighborhood. I would not go to meetings on other nights. I bounced from one sick relationship to another. I was too proud to ask what a sponsor was.'Manuel ' },
       { text: 'I plodded along for a few months. I was sober about six months, and I was not getting any better. I contemplated suicide almost every day. My emotions swung between paralyzing despair and murderous rage.' },
-      { text: 'I decided I had had enough. I went to my Tuesday night meeting, fully intent on sharing honestly. I arrived and no one else was there. Then a man walked through the door.' },
+      { text: 'I decided I had had enough. I went to my Tuesday night meeting, fully intent on sharing honestly.' },
+      { text: 'I arrived and no one else was there. Then a man walked through the door.' },
       { text: 'He asked me how I was doing. The pain, fear, misery, anger, loss, resentment, and despair came pouring out. For the first time I made completely honest contact with another human being. I was met with acceptance and love.' },
       { text: 'When I had finished, he told me something simple: "You don\'t have to drink over it." If I stuck with A.A., I could stay sober under any and all conditions. He gave me hope.' },
       { text: 'I began to change. I began to pray. I became actively involved in working the steps. I began working with a sponsor and became active in my home group. My life began to change.' },
