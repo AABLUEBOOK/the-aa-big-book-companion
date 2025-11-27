@@ -74,7 +74,7 @@ const TermTooltip = memo(function TermTooltip({ term, definition }) {
     document.body.style.position = 'fixed';
     document.body.style.width = '100%';
     document.body.style.top = `-${window.scrollY}px`;
-  };
+  }, []);
 
   const handleClose = useCallback((e) => {
     if (e) {
