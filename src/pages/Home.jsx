@@ -1,6 +1,37 @@
-import React from "react";
+import React, { memo, useMemo } from "react";
 import { Link } from "react-router-dom";
 import { ChevronRight } from "lucide-react";
+
+// Memoized chapter item for better performance
+const ChapterItem = memo(function ChapterItem({ chapter, createPageUrl }) {
+  return (
+    <Link
+      to={`${createPageUrl("Chapter")}?id=${chapter.id}`}
+      className="flex items-center justify-between px-3 sm:px-4 py-3 sm:py-3.5 
+                 border border-[#25DCE6]/30 rounded-lg
+                 bg-[#2A3440] hover:bg-[#25DCE6]/10 active:bg-[#25DCE6]/20
+                 hover:border-[#25DCE6]/50 active:scale-[0.99]
+                 transition-all duration-150 shadow-sm"
+    >
+      <div className="flex items-center gap-2 sm:gap-3 min-w-0 flex-1">
+        {chapter.chapter && (
+          <span className="text-[#25DCE6] text-xs sm:text-sm font-medium w-6 sm:w-8 flex-shrink-0">
+            {chapter.chapter}.
+          </span>
+        )}
+        <span className={`text-[#FFFFFD] text-sm sm:text-base truncate ${!chapter.chapter ? 'pl-0' : ''}`}>
+          {chapter.title}
+        </span>
+      </div>
+      <div className="flex items-center gap-2 flex-shrink-0 ml-2">
+        <span className="text-[#FFFFFD]/50 text-xs sm:text-sm">
+          p. {chapter.pages}
+        </span>
+        <ChevronRight className="w-4 h-4 text-[#25DCE6]/60" />
+      </div>
+    </Link>
+  );
+});
 
 function createPageUrl(pageName) {
   return `/${pageName}`;
@@ -47,7 +78,7 @@ const CHAPTERS = [
   { id: "twelve-concepts", title: "Twelve Concepts (Short Form)", pages: "574-575", section: "Section6" },
 ];
 
-export default function Home() {
+const Home = memo(function Home() {
   return (
     <div className="min-h-screen min-h-[100dvh] w-full bg-[#222A31] overflow-x-hidden overflow-y-auto">
         {/* Header */}
@@ -94,33 +125,8 @@ export default function Home() {
       {/* Chapter List */}
       <main className="max-w-3xl mx-auto px-3 sm:px-4 py-4 sm:py-6">
         <div className="flex flex-col gap-2 sm:gap-2.5">
-          {CHAPTERS.map((chapter, index) => (
-            <Link
-              key={chapter.id}
-              to={`${createPageUrl("Chapter")}?id=${chapter.id}`}
-              className="flex items-center justify-between px-3 sm:px-4 py-3 sm:py-3.5 
-                         border border-[#25DCE6]/30 rounded-lg
-                         bg-[#2A3440] hover:bg-[#25DCE6]/10 active:bg-[#25DCE6]/20
-                         hover:border-[#25DCE6]/50 active:scale-[0.99]
-                         transition-all duration-150 shadow-sm"
-            >
-              <div className="flex items-center gap-2 sm:gap-3 min-w-0 flex-1">
-                {chapter.chapter && (
-                  <span className="text-[#25DCE6] text-xs sm:text-sm font-medium w-6 sm:w-8 flex-shrink-0">
-                    {chapter.chapter}.
-                  </span>
-                )}
-                <span className={`text-[#FFFFFD] text-sm sm:text-base truncate ${!chapter.chapter ? 'pl-0' : ''}`}>
-                  {chapter.title}
-                </span>
-              </div>
-              <div className="flex items-center gap-2 flex-shrink-0 ml-2">
-                <span className="text-[#FFFFFD]/50 text-xs sm:text-sm">
-                  p. {chapter.pages}
-                </span>
-                <ChevronRight className="w-4 h-4 text-[#25DCE6]/60" />
-              </div>
-            </Link>
+          {CHAPTERS.map((chapter) => (
+            <ChapterItem key={chapter.id} chapter={chapter} createPageUrl={createPageUrl} />
           ))}
         </div>
       </main>
@@ -133,4 +139,6 @@ export default function Home() {
       </footer>
     </div>
   );
-}
+});
+
+export default Home;
