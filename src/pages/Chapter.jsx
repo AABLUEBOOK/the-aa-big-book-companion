@@ -76,6 +76,11 @@ const Chapter = memo(function Chapter() {
     }
   }, [nextChapter]);
 
+  // Scroll to top when chapter changes
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'instant' });
+  }, [chapterId]);
+
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
