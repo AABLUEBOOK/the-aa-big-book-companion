@@ -7,17 +7,13 @@ export const prefaceContent = {
     },
     {
       segments: [
-        { text: `Because this book has become the basic text for our Society and has helped such large numbers of alcoholic men and women to ` },
-        { text: `recovery`, highlight: 'pink' },
-        { text: `, there exists strong sentiment against any radical change being made in it. Therefore, the first portion of this volume, describing the A.A. recovery program, has been left largely untouched in the course of revisions made for the second, third, and fourth editions. The section called "The Doctor's Opinion" has been kept intact, just as it was originally written in 1939 by the late Dr. William D. Silkworth, our Society's great medical benefactor.` }
+        { text: `Because this book has become the ` },
+        { text: `basic text`, highlight: 'yellow' },
+        { text: ` for our Society and has helped such large numbers of alcoholic men and women to recovery, there exists strong sentiment against any radical change being made in it. Therefore, the first portion of this volume, describing the A.A. recovery program, has been left largely untouched in the course of revisions made for the second, third, and fourth editions. The section called "The Doctor's Opinion" has been kept intact, just as it was originally written in 1939 by the late Dr. William D. Silkworth, our Society's great medical benefactor.` }
       ]
     },
     {
-      segments: [
-        { text: `The second edition added the appendices, the Twelve Traditions, and the directions for getting in touch with A.A. But the chief change was in the section of ` },
-        { text: `personal stories`, highlight: 'pink' },
-        { text: `, which was expanded to reflect the Fellowship's growth. "Bill's Story," "Doctor Bob's Nightmare," and one other personal history from the first edition were retained intact; three were edited and one of these was retitled; new versions of two stories were written, with new titles; thirty completely new stories were added; and the story section was divided into three parts, under the same headings that are used now.` }
-      ]
+      text: `The second edition added the appendices, the Twelve Traditions, and the directions for getting in touch with A.A. But the chief change was in the section of personal stories, which was expanded to reflect the Fellowship's growth. "Bill's Story," "Doctor Bob's Nightmare," and one other personal history from the first edition were retained intact; three were edited and one of these was retitled; new versions of two stories were written, with new titles; thirty completely new stories were added; and the story section was divided into three parts, under the same headings that are used now.`
     },
     {
       text: `In the third edition, Part I ("Pioneers of A.A.") was left unchanged. Nine of the stories in Part II ("They Stopped in Time") were carried over from the second edition; eight new stories were added. In Part III ("They Lost Nearly All"), eight stories were retained; five new ones were added.`
@@ -29,7 +25,10 @@ export const prefaceContent = {
       text: `All changes made over the years in the Big Book (A.A. members' fond nickname for this volume) have had the same purpose: to represent the current membership of Alcoholics Anonymous more accurately, and thereby to reach more alcoholics.`
     },
     {
-      text: `If you have a drinking problem, we hope that you may pause in reading one of the forty-two personal stories and think: "Yes, that happened to me"; or, more important, "Yes, I've felt like that"; or, most important, "Yes, I believe this program can work for me too."`
+      segments: [
+        { text: `If you have a drinking problem, we hope that you may pause in reading one of the forty-two personal stories and think: "Yes, that happened to me"; or, more important, "Yes, I've felt like that"; or, most important, ` },
+        { text: `"Yes, I believe this program can work for me too."`, highlight: 'pink' }
+      ]
     }
   ]
 };

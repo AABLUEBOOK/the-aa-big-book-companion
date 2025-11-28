@@ -1,8 +1,6 @@
 export const forewordSecondContent = {
   highlights: [],
-  tabs: [
-    { label: "AA NOT\nRELIGIOUS", color: "yellow", position: 68 }
-  ],
+  tabs: [],
   paragraphs: [
     {
       text: `Since the original Foreword to this book was written in 1939, a wholesale miracle has taken place. Our earliest printing voiced the hope "that every alcoholic who journeys will find the Fellowship of Alcoholics Anonymous at his destination. Already," continues the early text "twos and threes and fives of us have sprung up in other communities."`
@@ -44,14 +42,19 @@ export const forewordSecondContent = {
       text: `This was the substance of A.A.'s Twelve Traditions, which are stated in full on page 562 of this book. Though none of these principles had the force of rules or laws, they had become so widely accepted by 1950 that they were confirmed by our first International Conference held at Cleveland. Today the remarkable unity of A.A. is one of the greatest assets that our Society has.`
     },
     {
-      text: `While the internal difficulties of our adolescent period were being ironed out, public acceptance of A.A. grew by leaps and bounds. For this there were two principal reasons: the large numbers of recoveries, and reunited homes. These made their impressions everywhere. Of alcoholics who came to A.A. and really tried, 50% got sober at once and remained that way; 25% sobered up after some relapses, and among the remainder, those who stayed on with A.A. showed improvement. Other thousands came to a few A.A. meetings and at first decided they didn't want the program. But great numbers of these—about two out of three—began to return as time passed.`
+      segments: [
+        { text: `While the internal difficulties of our adolescent period were being ironed out, public acceptance of A.A. grew by leaps and bounds. For this there were two principal reasons: the large numbers of recoveries, and reunited homes. These made their impressions everywhere. Of alcoholics who came to A.A. and really tried, 50% got sober at once and remained that way; 25% sobered up after some relapses, and among the remainder, ` },
+        { text: `those who stayed on with A.A. showed improvement`, highlight: 'yellow' },
+        { text: `. Other thousands came to a few A.A. meetings and at first decided they didn't want the program. But great numbers of these—about two out of three—began to return as time passed.` }
+      ]
     },
     {
       text: `Another reason for the wide acceptance of A.A. was the ministration of friends—friends in medicine, religion, and the press, together with innumerable others who became our able and persistent advocates. Without such support, A.A. could have made only the slowest progress. Some of the recommendations of A.A.'s early medical and religious friends will be found further on in this book.`
     },
     {
       segments: [
-        { text: `Alcoholics Anonymous is not a religious organization`, highlight: 'pink' },
+        { text: `Alcoholics Anonymous is ` },
+        { text: `not a religious organization`, highlight: 'yellow' },
         { text: `. Neither does A.A. take any particular medical point of view, though we cooperate widely with the men of medicine as well as with the men of religion.` }
       ]
     },
