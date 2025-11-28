@@ -57,7 +57,14 @@ Or by pot."` },
     { text: `Despite the living example of my friend there remained in me the vestiges of my old prejudice. The word God still aroused a certain antipathy. When the thought was expressed that there might be a God personal to me this feeling was intensified. I didn't like the idea. I could go for such conceptions as Creative Intelligence, Universal Mind or Spirit of Nature but I resisted the thought of a Czar of the Heavens, however loving His sway might be. I have since talked with scores of men who felt the same way.` },
     { text: `My friend suggested what then seemed a novel idea. He said, "Why don't you choose your own conception of God?"` },
     { text: `That statement hit me hard. It melted the icy intellectual mountain in whose shadow I had lived and shivered many years. I stood in the sunlight at last.` },
-    { text: `It was only a matter of being willing to believe in a Power greater than myself. Nothing more was required of me to make my beginning. I saw that growth could start from that point. Upon a foundation of complete willingness I might build what I saw in my friend. Would I have it? Of course I would!` },
+    {
+      segments: [
+        { text: `It was only a matter of being willing to believe in a Power greater than myself. Nothing more was required of me to make my beginning.`, highlight: 'pink' },
+        { text: ` I saw that growth could start from that point. ` },
+        { text: `Upon a foundation of complete willingness I might build what I saw in my friend.`, highlight: 'pink' },
+        { text: ` Would I have it? Of course I would!` }
+      ]
+    },
     { text: `Thus was I convinced that God is concerned with us humans when we want Him enough. At long last I saw, I felt, I believed. Scales of pride and prejudice fell from my eyes. A new world came into view.` },
     { text: `The real significance of my experience in the Cathedral burst upon me. For a brief moment, I had needed and wanted God. There had been a humble willingness to have Him with me—and He came. But soon the sense of His presence had been blotted out by worldly clamors, mostly those within myself. And so it had been ever since. How blind I had been.` },
     { text: `At the hospital I was separated from alcohol for the last time. Treatment seemed wise, for I showed signs of delirium tremens.` },
