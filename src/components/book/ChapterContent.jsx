@@ -16,6 +16,17 @@ const Paragraph = memo(({ para, idx, renderTerms }) => {
     'green': 'bg-green-400/30 px-1 py-0.5 rounded'
   };
 
+  // Page break marker
+  if (para.pageNum) {
+    return (
+      <div key={idx} className="flex items-center gap-3 my-6 sm:my-8">
+        <div className="flex-1 h-px bg-gray-300"></div>
+        <span className="text-xs sm:text-sm text-gray-500 font-medium">Page {para.pageNum}</span>
+        <div className="flex-1 h-px bg-gray-300"></div>
+      </div>
+    );
+  }
+
   if (para.segments) {
     return (
       <p key={idx} className="mb-4 sm:mb-5 first:mt-0 leading-relaxed sm:leading-relaxed">

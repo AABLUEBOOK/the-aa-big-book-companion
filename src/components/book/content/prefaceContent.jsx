@@ -2,6 +2,7 @@ export const prefaceContent = {
   highlights: [],
   tabs: [],
   paragraphs: [
+    { pageNum: "xi" },
     {
       text: `THIS IS the fourth edition of the book "Alcoholics Anonymous." The first edition appeared in April 1939, and in the following sixteen years, more than 300,000 copies went into circulation. The second edition, published in 1955, reached a total of more than 1,150,500 copies. The third edition, which came off press in 1976, achieved a circulation of approximately 19,550,000 in all formats.`
     },
@@ -9,9 +10,10 @@ export const prefaceContent = {
       segments: [
         { text: `Because this book has become the ` },
         { text: `basic text`, highlight: 'yellow' },
-        { text: ` for our Society and has helped such large numbers of alcoholic men and women to recovery, there exists strong sentiment against any radical change being made in it. Therefore, the first portion of this volume, describing the A.A. recovery program, has been left largely untouched in the course of revisions made for the second, third, and fourth editions. The section called "The Doctor's Opinion" has been kept intact, just as it was originally written in 1939 by the late Dr. William D. Silkworth, our Society's great medical benefactor.` }
+        { text: ` for our Society and has helped such large numbers of alcoholic men and women to recovery, there exists strong sentiment against any radical changes being made in it. Therefore, the first portion of this volume, describing the A.A. recovery program, has been left largely untouched in the course of revisions made for the second, third, and fourth editions. The section called "The Doctor's Opinion" has been kept intact, just as it was originally written in 1939 by the late Dr. William D. Silkworth, our Society's great medical benefactor.` }
       ]
     },
+    { pageNum: "xii" },
     {
       text: `The second edition added the appendices, the Twelve Traditions, and the directions for getting in touch with A.A. But the chief change was in the section of personal stories, which was expanded to reflect the Fellowship's growth. "Bill's Story," "Doctor Bob's Nightmare," and one other personal history from the first edition were retained intact; three were edited and one of these was retitled; new versions of two stories were written, with new titles; thirty completely new stories were added; and the story section was divided into three parts, under the same headings that are used now.`
     },

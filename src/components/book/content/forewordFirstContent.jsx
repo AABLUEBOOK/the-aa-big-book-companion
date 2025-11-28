@@ -2,6 +2,7 @@ export const forewordFirstContent = {
   highlights: [],
   tabs: [],
   paragraphs: [
+    { pageNum: "xiii" },
     {
       segments: [
         { text: `WE, OF Alcoholics Anonymous, are more than one hundred men and women who have ` },
@@ -23,6 +24,7 @@ export const forewordFirstContent = {
     {
       text: `Very earnestly we ask the press also, to observe this request, for otherwise we shall be greatly handicapped.`
     },
+    { pageNum: "xiv" },
     {
       text: `We are not an organization in the conventional sense of the word. There are no fees or dues whatsoever. The only requirement for membership is an honest desire to stop drinking. We are not allied with any particular faith, sect or denomination, nor do we oppose anyone. We simply wish to be helpful to those who are afflicted.`
     },

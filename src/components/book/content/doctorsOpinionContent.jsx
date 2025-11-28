@@ -2,6 +2,7 @@ export const doctorsOpinionContent = {
   highlights: [],
   tabs: [],
   paragraphs: [
+    { pageNum: "xxv" },
     {
       segments: [
         { text: `WE OF Alcoholics Anonymous believe that the reader will be interested in the medical estimate of the plan of recovery described in this book. Convincing testimony must surely come from medical men who have had experience with the sufferings of our members and have witnessed our return to health. ` },
@@ -13,6 +14,7 @@ export const doctorsOpinionContent = {
     { text: `In late 1934 I attended a patient who, though he had been a competent businessman of good earning capacity, was an alcoholic of a type I had come to regard as hopeless.` },
     { text: `In the course of his third treatment he acquired certain ideas concerning a possible means of recovery. As part of his rehabilitation he commenced to present his conceptions to other alcoholics, impressing upon them that they must do likewise with still others. This has become the basis of a rapidly growing fellowship of these men and their families. This man and over one hundred others appear to have recovered.` },
     { text: `I personally know scores of cases who were of the type with whom other methods had failed completely.` },
+    { pageNum: "xxvi" },
     { text: `These facts appear to be of extreme medical importance; because of the extraordinary possibilities of rapid growth inherent in this group they may mark a new epoch in the annals of alcoholism. These men may well have a remedy for thousands of such situations.` },
     { text: `You may rely absolutely on anything they say about themselves.` },
     {
@@ -21,6 +23,16 @@ export const doctorsOpinionContent = {
         { text: `William D. Silkworth, M.D.`, highlight: 'yellow' }
       ]
     },
+    {
+      text: `The physician who, at our request, gave us this letter, has been kind enough to enlarge upon his views in another statement which follows. In this statement he confirms what we who have suffered alcoholic torture must believe—that the body of the alcoholic is quite as abnormal as his mind. It did not satisfy us to be told that we could not control our drinking just because we were maladjusted to life, that we were in full flight from reality, or were outright mental defectives. These things were true to some extent, in fact, to a considerable extent with some of us. But we are sure that our bodies were sickened as well. In our belief, any picture of the alcoholic which leaves out this physical factor is incomplete.`
+    },
+    {
+      text: `The doctor's theory that we have an allergy to alcohol interests us. As laymen, our opinion as to its soundness may, of course, mean little. But as ex-problem drinkers, we can say that his explanation makes good sense. It explains many things for which we cannot otherwise account.`
+    },
+    {
+      text: `Though we work out our solution on the spiritual as well as an altruistic plane, we favor hospitalization for the alcoholic who is very jittery or befogged. More often than not, it is imperative that a man's brain be cleared before he is approached, as he has then a better chance of understanding and accepting what we have to offer.`
+    },
+    { pageNum: "xxvii" },
     {
       segments: [
         { text: `The doctor writes:`, highlight: 'yellow' }
@@ -42,7 +54,10 @@ export const doctorsOpinionContent = {
         { text: ` have followed through have been most interesting; in fact, many of them are amazing. The unselfishness of these men as we have come to know them, the entire absence of profit motive, and their community spirit, is indeed inspiring to one who has labored long and wearily in this alcoholic field. They believe in themselves, and still more in the Power which pulls chronic alcoholics back from the gates of death.` }
       ]
     },
-    { text: `Of course an alcoholic ought to be freed from his physical craving for liquor, and this often requires a definite hospital procedure, before psychological measures can be of maximum benefit.` },
+    {
+      text: `Of course an alcoholic ought to be freed from his physical craving for liquor, and this often requires a definite hospital procedure, before psychological measures can be of maximum benefit.`
+    },
+    { pageNum: "xxviii" },
     {
       segments: [
         { text: `We believe, and so suggested a few years ago, that the ` },
@@ -77,6 +92,7 @@ export const doctorsOpinionContent = {
         { text: ` there is very little hope of his recovery.` }
       ]
     },
+    { pageNum: "xxix" },
     {
       segments: [
         { text: `On the other hand—and strange as this may seem to those who do not understand—once a ` },
@@ -100,6 +116,7 @@ export const doctorsOpinionContent = {
         { text: ` at once became paramount to all other interests so that the important appointment was not met. These men were not drinking to escape; they were drinking to overcome a craving beyond their mental control.` }
       ]
     },
+    { pageNum: "xxx" },
     {
       segments: [
         { text: `There are many situations which arise out of the ` },
@@ -146,6 +163,7 @@ export const doctorsOpinionContent = {
         { text: `.` }
       ]
     },
+    { pageNum: "xxxi" },
     {
       segments: [
         { text: `What is the solution?`, highlight: 'pink' },
@@ -155,6 +173,7 @@ export const doctorsOpinionContent = {
     { text: `About one year prior to this experience a man was brought in to be treated for chronic alcoholism. He had but partially recovered from a gastric hemorrhage and seemed to be a case of pathological mental deterioration. He had lost everything worthwhile in life and was only living, one might say, to drink. He frankly admitted and believed that for him there was no hope. Following the elimination of alcohol, there was found to be no permanent brain injury. He accepted the plan outlined in this book. One year later he called to see me, and I experienced a very strange sensation. I knew the man by name, and partly recognized his features, but there all resemblance ended. From a trembling, despairing, nervous wreck, had emerged a man brimming over with self-reliance and contentment. I talked with him for some time, but was not able to bring myself to feel that I had known him before. To me he was a stranger, and so he left me. A long time has passed with no return to alcohol.` },
     { text: `When I need a mental uplift, I often think of another case brought in by a physician prominent in New York. The patient had made his own diagnosis, and deciding his situation hopeless, had hidden in a deserted barn determined to die. He was rescued by a searching party, and, in desperate condition, brought to me. Following his physical rehabilitation, he had a talk with me in which he frankly stated he thought the treatment a waste of effort, unless I could assure him, which no one ever had, that in the future he would have the "will power" to resist the impulse to drink.` },
     { text: `His alcoholic problem was so complex, and his depression so great, that we felt his only hope would be through what we then called "moral psychology," and we doubted if even that would have any effect.` },
+    { pageNum: "xxxii" },
     { text: `However, he did become "sold" on the ideas contained in this book. He has not had a drink for a great many years. I see him now and then and he is as fine a specimen of manhood as one could wish to meet.` },
     { text: `I earnestly advise every alcoholic to read this book through, and though perhaps he came to scoff, he may remain to pray.` },
     {
