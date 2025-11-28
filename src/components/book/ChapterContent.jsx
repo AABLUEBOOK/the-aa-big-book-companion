@@ -1,12 +1,10 @@
-import React, { useState, useEffect, useMemo, memo } from "react";
+import React, { useState, useEffect, memo } from "react";
 import { cn } from "@/lib/utils";
-import { loadChapterContent, preloadChapter } from "./chapterLoader";
+import { loadChapterContent } from "./chapterLoader";
 import AudioPlayer from "./AudioPlayer";
 import BookmarkButton from "./BookmarkButton";
 import { Loader2 } from "lucide-react";
-
-// Lazy load TermTooltip only when needed
-const TermTooltip = React.lazy(() => import("./TermTooltip").then(m => ({ default: m.default })));
+import { renderTextWithTerms } from "./TermTooltip";
 
 // Memoized paragraph component
 const Paragraph = memo(({ para, idx, renderTerms }) => {
@@ -50,7 +48,6 @@ const Paragraph = memo(({ para, idx, renderTerms }) => {
 export default function ChapterContent({ chapter, sectionRoute }) {
   const [chapterData, setChapterData] = useState(null);
   const [loading, setLoading] = useState(true);
-  const [renderTerms, setRenderTerms] = useState(null);
 
   useEffect(() => {
     if (!chapter) return;
@@ -59,11 +56,6 @@ export default function ChapterContent({ chapter, sectionRoute }) {
     loadChapterContent(chapter.id).then(content => {
       setChapterData(content);
       setLoading(false);
-    });
-
-    // Lazy load term rendering
-    import("./TermTooltip").then(m => {
-      setRenderTerms(() => m.renderTextWithTerms);
     });
   }, [chapter?.id]);
 
@@ -121,7 +113,7 @@ export default function ChapterContent({ chapter, sectionRoute }) {
                 key={idx} 
                 para={para} 
                 idx={idx} 
-                renderTerms={renderTerms}
+                renderTerms={renderTextWithTerms}
               />
             ))}
           </div>
