@@ -59,10 +59,9 @@ Or by pot."` },
     { text: `That statement hit me hard. It melted the icy intellectual mountain in whose shadow I had lived and shivered many years. I stood in the sunlight at last.` },
     {
       segments: [
-        { text: `It was only a matter of being willing to believe in a Power greater than myself. Nothing more was required of me to make my beginning.`, highlight: 'pink' },
-        { text: ` I saw that growth could start from that point. ` },
-        { text: `Upon a foundation of complete willingness I might build what I saw in my friend.`, highlight: 'pink' },
-        { text: ` Would I have it? Of course I would!` }
+        { text: `It was only a matter of being willing to believe in a Power greater than myself. Nothing more was required of me to make my beginning. I saw that growth could start from that point. ` },
+        { text: `Upon a foundation`, highlight: 'pink' },
+        { text: ` of complete willingness I might build what I saw in my friend. Would I have it? Of course I would!` }
       ]
     },
     { text: `Thus was I convinced that God is concerned with us humans when we want Him enough. At long last I saw, I felt, I believed. Scales of pride and prejudice fell from my eyes. A new world came into view.` },
