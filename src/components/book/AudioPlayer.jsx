@@ -23,11 +23,48 @@ const AudioPlayer = memo(function AudioPlayer({ content }) {
   useEffect(() => {
     synthRef.current = window.speechSynthesis;
     
+    // Preferred languages (most common)
+    const preferredLangs = ['en-US', 'en-GB', 'en-AU', 'es-ES', 'es-MX', 'fr-FR', 'de-DE', 'it-IT', 'pt-BR'];
+    
     const loadVoices = () => {
       const availableVoices = synthRef.current.getVoices();
-      setVoices(availableVoices);
-      if (availableVoices.length > 0 && !selectedVoice) {
-        const defaultVoice = availableVoices.find(v => v.default) || availableVoices[0];
+      
+      // Filter to get natural/realistic sounding voices
+      const filteredVoices = availableVoices.filter(voice => {
+        const lang = voice.lang;
+        const name = voice.name.toLowerCase();
+        
+        // Check if it's a preferred language
+        const isPreferredLang = preferredLangs.some(pl => lang.startsWith(pl.split('-')[0]));
+        
+        // Prefer natural/premium voices (these usually have specific naming patterns)
+        const isNatural = name.includes('natural') || 
+                          name.includes('neural') || 
+                          name.includes('enhanced') ||
+                          name.includes('premium') ||
+                          !name.includes('compact');
+        
+        return isPreferredLang && isNatural;
+      });
+      
+      // If no filtered voices, fall back to English voices only
+      const finalVoices = filteredVoices.length > 0 
+        ? filteredVoices 
+        : availableVoices.filter(v => v.lang.startsWith('en'));
+      
+      // Sort by language, then by name
+      finalVoices.sort((a, b) => {
+        if (a.lang !== b.lang) return a.lang.localeCompare(b.lang);
+        return a.name.localeCompare(b.name);
+      });
+      
+      setVoices(finalVoices);
+      
+      if (finalVoices.length > 0 && !selectedVoice) {
+        // Prefer a natural English voice as default
+        const defaultVoice = finalVoices.find(v => v.lang.startsWith('en') && v.default) ||
+                             finalVoices.find(v => v.lang.startsWith('en')) ||
+                             finalVoices[0];
         setSelectedVoice(defaultVoice.name);
       }
     };
@@ -180,15 +217,27 @@ const AudioPlayer = memo(function AudioPlayer({ content }) {
               <SelectValue placeholder="Select a voice" />
             </SelectTrigger>
             <SelectContent className="max-h-60 bg-white border-gray-300">
-              {voices.map((voice) => (
-                <SelectItem 
-                  key={voice.name} 
-                  value={voice.name}
-                  className="text-xs text-gray-800 focus:bg-gray-100 min-h-[40px]"
-                >
-                  {voice.name} ({voice.lang})
-                </SelectItem>
-              ))}
+              {voices.map((voice) => {
+                // Simplify the display name
+                const shortName = voice.name
+                  .replace(/Microsoft /g, '')
+                  .replace(/Google /g, '')
+                  .replace(/Apple /g, '')
+                  .replace(/ Online \(Natural\)/g, '')
+                  .replace(/ \(Natural\)/g, '')
+                  .replace(/ - .*$/g, '');
+                const langLabel = voice.lang.split('-')[0].toUpperCase();
+                
+                return (
+                  <SelectItem 
+                    key={voice.name} 
+                    value={voice.name}
+                    className="text-xs text-gray-800 focus:bg-gray-100 min-h-[40px]"
+                  >
+                    {shortName} ({langLabel})
+                  </SelectItem>
+                );
+              })}
             </SelectContent>
           </Select>
         </div>
