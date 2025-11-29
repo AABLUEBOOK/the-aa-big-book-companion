@@ -1,9 +1,9 @@
 import React, { useState, memo, useMemo, Suspense, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { ArrowLeft, BookOpen, BookmarkCheck, Loader2, Search, X } from "lucide-react";
+import { ArrowLeft, BookOpen, BookmarkCheck, Loader2 } from "lucide-react";
 import { preloadChapter } from "../components/book/chapterLoader";
+import SearchBar from "../components/book/SearchBar";
 
 // Lazy load heavy components
 const ChapterContent = React.lazy(() => import("../components/book/ChapterContent"));
@@ -44,29 +44,11 @@ const ALL_CHAPTERS = [
 
 const Chapter = memo(function Chapter() {
   const [bookmarksOpen, setBookmarksOpen] = useState(false);
-  const [searchOpen, setSearchOpen] = useState(false);
-  const [searchQuery, setSearchQuery] = useState("");
   const navigate = useNavigate();
   
   // Get chapter ID from URL
   const urlParams = new URLSearchParams(window.location.search);
   const chapterId = urlParams.get('id') || 'preface';
-  
-  // Search results
-  const searchResults = useMemo(() => {
-    if (!searchQuery.trim() || searchQuery.length < 2) return [];
-    const query = searchQuery.toLowerCase();
-    return ALL_CHAPTERS.filter(ch => 
-      ch.title.toLowerCase().includes(query) ||
-      ch.id.toLowerCase().includes(query)
-    ).slice(0, 8);
-  }, [searchQuery]);
-  
-  const handleSearchSelect = (chId) => {
-    navigate(`/Chapter?id=${chId}`);
-    setSearchOpen(false);
-    setSearchQuery("");
-  };
   
   // Memoize chapter lookup
   const { chapter, prevChapter, nextChapter } = useMemo(() => {
@@ -111,7 +93,7 @@ const Chapter = memo(function Chapter() {
               <span className="font-medium text-sm sm:text-base xs:hidden">Contents</span>
             </Link>
             
-            <div className="flex items-center gap-1 sm:gap-2 md:gap-3">
+            <div className="flex items-center gap-2 sm:gap-3">
               <div className="hidden sm:flex items-center gap-1.5">
                 <BookOpen className="w-4 h-4 text-[#25DCE6]" />
                 <span className="font-serif font-semibold text-[#FFFFFD] text-xs sm:text-sm">
@@ -119,15 +101,7 @@ const Chapter = memo(function Chapter() {
                 </span>
               </div>
 
-              <Button
-                onClick={() => setSearchOpen(!searchOpen)}
-                variant="ghost"
-                size="sm"
-                className="text-[#25DCE6] hover:bg-[#25DCE6]/10 active:bg-[#25DCE6]/20 h-10 w-10 p-0"
-                aria-label="Search"
-              >
-                <Search className="w-5 h-5" />
-              </Button>
+              <SearchBar className="w-32 sm:w-40" />
 
               <Button
                 onClick={() => setBookmarksOpen(!bookmarksOpen)}
@@ -142,52 +116,6 @@ const Chapter = memo(function Chapter() {
           </div>
         </nav>
       </header>
-
-      {/* Search Panel */}
-      {searchOpen && (
-        <div className="bg-[#2A3440] border-b border-[#25DCE6]/20 px-3 sm:px-4 py-3">
-          <div className="max-w-4xl mx-auto">
-            <div className="relative">
-              <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[#25DCE6]/60" />
-              <Input
-                type="text"
-                placeholder="Search chapters..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="pl-10 pr-10 bg-[#222A31] border-[#25DCE6]/30 text-[#FFFFFD] placeholder:text-[#FFFFFD]/40 focus:border-[#25DCE6]"
-                autoFocus
-              />
-              {searchQuery && (
-                <button
-                  onClick={() => setSearchQuery("")}
-                  className="absolute right-3 top-1/2 -translate-y-1/2 text-[#FFFFFD]/40 hover:text-[#FFFFFD]"
-                >
-                  <X className="w-4 h-4" />
-                </button>
-              )}
-            </div>
-            {searchResults.length > 0 && (
-              <div className="mt-2 bg-[#222A31] rounded-lg border border-[#25DCE6]/20 overflow-hidden">
-                {searchResults.map((result) => (
-                  <button
-                    key={result.id}
-                    onClick={() => handleSearchSelect(result.id)}
-                    className="w-full text-left px-4 py-3 hover:bg-[#25DCE6]/10 border-b border-[#25DCE6]/10 last:border-b-0 transition-colors"
-                  >
-                    <div className="text-[#FFFFFD] text-sm font-medium">{result.title}</div>
-                    <div className="text-[#FFFFFD]/50 text-xs">Pages {result.pages}</div>
-                  </button>
-                ))}
-              </div>
-            )}
-            {searchQuery.length >= 2 && searchResults.length === 0 && (
-              <div className="mt-2 text-center text-[#FFFFFD]/50 text-sm py-4">
-                No chapters found matching "{searchQuery}"
-              </div>
-            )}
-          </div>
-        </div>
-      )}
 
       {/* Bookmarks Panel */}
       {bookmarksOpen && (
