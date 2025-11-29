@@ -1,6 +1,7 @@
 import React, { memo, useMemo } from "react";
 import { Link } from "react-router-dom";
 import { ChevronRight } from "lucide-react";
+import SearchBar from "../components/book/SearchBar";
 
 // Memoized chapter item for better performance
 const ChapterItem = memo(function ChapterItem({ chapter, createPageUrl }) {
@@ -82,7 +83,7 @@ const Home = memo(function Home() {
   return (
     <div className="min-h-screen min-h-[100dvh] w-full bg-[#222A31] overflow-x-hidden overflow-y-auto">
         {/* Header */}
-        <header className="bg-[#2A3440] border-b border-[#25DCE6]/20 px-3 sm:px-4 py-4 sm:py-6 w-full position-relative z-10">
+        <header className="bg-[#2A3440] border-b border-[#25DCE6]/20 px-3 sm:px-4 py-4 sm:py-5 w-full position-relative z-10">
           <div className="max-w-3xl mx-auto text-center px-2">
             <h1 className="text-lg sm:text-xl md:text-2xl font-serif font-bold text-[#FFFFFD] leading-tight mt-0 pt-2">
               Alcoholics Anonymous
@@ -90,6 +91,9 @@ const Home = memo(function Home() {
             <p className="text-[11px] sm:text-xs md:text-sm text-[#25DCE6] mt-1 leading-snug">
               The Story of How Many Thousands of Men and Women Have Recovered from Alcoholism
             </p>
+            <div className="mt-3 max-w-xs mx-auto">
+              <SearchBar />
+            </div>
           </div>
         </header>
 
