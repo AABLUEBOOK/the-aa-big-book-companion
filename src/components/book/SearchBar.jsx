@@ -1,136 +1,35 @@
-import React, { useState, useMemo, memo, useEffect } from "react";
+import React, { useState, memo, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { Input } from "@/components/ui/input";
-import { Search, X, BookOpen, FileText } from "lucide-react";
-
-const ALL_CHAPTERS = [
-  { id: "preface", title: "Preface", pages: "xi-xii" },
-  { id: "foreword-first", title: "Foreword To First Edition", pages: "xiii-xiv" },
-  { id: "foreword-second", title: "Foreword To Second Edition", pages: "xv-xxi" },
-  { id: "foreword-third", title: "Foreword To Third Edition", pages: "xxii" },
-  { id: "foreword-fourth", title: "Foreword To Fourth Edition", pages: "xxiii-xxiv" },
-  { id: "doctors-opinion", title: "The Doctor's Opinion", pages: "xxv-xxxii" },
-  { id: "bills-story", title: "Bill's Story", pages: "1-16", chapter: 1 },
-  { id: "there-is-solution", title: "There Is A Solution", pages: "17-29", chapter: 2 },
-  { id: "more-about-alcoholism", title: "More About Alcoholism", pages: "30-43", chapter: 3 },
-  { id: "we-agnostics", title: "We Agnostics", pages: "44-57", chapter: 4 },
-  { id: "how-it-works", title: "How It Works", pages: "58-71", chapter: 5 },
-  { id: "into-action", title: "Into Action", pages: "72-88", chapter: 6 },
-  { id: "working-with-others", title: "Working With Others", pages: "89-103", chapter: 7 },
-  { id: "to-wives", title: "To Wives", pages: "104-121", chapter: 8 },
-  { id: "family-afterward", title: "The Family Afterward", pages: "122-135", chapter: 9 },
-  { id: "to-employers", title: "To Employers", pages: "136-150", chapter: 10 },
-  { id: "vision-for-you", title: "A Vision For You", pages: "151-164", chapter: 11 },
-  { id: "dr-bob-nightmare", title: "Doctor Bob's Nightmare", pages: "171-181" },
-  { id: "appendices", title: "Appendices", pages: "561-575" },
-];
-
-// Cache for loaded chapter content
-let contentCache = {};
+import { Search, X, BookOpen, FileText, Loader2 } from "lucide-react";
+import { search, highlightMatches, preloadIndex } from "./searchIndex";
 
 const SearchBar = memo(function SearchBar({ className = "" }) {
   const [searchQuery, setSearchQuery] = useState("");
   const [isFocused, setIsFocused] = useState(false);
-  const [contentResults, setContentResults] = useState([]);
+  const [results, setResults] = useState({ chapters: [], content: [] });
   const [isSearching, setIsSearching] = useState(false);
   const navigate = useNavigate();
 
-  // Chapter title matches
-  const chapterResults = useMemo(() => {
-    if (!searchQuery.trim() || searchQuery.length < 2) return [];
-    const query = searchQuery.toLowerCase();
-    return ALL_CHAPTERS.filter(ch => 
-      ch.title.toLowerCase().includes(query) ||
-      ch.id.toLowerCase().includes(query)
-    ).slice(0, 4);
-  }, [searchQuery]);
-
-  // Search content when query changes
+  // Preload index when component mounts
   useEffect(() => {
-    if (!searchQuery.trim() || searchQuery.length < 3) {
-      setContentResults([]);
+    preloadIndex();
+  }, []);
+
+  // Search when query changes
+  useEffect(() => {
+    if (!searchQuery.trim() || searchQuery.length < 2) {
+      setResults({ chapters: [], content: [] });
       return;
     }
 
-    const searchContent = async () => {
-      setIsSearching(true);
-      const query = searchQuery.toLowerCase();
-      const results = [];
-
-      // Dynamically import content modules
-      const contentModules = {
-        'preface': () => import('./content/prefaceContent'),
-        'foreword-first': () => import('./content/forewordFirstContent'),
-        'foreword-second': () => import('./content/forewordSecondContent'),
-        'doctors-opinion': () => import('./content/doctorsOpinionContent'),
-        'bills-story': () => import('./content/billsStoryContent'),
-        'there-is-solution': () => import('./content/thereIsSolutionContent'),
-        'more-about-alcoholism': () => import('./content/moreAboutAlcoholismContent'),
-        'we-agnostics': () => import('./content/weAgnosticsContent'),
-        'how-it-works': () => import('./content/howItWorksContent'),
-        'into-action': () => import('./content/intoActionContent'),
-        'working-with-others': () => import('./content/workingWithOthersContent'),
-        'to-wives': () => import('./content/toWivesContent'),
-        'family-afterward': () => import('./content/familyAfterwardContent'),
-        'to-employers': () => import('./content/toEmployersContent'),
-        'vision-for-you': () => import('./content/visionForYouContent'),
-      };
-
-      for (const [chapterId, loader] of Object.entries(contentModules)) {
-        try {
-          // Use cache if available
-          if (!contentCache[chapterId]) {
-            const module = await loader();
-            const key = Object.keys(module)[0];
-            contentCache[chapterId] = module[key];
-          }
-          
-          const content = contentCache[chapterId];
-          if (!content?.paragraphs) continue;
-
-          // Search through paragraphs
-          for (const para of content.paragraphs) {
-            if (para.pageNum) continue;
-            
-            let text = '';
-            if (para.text) text = para.text;
-            else if (para.segments) {
-              text = para.segments.map(s => s.text).join('');
-            }
-            
-            if (text.toLowerCase().includes(query)) {
-              const chapter = ALL_CHAPTERS.find(c => c.id === chapterId);
-              if (chapter) {
-                // Get snippet around the match
-                const idx = text.toLowerCase().indexOf(query);
-                const start = Math.max(0, idx - 30);
-                const end = Math.min(text.length, idx + query.length + 30);
-                let snippet = text.slice(start, end);
-                if (start > 0) snippet = '...' + snippet;
-                if (end < text.length) snippet = snippet + '...';
-                
-                results.push({
-                  chapterId,
-                  chapterTitle: chapter.title,
-                  snippet,
-                  pages: chapter.pages
-                });
-                break; // One result per chapter
-              }
-            }
-          }
-        } catch (e) {
-          // Skip failed imports
-        }
-        
-        if (results.length >= 4) break;
-      }
-
-      setContentResults(results);
+    setIsSearching(true);
+    const debounce = setTimeout(async () => {
+      const searchResults = await search(searchQuery, { fuzzy: true, maxResults: 6 });
+      setResults(searchResults);
       setIsSearching(false);
-    };
+    }, 200);
 
-    const debounce = setTimeout(searchContent, 300);
     return () => clearTimeout(debounce);
   }, [searchQuery]);
 
@@ -138,6 +37,18 @@ const SearchBar = memo(function SearchBar({ className = "" }) {
     navigate(`/Chapter?id=${chId}`);
     setSearchQuery("");
     setIsFocused(false);
+  };
+
+  // Render highlighted snippet
+  const renderHighlightedSnippet = (snippet, query) => {
+    const parts = highlightMatches(snippet, query);
+    return parts.map((part, i) => 
+      part.highlight ? (
+        <mark key={i} className="bg-[#25DCE6]/30 text-[#FFFFFD] px-0.5 rounded">{part.text}</mark>
+      ) : (
+        <span key={i}>{part.text}</span>
+      )
+    );
   };
 
   return (
@@ -163,14 +74,14 @@ const SearchBar = memo(function SearchBar({ className = "" }) {
         )}
       </div>
       
-      {isFocused && (chapterResults.length > 0 || contentResults.length > 0) && (
+      {isFocused && (results.chapters.length > 0 || results.content.length > 0) && (
         <div className="absolute top-full left-0 right-0 mt-1 bg-[#222A31] rounded-lg border border-[#25DCE6]/20 overflow-hidden z-50 shadow-xl max-h-80 overflow-y-auto">
-          {chapterResults.length > 0 && (
+          {results.chapters.length > 0 && (
             <>
-              <div className="px-3 py-1.5 text-[10px] uppercase tracking-wide text-[#25DCE6]/60 bg-[#1a2028] flex items-center gap-1">
+              <div className="px-3 py-1.5 text-[10px] uppercase tracking-wide text-[#25DCE6]/60 bg-[#1a2028] flex items-center gap-1 sticky top-0">
                 <BookOpen className="w-3 h-3" /> Chapters
               </div>
-              {chapterResults.map((result) => (
+              {results.chapters.map((result) => (
                 <button
                   key={result.id}
                   onMouseDown={() => handleSelect(result.id)}
@@ -183,19 +94,21 @@ const SearchBar = memo(function SearchBar({ className = "" }) {
             </>
           )}
           
-          {contentResults.length > 0 && (
+          {results.content.length > 0 && (
             <>
-              <div className="px-3 py-1.5 text-[10px] uppercase tracking-wide text-[#25DCE6]/60 bg-[#1a2028] flex items-center gap-1">
-                <FileText className="w-3 h-3" /> In Text
+              <div className="px-3 py-1.5 text-[10px] uppercase tracking-wide text-[#25DCE6]/60 bg-[#1a2028] flex items-center gap-1 sticky top-0">
+                <FileText className="w-3 h-3" /> In Text {results.content.length > 0 && `(${results.content.length})`}
               </div>
-              {contentResults.map((result, idx) => (
+              {results.content.map((result, idx) => (
                 <button
                   key={`${result.chapterId}-${idx}`}
                   onMouseDown={() => handleSelect(result.chapterId)}
                   className="w-full text-left px-3 py-2 hover:bg-[#25DCE6]/10 border-b border-[#25DCE6]/10 last:border-b-0 transition-colors"
                 >
                   <div className="text-[#FFFFFD] text-sm font-medium truncate">{result.chapterTitle}</div>
-                  <div className="text-[#FFFFFD]/40 text-xs truncate italic">"{result.snippet}"</div>
+                  <div className="text-[#FFFFFD]/40 text-xs line-clamp-2 italic">
+                    "{renderHighlightedSnippet(result.snippet, result.matchedQuery)}"
+                  </div>
                 </button>
               ))}
             </>
@@ -203,7 +116,7 @@ const SearchBar = memo(function SearchBar({ className = "" }) {
         </div>
       )}
       
-      {isFocused && searchQuery.length >= 2 && chapterResults.length === 0 && contentResults.length === 0 && !isSearching && (
+      {isFocused && searchQuery.length >= 2 && results.chapters.length === 0 && results.content.length === 0 && !isSearching && (
         <div className="absolute top-full left-0 right-0 mt-1 bg-[#222A31] rounded-lg border border-[#25DCE6]/20 z-50 shadow-xl">
           <div className="text-center text-[#FFFFFD]/50 text-sm py-3">
             No results found
@@ -211,10 +124,10 @@ const SearchBar = memo(function SearchBar({ className = "" }) {
         </div>
       )}
       
-      {isFocused && isSearching && chapterResults.length === 0 && (
+      {isFocused && isSearching && results.chapters.length === 0 && (
         <div className="absolute top-full left-0 right-0 mt-1 bg-[#222A31] rounded-lg border border-[#25DCE6]/20 z-50 shadow-xl">
-          <div className="text-center text-[#FFFFFD]/50 text-sm py-3">
-            Searching...
+          <div className="flex items-center justify-center gap-2 text-[#FFFFFD]/50 text-sm py-3">
+            <Loader2 className="w-4 h-4 animate-spin" /> Searching...
           </div>
         </div>
       )}
