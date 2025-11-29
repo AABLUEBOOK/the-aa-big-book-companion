@@ -1,7 +1,7 @@
-import React, { useState, useMemo, memo } from "react";
+import React, { useState, useMemo, memo, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { Input } from "@/components/ui/input";
-import { Search, X } from "lucide-react";
+import { Search, X, BookOpen, FileText } from "lucide-react";
 
 const ALL_CHAPTERS = [
   { id: "preface", title: "Preface", pages: "xi-xii" },
@@ -25,18 +25,113 @@ const ALL_CHAPTERS = [
   { id: "appendices", title: "Appendices", pages: "561-575" },
 ];
 
+// Cache for loaded chapter content
+let contentCache = {};
+
 const SearchBar = memo(function SearchBar({ className = "" }) {
   const [searchQuery, setSearchQuery] = useState("");
   const [isFocused, setIsFocused] = useState(false);
+  const [contentResults, setContentResults] = useState([]);
+  const [isSearching, setIsSearching] = useState(false);
   const navigate = useNavigate();
 
-  const searchResults = useMemo(() => {
+  // Chapter title matches
+  const chapterResults = useMemo(() => {
     if (!searchQuery.trim() || searchQuery.length < 2) return [];
     const query = searchQuery.toLowerCase();
     return ALL_CHAPTERS.filter(ch => 
       ch.title.toLowerCase().includes(query) ||
       ch.id.toLowerCase().includes(query)
-    ).slice(0, 6);
+    ).slice(0, 4);
+  }, [searchQuery]);
+
+  // Search content when query changes
+  useEffect(() => {
+    if (!searchQuery.trim() || searchQuery.length < 3) {
+      setContentResults([]);
+      return;
+    }
+
+    const searchContent = async () => {
+      setIsSearching(true);
+      const query = searchQuery.toLowerCase();
+      const results = [];
+
+      // Dynamically import content modules
+      const contentModules = {
+        'preface': () => import('./content/prefaceContent'),
+        'foreword-first': () => import('./content/forewordFirstContent'),
+        'foreword-second': () => import('./content/forewordSecondContent'),
+        'doctors-opinion': () => import('./content/doctorsOpinionContent'),
+        'bills-story': () => import('./content/billsStoryContent'),
+        'there-is-solution': () => import('./content/thereIsSolutionContent'),
+        'more-about-alcoholism': () => import('./content/moreAboutAlcoholismContent'),
+        'we-agnostics': () => import('./content/weAgnosticsContent'),
+        'how-it-works': () => import('./content/howItWorksContent'),
+        'into-action': () => import('./content/intoActionContent'),
+        'working-with-others': () => import('./content/workingWithOthersContent'),
+        'to-wives': () => import('./content/toWivesContent'),
+        'family-afterward': () => import('./content/familyAfterwardContent'),
+        'to-employers': () => import('./content/toEmployersContent'),
+        'vision-for-you': () => import('./content/visionForYouContent'),
+      };
+
+      for (const [chapterId, loader] of Object.entries(contentModules)) {
+        try {
+          // Use cache if available
+          if (!contentCache[chapterId]) {
+            const module = await loader();
+            const key = Object.keys(module)[0];
+            contentCache[chapterId] = module[key];
+          }
+          
+          const content = contentCache[chapterId];
+          if (!content?.paragraphs) continue;
+
+          // Search through paragraphs
+          for (const para of content.paragraphs) {
+            if (para.pageNum) continue;
+            
+            let text = '';
+            if (para.text) text = para.text;
+            else if (para.segments) {
+              text = para.segments.map(s => s.text).join('');
+            }
+            
+            if (text.toLowerCase().includes(query)) {
+              const chapter = ALL_CHAPTERS.find(c => c.id === chapterId);
+              if (chapter) {
+                // Get snippet around the match
+                const idx = text.toLowerCase().indexOf(query);
+                const start = Math.max(0, idx - 30);
+                const end = Math.min(text.length, idx + query.length + 30);
+                let snippet = text.slice(start, end);
+                if (start > 0) snippet = '...' + snippet;
+                if (end < text.length) snippet = snippet + '...';
+                
+                results.push({
+                  chapterId,
+                  chapterTitle: chapter.title,
+                  snippet,
+                  pages: chapter.pages
+                });
+                break; // One result per chapter
+              }
+            }
+          }
+        } catch (e) {
+          // Skip failed imports
+        }
+        
+        if (results.length >= 4) break;
+      }
+
+      setContentResults(results);
+      setIsSearching(false);
+    };
+
+    const debounce = setTimeout(searchContent, 300);
+    return () => clearTimeout(debounce);
   }, [searchQuery]);
 
   const handleSelect = (chId) => {
@@ -68,25 +163,58 @@ const SearchBar = memo(function SearchBar({ className = "" }) {
         )}
       </div>
       
-      {isFocused && searchResults.length > 0 && (
-        <div className="absolute top-full left-0 right-0 mt-1 bg-[#222A31] rounded-lg border border-[#25DCE6]/20 overflow-hidden z-50 shadow-xl">
-          {searchResults.map((result) => (
-            <button
-              key={result.id}
-              onMouseDown={() => handleSelect(result.id)}
-              className="w-full text-left px-3 py-2 hover:bg-[#25DCE6]/10 border-b border-[#25DCE6]/10 last:border-b-0 transition-colors"
-            >
-              <div className="text-[#FFFFFD] text-sm font-medium truncate">{result.title}</div>
-              <div className="text-[#FFFFFD]/50 text-xs">p. {result.pages}</div>
-            </button>
-          ))}
+      {isFocused && (chapterResults.length > 0 || contentResults.length > 0) && (
+        <div className="absolute top-full left-0 right-0 mt-1 bg-[#222A31] rounded-lg border border-[#25DCE6]/20 overflow-hidden z-50 shadow-xl max-h-80 overflow-y-auto">
+          {chapterResults.length > 0 && (
+            <>
+              <div className="px-3 py-1.5 text-[10px] uppercase tracking-wide text-[#25DCE6]/60 bg-[#1a2028] flex items-center gap-1">
+                <BookOpen className="w-3 h-3" /> Chapters
+              </div>
+              {chapterResults.map((result) => (
+                <button
+                  key={result.id}
+                  onMouseDown={() => handleSelect(result.id)}
+                  className="w-full text-left px-3 py-2 hover:bg-[#25DCE6]/10 border-b border-[#25DCE6]/10 transition-colors"
+                >
+                  <div className="text-[#FFFFFD] text-sm font-medium truncate">{result.title}</div>
+                  <div className="text-[#FFFFFD]/50 text-xs">p. {result.pages}</div>
+                </button>
+              ))}
+            </>
+          )}
+          
+          {contentResults.length > 0 && (
+            <>
+              <div className="px-3 py-1.5 text-[10px] uppercase tracking-wide text-[#25DCE6]/60 bg-[#1a2028] flex items-center gap-1">
+                <FileText className="w-3 h-3" /> In Text
+              </div>
+              {contentResults.map((result, idx) => (
+                <button
+                  key={`${result.chapterId}-${idx}`}
+                  onMouseDown={() => handleSelect(result.chapterId)}
+                  className="w-full text-left px-3 py-2 hover:bg-[#25DCE6]/10 border-b border-[#25DCE6]/10 last:border-b-0 transition-colors"
+                >
+                  <div className="text-[#FFFFFD] text-sm font-medium truncate">{result.chapterTitle}</div>
+                  <div className="text-[#FFFFFD]/40 text-xs truncate italic">"{result.snippet}"</div>
+                </button>
+              ))}
+            </>
+          )}
         </div>
       )}
       
-      {isFocused && searchQuery.length >= 2 && searchResults.length === 0 && (
+      {isFocused && searchQuery.length >= 2 && chapterResults.length === 0 && contentResults.length === 0 && !isSearching && (
         <div className="absolute top-full left-0 right-0 mt-1 bg-[#222A31] rounded-lg border border-[#25DCE6]/20 z-50 shadow-xl">
           <div className="text-center text-[#FFFFFD]/50 text-sm py-3">
-            No chapters found
+            No results found
+          </div>
+        </div>
+      )}
+      
+      {isFocused && isSearching && chapterResults.length === 0 && (
+        <div className="absolute top-full left-0 right-0 mt-1 bg-[#222A31] rounded-lg border border-[#25DCE6]/20 z-50 shadow-xl">
+          <div className="text-center text-[#FFFFFD]/50 text-sm py-3">
+            Searching...
           </div>
         </div>
       )}
