@@ -1,7 +1,8 @@
 import React, { useState, memo, useMemo, Suspense, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, BookOpen, BookmarkCheck, Loader2 } from "lucide-react";
+import { Input } from "@/components/ui/input";
+import { ArrowLeft, BookOpen, BookmarkCheck, Loader2, Search, X } from "lucide-react";
 import { preloadChapter } from "../components/book/chapterLoader";
 
 // Lazy load heavy components
@@ -35,29 +36,37 @@ const ALL_CHAPTERS = [
   { id: "vision-for-you", title: "A Vision For You", pageNum: "151", pages: "151-164", chapter: 11 },
   
   // Personal Stories
-  { id: "how-forty-two", title: "How Forty-Two Alcoholics Recovered", pageNum: "165", pages: "165-166" },
   { id: "dr-bob-nightmare", title: "Doctor Bob's Nightmare", pageNum: "171", pages: "171-181" },
-  { id: "dr-bob-nightmare", title: "Doctor Bob\'s Nightmare", pageNum: "171", pages: "171-181" },
-  { id: "pioneers", title: "Pioneers of A.A.", pageNum: "169", pages: "169-276" },
-  { id: "stopped-in-time", title: "They Stopped in Time", pageNum: "277", pages: "277-431" },
-  { id: "lost-nearly-all", title: "They Lost Nearly All", pageNum: "435", pages: "435-559" },
   
   // Appendices
-  { id: "aa-tradition", title: "The A.A. Tradition", pageNum: "561", pages: "561-566" },
-  { id: "spiritual-experience", title: "Spiritual Experience", pageNum: "567", pages: "567-568" },
-  { id: "medical-view", title: "The Medical View On A.A.", pageNum: "569", pages: "569-570" },
-  { id: "lasker-award", title: "The Lasker Award", pageNum: "571", pages: "571" },
-  { id: "religious-view", title: "The Religious View On A.A.", pageNum: "572", pages: "572" },
-  { id: "get-in-touch", title: "How To Get in Touch With A.A.", pageNum: "573", pages: "573" },
-  { id: "twelve-concepts", title: "Twelve Concepts (Short Form)", pageNum: "574", pages: "574-575" },
+  { id: "appendices", title: "Appendices", pageNum: "561", pages: "561-575" },
 ];
 
 const Chapter = memo(function Chapter() {
   const [bookmarksOpen, setBookmarksOpen] = useState(false);
+  const [searchOpen, setSearchOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
+  const navigate = useNavigate();
   
   // Get chapter ID from URL
   const urlParams = new URLSearchParams(window.location.search);
   const chapterId = urlParams.get('id') || 'preface';
+  
+  // Search results
+  const searchResults = useMemo(() => {
+    if (!searchQuery.trim() || searchQuery.length < 2) return [];
+    const query = searchQuery.toLowerCase();
+    return ALL_CHAPTERS.filter(ch => 
+      ch.title.toLowerCase().includes(query) ||
+      ch.id.toLowerCase().includes(query)
+    ).slice(0, 8);
+  }, [searchQuery]);
+  
+  const handleSearchSelect = (chId) => {
+    navigate(`/Chapter?id=${chId}`);
+    setSearchOpen(false);
+    setSearchQuery("");
+  };
   
   // Memoize chapter lookup
   const { chapter, prevChapter, nextChapter } = useMemo(() => {
@@ -102,27 +111,83 @@ const Chapter = memo(function Chapter() {
               <span className="font-medium text-sm sm:text-base xs:hidden">Contents</span>
             </Link>
             
-            <div className="flex items-center gap-2 sm:gap-3 md:gap-4">
-              <div className="flex items-center gap-1.5 sm:gap-2">
-                <BookOpen className="w-4 h-4 sm:w-5 sm:h-5 text-[#25DCE6]" />
-                <span className="font-serif font-semibold text-[#FFFFFD] text-xs sm:text-sm md:text-base">
+            <div className="flex items-center gap-1 sm:gap-2 md:gap-3">
+              <div className="hidden sm:flex items-center gap-1.5">
+                <BookOpen className="w-4 h-4 text-[#25DCE6]" />
+                <span className="font-serif font-semibold text-[#FFFFFD] text-xs sm:text-sm">
                   p. {chapter.pages}
                 </span>
               </div>
 
               <Button
+                onClick={() => setSearchOpen(!searchOpen)}
+                variant="ghost"
+                size="sm"
+                className="text-[#25DCE6] hover:bg-[#25DCE6]/10 active:bg-[#25DCE6]/20 h-10 w-10 p-0"
+                aria-label="Search"
+              >
+                <Search className="w-5 h-5" />
+              </Button>
+
+              <Button
                 onClick={() => setBookmarksOpen(!bookmarksOpen)}
                 variant="ghost"
                 size="sm"
-                className="text-[#25DCE6] hover:bg-[#25DCE6]/10 active:bg-[#25DCE6]/20 h-11 w-11 sm:h-10 sm:w-10 p-0"
+                className="text-[#25DCE6] hover:bg-[#25DCE6]/10 active:bg-[#25DCE6]/20 h-10 w-10 p-0"
                 aria-label="Open bookmarks"
               >
-                <BookmarkCheck className="w-5 h-5 sm:w-5 sm:h-5" />
+                <BookmarkCheck className="w-5 h-5" />
               </Button>
             </div>
           </div>
         </nav>
       </header>
+
+      {/* Search Panel */}
+      {searchOpen && (
+        <div className="bg-[#2A3440] border-b border-[#25DCE6]/20 px-3 sm:px-4 py-3">
+          <div className="max-w-4xl mx-auto">
+            <div className="relative">
+              <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[#25DCE6]/60" />
+              <Input
+                type="text"
+                placeholder="Search chapters..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="pl-10 pr-10 bg-[#222A31] border-[#25DCE6]/30 text-[#FFFFFD] placeholder:text-[#FFFFFD]/40 focus:border-[#25DCE6]"
+                autoFocus
+              />
+              {searchQuery && (
+                <button
+                  onClick={() => setSearchQuery("")}
+                  className="absolute right-3 top-1/2 -translate-y-1/2 text-[#FFFFFD]/40 hover:text-[#FFFFFD]"
+                >
+                  <X className="w-4 h-4" />
+                </button>
+              )}
+            </div>
+            {searchResults.length > 0 && (
+              <div className="mt-2 bg-[#222A31] rounded-lg border border-[#25DCE6]/20 overflow-hidden">
+                {searchResults.map((result) => (
+                  <button
+                    key={result.id}
+                    onClick={() => handleSearchSelect(result.id)}
+                    className="w-full text-left px-4 py-3 hover:bg-[#25DCE6]/10 border-b border-[#25DCE6]/10 last:border-b-0 transition-colors"
+                  >
+                    <div className="text-[#FFFFFD] text-sm font-medium">{result.title}</div>
+                    <div className="text-[#FFFFFD]/50 text-xs">Pages {result.pages}</div>
+                  </button>
+                ))}
+              </div>
+            )}
+            {searchQuery.length >= 2 && searchResults.length === 0 && (
+              <div className="mt-2 text-center text-[#FFFFFD]/50 text-sm py-4">
+                No chapters found matching "{searchQuery}"
+              </div>
+            )}
+          </div>
+        </div>
+      )}
 
       {/* Bookmarks Panel */}
       {bookmarksOpen && (
@@ -159,26 +224,24 @@ const Chapter = memo(function Chapter() {
           {/* Prev/Next Navigation */}
           <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 justify-between">
             {prevChapter ? (
-              <Link to={`${createPageUrl("Chapter")}?id=${prevChapter.id}`} className="flex-1">
-                <Button
-                  variant="outline"
-                  className="w-full border-[#25DCE6]/40 text-[#25DCE6] hover:bg-[#25DCE6]/10 active:bg-[#25DCE6]/20 min-h-[44px] justify-start"
-                >
-                  <ArrowLeft className="w-4 h-4 mr-2" />
-                  <span className="truncate">{prevChapter.title}</span>
-                </Button>
-              </Link>
+              <Button
+                variant="outline"
+                onClick={() => navigate(`/Chapter?id=${prevChapter.id}`)}
+                className="flex-1 border-[#25DCE6]/40 text-[#25DCE6] hover:bg-[#25DCE6]/10 active:bg-[#25DCE6]/20 min-h-[44px] justify-start"
+              >
+                <ArrowLeft className="w-4 h-4 mr-2 flex-shrink-0" />
+                <span className="truncate">{prevChapter.title}</span>
+              </Button>
             ) : <div className="flex-1" />}
             
             {nextChapter ? (
-              <Link to={`${createPageUrl("Chapter")}?id=${nextChapter.id}`} className="flex-1">
-                <Button
-                  className="w-full bg-[#25DCE6] text-[#222A31] hover:bg-[#25DCE6]/90 active:bg-[#25DCE6]/80 min-h-[44px] justify-end"
-                >
-                  <span className="truncate">{nextChapter.title}</span>
-                  <ArrowLeft className="w-4 h-4 ml-2 rotate-180" />
-                </Button>
-              </Link>
+              <Button
+                onClick={() => navigate(`/Chapter?id=${nextChapter.id}`)}
+                className="flex-1 bg-[#25DCE6] text-[#222A31] hover:bg-[#25DCE6]/90 active:bg-[#25DCE6]/80 min-h-[44px] justify-end"
+              >
+                <span className="truncate">{nextChapter.title}</span>
+                <ArrowLeft className="w-4 h-4 ml-2 rotate-180 flex-shrink-0" />
+              </Button>
             ) : null}
           </div>
 
@@ -191,14 +254,13 @@ const Chapter = memo(function Chapter() {
             >
               Back to Top
             </Button>
-            <Link to={createPageUrl("Home")} className="w-full sm:w-auto">
-              <Button 
-                variant="outline"
-                className="w-full border-[#25DCE6]/40 text-[#25DCE6] hover:bg-[#25DCE6]/10 active:bg-[#25DCE6]/20 min-h-[44px]"
-              >
-                Table of Contents
-              </Button>
-            </Link>
+            <Button 
+              onClick={() => navigate('/Home')}
+              variant="outline"
+              className="border-[#25DCE6]/40 text-[#25DCE6] hover:bg-[#25DCE6]/10 active:bg-[#25DCE6]/20 min-h-[44px]"
+            >
+              Table of Contents
+            </Button>
           </div>
         </div>
       </main>
