@@ -490,6 +490,8 @@ export const TERM_DEFINITIONS = {
   "mature": "Fully developed.",
   "meager": "Scanty.",
   "meek": "Humble.",
+  "meditate": "To engage in contemplation or reflection; to focus one's thoughts on a subject; to consider deeply.",
+  "meditation": "Contemplation or reflection; focusing one's thoughts on a subject; considering deeply.",
   "melancholy": "Sadness.",
   "menace": "Threat.",
   "mentor": "Wise adviser.",
