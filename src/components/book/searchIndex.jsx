@@ -1,7 +1,7 @@
 // Full-text search index for the Big Book
 // Uses shared cache from chapterLoader for efficiency
 
-import { loadChapterContent, getCache } from './chapterLoader';
+import { loadChapterContent } from './chapterLoader';
 
 const ALL_CHAPTERS = [
   { id: "preface", title: "Preface", pages: "xi-xii" },
