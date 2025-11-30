@@ -2,7 +2,7 @@ import React, { useState, memo, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { Input } from "@/components/ui/input";
 import { Search, X, BookOpen, FileText, Loader2 } from "lucide-react";
-import { search, highlightMatches, preloadIndex } from "./searchIndex";
+import { search, highlightMatches } from "./searchIndex";
 
 const SearchBar = memo(function SearchBar({ className = "" }) {
   const [searchQuery, setSearchQuery] = useState("");
@@ -11,10 +11,7 @@ const SearchBar = memo(function SearchBar({ className = "" }) {
   const [isSearching, setIsSearching] = useState(false);
   const navigate = useNavigate();
 
-  // Preload index when component mounts
-  useEffect(() => {
-    preloadIndex();
-  }, []);
+  // Index builds on first search - no preloading needed
 
   // Search when query changes
   useEffect(() => {

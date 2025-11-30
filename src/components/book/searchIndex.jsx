@@ -1,4 +1,7 @@
 // Full-text search index for the Big Book
+// Uses shared cache from chapterLoader for efficiency
+
+import { loadChapterContent, getCache } from './chapterLoader';
 
 const ALL_CHAPTERS = [
   { id: "preface", title: "Preface", pages: "xi-xii" },
@@ -22,27 +25,7 @@ const ALL_CHAPTERS = [
   { id: "appendices", title: "Appendices", pages: "561-575" },
 ];
 
-// Content loaders
-const contentLoaders = {
-  'preface': () => import('./content/prefaceContent'),
-  'foreword-first': () => import('./content/forewordFirstContent'),
-  'foreword-second': () => import('./content/forewordSecondContent'),
-  'doctors-opinion': () => import('./content/doctorsOpinionContent'),
-  'bills-story': () => import('./content/billsStoryContent'),
-  'there-is-solution': () => import('./content/thereIsSolutionContent'),
-  'more-about-alcoholism': () => import('./content/moreAboutAlcoholismContent'),
-  'we-agnostics': () => import('./content/weAgnosticsContent'),
-  'how-it-works': () => import('./content/howItWorksContent'),
-  'into-action': () => import('./content/intoActionContent'),
-  'working-with-others': () => import('./content/workingWithOthersContent'),
-  'to-wives': () => import('./content/toWivesContent'),
-  'family-afterward': () => import('./content/familyAfterwardContent'),
-  'to-employers': () => import('./content/toEmployersContent'),
-  'vision-for-you': () => import('./content/visionForYouContent'),
-  'appendices': () => import('./content/appendicesContent'),
-};
-
-// Search index cache
+// Search index cache - built on first search
 let searchIndex = null;
 let indexBuilding = false;
 let indexPromise = null;
@@ -84,7 +67,7 @@ function extractParaText(para) {
   return '';
 }
 
-// Build the search index
+// Build the search index using shared chapter cache
 async function buildIndex() {
   if (searchIndex) return searchIndex;
   if (indexBuilding) return indexPromise;
@@ -93,49 +76,39 @@ async function buildIndex() {
   indexPromise = (async () => {
     const index = {
       chapters: ALL_CHAPTERS,
-      documents: [], // { chapterId, chapterTitle, pages, text, words }
-      wordIndex: {}, // word -> [docIndex, ...]
+      documents: [],
+      wordIndex: {},
     };
 
-    for (const [chapterId, loader] of Object.entries(contentLoaders)) {
-      try {
-        const module = await loader();
-        const key = Object.keys(module)[0];
-        const content = module[key];
-        
-        if (!content?.paragraphs) continue;
-        
-        const chapter = ALL_CHAPTERS.find(c => c.id === chapterId);
-        if (!chapter) continue;
+    // Load all chapters using shared cache
+    const loadPromises = ALL_CHAPTERS.map(ch => loadChapterContent(ch.id));
+    const contents = await Promise.all(loadPromises);
 
-        // Combine all text from chapter
-        const fullText = content.paragraphs.map(extractParaText).join(' ');
-        
-        // Tokenize into words
-        const words = fullText.toLowerCase()
-          .replace(/[^\w\s]/g, ' ')
-          .split(/\s+/)
-          .filter(w => w.length > 2);
-        
-        const docIndex = index.documents.length;
-        index.documents.push({
-          chapterId,
-          chapterTitle: chapter.title,
-          pages: chapter.pages,
-          text: fullText,
-          wordSet: new Set(words)
-        });
+    contents.forEach((content, i) => {
+      const chapter = ALL_CHAPTERS[i];
+      if (!content?.paragraphs) return;
 
-        // Build inverted index
-        const uniqueWords = new Set(words);
-        for (const word of uniqueWords) {
-          if (!index.wordIndex[word]) index.wordIndex[word] = [];
-          index.wordIndex[word].push(docIndex);
-        }
-      } catch (e) {
-        console.warn(`Failed to index ${chapterId}:`, e);
+      const fullText = content.paragraphs.map(extractParaText).join(' ');
+      const words = fullText.toLowerCase()
+        .replace(/[^\w\s]/g, ' ')
+        .split(/\s+/)
+        .filter(w => w.length > 2);
+      
+      const docIndex = index.documents.length;
+      index.documents.push({
+        chapterId: chapter.id,
+        chapterTitle: chapter.title,
+        pages: chapter.pages,
+        text: fullText,
+        wordSet: new Set(words)
+      });
+
+      const uniqueWords = new Set(words);
+      for (const word of uniqueWords) {
+        if (!index.wordIndex[word]) index.wordIndex[word] = [];
+        index.wordIndex[word].push(docIndex);
       }
-    }
+    });
 
     searchIndex = index;
     indexBuilding = false;
