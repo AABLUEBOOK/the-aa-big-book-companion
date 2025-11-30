@@ -38,8 +38,13 @@ const inlineContent = {
   }
 };
 
-// Cache for loaded chapters
+// Cache for loaded chapters - exported for search index sharing
 const cache = new Map();
+
+// Export cache getter for search index to share
+export function getCache() {
+  return cache;
+}
 
 export async function loadChapterContent(chapterId) {
   // Check cache first

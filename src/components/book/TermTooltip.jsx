@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback, memo } from "react";
 import ReactDOM from "react-dom";
 
-// Lazy load dictionary data
+// Lazy load dictionary data - only when first term is clicked
 let TERM_DEFINITIONS = null;
 let definitionsPromise = null;
 
@@ -16,8 +16,7 @@ function loadDefinitions() {
   return definitionsPromise;
 }
 
-// Preload definitions
-loadDefinitions();
+// Don't preload - load on first interaction instead
 
 // Cache for processed text
 const textCache = new Map();
@@ -160,11 +159,13 @@ const TermTooltip = memo(function TermTooltip({ term, definition }) {
 export default TermTooltip;
 
 export function renderTextWithTerms(text) {
-  if (!TERM_DEFINITIONS) {
-    // Return plain text if definitions not loaded yet
-    return text;
-  }
   if (!text) return null;
+  
+  // Load definitions on first render if not loaded
+  if (!TERM_DEFINITIONS) {
+    loadDefinitions();
+    return text; // Return plain text until loaded
+  }
   
   const processed = wrapTermsInText(text);
   const parts = processed.split(/(\{\{TERM:[^}]+\}\})/g);

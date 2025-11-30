@@ -244,9 +244,4 @@ export function highlightMatches(text, query) {
   return parts.length > 0 ? parts : [{ text, highlight: false }];
 }
 
-// Pre-build index on load
-export function preloadIndex() {
-  buildIndex();
-}
-
 export { ALL_CHAPTERS };

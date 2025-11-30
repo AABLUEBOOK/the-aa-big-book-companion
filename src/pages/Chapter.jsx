@@ -2,7 +2,7 @@ import React, { useState, memo, useMemo, Suspense, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, BookOpen, BookmarkCheck, Loader2 } from "lucide-react";
-import { preloadChapter } from "../components/book/chapterLoader";
+import { preloadChapter, loadChapterContent } from "../components/book/chapterLoader";
 import SearchBar from "../components/book/SearchBar";
 
 // Lazy load heavy components
