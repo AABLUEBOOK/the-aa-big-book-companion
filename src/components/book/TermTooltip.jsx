@@ -65,14 +65,14 @@ export function wrapTermsInText(text) {
 const TermTooltip = memo(function TermTooltip({ term, definition }) {
   const [showTooltip, setShowTooltip] = useState(false);
 
+  const scrollYRef = React.useRef(0);
+
   const handleClick = useCallback((e) => {
     e.preventDefault();
     e.stopPropagation();
+    scrollYRef.current = window.scrollY;
     setShowTooltip(true);
     document.body.style.overflow = 'hidden';
-    document.body.style.position = 'fixed';
-    document.body.style.width = '100%';
-    document.body.style.top = `-${window.scrollY}px`;
   }, []);
 
   const handleClose = useCallback((e) => {
@@ -80,21 +80,17 @@ const TermTooltip = memo(function TermTooltip({ term, definition }) {
       e.preventDefault();
       e.stopPropagation();
     }
-    const scrollY = document.body.style.top;
     document.body.style.overflow = '';
-    document.body.style.position = '';
-    document.body.style.width = '';
-    document.body.style.top = '';
-    window.scrollTo(0, parseInt(scrollY || '0') * -1);
     setShowTooltip(false);
+    // Restore scroll position after state update
+    requestAnimationFrame(() => {
+      window.scrollTo(0, scrollYRef.current);
+    });
   }, []);
 
   useEffect(() => {
     return () => {
       document.body.style.overflow = '';
-      document.body.style.position = '';
-      document.body.style.width = '';
-      document.body.style.top = '';
     };
   }, []);
 
