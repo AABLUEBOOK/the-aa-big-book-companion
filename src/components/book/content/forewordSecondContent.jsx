@@ -49,9 +49,8 @@ export const forewordSecondContent = {
     { pageNum: "xx" },
     {
       segments: [
-        { text: `While the internal difficulties of our adolescent period were being ironed out, public acceptance of A.A. grew by leaps and bounds. For this there were two principal reasons: the large numbers of recoveries, and reunited homes. These made their impressions everywhere. Of alcoholics who came to A.A. and really tried, 50% got sober at once and remained that way; 25% sobered up after some relapses, and among the remainder, ` },
-        { text: `those who stayed on with A.A. showed improvement`, highlight: 'yellow' },
-        { text: `. Other thousands came to a few A.A. meetings and at first decided they didn't want the program. But great numbers of these—about two out of three—began to return as time passed.` }
+        { text: `While the internal difficulties of our adolescent period were being ironed out, public acceptance of A.A. grew by leaps and bounds. For this there were two principal reasons: the large numbers of recoveries, and reunited homes. These made their impressions everywhere. Of alcoholics who came to A.A. and really tried, 50% got sober at once and remained that way; 25% sobered up after some relapses, and among the remainder, those who stayed on with A.A. showed improvement.`, highlight: 'yellow' },
+        { text: ` Other thousands came to a few A.A. meetings and at first decided they didn't want the program. But great numbers of these—about two out of three—began to return as time passed.` }
       ]
     },
     {
