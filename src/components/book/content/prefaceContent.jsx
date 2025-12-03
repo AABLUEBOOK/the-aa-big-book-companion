@@ -4,7 +4,11 @@ export const prefaceContent = {
   paragraphs: [
     { pageNum: "xi" },
     {
-      text: `THIS IS the fourth edition of the book "Alcoholics Anonymous." The first edition appeared in April 1939, and in the following sixteen years, more than 300,000 copies went into circulation. The second edition, published in 1955, reached a total of more than 1,150,500 copies. The third edition, which came off press in 1976, achieved a circulation of approximately 19,550,000 in all formats.`
+      segments: [
+        { text: `THIS IS the fourth edition of the book "Alcoholics Anonymous." ` },
+        { text: `The Story of How Many Thousands of Men and Women Have Recovered from Alcoholism FOURTH EDITION`, highlight: 'pink' },
+        { text: ` The first edition appeared in April 1939, and in the following sixteen years, more than 300,000 copies went into circulation. The second edition, published in 1955, reached a total of more than 1,150,500 copies. The third edition, which came off press in 1976, achieved a circulation of approximately 19,550,000 in all formats.` }
+      ]
     },
     {
       segments: [
@@ -15,7 +19,11 @@ export const prefaceContent = {
     },
     { pageNum: "xii" },
     {
-      text: `The second edition added the appendices, the Twelve Traditions, and the directions for getting in touch with A.A. But the chief change was in the section of personal stories, which was expanded to reflect the Fellowship's growth. "Bill's Story," "Doctor Bob's Nightmare," and one other personal history from the first edition were retained intact; three were edited and one of these was retitled; new versions of two stories were written, with new titles; thirty completely new stories were added; and the story section was divided into three parts, under the same headings that are used now.`
+      segments: [
+        { text: `The second edition added the appendices, the Twelve Traditions, and the directions for getting in touch with A.A. But the chief change was in the section of ` },
+        { text: `personal stories`, highlight: 'pink' },
+        { text: `, which was expanded to reflect the Fellowship's growth. "Bill's Story," "Doctor Bob's Nightmare," and one other personal history from the first edition were retained intact; three were edited and one of these was retitled; new versions of two stories were written, with new titles; thirty completely new stories were added; and the story section was divided into three parts, under the same headings that are used now.` }
+      ]
     },
     {
       text: `In the third edition, Part I ("Pioneers of A.A.") was left unchanged. Nine of the stories in Part II ("They Stopped in Time") were carried over from the second edition; eight new stories were added. In Part III ("They Lost Nearly All"), eight stories were retained; five new ones were added.`
@@ -28,7 +36,11 @@ export const prefaceContent = {
     },
     {
       segments: [
-        { text: `If you have a drinking problem, we hope that you may pause in reading one of the forty-two personal stories and think: "Yes, that happened to me"; or, more important, "Yes, I've felt like that"; or, most important, ` },
+        { text: `If you have a drinking problem, we hope that you may pause in reading one of the forty-two personal stories and think: "` },
+        { text: `Yes, that happened to me";`, highlight: 'pink' },
+        { text: ` or, more important, "` },
+        { text: `Yes, I've felt like that";`, highlight: 'pink' },
+        { text: ` or, most important, ` },
         { text: `"Yes, I believe this program can work for me too."`, highlight: 'pink' }
       ]
     }

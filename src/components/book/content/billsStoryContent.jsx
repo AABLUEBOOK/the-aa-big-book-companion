@@ -3,6 +3,12 @@ export const billsStoryContent = {
   tabs: [],
   paragraphs: [
     { pageNum: "1" },
+    {
+      segments: [
+        { text: `` },
+        { text: `Chapter 1 BILL'S STORY`, highlight: 'pink' }
+      ]
+    },
     { text: `War fever ran high in the New England town to which we new, young officers from Plattsburg were assigned, and we were flattered when the first citizens took us to their homes, making us feel heroic. Here was love, applause, war; moments sublime with intervals hilarious. I was part of life at last, and in the midst of the excitement I discovered liquor. I forgot the strong warnings and the prejudices of my people concerning drink. In time we sailed for "Over There." I was very lonely and again turned to alcohol.` },
     { text: `We landed in England. I visited Winchester Cathedral. Much moved, I wandered outside. My attention was caught by a doggerel on an old tombstone:` },
     { text: `"Here lies a Hampshire Grenadier
@@ -54,7 +60,12 @@ Or by pot."` },
     { text: `He talked for hours. Childhood memories rose before me. I could almost hear the sound of the preacher's voice as I sat, on still Sundays, way over there on the hillside; there was that proffered temperance pledge I never signed; my grandfather's good natured contempt of some church folk and their doings; his insistence that the spheres really had their music; but his denial of the preacher's right to tell him how he must listen; his fearlessness as he spoke of these things just before he died; these recollections welled up from the past. They made me swallow hard.` },
     { text: `That war-time day in old Winchester Cathedral came back again.` },
     { pageNum: "8" },
-    { text: `I had always believed in a Power greater than myself. I had often pondered these things. I was not an atheist. Few people really are, for that means blind faith in the strange proposition that this universe originated in a cipher and aimlessly rushes nowhere. My intellectual heroes, the chemists, the astronomers, even the evolutionists, suggested vast laws and forces at work. Despite contrary indications, I had little doubt that a mighty purpose and rhythm underlay all. How could there be so much of precise and immutable law, and no intelligence? I simply had to believe in a Spirit of the Universe, who knew neither time nor limitation. But that was as far as I had gone.` },
+    {
+      segments: [
+        { text: `I had always believed in a Power greater than myself. I had often pondered these things. I was not an atheist. Few people really are, for that means blind faith in the strange proposition that this universe originated in a cipher and aimlessly rushes nowhere. My intellectual heroes, the chemists, the astronomers, even the evolutionists, suggested vast laws and forces at work. Despite contrary indications, I had little doubt that a mighty purpose and rhythm underlay all. How could there be so much of precise and immutable law, and no intelligence? I simply had to believe in a Spirit of the Universe, who knew neither time nor limitation. But that was as far as I had gone. ` },
+        { text: `Foundation`, highlight: 'pink' }
+      ]
+    },
     { text: `With ministers, and the world's religions, I parted right there. When they talked of a God personal to me, who was love, superhuman strength and direction, I became irritated and my mind snapped shut against such a theory.` },
     { text: `To Christ I conceded the certainty of a great man, not too closely followed by those who claimed Him. His moral teaching—most excellent. For myself, I had adopted those parts which seemed convenient and not too difficult; the rest I disregarded.` },
     { pageNum: "9" },
