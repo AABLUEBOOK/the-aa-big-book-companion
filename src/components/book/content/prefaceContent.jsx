@@ -13,7 +13,7 @@ export const prefaceContent = {
     {
       segments: [
         { text: `Because this book has become the ` },
-        { text: `basic text`, highlight: 'yellow' },
+        { text: `basic text`, highlight: 'pink' },
         { text: ` for our Society and has helped such large numbers of alcoholic men and women to recovery, there exists strong sentiment against any radical changes being made in it. Therefore, the first portion of this volume, describing the A.A. recovery program, has been left largely untouched in the course of revisions made for the second, third, and fourth editions. The section called "The Doctor's Opinion" has been kept intact, just as it was originally written in 1939 by the late Dr. William D. Silkworth, our Society's great medical benefactor.` }
       ]
     },
