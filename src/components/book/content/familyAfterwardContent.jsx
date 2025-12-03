@@ -59,9 +59,30 @@ export const familyAfterwardContent = {
     { text: `Whether the family goes on a spiritual basis or not, the alcoholic member has to if he would recover. The others must be convinced of his new status beyond the shadow of a doubt. Seeing is believing to most families who have lived with a drinker.` },
     { text: `Here is a case in point: One of our friends is a heavy smoker and coffee drinker. There was no doubt he over-indulged. Seeing this, and meaning to be helpful, his wife commenced to admonish him about it. He admitted he was overdoing these things, but frankly said that he was not ready to stop. His wife is one of those persons who really feels there is something rather sinful about these commodities, so she nagged, and her intolerance finally threw him into a fit of anger. He got drunk.` },
     { text: `Of course our friend was wrong—dead wrong. He had to painfully admit that and mend his spiritual fences. Though he is now a most effective member of Alcoholics Anonymous, he still smokes and drinks coffee, but neither his wife nor anyone else stands in judgment. She sees she was wrong to make a burning issue out of such a matter when his more serious ailments were being rapidly cured.` },
-    { text: `We have three little mottoes which are apropos. Here they are:` },
-    { text: `First Things First` },
-    { text: `Live and Let Live` },
-    { text: `Easy Does It.` }
+    {
+      segments: [
+        { text: `We have ` },
+        { text: `three little mottoes`, highlight: 'pink' },
+        { text: ` which are apropos. Here they are:` }
+      ]
+    },
+    {
+      segments: [
+        { text: `` },
+        { text: `First Things First`, highlight: 'pink' }
+      ]
+    },
+    {
+      segments: [
+        { text: `` },
+        { text: `Live and Let Live`, highlight: 'pink' }
+      ]
+    },
+    {
+      segments: [
+        { text: `` },
+        { text: `Easy Does It.`, highlight: 'pink' }
+      ]
+    }
   ]
 };

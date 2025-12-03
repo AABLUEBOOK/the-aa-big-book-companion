@@ -15,13 +15,31 @@ export const appendicesContent = {
     { text: "10. Alcoholics Anonymous has no opinion on outside issues; hence the A.A. name ought never be drawn into public controversy." },
     { text: "11. Our public relations policy is based on attraction rather than promotion; we need always maintain personal anonymity at the level of press, radio, and films." },
     { text: "12. Anonymity is the spiritual foundation of all our Traditions, ever reminding us to place principles before personalities." },
-    { text: "SPIRITUAL EXPERIENCE" },
-    { text: "The terms \"spiritual experience\" and \"spiritual awakening\" are used many times in this book which, upon careful reading, shows that the personality change sufficient to bring about recovery from alcoholism has manifested itself among us in many different forms." },
+    {
+      segments: [
+        { text: "" },
+        { text: "SPIRITUAL EXPERIENCE", highlight: 'pink' }
+      ]
+    },
+    {
+      segments: [
+        { text: "The terms \"" },
+        { text: "spiritual experience", highlight: 'pink' },
+        { text: "\" and \"" },
+        { text: "spiritual awakening", highlight: 'pink' },
+        { text: "\" are used many times in this book which, upon careful reading, shows that the personality change sufficient to bring about recovery from alcoholism has manifested itself among us in many different forms." }
+      ]
+    },
     { text: "Most of our experiences are what the psychologist William James calls the \"educational variety\" because they develop slowly over a period of time. Quite often friends of the newcomer are aware of the difference long before he is himself. He finally realizes that he has undergone a profound alteration in his reaction to life; that such a change could hardly have been brought about by himself alone." },
     { text: "What often takes place in a few months could seldom have been accomplished by years of self-discipline. With few exceptions our members find that they have tapped an unsuspected inner resource which they presently identify with their own conception of a Power greater than themselves." },
     { text: "Most of us think this awareness of a Power greater than ourselves is the essence of spiritual experience. Our more religious members call it \"God-consciousness.\"" },
     { text: "Most emphatically we wish to say that any alcoholic capable of honestly facing his problems in the light of our experience can recover, provided he does not close his mind to all spiritual concepts. He can only be defeated by an attitude of intolerance or belligerent denial." },
-    { text: "We find that no one need have difficulty with the spirituality of the program. Willingness, honesty and open mindedness are the essentials of recovery. But these are indispensable." },
+    {
+      segments: [
+        { text: "We find that no one need have difficulty with the spirituality of the program. " },
+        { text: "Willingness, honesty and open mindedness are the essentials of recovery. But these are indispensable.", highlight: 'pink' }
+      ]
+    },
     { text: "THE MEDICAL VIEW ON A.A." },
     { text: "Since the first edition of this book was published, several important medical studies of alcoholism and the A.A. program have been conducted. The conclusion of many of these is that A.A. works, and works well." },
     { text: "From the medical point of view, A.A. may be described as a spiritual psychotherapy supported by group dynamics. The group provides a powerful healing force through identification, emotional support, and practical advice from others who have successfully overcome the same problem." },

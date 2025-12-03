@@ -32,11 +32,36 @@ export const doctorBobsNightmareContent = {
     { text: `That was June 10, 1935, and that was my last drink. As I write, nearly four years have passed.` },
     { text: `The question which might naturally come into your mind would be: “What did the man do or say that was different from what others had done or said?” It must be remembered that I had read a great deal and talked to everyone who knew, or thought they knew anything about the subject of alcoholism. But this was a man who had experienced many years of frightful drinking, who had had most all the drunkard’s experiences known to man, but who had been cured by the very means I had been trying to employ, that is to say the spiritual approach. He gave me information about the subject of alcoholism which was undoubtedly helpful. Of far more importance was the fact that he was the first living human with whom I had ever talked, who knew what he was talking about in regard to alcoholism from actual experience. In other words, he talked my language. He knew all the answers, and certainly not because he had picked them up in his reading.` },
     { text: `It is a most wonderful blessing to be relieved of the terrible curse with which I was afflicted. My health is good and I have regained my self-respect and the respect of my colleagues. My home life is ideal and my business is as good as can be expected in these uncertain times.` },
-    { text: `I spend a great deal of time passing on what I learned to others who want and need it badly. I do it for four reasons:` },
-    { text: `1. Sense of duty.` },
-    { text: `2. It is a pleasure.` },
-    { text: `3. Because in so doing I am paying my debt to the man who took time to pass it on to me.` },
-    { text: `4. Because every time I do it I take out a little more insurance for myself against a possible slip.` },
+    {
+      segments: [
+        { text: `I spend a great deal of time passing on what I learned to others who want and need it badly. I do it for ` },
+        { text: `four reasons:`, highlight: 'pink' }
+      ]
+    },
+    {
+      segments: [
+        { text: `` },
+        { text: `1. Sense of duty.`, highlight: 'pink' }
+      ]
+    },
+    {
+      segments: [
+        { text: `` },
+        { text: `2. It is a pleasure.`, highlight: 'pink' }
+      ]
+    },
+    {
+      segments: [
+        { text: `` },
+        { text: `3. Because in so doing I am paying my debt to the man who took time to pass it on to me.`, highlight: 'pink' }
+      ]
+    },
+    {
+      segments: [
+        { text: `` },
+        { text: `4. Because every time I do it I take out a little more insurance for myself against a possible slip.`, highlight: 'pink' }
+      ]
+    },
     { text: `Unlike most of our crowd, I did not get over my craving for liquor much during the first two and one-half years of abstinence. It was almost always with me. But at no time have I been anywhere near yielding. I used to get terribly upset when I saw my friends drink and knew I could not, but I schooled myself to believe that though I once had the same privilege, I had abused it so frightfully that it was withdrawn. So it doesn’t behoove me to squawk about it for, after all, nobody ever had to throw me down and pour liquor down my throat.` },
     { text: `If you think you are an atheist, an agnostic, a skeptic, or have any other form of intellectual pride which keeps you from accepting what is in this book, I feel sorry for you. If you still think you are strong enough to beat the game alone, that is your affair. But if you really and truly want to quit drinking liquor for good and all, and sincerely feel that you must have some help, we know that we have an answer for you. It never fails, if you go about it with one half the zeal you have been in the habit of showing when you were getting another drink.` },
     { text: `Your Heavenly Father will never let you down!` }
