@@ -2,6 +2,7 @@ export const thereIsSolutionContent = {
   highlights: [],
   tabs: [],
   paragraphs: [
+    { pageNum: "17" },
     {
       segments: [
         { text: `WE, OF ALCOHOLICS ANONYMOUS, know thousands of men and women who were once just as hopeless as Bill. Nearly all have `, highlight: 'pink' },
@@ -34,6 +35,7 @@ export const thereIsSolutionContent = {
       ]
     },
     { text: `That the man who is making the approach has had the same difficulty, that he obviously knows what he is talking about, that his whole deportment shouts at the new prospect that he is a man with a real answer, that he has no attitude of Holier Than Thou, nothing whatever except the sincere desire to be helpful; that there are no fees to pay, no axes to grind, no people to please, no lectures to be endured—these are the conditions we have found most effective. After such an approach many take up their beds and walk again.` },
+    { pageNum: "18" },
     { text: `None of us makes a sole vocation of this work, nor do we think its effectiveness would be increased if we did. We feel that elimination of our drinking is but a beginning. A much more important demonstration of our principles lies before us in our respective homes, occupations and affairs. All of us spend much of our spare time in the sort of effort which we are going to describe. A few are fortunate enough to be so situated that they can give nearly all their time to the work.` },
     { text: `If we keep on the way we are going there is little doubt that much good will result, but the surface of the problem would hardly be scratched. Those of us who live in large cities are overcome by the reflection that close by hundreds are dropping into oblivion every day. Many could recover if they had the opportunity we have enjoyed. How then shall we present that which has been so freely given us?` },
     { text: `We have concluded to publish an anonymous volume setting forth the problem as we see it. We shall bring to the task our combined experience and knowledge. This should suggest a useful program for anyone concerned with a drinking problem.` },
@@ -77,7 +79,9 @@ export const thereIsSolutionContent = {
         { text: `; but at some stage of his drinking career he begins to lose all control of his liquor consumption, once he starts to drink.` }
       ]
     },
+    { pageNum: "19" },
     { text: `Here is the fellow who has been puzzling you, especially in his lack of control. He does absurd, incredible, tragic things while drinking. He is a real Dr. Jekyll and Mr. Hyde. He is seldom mildly intoxicated. He is always more or less insanely drunk. His disposition while drinking resembles his normal nature but little. He may be one of the finest fellows in the world. Yet let him drink for a day, and he frequently becomes disgustingly, and even dangerously anti-social. He has a positive genius for getting tight at exactly the wrong moment, particularly when some important decision must be made or engagement kept. He is often perfectly sensible and well balanced concerning everything except liquor, but in that respect he is incredibly dishonest and selfish. He often possesses special abilities, skills, and aptitudes, and has a promising career ahead of him. He uses his gifts to build up a bright outlook for his family and himself, and then pulls the structure down on his head by a senseless series of sprees. He is the fellow who goes to bed so intoxicated he ought to sleep the clock around. Yet early next morning he searches madly for the bottle he misplaced the night before. If he can afford it, he may have liquor concealed all over his house to be certain no one gets his entire supply away from him to throw down the wastepipe. As matters grow worse, he begins to use a combination of high-powered sedative and liquor to quiet his nerves so he can go to work. Then comes the day when he simply cannot make it and gets drunk all over again. Perhaps he goes to a doctor who gives him morphine or some sedative with which to taper off. Then he begins to appear at hospitals and sanitariums.` },
+    { pageNum: "20" },
     { text: `This is by no means a comprehensive picture of the true alcoholic, as our behavior patterns vary. But this description should identify him roughly.` },
     { text: `Why does he behave like this? If hundreds of experiences have shown him that one drink means another debacle with all its attendant suffering and humiliation, why is it he takes that one drink? Why can't he stay on the water wagon? What has become of the common sense and will power that he still sometimes displays with respect to other matters?` },
     { text: `Perhaps there never will be a full answer to these questions. Opinions vary considerably as to why the alcoholic reacts differently from normal people. We are not sure why, once a certain point is reached, little can be done for him. We cannot answer the riddle.` },
@@ -110,7 +114,9 @@ export const thereIsSolutionContent = {
       ]
     },
     { text: `The almost certain consequences that follow taking even a glass of beer do not crowd into the mind to deter us. If these thoughts occur, they are hazy and readily supplanted with the old threadbare idea that this time we shall handle ourselves like other people. There is a complete failure of the kind of defense that keeps one from putting his hand on a hot stove.` },
+    { pageNum: "21" },
     { text: `The alcoholic may say to himself in the most casual way, "It won't burn me this time, so here's how!" Or perhaps he doesn't think at all. How often have some of us begun to drink in this nonchalant way, and after the third or fourth, pounded on the bar and said to ourselves, "For God's sake, how did I ever get started again?" Only to have that thought supplanted by "Well, I'll stop with the sixth drink." Or "What's the use anyhow?"` },
+    { pageNum: "22" },
     { text: `When this sort of thinking is fully established in an individual with alcoholic tendencies, he has probably placed himself beyond human aid, and unless locked up, may die or go permanently insane. These stark and ugly facts have been confirmed by legions of alcoholics throughout history. But for the grace of God, there would have been thousands more convincing demonstrations. So many want to stop but cannot.` },
     {
       segments: [
@@ -134,6 +140,7 @@ export const thereIsSolutionContent = {
         { text: ` This we did because we honestly wanted to, and were willing to make the effort.` }
       ]
     },
+    { pageNum: "23" },
     {
       segments: [
         { text: `A certain American business man`, highlight: 'pink' },
@@ -147,6 +154,7 @@ export const thereIsSolutionContent = {
         { text: `. He seemed quite rational and well-balanced with respect to other problems. Yet he had no control whatever over alcohol. Why was this?` }
       ]
     },
+    { pageNum: "24" },
     { text: `He begged the doctor to tell him the whole truth, and he got it. In the doctor's judgment he was utterly hopeless; he could never regain his position in society and he would have to place himself under lock and key or hire a bodyguard if he expected to live long. That was a great physician's opinion.` },
     { text: `But this man still lives, and is a free man. He does not need a bodyguard nor is he confined. He can go anywhere on this earth where other free men may go without disaster, provided he remains willing to maintain a certain simple attitude.` },
     { text: `Some of our alcoholic readers may think they can do without spiritual help. Let us tell you the rest of the conversation our friend had with his doctor.` },
@@ -166,10 +174,13 @@ export const thereIsSolutionContent = {
         { text: `.` }
       ]
     },
+    { pageNum: "25" },
     { text: `Here was the terrible dilemma in which our friend found himself when he had the extraordinary experience, which as we have already told you, made him a free man.` },
     { text: `We, in our turn, sought the same escape with all the desperation of drowning men. What seemed at first a flimsy reed, has proved to be the loving and powerful hand of God. A new life has been given us or, if you prefer, "a design for living" that really works.` },
     { text: `The distinguished American psychologist, William James, in his book "Varieties of Religious Experience," indicates a multitude of ways in which men have discovered God. We have no desire to convince anyone that there is only one way by which faith can be acquired. If what we have learned and felt and seen means anything at all, it means that all of us, whatever our race, creed, or color are the children of a living Creator with whom we may form a relationship upon simple and understandable terms as soon as we are willing and honest enough to try. Those having religious affiliations will find here nothing disturbing to their beliefs or ceremonies. There is no friction among us over such matters.` },
+    { pageNum: "26" },
     { text: `We think it no concern of ours what religious bodies our members identify themselves with as individuals. This should be an entirely personal affair which each one decides for himself in the light of past associations, or his present choice. Not all of us join religious bodies, but most of us favor such memberships.` },
+    { pageNum: "27" },
     { text: `In the following chapter, there appears an explanation of alcoholism, as we understand it, then a chapter addressed to the agnostic. Many who once were in this class are now among our members. Surprisingly enough, we find such convictions no great obstacle to a spiritual experience.` },
     {
       segments: [
@@ -178,6 +189,7 @@ export const thereIsSolutionContent = {
         { text: `. These are followed by forty-two personal experiences.` }
       ]
     },
+    { pageNum: "28" },
     { text: `Each individual, in the personal stories, describes in his own language and from his own point of view the way he established his relationship with God. These give a fair cross section of our membership and a clear-cut idea of what has actually happened in their lives.` },
     {
       segments: [
