@@ -11,9 +11,9 @@ const Paragraph = memo(({ para, idx, renderTerms }) => {
   const highlightClasses = {
     'yellow': 'bg-yellow-400/30 px-1 py-0.5 rounded',
     'pink': 'bg-pink-400/40 px-1 py-0.5 rounded',
-    'blue': 'underline decoration-2 decoration-blue-600 underline-offset-2 font-semibold',
+    'blue': 'underline decoration-2 decoration-blue-600 underline-offset-2',
     'orange': 'bg-orange-400/30 px-1 py-0.5 rounded',
-    'green': 'underline decoration-2 decoration-green-600 underline-offset-2 font-semibold'
+    'green': 'underline decoration-2 decoration-green-600 underline-offset-2'
   };
 
   // Page break marker
