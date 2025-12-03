@@ -320,3 +320,5 @@ export const howItWorksContent = {
     }
   ]
 };
+  ]
+};
