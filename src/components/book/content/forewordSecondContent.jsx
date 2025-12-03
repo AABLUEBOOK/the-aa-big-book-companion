@@ -58,8 +58,7 @@ export const forewordSecondContent = {
     },
     {
       segments: [
-        { text: `Alcoholics Anonymous is ` },
-        { text: `not a religious organization`, highlight: 'yellow' },
+        { text: `Alcoholics Anonymous is not a religious organization`, highlight: 'pink' },
         { text: `. Neither does A.A. take any particular medical point of view, though we cooperate widely with the men of medicine as well as with the men of religion.` }
       ]
     },
