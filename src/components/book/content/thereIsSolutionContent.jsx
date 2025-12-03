@@ -1,16 +1,9 @@
 export const thereIsSolutionContent = {
-  highlights: [],
-  tabs: [],
   paragraphs: [
     { pageNum: "17" },
-    {
-      segments: [
-        { text: `WE, OF ALCOHOLICS ANONYMOUS, know thousands of men and women who were once just as hopeless as Bill. ` },
-        { text: `Nearly all have recovered. They have solved the drink problem.`, highlight: 'blue' }
-      ]
-    },
+    { text: `WE, OF ALCOHOLICS ANONYMOUS, know thousands of men and women who were once just as hopeless as Bill. Nearly all have recovered. They have solved the drink problem.` },
     { text: `We are average Americans. All sections of this country and many of its occupations are represented, as well as many political, economic, social, and religious backgrounds. We are people who normally would not mix. But there exists among us a fellowship, a friendliness, and an understanding which is indescribably wonderful. We are like the passengers of a great liner the moment after rescue from shipwreck when camaraderie, joyousness and democracy pervade the vessel from steerage to Captain's table. Unlike the feelings of the ship's passengers, however, our joy in escape from disaster does not subside as we go our individual ways. The feeling of having shared in a common peril is one element in the powerful cement which binds us. But that in itself would never have held us together as we are now joined.` },
-    { text: `The tremendous fact for every one of us is that we have discovered a common solution. We have a way out on which we can absolutely agree, and upon which we can join in brotherly and harmonious action. This is the great news this book carries to those who suffer from alcoholism.`, highlight: 'blue' },
+    { text: `The tremendous fact for every one of us is that we have discovered a common solution. We have a way out on which we can absolutely agree, and upon which we can join in brotherly and harmonious action. This is the great news this book carries to those who suffer from alcoholism.` },
     { text: `An illness of this sort—and we have come to believe it an illness—involves those about us in a way no other human sickness can. If a person has cancer all are sorry for him and no one is angry or hurt. But not so with the alcoholic illness, for with it there goes annihilation of all the things worth while in life. It engulfs all whose lives touch the sufferer's. It brings misunderstanding, fierce resentment, financial insecurity, disgusted friends and employers, warped lives of blameless children, sad wives and parents—anyone can increase the list.` },
     { text: `We hope this volume will inform and comfort those who are, or who may be affected. There are many. Highly competent psychiatrists who have dealt with us have found it sometimes impossible to persuade an alcoholic to discuss his situation without reserve. Strangely enough, wives, parents and intimate friends usually find us even more unapproachable than do the psychiatrist and the doctor.` },
     { text: `But the ex-problem drinker who has found this solution, who is properly armed with facts about himself, can generally win the entire confidence of another alcoholic in a few hours. Until such an understanding is reached, little or nothing can be accomplished.` },
@@ -44,18 +37,8 @@ export const thereIsSolutionContent = {
     { text: `The alcoholic may say to himself in the most casual way, "It won't burn me this time, so here's how!" Or perhaps he doesn't think at all. How often have some of us begun to drink in this nonchalant way, and after the third or fourth, pounded on the bar and said to ourselves, "For God's sake, how did I ever get started again?" Only to have that thought supplanted by "Well, I'll stop with the sixth drink." Or "What's the use anyhow?"` },
     { pageNum: "22" },
     { text: `When this sort of thinking is fully established in an individual with alcoholic tendencies, he has probably placed himself beyond human aid, and unless locked up, may die or go permanently insane. These stark and ugly facts have been confirmed by legions of alcoholics throughout history. But for the grace of God, there would have been thousands more convincing demonstrations. So many want to stop but cannot.` },
-    {
-      segments: [
-        { text: `There is a solution. Almost none of us liked the self-searching, the leveling of our pride, the confession of shortcomings which the process requires for its successful consummation. But we saw that it really worked in others, and we had come to believe in the hopelessness and futility of life as we had been living it. When, therefore, we were approached by those in whom the problem had been solved, there was nothing left for us but to pick up the simple kit of spiritual tools laid at our feet. ` },
-        { text: `We have found much of heaven and we have been rocketed into a fourth dimension of existence of which we had not even dreamed.`, highlight: 'blue' }
-      ]
-    },
-    {
-      segments: [
-        { text: `The great fact is just this, and nothing less: ` },
-        { text: `That we have had deep and effective spiritual experiences which have revolutionized our whole attitude toward life, toward our fellows and toward God's universe. The central fact of our lives today is the absolute certainty that our Creator has entered into our hearts and lives in a way which is indeed miraculous. He has commenced to accomplish those things for us which we could never do by ourselves.`, highlight: 'blue' }
-      ]
-    },
+    { text: `There is a solution. Almost none of us liked the self-searching, the leveling of our pride, the confession of shortcomings which the process requires for its successful consummation. But we saw that it really worked in others, and we had come to believe in the hopelessness and futility of life as we had been living it. When, therefore, we were approached by those in whom the problem had been solved, there was nothing left for us but to pick up the simple kit of spiritual tools laid at our feet. We have found much of heaven and we have been rocketed into a fourth dimension of existence of which we had not even dreamed.` },
+    { text: `The great fact is just this, and nothing less: That we have had deep and effective spiritual experiences which have revolutionized our whole attitude toward life, toward our fellows and toward God's universe. The central fact of our lives today is the absolute certainty that our Creator has entered into our hearts and lives in a way which is indeed miraculous. He has commenced to accomplish those things for us which we could never do by ourselves.` },
     { text: `If you are as seriously alcoholic as we were, we believe there is no middle-of-the-road solution. We were in a position where life was becoming impossible, and if we had passed into the region from which there is no return through human aid, we had but two alternatives: One was to go on to the bitter end, blotting out the consciousness of our intolerable situation as best we could; and the other, to accept spiritual help. This we did because we honestly wanted to, and were willing to make the effort.` },
     { pageNum: "23" },
     { text: `A certain American business man had ability, good sense, and high character. For years he had floundered from one sanitarium to another. He had consulted the best known American psychiatrists. Then he had gone to Europe, placing himself in the care of a celebrated physician (the psychiatrist, Dr. Jung) who prescribed for him. Though experience had made him skeptical, he finished his treatment with unusual confidence. His physical and mental condition were unusually good. Above all, he believed he had acquired such a profound knowledge of the inner workings of his mind and its hidden springs that relapse was unthinkable. Nevertheless, he was drunk in a short time. More baffling still, he could give himself no satisfactory explanation for his fall.` },

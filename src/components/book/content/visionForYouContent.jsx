@@ -1,6 +1,4 @@
 export const visionForYouContent = {
-  highlights: [],
-  tabs: [],
   paragraphs: [
     { pageNum: "151" },
     { text: "FOR most normal folks, drinking means conviviality, companionship and colorful imagination. It means release from care, boredom and worry. It is joyous intimacy with friends and a feeling that life is good. But not so with us in those last days of heavy drinking. The old pleasures were gone. They were but memories. Never could we recapture the great moments of the past. There was an insistent yearning to enjoy life as we once did and a heartbreaking obsession that some new miracle of control would enable us to do it. There was always one more attempt—and one more failure." },
@@ -61,14 +59,7 @@ export const visionForYouContent = {
     { text: "So our fellow worker will soon have friends galore. Some of them may sink and perhaps never get up, but if our experience is a criterion, more than half of those approached will become fellows of Alcoholics Anonymous. When a few men in this city have found themselves, and have discovered the joy of helping others to face life again, there will be no stopping until everyone in that town has had his opportunity to recover—if he can and will." },
     { text: "Still you may say: \"But I will not have the benefit of contact with you who write this book.\" We cannot be sure. God will determine that, so you must remember that your real reliance is always upon Him. He will show you how to create the fellowship you crave.*" },
     { text: "* Alcoholics Anonymous will be glad to hear from you. Address P.O. Box 459, Grand Central Station, New York, NY 10163." },
-    {
-      segments: [
-        { text: "Our book is meant to be suggestive only. We realize we know only a little. God will constantly disclose more to you and to us. " },
-        { text: "Ask Him in your morning meditation what you can do each day for the man who is still sick.", highlight: 'green' },
-        { text: " The answers will come, if your own house is in order. But obviously you cannot transmit something you haven't got. " },
-        { text: "See to it that your relationship with Him is right, and great events will come to pass for you and countless others. This is the Great Fact for us.", highlight: 'blue' }
-      ]
-    },
+    { text: "Our book is meant to be suggestive only. We realize we know only a little. God will constantly disclose more to you and to us. Ask Him in your morning meditation what you can do each day for the man who is still sick. The answers will come, if your own house is in order. But obviously you cannot transmit something you haven't got. See to it that your relationship with Him is right, and great events will come to pass for you and countless others. This is the Great Fact for us." },
     { text: "Abandon yourself to God as you understand God. Admit your faults to Him and to your fellows. Clear away the wreckage of your past. Give freely of what you find and join us. We shall be with you in the Fellowship of the Spirit, and you will surely meet some of us as you trudge the Road of Happy Destiny." },
     { text: "May God bless you and keep you—until then." }
   ]
