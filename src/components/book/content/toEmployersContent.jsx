@@ -2,6 +2,7 @@ export const toEmployersContent = {
   highlights: [],
   tabs: [],
   paragraphs: [
+    { pageNum: "136" },
     { text: `AMONG many employers nowadays, we think of one member who has spent much of his life in the world of big business. He has hired and fired hundreds of men. He knows the alcoholic as the employer sees him. His present views ought to prove exceptionally useful to business men everywhere.` },
     { text: `But let him tell you:` },
     { text: `I was at one time assistant manager of a corporation department employing sixty-six hundred men. One day my secretary came in saying that Mr. B— insisted on speaking with me. I told her to say that I was not interested. I had warned him several times that he had but one more chance. Not long afterward he had called me from Hartford on two successive days, so drunk he could hardly speak. I told him he was through—finally and forever.` },

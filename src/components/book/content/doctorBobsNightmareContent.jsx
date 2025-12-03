@@ -2,6 +2,7 @@ export const doctorBobsNightmareContent = {
   highlights: [],
   tabs: [],
   paragraphs: [
+    { pageNum: "171" },
     { text: `A co-founder of Alcoholics Anonymous. The birth of our Society dates from his first day of permanent sobriety, June 10, 1935. To 1950, the year of his death, he carried the A.A. message to more than 5,000 alcoholic men and women, and to all these he gave his medical services without thought of charge.` },
     { text: `In this prodigy of service, he was well assisted by Sister Ignatia at St. Thomas Hospital in Akron, Ohio, one of the greatest friends our Fellowship will ever know.` },
     { text: `I was born in a small New England village of about seven thousand souls. The general moral standard was, as I recall it, far above the average. No beer or liquor was sold in the neighborhood, except at the State liquor agency where perhaps one might procure a pint if he could convince the agent that he really needed it. Without this proof the expectant purchaser would be forced to depart empty handed with none of what I later came to believe was the great panacea for all human ills. Men who had liquor shipped in from Boston or New York by express were looked upon with great distrust and disfavor by most of the good townspeople. The town was well supplied with churches and schools in which I pursued my early educational activities.` },
