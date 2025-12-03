@@ -101,7 +101,13 @@ Or by pot."` },
     { text: `We commenced to make many fast friends and a fellowship has grown up among us of which it is a wonderful thing to feel a part. The joy of living we really have, even under pressure and difficulty. I have seen hundreds of families set their feet in the path that really goes somewhere; have seen the most impossible domestic situations righted; feuds and bitterness of all sorts wiped out. I have seen men come out of asylums and resume a vital place in the lives of their families and communities. Business and professional men have regained their standing. There is scarcely any form of trouble and misery which has not been overcome among us. In one western city and its environs there are one thousand of us and our families. We meet frequently so that newcomers may find the fellowship they seek. At these informal gatherings one may often see from 50 to 200 persons. We are growing in numbers and power. (In 2006, A.A. is composed of over 106,000 groups.)` },
     { text: `An alcoholic in his cups is an unlovely creature. Our struggles with them are variously strenuous, comic, and tragic. One poor chap committed suicide in my home. He could not, or would not, see our way of life.` },
     { pageNum: "16" },
-    { text: `There is, however, a vast amount of fun about it all. I suppose some would be shocked at our seeming worldliness and levity. But just underneath there is deadly earnestness. Faith has to work twenty-four hours a day in and through us, or we perish.` },
+    {
+      segments: [
+        { text: `There is, however, a vast amount of fun about it all. I suppose some would be shocked at our seeming worldliness and levity. But just underneath there is deadly earnestness. Faith has to work ` },
+        { text: `twenty-four hours`, highlight: 'pink' },
+        { text: ` a day in and through us, or we perish.` }
+      ]
+    },
     { text: `Most of us feel we need look no further for Utopia. We have it with us right here and now. Each day my friend's simple talk in our kitchen multiplies itself in a widening circle of peace on earth and good will to men.` },
     { text: `Bill W., co-founder of A.A., died January 24, 1971.` }
   ]
