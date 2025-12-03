@@ -2,6 +2,7 @@ export const moreAboutAlcoholismContent = {
   highlights: [],
   tabs: [],
   paragraphs: [
+    { pageNum: "30" },
     {
       segments: [
         { text: `MOST OF US have been unwilling to admit we were ` },
@@ -22,6 +23,7 @@ export const moreAboutAlcoholismContent = {
         { text: ` that we are like other people, or presently may be, has to be smashed.` }
       ]
     },
+    { pageNum: "31" },
     { text: `We alcoholics are men and women who have lost the ability to control our drinking. We know that no real alcoholic ever recovers control. All of us felt at times that we were regaining control, but such intervals—usually brief—were inevitably followed by still less control, which led in time to pitiful and incomprehensible demoralization. We are convinced to a man that alcoholics of our type are in the grip of a progressive illness. Over any considerable period we get worse, never better.` },
     { text: `We are like men who have lost their legs; they never grow new ones. Neither does there appear to be any kind of treatment which will make alcoholics of our kind like other men. We have tried every imaginable remedy. In some instances there has been brief recovery, followed always by a still worse relapse. Physicians who are familiar with alcoholism agree there is no such thing as making a normal drinker out of an alcoholic. Science may one day accomplish this, but it hasn't done so yet.` },
     {
@@ -31,9 +33,11 @@ export const moreAboutAlcoholismContent = {
         { text: ` are not going to believe they are in that class. By every form of self-deception and experimentation, they will try to prove themselves exceptions to the rule, therefore nonalcoholic. If anyone who is showing inability to control his drinking can do the right-about-face and drink like a gentleman, our hats are off to him. Heaven knows, we have tried hard enough and long enough to drink like other people!` }
       ]
     },
+    { pageNum: "32" },
     { text: `Here are some of the methods we have tried: Drinking beer only, limiting the number of drinks, never drinking alone, never drinking in the morning, drinking only at home, never having it in the house, never drinking during business hours, drinking only at parties, switching from scotch to brandy, drinking only natural wines, agreeing to resign if ever drunk on the job, taking a trip, not taking a trip, swearing off forever (with and without a solemn oath), taking more physical exercise, reading inspirational books, going to health farms and sanitariums, accepting voluntary commitment to asylums—we could increase the list ad infinitum.` },
     { text: `We do not like to pronounce any individual as alcoholic, but you can quickly diagnose yourself. Step over to the nearest barroom and try some controlled drinking. Try to drink and stop abruptly. Try it more than once. It will not take long for you to decide, if you are honest with yourself about it. It may be worth a bad case of jitters if you get a full knowledge of your condition.` },
     { text: `Though there is no way of proving it, we believe that early in our drinking careers most of us could have stopped drinking. But the difficulty is that few alcoholics have enough desire to stop while there is yet time. We have heard of a few instances where people, who showed definite signs of alcoholism, were able to stop for a long period because of an overpowering desire to do so. Here is one.` },
+    { pageNum: "33" },
     {
       segments: [
         { text: `A man of thirty`, highlight: 'pink' },
@@ -51,18 +55,22 @@ export const moreAboutAlcoholismContent = {
         { text: ` of any kind, nor any lurking notion that someday we will be immune to alcohol.` }
       ]
     },
+    { pageNum: "34" },
     { text: `Young people may be encouraged by this man's experience to think that they can stop, as he did, on their own will power. We doubt if many of them can do it, because none will really want to stop, and hardly one of them, because of the peculiar mental twist already acquired, will find he can win out. Several of our crowd, men of thirty or less, had been drinking only a few years, but they found themselves as helpless as those who had been drinking twenty years.` },
     { text: `To be gravely affected, one does not necessarily have to drink a long time nor take the quantities some of us have. This is particularly true of women. Potential female alcoholics often turn into the real thing and are gone beyond recall in a few years. Certain drinkers, who would be greatly insulted if called alcoholics, are astonished at their inability to stop. We, who are familiar with the symptoms, see large numbers of potential alcoholics among young people everywhere. But try and get them to see it! (True when this book was first published. But a 2003 U.S./Canada membership survey showed about one-fifth of A.A.'s were thirty and under.)` },
     { text: `As we look back, we feel we had gone on drinking many years beyond the point where we could quit on our will power. If anyone questions whether he has entered this dangerous area, let him try leaving liquor alone for one year. If he is a real alcoholic and very far advanced, there is scant chance of success. In the early days of our drinking we occasionally remained sober for a year or more, becoming serious drinkers again later. Though you may be able to stop for a considerable period, you may yet be a potential alcoholic. We think few, to whom this book will appeal, can stay dry anything like a year. Some will be drunk the day after making their resolutions; most of them within a few weeks.` },
+    { pageNum: "35" },
     { text: `For those who are unable to drink moderately the question is how to stop altogether. We are assuming, of course, that the reader desires to stop. Whether such a person can quit upon a nonspiritual basis depends upon the extent to which he has already lost the power to choose whether he will drink or not. Many of us felt that we had plenty of character. There was a tremendous urge to cease forever. Yet we found it impossible. This is the baffling feature of alcoholism as we know it—this utter inability to leave it alone, no matter how great the necessity or the wish.` },
     { text: `How then shall we help our readers determine, to their own satisfaction, whether they are one of us? The experiment of quitting for a period of time will be helpful, but we think we can render an even greater service to alcoholic sufferers and perhaps to the medical fraternity. So we shall describe some of the mental states that precede a relapse into drinking, for obviously this is the crux of the problem.` },
     { text: `What sort of thinking dominates an alcoholic who repeats time after time the desperate experiment of the first drink? Friends who have reasoned with him after a spree which has brought him to the point of divorce or bankruptcy are mystified when he walks directly into a saloon. Why does he? Of what is he thinking?` },
+    { pageNum: "36" },
     {
       segments: [
         { text: `Our first example is a friend we shall call Jim.`, highlight: 'pink' },
         { text: ` This man has a charming wife and family. He inherited a lucrative automobile agency. He had a commendable World War record. He is a good salesman. Everybody likes him. He is an intelligent man, normal so far as we can see, except for a nervous disposition. He did no drinking until he was thirty-five. In a few years he became so violent when intoxicated that he had to be committed. On leaving the asylum he came into contact with us.` }
       ]
     },
+    { pageNum: "37" },
     { text: `We told him what we knew of alcoholism and the answer we had found. He made a beginning. His family was re-assembled, and he began to work as a salesman for the business he had lost through drinking. All went well for a time, but he failed to enlarge his spiritual life. To his consternation, he found himself drunk half a dozen times in rapid succession. On each of these occasions we worked with him, reviewing carefully what had happened. He agreed he was a real alcoholic and in a serious condition. He knew he faced another trip to the asylum if he kept on. Moreover, he would lose his family for whom he had a deep affection.` },
     { text: `Yet he got drunk again. We asked him to tell us exactly how it happened. This is his story: "I came to work on Tuesday morning. I remember I felt irritated that I had to be a salesman for a concern I once owned. I had a few words with the boss, but nothing serious. Then I decided to drive into the country and see one of my prospects for a car. On the way I felt hungry so I stopped at a roadside place where they have a bar. I had no intention of drinking. I just thought I would get a sandwich. I also had the notion that I might find a customer for a car at this place, which was familiar for I had been going to it for years. I had eaten there many times during the months I was sober. I sat down at a table and ordered a sandwich and a glass of milk. Still no thought of drinking. I ordered another sandwich and decided to have another glass of milk.` },
     {
@@ -79,6 +87,7 @@ export const moreAboutAlcoholismContent = {
         { text: `. Here was the threat of commitment, the loss of family and position, to say nothing of that intense mental and physical suffering which drinking always caused him. He had much knowledge about himself as an alcoholic. Yet all reasons for not drinking were easily pushed aside in favor of the foolish idea that he could take whiskey if only he mixed it with milk!` }
       ]
     },
+    { pageNum: "38" },
     {
       segments: [
         { text: `Whatever the precise definition of the word may be, we call this ` },
@@ -129,6 +138,7 @@ export const moreAboutAlcoholismContent = {
         { text: `. It's strong language—but isn't it true?` }
       ]
     },
+    { pageNum: "39" },
     { text: `Some of you are thinking: "Yes, what you tell us is true, but it doesn't fully apply. We admit we have some of these symptoms, but we have not gone to the extremes you fellows did, nor are we likely to, for we understand ourselves so well after what you have told us that such things cannot happen again. We have not lost everything in life through drinking and we certainly do not intend to. Thanks for the information."` },
     {
       segments: [
@@ -137,6 +147,7 @@ export const moreAboutAlcoholismContent = {
         { text: `. This is a point we wish to emphasize and re-emphasize, to smash home upon our alcoholic readers as it has been revealed to us out of bitter experience. Let us take another illustration.` }
       ]
     },
+    { pageNum: "40" },
     {
       segments: [
         { text: `Fred is partner in a well known accounting firm.`, highlight: 'pink' },
@@ -152,6 +163,7 @@ export const moreAboutAlcoholismContent = {
         { text: `Self-knowledge would fix it.`, highlight: 'pink' }
       ]
     },
+    { pageNum: "41" },
     {
       segments: [
         { text: `We heard no more of ` },
@@ -166,6 +178,7 @@ export const moreAboutAlcoholismContent = {
         { text: ` and keeping on guard.` }
       ]
     },
+    { pageNum: "42" },
     { text: `"In this frame of mind, I went about my business and for a time all was well. I had no trouble refusing drinks, and began to wonder if I had not been making too hard work of a simple matter. One day I went to Washington to present some accounting evidence to a government bureau. I had been out of town before during this particular dry spell, so there was nothing new about that. Physically, I felt fine. Neither did I have any pressing problems or worries. My business came off well, I was pleased and knew my partners would be too. It was the end of a perfect day, not a cloud on the horizon.` },
     {
       segments: [
@@ -203,6 +216,7 @@ export const moreAboutAlcoholismContent = {
         { text: ` and program of action which a hundred of them had followed successfully. Though I had been only a nominal churchman, their proposals were not, intellectually, hard to swallow. But the program of action, though entirely sensible, was pretty drastic. It meant I would have to throw several lifelong conceptions out of the window. That was not easy. But the moment I made up my mind to go through with the process, I had the curious feeling that my alcoholic condition was relieved, as in fact it proved to be.` }
       ]
     },
+    { pageNum: "43" },
     { text: `"Quite as important was the discovery that spiritual principles would solve all my problems. I have since been brought into a way of living infinitely more satisfying and, I hope, more useful than the life I lived before. My old manner of life was by no means a bad one, but I would not exchange its best moments for the worst I have now. I would not go back to it even if I could."` },
     {
       segments: [
