@@ -5,14 +5,10 @@ export const thereIsSolutionContent = {
       segments: [
         { text: `WE, OF ALCOHOLICS ANONYMOUS, know thousands of men and women who were once just as hopeless as Bill. Nearly all have ` },
         { text: `Recovered`, highlight: 'pink' },
-        { text: `. They have solved the drink problem apply/text> }
+        { text: `. They have solved the drink problem.` }
       ]
     },
-    {
-      segments: [
-        { text: `We are average Americans. All sections of this country and many of its occupations are represented, as well as many political, economic, social, and religious backgrounds. We are people who normally would not mix. But there exists among us a fellowship, a friendliness, and an understanding which is indescribably wonderful. We are like the passengers of a great liner the moment after rescue from shipwreck when camaraderie, joyousness and democracy pervade the vessel from steerage to Captain's table. Unlike the feelings of the ship's passengers, however, our joy in escape from disaster does not subside as we go our individual ways. The feeling of having shared in a common peril is one element in the powerful cement which binds us. But that in itself would never have held us together as we are now joined apply/text> }
-      ]
-    },
+    { text: `We are average Americans. All sections of this country and many of its occupations are represented, as well as many political, economic, social, and religious backgrounds. We are people who normally would not mix. But there exists among us a fellowship, a friendliness, and an understanding which is indescribably wonderful. We are like the passengers of a great liner the moment after rescue from shipwreck when camaraderie, joyousness and democracy pervade the vessel from steerage to Captain's table. Unlike the feelings of the ship's passengers, however, our joy in escape from disaster does not subside as we go our individual ways. The feeling of having shared in a common peril is one element in the powerful cement which binds us. But that in itself would never have held us together as we are now joined.` },
     {
       segments: [
         { text: `The tremendous fact for every one of us is that we have discovered a ` },
