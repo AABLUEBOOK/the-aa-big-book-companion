@@ -183,16 +183,54 @@ export const moreAboutAlcoholismContent = {
         { text: `keeping on guard.`, highlight: 'pink' }
       ]
     },
+    { text: `"In this frame of mind, I went about my business and for a time all was well. I had no trouble refusing drinks, and began to wonder if I had not been making too hard work of a simple matter. One day I went to Washington to present some accounting evidence to a government bureau. I had been out of town before during this particular dry spell, so there was nothing new about that. Physically, I felt fine. Neither did I have any pressing problems or worries. My business came off well, I was pleased and knew my partners would be too. It was the end of a perfect day, not a cloud on the horizon.` },
     { pageNum: "42" },
     { text: `"In this frame of mind, I went about my business and for a time all was well. I had no trouble refusing drinks, and began to wonder if I had not been making too hard work of a simple matter. One day I went to Washington to present some accounting evidence to a government bureau. I had been out of town before during this particular dry spell, so there was nothing new about that. Physically, I felt fine. Neither did I have any pressing problems or worries. My business came off well, I was pleased and knew my partners would be too. It was the end of a perfect day, not a cloud on the horizon.` },
     { text: `"I went to my hotel and leisurely dressed for dinner. As I crossed the threshold of the dining room, the thought came to mind that it would be nice to have a couple of cocktails with dinner. That was all. Nothing more. I ordered a cocktail and my meal. Then I ordered another cocktail. After dinner I decided to take a walk. When I returned to the hotel it struck me a highball would be fine before going to bed, so I stepped into the bar and had one. I remember having several more that night and plenty next morning. I have a shadowy recollection of being in an airplane bound for New York, and of finding a friendly taxicab driver at the landing field instead of my wife. The driver escorted me about for several days. I know little of where I went or what I said and did. Then came the hospital with unbearable mental and physical suffering.` },
-    { text: `"As soon as I regained my ability to think, I went carefully over that evening in Washington. Not only had I been off guard, I had made no fight whatever against the first drink. This time I had not thought of the consequences at all. I had commenced to drink as carelessly as though the cocktails were ginger ale. I now remembered what my alcoholic friends had told me, how they prophesied that if I had an alcoholic mind, the time and place would come—I would drink again. They had said that though I did raise a defense, it would one day give way before some trivial reason for having a drink. Well, just that did happen and more, for what I had learned of alcoholism did not occur to me at all. I knew from that moment that I had an alcoholic mind. I saw that will power and self-knowledge would not help in those strange mental blank spots. I had never been able to understand people who said that a problem had them hopelessly defeated. I knew then. It was a crushing blow.` },
-    { text: `"Two of the members of Alcoholics Anonymous came to see me. They grinned, which I didn't like so much, and then asked me if I thought myself alcoholic and if I were really licked this time. I had to concede both propositions. They piled on me heaps of evidence to the effect that an alcoholic mentality, such as I had exhibited in Washington, was a hopeless condition. They cited cases out of their own experience by the dozen. This process snuffed out the last flicker of conviction that I could do the job myself.` },
-    { text: `"Then they outlined the spiritual answer and program of action which a hundred of them had followed successfully. Though I had been only a nominal churchman, their proposals were not, intellectually, hard to swallow. But the program of action, though entirely sensible, was pretty drastic. It meant I would have to throw several lifelong conceptions out of the window. That was not easy. But the moment I made up my mind to go through with the process, I had the curious feeling that my alcoholic condition was relieved, as in fact it proved to be.` },
+    {
+      segments: [
+        { text: `"As soon as I regained my ability to think, I went carefully over that evening in Washington. ` },
+        { text: `Not only had I been off guard, I had made no fight whatever against the first drink. This time I had not thought of the consequences at all. I had commenced to drink as carelessly as though the cocktails were ginger ale.`, highlight: 'pink' },
+        { text: ` I now remembered what my alcoholic friends had told me, how they prophesied that if I had an ` },
+        { text: `alcoholic mind,`, highlight: 'pink' },
+        { text: ` the time and place would come—I would drink again. They had said that though I did raise a defense, it would one day give way before some trivial reason for having a drink. Well, just that did happen and more, for what I had learned of alcoholism did not occur to me at all. I knew from that moment that I had an alcoholic mind. I saw that ` },
+        { text: `will power`, highlight: 'pink' },
+        { text: ` and ` },
+        { text: `self-knowledge`, highlight: 'pink' },
+        { text: ` would not help in those ` },
+        { text: `strange mental blank spots.`, highlight: 'pink' },
+        { text: ` I had never been able to understand people who said that a problem had them hopelessly defeated. I knew then. It was a crushing blow.` }
+      ]
+    },
+    {
+      segments: [
+        { text: `"Two of the members of Alcoholics Anonymous came to see me. They grinned, which I didn't like so much, and then asked me if I thought myself alcoholic and if I were really licked this time. I had to concede both propositions. They piled on me heaps of evidence to the effect that an ` },
+        { text: `alcoholic mentality,`, highlight: 'pink' },
+        { text: ` such as I had exhibited in Washington, was a hopeless condition. They cited cases out of their own experience by the dozen. This process snuffed out the last flicker of conviction that I could do the job myself.` }
+      ]
+    },
+    {
+      segments: [
+        { text: `"Then they outlined the ` },
+        { text: `spiritual answer`, highlight: 'pink' },
+        { text: ` and program of action which a hundred of them had followed successfully. Though I had been only a nominal churchman, their proposals were not, intellectually, hard to swallow. But the program of action, though entirely sensible, was pretty drastic. It meant I would have to throw several lifelong conceptions out of the window. That was not easy. But the moment I made up my mind to go through with the process, I had the curious feeling that my alcoholic condition was relieved, as in fact it proved to be.` }
+      ]
+    },
     { pageNum: "43" },
     { text: `"Quite as important was the discovery that spiritual principles would solve all my problems. I have since been brought into a way of living infinitely more satisfying and, I hope, more useful than the life I lived before. My old manner of life was by no means a bad one, but I would not exchange its best moments for the worst I have now. I would not go back to it even if I could."` },
-    { text: `Fred's story speaks for itself. We hope it strikes home to thousands like him. He had felt only the first nip of the wringer. Most alcoholics have to be pretty badly mangled before they really commence to solve their problems.` },
+    {
+      segments: [
+        { text: `` },
+        { text: `Fred's`, highlight: 'pink' },
+        { text: ` story speaks for itself. We hope it strikes home to thousands like him. He had felt only the first nip of the wringer. Most alcoholics have to be pretty badly mangled before they really commence to solve their problems.` }
+      ]
+    },
     { text: `Many doctors and psychiatrists agree with our conclusions. One of these men, staff member of a world-renowned hospital, recently made this statement to some of us: "What you say about the general hopelessness of the average alcoholic's plight is, in my opinion, correct. As to two of you men, whose stories I have heard, there is no doubt in my mind that you were 100% hopeless, apart from divine help. Had you offered yourselves as patients at this hospital, I would not have taken you, if I had been able to avoid it. People like you are too heartbreaking. Though not a religious person, I have profound respect for the spiritual approach in such cases as yours. For most cases, there is virtually no other solution."` },
-    { text: `Once more: The alcoholic at certain times has no effective mental defense against the first drink. Except in a few rare cases, neither he nor any other human being can provide such a defense. His defense must come from a Higher Power.` }
+    {
+      segments: [
+        { text: `` },
+        { text: `Once more: The alcoholic at certain times has no effective mental defense against the first drink. Except in a few rare cases, neither he nor any other human being can provide such a defense. His defense must come from a Higher Power.`, highlight: 'pink' }
+      ]
+    }
   ]
 };
