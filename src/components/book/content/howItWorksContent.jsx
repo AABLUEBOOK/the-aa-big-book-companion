@@ -13,19 +13,79 @@ export const howItWorksContent = {
     { text: `Remember that we deal with alcohol—cunning, baffling, powerful! Without help it is too much for us. But there is One who has all power—that One is God. May you find Him now!` },
     { text: `Half measures availed us nothing. We stood at the turning point. We asked His protection and care with complete abandon.` },
     { text: `Here are the steps we took, which are suggested as a program of recovery:` },
-    { text: `1. We admitted we were powerless over alcohol—that our lives had become unmanageable.` },
-    { text: `2. Came to believe that a Power greater than ourselves could restore us to sanity.` },
-    { text: `3. Made a decision to turn our will and our lives over to the care of God as we understood Him.` },
-    { text: `4. Made a searching and fearless moral inventory of ourselves.` },
-    { text: `5. Admitted to God, to ourselves, and to another human being the exact nature of our wrongs.` },
-    { text: `6. Were entirely ready to have God remove all these defects of character.` },
-    { text: `7. Humbly asked Him to remove our shortcomings.` },
-    { text: `8. Made a list of all persons we had harmed, and became willing to make amends to them all.` },
-    { text: `9. Made direct amends to such people wherever possible, except when to do so would injure them or others.` },
-    { text: `10. Continued to take personal inventory and when we were wrong promptly admitted it.` },
-    { text: `11. Sought through prayer and meditation to improve our conscious contact with God as we understood Him, praying only for knowledge of His will for us and the power to carry that out.` },
+    {
+      segments: [
+        { text: `1.`, highlight: 'orange' },
+        { text: ` We admitted we were powerless over alcohol—that our lives had become unmanageable.` }
+      ]
+    },
+    {
+      segments: [
+        { text: `2.`, highlight: 'orange' },
+        { text: ` Came to believe that a Power greater than ourselves could restore us to sanity.` }
+      ]
+    },
+    {
+      segments: [
+        { text: `3.`, highlight: 'orange' },
+        { text: ` Made a decision to turn our will and our lives over to the care of God as we understood Him.` }
+      ]
+    },
+    {
+      segments: [
+        { text: `4.`, highlight: 'orange' },
+        { text: ` Made a searching and fearless moral inventory of ourselves.` }
+      ]
+    },
+    {
+      segments: [
+        { text: `5.`, highlight: 'orange' },
+        { text: ` Admitted to God, to ourselves, and to another human being the exact nature of our wrongs.` }
+      ]
+    },
+    {
+      segments: [
+        { text: `6.`, highlight: 'orange' },
+        { text: ` Were entirely ready to have God remove all these defects of character.` }
+      ]
+    },
+    {
+      segments: [
+        { text: `7.`, highlight: 'orange' },
+        { text: ` Humbly asked Him to remove our shortcomings.` }
+      ]
+    },
+    {
+      segments: [
+        { text: `8.`, highlight: 'orange' },
+        { text: ` Made a list of all persons we had harmed, and became willing to make amends to them all.` }
+      ]
+    },
+    {
+      segments: [
+        { text: `9.`, highlight: 'orange' },
+        { text: ` Made direct amends to such people wherever possible, except when to do so would injure them or others.` }
+      ]
+    },
+    {
+      segments: [
+        { text: `10.`, highlight: 'orange' },
+        { text: ` Continued to take personal inventory and when we were wrong promptly admitted it.` }
+      ]
+    },
+    {
+      segments: [
+        { text: `11.`, highlight: 'orange' },
+        { text: ` Sought through prayer and meditation to improve our conscious contact with God as we understood Him, praying only for knowledge of His will for us and the power to carry that out.` }
+      ]
+    },
     { pageNum: "60" },
-    { text: `12. Having had a spiritual awakening as the result of these steps, we tried to carry this message to alcoholics, and to practice these principles in all our affairs.` },
+    {
+      segments: [
+        { text: `12.`, highlight: 'orange' },
+        { text: ` Having had a spiritual awakening as the result of these steps, we tried to carry this message to alcoholics, and to practice these principles in all our affairs.` }
+      ]
+    },
     { text: `Many of us exclaimed, "What an order! I can't go through with it." Do not be discouraged. No one among us has been able to maintain anything like perfect adherence to these principles. We are not saints. The point is, that we are willing to grow along spiritual lines. The principles we have set down are guides to progress. We claim spiritual progress rather than spiritual perfection.` },
     { text: `Our description of the alcoholic, the chapter to the agnostic, and our personal adventures before and after make clear three pertinent ideas:` },
     {
