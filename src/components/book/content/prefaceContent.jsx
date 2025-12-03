@@ -36,7 +36,9 @@ export const prefaceContent = {
     },
     {
       segments: [
-        { text: `If you have a drinking problem, we hope that you may pause in reading one of the forty-two personal stories and think: "` },
+        { text: `If you have a drinking problem, we hope that you may pause in reading one of the ` },
+        { text: `forty-two personal stories`, highlight: 'pink' },
+        { text: ` and think: "` },
         { text: `Yes, that happened to me";`, highlight: 'pink' },
         { text: ` or, more important, "` },
         { text: `Yes, I've felt like that";`, highlight: 'pink' },
