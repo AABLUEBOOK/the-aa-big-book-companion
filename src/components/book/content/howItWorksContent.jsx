@@ -306,9 +306,7 @@ export const howItWorksContent = {
       ]
     },
     {
-      segments: [
-        { text: `If we have been thorough about our personal inventory, we have written down a lot. We have listed and analyzed our resentments. We have begun to comprehend their futility and their fatality. We have commenced to see their terrible destructiveness. We have begun to learn tolerance, patience and good will toward all men, even our enemies, for we look on them as sick people. We have listed the people we have hurt by our conduct, and are willing to straighten out the past if we can apply/text> }
-      ]
+      text: `If we have been thorough about our personal inventory, we have written down a lot. We have listed and analyzed our resentments. We have begun to comprehend their futility and their fatality. We have commenced to see their terrible destructiveness. We have begun to learn tolerance, patience and good will toward all men, even our enemies, for we look on them as sick people. We have listed the people we have hurt by our conduct, and are willing to straighten out the past if we can.`
     },
     { pageNum: "71" },
     {
