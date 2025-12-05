@@ -17,7 +17,7 @@ export const howItWorksContent = {
     { text: `At some of these we balked. We thought we could find an easier, softer way. But we could not. With all the earnestness at our command, we beg of you to be fearless and thorough from the very start. Some of us have tried to hold on to our old ideas and the result was nil until we let go absolutely.` },
     { pageNum: "59" },
     { text: `Remember that we deal with alcohol—cunning, baffling, powerful! Without help it is too much for us. But there is One who has all power—that One is God. May you find Him now!` },
-    { text: `Half measures availed us nothing. We stood at the turning point. We asked His protection and care with complete abandon.` },
+    { text: `Half measures availed us nothing. We stood at the turning point. We asked His protection and care with complete abandon.`, highlight: 'green' },
     { text: `Here are the steps we took, which are suggested as a program of recovery:` },
     {
       segments: [
@@ -171,7 +171,9 @@ export const howItWorksContent = {
     },
     {
       segments: [
-        { text: `We were now at Step Three. Many of us said to our Maker, as we understood Him: "God, I offer myself to Thee—to build with me and to do with me as Thou wilt. Relieve me of the bondage of self, that I may better do Thy will. Take away my difficulties, that victory over them may bear witness to those I would help of Thy Power, Thy Love, and Thy Way of life. May I do Thy will always!" We thought well before taking this step making sure we were ready; that we could at last abandon ourselves utterly to Him.` }
+        { text: `We were now at Step Three. Many of us said to our Maker, as we understood Him: ` },
+        { text: `"God, I offer myself to Thee—to build with me and to do with me as Thou wilt. Relieve me of the bondage of self, that I may better do Thy will. Take away my difficulties, that victory over them may bear witness to those I would help of Thy Power, Thy Love, and Thy Way of life. May I do Thy will always!"`, highlight: 'green' },
+        { text: ` We thought well before taking this step making sure we were ready; that we could at last abandon ourselves utterly to Him.` }
       ]
     },
     {
@@ -275,7 +277,8 @@ export const howItWorksContent = {
       segments: [
         { text: `` },
         { text: `This was our course:`, highlight: 'pink' },
-        { text: ` We realized that the people who wronged us were perhaps spiritually sick. Though we did not like their symptoms and the way these disturbed us, they, like ourselves, were sick too. We asked God to help us show them the same tolerance, pity, and patience that we would cheerfully grant a sick friend. When a person offended we said to ourselves, "This is a sick man. How can I be helpful to him? God save me from being angry. Thy will be done."` }
+        { text: ` We realized that the people who wronged us were perhaps spiritually sick. Though we did not like their symptoms and the way these disturbed us, they, like ourselves, were sick too. ` },
+        { text: `We asked God to help us show them the same tolerance, pity, and patience that we would cheerfully grant a sick friend. When a person offended we said to ourselves, "This is a sick man. How can I be helpful to him? God save me from being angry. Thy will be done."`, highlight: 'green' }
       ]
     },
     {
@@ -320,7 +323,9 @@ export const howItWorksContent = {
         { text: `faith means courage.`, highlight: 'pink' },
         { text: ` All men of faith have courage. They trust their God. We never apologize for God. Instead we let Him demonstrate, through us, what He can do. We ask Him to remove ` },
         { text: `our fear`, highlight: 'pink' },
-        { text: ` and direct our attention to what He would have us be. ` },
+        { text: ` and ` },
+        { text: `direct our attention to what He would have us be.`, highlight: 'green' },
+        { text: ` ` },
         { text: `At once, we commence to outgrow fear.`, highlight: 'blue' }
       ]
     },
@@ -357,7 +362,9 @@ export const howItWorksContent = {
       segments: [
         { text: `` },
         { text: `Whatever our ideal turns out to be, we must be willing to grow toward it. We must be willing to make amends where we have done harm, provided that we do not bring about still more harm in so doing. In other words, we treat sex as we would any other problem.`, highlight: 'pink' },
-        { text: ` In meditation, we ask God what we should do about each specific matter. The right answer will come, if we want it.` }
+        { text: ` ` },
+        { text: `In meditation, we ask God what we should do about each specific matter.`, highlight: 'green' },
+        { text: ` The right answer will come, if we want it.` }
       ]
     },
     {
