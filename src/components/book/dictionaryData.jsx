@@ -2438,6 +2438,7 @@ export const TERM_DEFINITIONS = {
   "whoop": "Hoot / nothing at all / not to give a damn",
   "whoopee": "Loud and festive occasion / merrymaking / celebration / merriment",
   "will": "The mental powers by which one deliberately chooses or decides upon a course of action",
+  "will and our lives": "our thoughts and our actions",
   "willing": "Agreeable / ready / consenting / of or resulting from the process of choosing / acting or ready to act gladly / done, given, accepted, or offered freely / ready to accept or tolerate",
   "willingly": "Agreeably / readily",
   "willpower": "Personal determination / self-control / the ability to carry out one's decisions, wishes, or plans / strength of mind",
