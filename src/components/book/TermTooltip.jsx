@@ -55,7 +55,8 @@ export function wrapTermsInText(text) {
   replacements.sort((a, b) => b.start - a.start);
   
   for (const rep of replacements) {
-    result = result.slice(0, rep.start) + `{{TERM:${rep.term}:${rep.definition}}}` + result.slice(rep.end);
+    const escapedDef = rep.definition.replace(/:/g, '|||COLON|||');
+    result = result.slice(0, rep.start) + `{{TERM:${rep.term}:${escapedDef}}}` + result.slice(rep.end);
   }
   
   textCache.set(text, result);
@@ -170,7 +171,8 @@ export function renderTextWithTerms(text) {
     // Match TERM:term:definition - term is first segment, definition is everything after second colon
     const match = part.match(/\{\{TERM:([^:]+):(.+)\}\}$/);
     if (match) {
-      return <TermTooltip key={idx} term={match[1]} definition={match[2]} />;
+      const definition = match[2].replace(/\|\|\|COLON\|\|\|/g, ':');
+      return <TermTooltip key={idx} term={match[1]} definition={definition} />;
     }
     return <span key={idx}>{part}</span>;
   });
