@@ -5,7 +5,9 @@ export const intoActionContent = {
       segments: [
         { text: `HAVING made our personal inventory, what shall we do about it? We have been trying to get a new attitude, a new relationship with our Creator, and to discover the obstacles in our path. We have admitted certain defects; we have ascertained in a rough way what the trouble is; we have put our finger on the weak items in our personal inventory. Now these are about to be cast out. ` },
         { text: `This requires action on our part, which, when completed, will mean that we have admitted to God, to ourselves, and to another human being, the exact nature of our defects.`, highlight: 'pink' },
-        { text: ` This brings us to the Fifth Step in the program of recovery mentioned in the preceding chapter.` }
+        { text: ` This brings us to the ` },
+        { text: `Fifth Step`, highlight: 'orange' },
+        { text: ` in the program of recovery mentioned in the preceding chapter.` }
       ]
     },
     { pageNum: "73" },
@@ -63,7 +65,9 @@ export const intoActionContent = {
     {
       segments: [
         { text: `` },
-        { text: `If we can answer to our satisfaction, we then look at Step Six. We have emphasized willingness as being indispensable.`, highlight: 'blue' },
+        { text: `If we can answer to our satisfaction, we then look at ` },
+        { text: `Step Six`, highlight: 'orange' },
+        { text: `. We have emphasized willingness as being indispensable.`, highlight: 'blue' },
         { text: ` Are we now ready to let God remove from us all the things which we have admitted are objectionable? Can He now take them all—every one? ` },
         { text: `If we still cling to something we will not let go, we ask God to help us be willing.`, highlight: 'green' }
       ]
@@ -75,14 +79,20 @@ export const intoActionContent = {
         { text: ` ` },
         { text: `"My Creator, I am now willing that you should have all of me, good and bad. I pray that you now remove from me every single defect of character which stands in the way of my usefulness to you and my fellows. Grant me strength, as I go out from here, to do your bidding. Amen."`, highlight: 'green' },
         { text: ` ` },
-        { text: `We have then completed Step Seven.`, highlight: 'pink' }
+        { text: `We have then completed ` },
+        { text: `Step Seven`, highlight: 'orange' },
+        { text: `.` }
       ]
     },
     { pageNum: "77" },
     {
       segments: [
         { text: `` },
-        { text: `Now we need more action, without which we find that "Faith without works is dead." Let's look at Steps Eight and Nine. We have a list of all persons we have harmed and to whom we are willing to make amends. We made it when we took inventory.`, highlight: 'pink' },
+        { text: `Now we need more action, without which we find that "Faith without works is dead." Let's look at ` },
+        { text: `Steps Eight`, highlight: 'orange' },
+        { text: ` and ` },
+        { text: `Nine`, highlight: 'orange' },
+        { text: `. We have a list of all persons we have harmed and to whom we are willing to make amends. We made it when we took inventory.`, highlight: 'pink' },
         { text: ` We subjected ourselves to a drastic self-appraisal. ` },
         { text: `Now we go out to our fellows and repair the damage done in the past.`, highlight: 'pink' },
         { text: ` We attempt to sweep away the debris which has accumulated out of our effort to live on self-will and run the show ourselves. ` },
@@ -211,7 +221,9 @@ export const intoActionContent = {
     {
       segments: [
         { text: `` },
-        { text: `This thought brings us to Step Ten, which suggests we continue to take personal inventory and continue to set right any new mistakes as we go along. We vigorously commenced this way of living as we cleaned up the past. We have entered the world of the Spirit. Our next function is to grow in understanding and effectiveness.`, highlight: 'pink' },
+        { text: `This thought brings us to ` },
+        { text: `Step Ten`, highlight: 'orange' },
+        { text: `, which suggests we continue to take personal inventory and continue to set right any new mistakes as we go along. We vigorously commenced this way of living as we cleaned up the past. We have entered the world of the Spirit. Our next function is to grow in understanding and effectiveness.`, highlight: 'pink' },
         { text: ` This is not an overnight matter. It should continue for our lifetime. ` },
         { text: `Continue to watch for selfishness, dishonesty, resentment, and fear. When these crop up, we ask God at once to remove them. We discuss them with someone immediately and make amends quickly if we have harmed anyone. Then we resolutely turn our thoughts to someone we can help.`, highlight: 'green' },
         { text: ` Love and tolerance of others is our code.` }
@@ -229,7 +241,8 @@ export const intoActionContent = {
     { text: `Much has already been said about receiving strength, inspiration, and direction from Him who has all knowledge and power. If we have carefully followed directions, we have begun to sense the flow of His Spirit into us. To some extent we have become God-conscious. We have begun to develop this vital sixth sense. But we must go further and that means more action.`, highlight: 'blue' },
     {
       segments: [
-        { text: `Step Eleven suggests prayer and meditation. We shouldn't be shy on this matter of prayer. Better men than we are using it constantly. ` },
+        { text: `Step Eleven`, highlight: 'orange' },
+        { text: ` suggests prayer and meditation. We shouldn't be shy on this matter of prayer. Better men than we are using it constantly. ` },
         { text: `It works, if we have the proper attitude and work at it.`, highlight: 'blue' },
         { text: ` It would be easy to be vague about this matter. ` },
         { text: `Yet, we believe we can make some definite and valuable suggestions.`, highlight: 'pink' }
@@ -276,7 +289,9 @@ export const intoActionContent = {
       segments: [
         { text: `` },
         { text: `We alcoholics are undisciplined. So we let God discipline us in the simple way we have just outlined.`, highlight: 'pink' },
-        { text: ` But this is not all. There is action and more action. "Faith without works is dead." The next chapter is entirely devoted to Step Twelve.` }
+        { text: ` But this is not all. There is action and more action. "Faith without works is dead." The next chapter is entirely devoted to ` },
+        { text: `Step Twelve`, highlight: 'orange' },
+        { text: `.` }
       ]
     }
   ]

@@ -114,7 +114,9 @@ export const howItWorksContent = {
     },
     {
       segments: [
-        { text: `Being convinced, we were at Step Three, which is that we ` },
+        { text: `Being convinced, we were at ` },
+        { text: `Step Three`, highlight: 'orange' },
+        { text: `, which is that we ` },
         { text: `decided`, highlight: 'pink' },
         { text: ` to turn ` },
         { text: `our will`, highlight: 'pink' },
@@ -171,7 +173,9 @@ export const howItWorksContent = {
     },
     {
       segments: [
-        { text: `We were now at Step Three. Many of us said to our Maker, as we understood Him: ` },
+        { text: `We were now at ` },
+        { text: `Step Three`, highlight: 'orange' },
+        { text: `. Many of us said to our Maker, as we understood Him: ` },
         { text: `"God, I offer myself to Thee—to build with me and to do with me as Thou wilt. Relieve me of the bondage of self, that I may better do Thy will. Take away my difficulties, that victory over them may bear witness to those I would help of Thy Power, Thy Love, and Thy Way of life. May I do Thy will always!"`, highlight: 'green' },
         { text: ` We thought well before taking this step making sure we were ready; that we could at last abandon ourselves utterly to Him.` }
       ]
@@ -196,7 +200,9 @@ export const howItWorksContent = {
       segments: [
         { text: `` },
         { text: `Therefore, we started upon a personal inventory.`, highlight: 'pink' },
-        { text: ` This was Step Four. A business which takes no regular inventory usually goes broke. Taking a commercial inventory is a fact-finding and a fact-facing process. It is an effort to discover the truth about the stock-in-trade. One object is to disclose damaged or unsalable goods, to get rid of them promptly and without regret. If the owner of the business is to be successful, he cannot fool himself about values.` }
+        { text: ` This was ` },
+        { text: `Step Four`, highlight: 'orange' },
+        { text: `. A business which takes no regular inventory usually goes broke. Taking a commercial inventory is a fact-finding and a fact-facing process. It is an effort to discover the truth about the stock-in-trade. One object is to disclose damaged or unsalable goods, to get rid of them promptly and without regret. If the owner of the business is to be successful, he cannot fool himself about values.` }
       ]
     },
     {
