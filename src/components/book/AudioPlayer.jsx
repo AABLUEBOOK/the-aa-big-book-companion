@@ -143,9 +143,39 @@ const AudioPlayer = memo(function AudioPlayer({ content }) {
   };
 
   const handleMuteToggle = () => {
-    setIsMuted(!isMuted);
-    if (utteranceRef.current) {
-      utteranceRef.current.volume = isMuted ? 1 : 0;
+    const newMuted = !isMuted;
+    setIsMuted(newMuted);
+    
+    // Speech Synthesis doesn't support changing volume on active utterance
+    // We need to restart with new volume setting
+    if (isPlaying && synthRef.current) {
+      synthRef.current.cancel();
+      const texts = extractText();
+      
+      utteranceRef.current = new SpeechSynthesisUtterance(texts[currentIndex]);
+      utteranceRef.current.rate = speed;
+      utteranceRef.current.volume = newMuted ? 0 : 1;
+      
+      const voice = voices.find(v => v.name === selectedVoice);
+      if (voice) {
+        utteranceRef.current.voice = voice;
+      }
+      
+      utteranceRef.current.onend = () => {
+        if (currentIndex < texts.length - 1) {
+          setCurrentIndex(currentIndex + 1);
+          speak(texts[currentIndex + 1], currentIndex + 1);
+        } else {
+          setIsPlaying(false);
+          setCurrentIndex(0);
+        }
+      };
+      
+      utteranceRef.current.onerror = () => {
+        setIsPlaying(false);
+      };
+      
+      synthRef.current.speak(utteranceRef.current);
     }
   };
 
