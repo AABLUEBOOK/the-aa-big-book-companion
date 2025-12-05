@@ -3,17 +3,13 @@ export const thereIsSolutionContent = {
     { pageNum: "17" },
     {
       segments: [
-        { text: `WE, OF ALCOHOLICS ANONYMOUS, know thousands of men and women who were once just as hopeless as Bill. Nearly all have ` },
-        { text: `Recovered`, highlight: 'pink' },
-        { text: `. They have solved the drink problem.` }
+        { text: `WE, OF ALCOHOLICS ANONYMOUS, know thousands of men and women who were once just as hopeless as Bill. Nearly all have recovered. They have solved the drink problem.`, highlight: 'blue' }
       ]
     },
     { text: `We are average Americans. All sections of this country and many of its occupations are represented, as well as many political, economic, social, and religious backgrounds. We are people who normally would not mix. But there exists among us a fellowship, a friendliness, and an understanding which is indescribably wonderful. We are like the passengers of a great liner the moment after rescue from shipwreck when camaraderie, joyousness and democracy pervade the vessel from steerage to Captain's table. Unlike the feelings of the ship's passengers, however, our joy in escape from disaster does not subside as we go our individual ways. The feeling of having shared in a common peril is one element in the powerful cement which binds us. But that in itself would never have held us together as we are now joined.` },
     {
       segments: [
-        { text: `The tremendous fact for every one of us is that we have discovered a ` },
-        { text: `common solution.`, highlight: 'pink' },
-        { text: ` We have a way out on which we can absolutely agree, and upon which we can join in brotherly and harmonious action. This is the great news this book carries to those who suffer from alcoholism.` }
+        { text: `The tremendous fact for every one of us is that we have discovered a common solution. We have a way out on which we can absolutely agree, and upon which we can join in brotherly and harmonious action. This is the great news this book carries to those who suffer from alcoholism.`, highlight: 'blue' }
       ]
     },
     {
@@ -124,16 +120,13 @@ export const thereIsSolutionContent = {
       segments: [
         { text: `` },
         { text: `There is a solution.`, highlight: 'pink' },
-        { text: ` Almost none of us liked the self-searching, the leveling of our pride, the confession of shortcomings which the process requires for its successful consummation. But we saw that it really worked in others, and we had come to believe in the hopelessness and futility of life as we had been living it. When, therefore, we were approached by those in whom the problem had been solved, there was nothing left for us but to pick up the simple kit of spiritual tools laid at our feet. We have found much of heaven and we have been rocketed into a ` },
-        { text: `fourth dimension`, highlight: 'pink' },
-        { text: ` of existence of which we had not even dreamed.` }
+        { text: ` Almost none of us liked the self-searching, the leveling of our pride, the confession of shortcomings which the process requires for its successful consummation. But we saw that it really worked in others, and we had come to believe in the hopelessness and futility of life as we had been living it. When, therefore, we were approached by those in whom the problem had been solved, there was nothing left for us but to pick up the simple kit of spiritual tools laid at our feet. ` },
+        { text: `We have found much of heaven and we have been rocketed into a fourth dimension of existence of which we had not even dreamed.`, highlight: 'blue' }
       ]
     },
     {
       segments: [
-        { text: `The great fact is just this, and nothing less: That we have had ` },
-        { text: `deep and effective spiritual experiences`, highlight: 'pink' },
-        { text: `* which have revolutionized our whole attitude toward life, toward our fellows and toward God's universe. The central fact of our lives today is the absolute certainty that our Creator has entered into our hearts and lives in a way which is indeed miraculous. He has commenced to accomplish those things for us which we could never do by ourselves.` }
+        { text: `The great fact is just this, and nothing less: That we have had deep and effective spiritual experiences* which have revolutionized our whole attitude toward life, toward our fellows and toward God's universe. The central fact of our lives today is the absolute certainty that our Creator has entered into our hearts and lives in a way which is indeed miraculous. He has commenced to accomplish those things for us which we could never do by ourselves.`, highlight: 'blue' }
       ]
     },
     {

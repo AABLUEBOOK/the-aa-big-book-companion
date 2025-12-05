@@ -26,8 +26,18 @@ export const weAgnosticsContent = {
     },
     { text: `We know how he feels. We have shared his honest doubt and prejudice. Some of us have been violently anti-religious. To others, the word "God" brought up a particular idea of Him with which someone had tried to impress them during childhood. Perhaps we rejected this particular conception because it seemed inadequate. With that rejection we imagined we had abandoned the God idea entirely. We were bothered with the thought that faith and dependence upon a Power beyond ourselves was somewhat weak, even cowardly. We looked upon this world of warring individuals, warring theological systems, and inexplicable calamity, with deep skepticism. We looked askance at many individuals who claimed to be godly. How could a Supreme Being have anything to do with it all? And who could comprehend a Supreme Being anyhow? Yet, in other moments, we found ourselves thinking, when enchanted by a starlit night, "Who, then, made all this?" There was a feeling of awe and wonder, but it was fleeting and soon lost.` },
     { pageNum: "46" },
-    { text: `Yes, we of agnostic temperament have had these thoughts and experiences. Let us make haste to reassure you. We found that as soon as we were able to lay aside prejudice and express even a willingness to believe in a Power greater than ourselves, we commenced to get results, even though it was impossible for any of us to fully define or comprehend that Power, which is God.` },
-    { text: `Much to our relief, we discovered we did not need to consider another's conception of God. Our own conception, however inadequate, was sufficient to make the approach and to effect a contact with Him. As soon as we admitted the possible existence of a Creative Intelligence, a Spirit of the Universe underlying the totality of things, we began to be possessed of a new sense of power and direction, provided we took other simple steps. We found that God does not make too hard terms with those who seek Him. To us, the Realm of Spirit is broad, roomy, all inclusive; never exclusive or forbidding to those who earnestly seek. It is open, we believe, to all men.` },
+    {
+      segments: [
+        { text: `Yes, we of agnostic temperament have had these thoughts and experiences. Let us make haste to reassure you. ` },
+        { text: `We found that as soon as we were able to lay aside prejudice and express even a willingness to believe in a Power greater than ourselves, we commenced to get results, even though it was impossible for any of us to fully define or comprehend that Power, which is God.`, highlight: 'blue' }
+      ]
+    },
+    {
+      segments: [
+        { text: `Much to our relief, we discovered we did not need to consider another's conception of God. Our own conception, however inadequate, was sufficient to make the approach and to effect a contact with Him. ` },
+        { text: `As soon as we admitted the possible existence of a Creative Intelligence, a Spirit of the Universe underlying the totality of things, we began to be possessed of a new sense of power and direction, provided we took other simple steps. We found that God does not make too hard terms with those who seek Him. To us, the Realm of Spirit is broad, roomy, all inclusive; never exclusive or forbidding to those who earnestly seek. It is open, we believe, to all men.`, highlight: 'blue' }
+      ]
+    },
     { pageNum: "47" },
     {
       segments: [
@@ -40,9 +50,8 @@ export const weAgnosticsContent = {
       segments: [
         { text: `` },
         { text: `We needed to ask ourselves but one short question. "Do I now believe, or am I even willing to believe, that there is a Power greater than myself?"`, highlight: 'pink' },
-        { text: ` As soon as a man can say that he does believe, or is willing to believe, we emphatically assure him that he is on his way. It has been repeatedly proven among us that upon this simple ` },
-        { text: `cornerstone`, highlight: 'pink' },
-        { text: ` a wonderfully effective spiritual structure can be built.*` }
+        { text: ` ` },
+        { text: `As soon as a man can say that he does believe, or is willing to believe, we emphatically assure him that he is on his way. It has been repeatedly proven among us that upon this simple cornerstone a wonderfully effective spiritual structure can be built.*`, highlight: 'blue' }
       ]
     },
     { text: `That was great news to us, for we had assumed we could not make use of spiritual principles unless we accepted many things on faith which seemed difficult to believe. When people presented us with spiritual approaches, how frequently did we all say, "I wish I had what that man has. I'm sure it would work if I could only believe as he believes. But I cannot accept as surely true the many articles of faith which are so plain to him." So it was comforting to learn that we could commence at a simpler level.` },
@@ -60,7 +69,13 @@ export const weAgnosticsContent = {
     { text: `Instead, we looked at the human defects of these people, and sometimes used their shortcomings as a basis of wholesale condemnation. We talked of intolerance, while we were intolerant ourselves. We missed the reality and the beauty of the forest because we were diverted by the ugliness of some of its trees. We never gave the spiritual side of life a fair hearing.` },
     { text: `In our personal stories you will find a wide variation in the way each teller approaches and conceives of the Power which is greater than himself. Whether we agree with a particular approach or conception seems to make little difference. Experience has taught us that these are matters about which, for our purpose, we need not be worried. They are questions for each individual to settle for himself.` },
     { text: `On one proposition, however, these men and women are strikingly agreed. Every one of them has gained access to, and believes in, a Power greater than himself. This Power has in each case accomplished the miraculous, the humanly impossible. As a celebrated American statesman put it, "Let's look at the record."` },
-    { text: `Here are thousands of men and women, worldly indeed. They flatly declare that since they have come to believe in a Power greater than themselves, to take a certain attitude toward that Power, and to do certain simple things, there has been a revolutionary change in their way of living and thinking. In the face of collapse and despair, in the face of the total failure of their human resources, they found that a new power, peace, happiness, and sense of direction flowed into them. This happened soon after they wholeheartedly met a few simple requirements. Once confused and baffled by the seeming futility of existence, they show the underlying reasons why they were making heavy going of life. Leaving aside the drink question, they tell why living was so unsatisfactory. They show how the change came over them. When many hundreds of people are able to say that the consciousness of the Presence of God is today the most important fact of their lives, they present a powerful reason why one should have faith.` },
+    {
+      segments: [
+        { text: `Here are thousands of men and women, worldly indeed. They flatly declare that since they have come to believe in a Power greater than themselves, to take a certain attitude toward that Power, and to do certain simple things, there has been a revolutionary change in their way of living and thinking. ` },
+        { text: `In the face of collapse and despair, in the face of the total failure of their human resources, they found that a new power, peace, happiness, and sense of direction flowed into them. This happened soon after they wholeheartedly met a few simple requirements.`, highlight: 'blue' },
+        { text: ` Once confused and baffled by the seeming futility of existence, they show the underlying reasons why they were making heavy going of life. Leaving aside the drink question, they tell why living was so unsatisfactory. They show how the change came over them. When many hundreds of people are able to say that the consciousness of the Presence of God is today the most important fact of their lives, they present a powerful reason why one should have faith.` }
+      ]
+    },
     { pageNum: "51" },
     { text: `This world of ours has made more material progress in the last century than in all the millenniums which went before. Almost everyone knows the reason. Students of ancient history tell us that the intellect of men in those days was equal to the best of today. Yet in ancient times material progress was painfully slow. The spirit of modern scientific inquiry, research and invention was almost unknown. In the realm of the material, men's minds were fettered by superstition, tradition, and all sorts of fixed ideas. Some of the contemporaries of Columbus thought a round earth preposterous. Others came near putting Galileo to death for his astronomical heresies.` },
     { text: `We asked ourselves this: Are not some of us just as biased and unreasonable about the realm of the spirit as were the ancients about the realm of the material? Even in the present century, American newspapers were afraid to print an account of the Wright brothers' first successful flight at Kitty Hawk. Had not all efforts at flight failed before? Did not Professor Langley's flying machine go to the bottom of the Potomac River? Was it not true that the best mathematical minds had proved man could never fly? Had not people said God had reserved this privilege to the birds? Only thirty years later the conquest of the air was almost an old story and airplane travel was in full swing.` },
@@ -92,7 +107,12 @@ export const weAgnosticsContent = {
     { text: `Yet we had been seeing another kind of flight, a spiritual liberation from this world, people who rose above their problems. They said God made these things possible, and we only smiled. We had seen spiritual release, but liked to tell ourselves it wasn't true.` },
     { text: `Actually we were fooling ourselves, for deep down in every man, woman, and child, is the fundamental idea of God. It may be obscured by calamity, by pomp, by worship of other things, but in some form or other it is there. For faith in a Power greater than ourselves, and miraculous demonstrations of that power in human lives, are facts as old as man himself.` },
     { text: `We finally saw that faith in some kind of God was a part of our make-up, just as much as the feeling we have for a friend. Sometimes we had to search fearlessly, but He was there. He was as much a fact as we were. We found the Great Reality deep down within us. In the last analysis it is only there that He may be found. It was so with us.` },
-    { text: `We can only clear the ground a bit. If our testimony helps sweep away prejudice, enables you to think honestly, encourages you to search diligently within yourself, then, if you wish, you can join us on the Broad Highway. With this attitude you cannot fail. The consciousness of your belief is sure to come to you.` },
+    {
+      segments: [
+        { text: `We can only clear the ground a bit. ` },
+        { text: `If our testimony helps sweep away prejudice, enables you to think honestly, encourages you to search diligently within yourself, then, if you wish, you can join us on the Broad Highway. With this attitude you cannot fail. The consciousness of your belief is sure to come to you.`, highlight: 'blue' }
+      ]
+    },
     { text: `In this book you will read the experience of a man who thought he was an atheist. His story is so interesting that some of it should be told now. His change of heart was dramatic, convincing, and moving.` },
     { pageNum: "56" },
     {
@@ -110,6 +130,6 @@ export const weAgnosticsContent = {
     { text: `Save for a few brief moments of temptation the thought of drink has never returned; and at such times a great revulsion has risen up in him. Seemingly he could not drink even if he would. God had restored his sanity.` },
     { text: `What is this but a miracle of healing? Yet its elements are simple. Circumstances made him willing to believe. He humbly offered himself to his Maker—then he knew.` },
     { text: `Even so has God restored us all to our right minds. To this man, the revelation was sudden. Some of us grow into it more slowly. But He has come to all who have honestly sought Him.` },
-    { text: `When we drew near to Him He disclosed Himself to us!` }
+    { text: `When we drew near to Him He disclosed Himself to us!`, highlight: 'blue' }
   ]
 };
