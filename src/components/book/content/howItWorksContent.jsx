@@ -1,7 +1,13 @@
 export const howItWorksContent = {
   paragraphs: [
     { pageNum: "58" },
-    { text: `RARELY HAVE we seen a person fail who has thoroughly followed our path. Those who do not recover are people who cannot or will not completely give themselves to this simple program, usually men and women who are constitutionally incapable of being honest with themselves. There are such unfortunates. They are not at fault; they seem to have been born that way. They are naturally incapable of grasping and developing a manner of living which demands rigorous honesty. Their chances are less than average. There are those, too, who suffer from grave emotional and mental disorders, but many of them do recover if they have the capacity to be honest.` },
+    {
+      segments: [
+        { text: `Rarely have we seen a person fail who has thoroughly followed our path.`, highlight: 'blue' },
+        { text: ` Those who do not recover are people who cannot or will not completely give themselves to this simple program, usually men and women who are constitutionally incapable of being honest with themselves. There are such unfortunates. They are not at fault; they seem to have been born that way. They are naturally incapable of grasping and developing a manner of living which demands rigorous honesty. Their chances are less than average. ` },
+        { text: `There are those, too, who suffer from grave emotional and mental disorders, but many of them do recover if they have the capacity to be honest.`, highlight: 'blue' }
+      ]
+    },
     {
       segments: [
         { text: `Our stories disclose in a general way what we used to be like, what happened, and what we are like now. ` },
@@ -141,7 +147,12 @@ export const howItWorksContent = {
         { text: ` Sometimes they hurt us, seemingly without provocation, but we invariably find that at some time in the past we have made decisions based on self which later placed us in a position to be hurt.` }
       ]
     },
-    { text: `So our troubles, we think, are basically of our own making. They arise out of ourselves, and the alcoholic is an extreme example of self-will run riot, though he usually doesn't think so. Above everything, we alcoholics must be rid of this selfishness. We must, or it kills us! God makes that possible. And there often seems no way of entirely getting rid of self without His aid. Many of us had moral and philosophical convictions galore, but we could not live up to them even though we would have liked to. Neither could we reduce our self-centeredness much by wishing or trying on our own power. We had to have God's help.` },
+    {
+      segments: [
+        { text: `So our troubles, we think, are basically of our own making. They arise out of ourselves, and the alcoholic is an extreme example of self-will run riot, though he usually doesn't think so. Above everything, we alcoholics must be rid of this selfishness. We must, or it kills us! God makes that possible.`, highlight: 'blue' },
+        { text: ` And there often seems no way of entirely getting rid of self without His aid. Many of us had moral and philosophical convictions galore, but we could not live up to them even though we would have liked to. Neither could we reduce our self-centeredness much by wishing or trying on our own power. We had to have God's help.` }
+      ]
+    },
     {
       segments: [
         { text: `` },
@@ -155,8 +166,7 @@ export const howItWorksContent = {
     {
       segments: [
         { text: `When we sincerely took such a position, all sorts of remarkable things followed. ` },
-        { text: `We had a new Employer.`, highlight: 'pink' },
-        { text: ` Being all powerful, He provided what we needed, if we kept close to Him and performed His work well. Established on such a footing we became less and less interested in ourselves, our little plans and designs. More and more we became interested in seeing what we could contribute to life. As we felt new power flow in, as we enjoyed peace of mind, as we discovered we could face life successfully, as we became conscious of His presence, we began to lose our fear of today, tomorrow or the hereafter. We were reborn.` }
+        { text: `We had a new Employer. Being all powerful, He provided what we needed, if we kept close to Him and performed His work well. Established on such a footing we became less and less interested in ourselves, our little plans and designs. More and more we became interested in seeing what we could contribute to life. As we felt new power flow in, as we enjoyed peace of mind, as we discovered we could face life successfully, as we became conscious of His presence, we began to lose our fear of today, tomorrow or the hereafter. We were reborn.`, highlight: 'blue' }
       ]
     },
     {
@@ -168,7 +178,8 @@ export const howItWorksContent = {
       segments: [
         { text: `We found it very desirable to take this spiritual step with an understanding person, such as our wife, best friend, or spiritual adviser. But it is better to meet God alone than with one who might misunderstand. The wording was, of course, quite optional so long as we expressed the idea, voicing it ` },
         { text: `without reservation.`, highlight: 'pink' },
-        { text: ` This was only a beginning, though if honestly and humbly made, an effect, sometimes a very great one, was felt at once.` }
+        { text: ` ` },
+        { text: `This was only a beginning, though if honestly and humbly made, an effect, sometimes a very great one, was felt at once.`, highlight: 'blue' }
       ]
     },
     { pageNum: "64" },
@@ -197,7 +208,9 @@ export const howItWorksContent = {
       segments: [
         { text: `` },
         { text: `Resentment is the "number one" offender.`, highlight: 'pink' },
-        { text: ` It destroys more alcoholics than anything else. From it stem all forms of spiritual disease, for we have been not only mentally and physically ill, we have been spiritually sick. When the spiritual malady is overcome, we straighten out mentally and physically. ` },
+        { text: ` It destroys more alcoholics than anything else. From it stem all forms of spiritual disease, for we have been not only mentally and physically ill, we have been spiritually sick. ` },
+        { text: `When the spiritual malady is overcome, we straighten out mentally and physically.`, highlight: 'blue' },
+        { text: ` ` },
         { text: `In dealing with resentments, we set them on paper. We listed people, institutions or principles with whom we were angry. We asked ourselves why we were angry.`, highlight: 'pink' },
         { text: ` In most cases it was found that our self-esteem, our pocketbooks, our ambitions, our personal relationships` }
       ]
@@ -265,7 +278,12 @@ export const howItWorksContent = {
         { text: ` We realized that the people who wronged us were perhaps spiritually sick. Though we did not like their symptoms and the way these disturbed us, they, like ourselves, were sick too. We asked God to help us show them the same tolerance, pity, and patience that we would cheerfully grant a sick friend. When a person offended we said to ourselves, "This is a sick man. How can I be helpful to him? God save me from being angry. Thy will be done."` }
       ]
     },
-    { text: `We avoid retaliation or argument. We wouldn't treat sick people that way. If we do, we destroy our chance of being helpful. We cannot be helpful to all people, but at least God will show us how to take a kindly and tolerant view of each and every one.` },
+    {
+      segments: [
+        { text: `We avoid retaliation or argument. We wouldn't treat sick people that way. If we do, we destroy our chance of being helpful. ` },
+        { text: `We cannot be helpful to all people, but at least God will show us how to take a kindly and tolerant view of each and every one.`, highlight: 'blue' }
+      ]
+    },
     {
       segments: [
         { text: `` },
@@ -290,14 +308,20 @@ export const howItWorksContent = {
         { text: ` or any other. When it made us cocky, it was worse.` }
       ]
     },
-    { text: `Perhaps there is a better way—we think so. For we are now on a different basis; the basis of trusting and relying upon God. We trust infinite God rather than our finite selves. We are in the world to play the role He assigns. Just to the extent that we do as we think He would have us, and humbly rely on Him, does He enable us to match calamity with serenity.` },
+    {
+      segments: [
+        { text: `Perhaps there is a better way—we think so. For we are now on a different basis; the basis of trusting and relying upon God. We trust infinite God rather than our finite selves. We are in the world to play the role He assigns. ` },
+        { text: `Just to the extent that we do as we think He would have us, and humbly rely on Him, does He enable us to match calamity with serenity.`, highlight: 'blue' }
+      ]
+    },
     {
       segments: [
         { text: `We never apologize to anyone for depending upon our Creator. We can laugh at those who think spirituality the way of weakness. Paradoxically, it is the way of strength. The verdict of the ages is that ` },
         { text: `faith means courage.`, highlight: 'pink' },
         { text: ` All men of faith have courage. They trust their God. We never apologize for God. Instead we let Him demonstrate, through us, what He can do. We ask Him to remove ` },
         { text: `our fear`, highlight: 'pink' },
-        { text: ` and direct our attention to what He would have us be. At once, we commence to outgrow fear.` }
+        { text: ` and direct our attention to what He would have us be. ` },
+        { text: `At once, we commence to outgrow fear.`, highlight: 'blue' }
       ]
     },
     {
@@ -325,7 +349,8 @@ export const howItWorksContent = {
         { text: `our ideals`, highlight: 'pink' },
         { text: ` and help us to live up to them. We remembered always that our ` },
         { text: `sex powers`, highlight: 'pink' },
-        { text: ` were God-given and therefore good, neither to be used lightly or selfishly nor to be despised and loathed.` }
+        { text: ` were God-given and therefore good, neither to be used lightly or selfishly nor to be despised and loathed. ` },
+        { text: `The right answer will come, if we want it.`, highlight: 'blue' }
       ]
     },
     {
@@ -366,16 +391,17 @@ export const howItWorksContent = {
       ]
     },
     {
-      text: `If we have been thorough about our personal inventory, we have written down a lot. We have listed and analyzed our resentments. We have begun to comprehend their futility and their fatality. We have commenced to see their terrible destructiveness. We have begun to learn tolerance, patience and good will toward all men, even our enemies, for we look on them as sick people. We have listed the people we have hurt by our conduct, and are willing to straighten out the past if we can.`
-    },
+          segments: [
+            { text: `If we have been thorough about our personal inventory, we have written down a lot. We have listed and analyzed our resentments. ` },
+            { text: `We have begun to comprehend their futility and their fatality. We have commenced to see their terrible destructiveness. We have begun to learn tolerance, patience and good will toward all men, even our enemies, for we look on them as sick people. We have listed the people we have hurt by our conduct, and are willing to straighten out the past if we can.`, highlight: 'blue' }
+          ]
+        },
     { pageNum: "71" },
     {
       segments: [
-        { text: `In this book you read again and again that faith did for us what we could not do for ourselves. We hope you are convinced now that God can remove whatever self-will has blocked you off from Him. If you have already made ` },
-        { text: `a decision,`, highlight: 'pink' },
-        { text: ` and ` },
-        { text: `an inventory`, highlight: 'pink' },
-        { text: ` of your grosser handicaps, you have made a good beginning. That being so you have swallowed and digested some big chunks of truth about yourself.` }
+        { text: `In this book you read again and again that faith did for us what we could not do for ourselves. We hope you are convinced now that God can remove whatever self-will has blocked you off from Him. ` },
+        { text: `If you have already made a decision, and an inventory of your grosser handicaps, you have made a good beginning.`, highlight: 'blue' },
+        { text: ` That being so you have swallowed and digested some big chunks of truth about yourself.` }
       ]
     }
   ]
