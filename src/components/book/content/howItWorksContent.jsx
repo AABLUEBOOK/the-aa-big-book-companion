@@ -350,9 +350,9 @@ export const howItWorksContent = {
       segments: [
         { text: `` },
         { text: `In this way we tried to shape a sane and sound ideal for our future sex life. We subjected each relation to this test—was it selfish or not?`, highlight: 'pink' },
-        { text: ` We asked God to mold ` },
-        { text: `our ideals`, highlight: 'pink' },
-        { text: ` and help us to live up to them. We remembered always that our ` },
+        { text: ` ` },
+        { text: `We asked God to mold our ideals and help us to live up to them.`, highlight: 'green' },
+        { text: ` We remembered always that our ` },
         { text: `sex powers`, highlight: 'pink' },
         { text: ` were God-given and therefore good, neither to be used lightly or selfishly nor to be despised and loathed. ` },
         { text: `The right answer will come, if we want it.`, highlight: 'blue' }
@@ -390,9 +390,9 @@ export const howItWorksContent = {
       segments: [
         { text: `` },
         { text: `To sum up about sex:`, highlight: 'pink' },
-        { text: ` We earnestly pray for the ` },
-        { text: `right ideal,`, highlight: 'pink' },
-        { text: ` for guidance in each questionable situation, for sanity, and for the strength to do the right thing. If ` },
+        { text: ` ` },
+        { text: `We earnestly pray for the right ideal, for guidance in each questionable situation, for sanity, and for the strength to do the right thing.`, highlight: 'green' },
+        { text: ` If ` },
         { text: `sex`, highlight: 'pink' },
         { text: ` is very troublesome, we throw ourselves the harder into helping others. We think of their needs and work for them. This takes us out of ourselves. It quiets the imperious urge, when to yield would mean heartache.` }
       ]

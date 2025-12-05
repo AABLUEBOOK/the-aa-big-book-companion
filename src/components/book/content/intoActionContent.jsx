@@ -51,19 +51,30 @@ export const intoActionContent = {
       ]
     },
     { pageNum: "76" },
-    { text: `Returning home we find a place where we can be quiet for an hour, carefully reviewing what we have done. We thank God from the bottom of our heart that we know Him better. Taking this book down from our shelf we turn to the page which contains the twelve steps. Carefully reading the first five proposals we ask if we have omitted anything, for we are building an arch through which we shall walk a free man at last. Is our work solid so far? Are the stones properly in place? Have we skimped on the cement put into the foundation? Have we tried to make mortar without sand?` },
+    {
+      segments: [
+        { text: `Returning home we find a place where we can be quiet for an hour, carefully reviewing what we have done. ` },
+        { text: `We thank God from the bottom of our heart that we know Him better.`, highlight: 'green' },
+        { text: ` Taking this book down from our shelf we turn to the page which contains the twelve steps. Carefully reading the first five proposals ` },
+        { text: `we ask if we have omitted anything,`, highlight: 'green' },
+        { text: ` for we are building an arch through which we shall walk a free man at last. Is our work solid so far? Are the stones properly in place? Have we skimped on the cement put into the foundation? Have we tried to make mortar without sand?` }
+      ]
+    },
     {
       segments: [
         { text: `` },
         { text: `If we can answer to our satisfaction, we then look at Step Six. We have emphasized willingness as being indispensable.`, highlight: 'blue' },
-        { text: ` Are we now ready to let God remove from us all the things which we have admitted are objectionable? Can He now take them all—every one? If we still cling to something we will not let go, we ask God to help us be willing.` }
+        { text: ` Are we now ready to let God remove from us all the things which we have admitted are objectionable? Can He now take them all—every one? ` },
+        { text: `If we still cling to something we will not let go, we ask God to help us be willing.`, highlight: 'green' }
       ]
     },
     {
       segments: [
         { text: `` },
         { text: `When ready, we say something like this:`, highlight: 'pink' },
-        { text: ` "My Creator, I am now willing that you should have all of me, good and bad. I pray that you now remove from me every single defect of character which stands in the way of my usefulness to you and my fellows. Grant me strength, as I go out from here, to do your bidding. Amen." ` },
+        { text: ` ` },
+        { text: `"My Creator, I am now willing that you should have all of me, good and bad. I pray that you now remove from me every single defect of character which stands in the way of my usefulness to you and my fellows. Grant me strength, as I go out from here, to do your bidding. Amen."`, highlight: 'green' },
+        { text: ` ` },
         { text: `We have then completed Step Seven.`, highlight: 'pink' }
       ]
     },
@@ -74,7 +85,9 @@ export const intoActionContent = {
         { text: `Now we need more action, without which we find that "Faith without works is dead." Let's look at Steps Eight and Nine. We have a list of all persons we have harmed and to whom we are willing to make amends. We made it when we took inventory.`, highlight: 'pink' },
         { text: ` We subjected ourselves to a drastic self-appraisal. ` },
         { text: `Now we go out to our fellows and repair the damage done in the past.`, highlight: 'pink' },
-        { text: ` We attempt to sweep away the debris which has accumulated out of our effort to live on self-will and run the show ourselves. If we haven't the will to do this, we ask until it comes. ` },
+        { text: ` We attempt to sweep away the debris which has accumulated out of our effort to live on self-will and run the show ourselves. ` },
+        { text: `If we haven't the will to do this, we ask until it comes.`, highlight: 'green' },
+        { text: ` ` },
         { text: `Remember it was agreed at the beginning we would go to any lengths for victory over alcohol.`, highlight: 'pink' }
       ]
     },
@@ -124,7 +137,9 @@ export const intoActionContent = {
       segments: [
         { text: `Although these reparations take innumerable forms, there are some general principles which we find guiding. ` },
         { text: `Reminding ourselves that we have decided to go to any lengths to find a spiritual experience,`, highlight: 'pink' },
-        { text: ` we ask that we be given strength and direction to do the right thing, no matter what the personal consequences may be. We may lose our position or reputation or face jail, but we are willing. We have to be. We must not shrink at anything.` }
+        { text: ` ` },
+        { text: `we ask that we be given strength and direction to do the right thing, no matter what the personal consequences may be.`, highlight: 'green' },
+        { text: ` We may lose our position or reputation or face jail, but we are willing. We have to be. We must not shrink at anything.` }
       ]
     },
     {
@@ -139,7 +154,8 @@ export const intoActionContent = {
       segments: [
         { text: `Before taking drastic action which might ` },
         { text: `implicate other people`, highlight: 'pink' },
-        { text: ` we secure their consent. If we have obtained permission, have consulted with others, asked God to help and the drastic step is indicated we must not shrink.` }
+        { text: ` we secure their consent. ` },
+        { text: `If we have obtained permission, have consulted with others, asked God to help and the drastic step is indicated we must not shrink.`, highlight: 'green' }
       ]
     },
     { text: `This brings to mind a story about one of our friends. While drinking, he accepted a sum of money from a bitterly-hated business rival, giving him no receipt for it. He subsequently denied having received the money and used the incident as a basis for discrediting the man. He thus used his own wrong-doing as a means of destroying the reputation of another. In fact, his rival was ruined.` },
@@ -167,13 +183,20 @@ export const intoActionContent = {
       segments: [
         { text: `` },
         { text: `Perhaps there are some cases where the utmost frankness is demanded.`, highlight: 'pink' },
-        { text: ` No outsider can appraise such an intimate situation. It may be that both will decide that the way of good sense and loving kindness is to let by-gones be by-gones. Each might pray about it, having the other one's happiness uppermost in mind. Keep it always in sight that we are dealing with that most terrible human emotion—jealousy. Good generalship may decide that the problem be attacked on the flank rather than risk a face-to-face combat.` }
+        { text: ` No outsider can appraise such an intimate situation. It may be that both will decide that the way of good sense and loving kindness is to let by-gones be by-gones. ` },
+        { text: `Each might pray about it, having the other one's happiness uppermost in mind.`, highlight: 'green' },
+        { text: ` Keep it always in sight that we are dealing with that most terrible human emotion—jealousy. Good generalship may decide that the problem be attacked on the flank rather than risk a face-to-face combat.` }
       ]
     },
     { text: `If we have no such complication, there is plenty we should do at home. Sometimes we hear an alcoholic say that the only thing he needs to do is to keep sober. Certainly he must keep sober, for there will be no home if he doesn't. But he is yet a long way from making good to the wife or parents whom for years he has so shockingly treated. Passing all understanding is the patience mothers and wives have had with alcoholics. Had this not been so, many of us would have no homes today, would perhaps be dead.` },
     { text: `The alcoholic is like a tornado roaring his way through the lives of others. Hearts are broken. Sweet relationships are dead. Affections have been uprooted. Selfish and inconsiderate habits have kept the home in turmoil. We feel a man is unthinking when he says that sobriety is enough. He is like the farmer who came up out of his cyclone cellar to find his home ruined. To his wife, he remarked, "Don't see anything the matter here, Ma. Ain't it grand the wind stopped blowin'?"` },
     { pageNum: "85" },
-    { text: `Yes, there is a long period of reconstruction ahead. We must take the lead. A remorseful mumbling that we are sorry won't fill the bill at all. We ought to sit down with the family and frankly analyze the past as we now see it, being very careful not to criticize them. Their defects may be glaring, but the chances are that our own actions are partly responsible. So we clean house with the family, asking each morning in meditation that our Creator show us the way of patience, tolerance, kindliness and love.` },
+    {
+      segments: [
+        { text: `Yes, there is a long period of reconstruction ahead. We must take the lead. A remorseful mumbling that we are sorry won't fill the bill at all. We ought to sit down with the family and frankly analyze the past as we now see it, being very careful not to criticize them. Their defects may be glaring, but the chances are that our own actions are partly responsible. ` },
+        { text: `So we clean house with the family, asking each morning in meditation that our Creator show us the way of patience, tolerance, kindliness and love.`, highlight: 'green' }
+      ]
+    },
     { text: `The spiritual life is not a theory. We have to live it. Unless one's family expresses a desire to live upon spiritual principles we think we ought not to urge them. We should not talk incessantly to them about spiritual matters. They will change in time. Our behavior will convince them more than our words. We must remember that ten or twenty years of drunkenness would make a skeptic out of anyone.` },
     {
       segments: [
@@ -190,7 +213,7 @@ export const intoActionContent = {
         { text: `` },
         { text: `This thought brings us to Step Ten, which suggests we continue to take personal inventory and continue to set right any new mistakes as we go along. We vigorously commenced this way of living as we cleaned up the past. We have entered the world of the Spirit. Our next function is to grow in understanding and effectiveness.`, highlight: 'pink' },
         { text: ` This is not an overnight matter. It should continue for our lifetime. ` },
-        { text: `Continue to watch for selfishness, dishonesty, resentment, and fear. When these crop up, we ask God at once to remove them. We discuss them with someone immediately and make amends quickly if we have harmed anyone. Then we resolutely turn our thoughts to someone we can help.`, highlight: 'pink' },
+        { text: `Continue to watch for selfishness, dishonesty, resentment, and fear. When these crop up, we ask God at once to remove them. We discuss them with someone immediately and make amends quickly if we have harmed anyone. Then we resolutely turn our thoughts to someone we can help.`, highlight: 'green' },
         { text: ` Love and tolerance of others is our code.` }
       ]
     },
@@ -216,24 +239,35 @@ export const intoActionContent = {
       segments: [
         { text: `` },
         { text: `When we retire at night,`, highlight: 'pink' },
-        { text: ` we constructively review our day. Were we resentful, selfish, dishonest or afraid? Do we owe an apology? Have we kept something to ourselves which should be discussed with another person at once? Were we kind and loving toward all? What could we have done better? Were we thinking of ourselves most of the time? Or were we thinking of what we could do for others, of what we could pack into the stream of life? But we must be careful not to drift into worry, remorse or morbid reflection, for that would diminish our usefulness to others. After making our review we ask God's forgiveness and inquire what corrective measures should be taken.` }
+        { text: ` ` },
+        { text: `we constructively review our day. Were we resentful, selfish, dishonest or afraid? Do we owe an apology? Have we kept something to ourselves which should be discussed with another person at once? Were we kind and loving toward all? What could we have done better? Were we thinking of ourselves most of the time? Or were we thinking of what we could do for others, of what we could pack into the stream of life? But we must be careful not to drift into worry, remorse or morbid reflection, for that would diminish our usefulness to others. After making our review we ask God's forgiveness and inquire what corrective measures should be taken.`, highlight: 'green' }
       ]
     },
     {
       segments: [
         { text: `` },
         { text: `On awakening`, highlight: 'pink' },
-        { text: ` let us think about the twenty-four hours ahead. We consider our plans for the day. Before we begin, we ask God to direct our thinking, especially asking that it be divorced from self-pity, dishonest or self-seeking motives. Under these conditions ` },
+        { text: ` let us think about the twenty-four hours ahead. We consider our plans for the day. ` },
+        { text: `Before we begin, we ask God to direct our thinking, especially asking that it be divorced from self-pity, dishonest or self-seeking motives.`, highlight: 'green' },
+        { text: ` Under these conditions ` },
         { text: `we can employ our mental faculties with assurance, for after all God gave us brains to use. Our thought-life will be placed on a much higher plane when our thinking is cleared of wrong motives.`, highlight: 'blue' }
       ]
     },
-    { text: `In thinking about our day we may face indecision. We may not be able to determine which course to take. Here we ask God for inspiration, an intuitive thought or a decision. We relax and take it easy. We don't struggle. We are often surprised how the right answers come after we have tried this for a while. What used to be the hunch or the occasional inspiration gradually becomes a working part of the mind. Being still inexperienced and having just made conscious contact with God, it is not probable that we are going to be inspired at all times. We might pay for this presumption in all sorts of absurd actions and ideas. Nevertheless, we find that our thinking will, as time passes, be more and more on the plane of inspiration. We come to rely upon it.`, highlight: 'blue' },
-    { text: `We usually conclude the period of meditation with a prayer that we be shown all through the day what our next step is to be, that we be given whatever we need to take care of such problems. We ask especially for freedom from self-will, and are careful to make no request for ourselves only. We may ask for ourselves, however, if others will be helped. We are careful never to pray for our own selfish ends. Many of us have wasted a lot of time doing that and it doesn't work. You can easily see why.` },
+    {
+      segments: [
+        { text: `In thinking about our day we may face indecision. We may not be able to determine which course to take. ` },
+        { text: `Here we ask God for inspiration, an intuitive thought or a decision.`, highlight: 'green' },
+        { text: ` We relax and take it easy. We don't struggle. ` },
+        { text: `We are often surprised how the right answers come after we have tried this for a while. What used to be the hunch or the occasional inspiration gradually becomes a working part of the mind. Being still inexperienced and having just made conscious contact with God, it is not probable that we are going to be inspired at all times. We might pay for this presumption in all sorts of absurd actions and ideas. Nevertheless, we find that our thinking will, as time passes, be more and more on the plane of inspiration. We come to rely upon it.`, highlight: 'blue' }
+      ]
+    },
+    { text: `We usually conclude the period of meditation with a prayer that we be shown all through the day what our next step is to be, that we be given whatever we need to take care of such problems. We ask especially for freedom from self-will, and are careful to make no request for ourselves only. We may ask for ourselves, however, if others will be helped. We are careful never to pray for our own selfish ends. Many of us have wasted a lot of time doing that and it doesn't work. You can easily see why.`, highlight: 'green' },
     { pageNum: "88" },
     { text: `If circumstances warrant, we ask our wives or friends to join us in morning meditation. If we belong to a religious denomination which requires a definite morning devotion, we attend to that also. If not members of religious bodies, we sometimes select and memorize a few set prayers which emphasize the principles we have been discussing. There are many helpful books also. Suggestions about these may be obtained from one's priest, minister, or rabbi. Be quick to see where religious people are right. Make use of what they offer.` },
     {
       segments: [
-        { text: `As we go through the day we pause, when agitated or doubtful, and ask for the right thought or action. We constantly remind ourselves we are no longer running the show, humbly saying to ourselves many times each day "Thy will be done." ` },
+        { text: `As we go through the day we pause, when agitated or doubtful, and ask for the right thought or action. We constantly remind ourselves we are no longer running the show, humbly saying to ourselves many times each day "Thy will be done."`, highlight: 'green' },
+        { text: ` ` },
         { text: `We are then in much less danger of excitement, fear, anger, worry, self-pity, or foolish decisions. We become much more efficient. We do not tire so easily, for we are not burning up energy foolishly as we did when we were trying to arrange life to suit ourselves.`, highlight: 'blue' }
       ]
     },
