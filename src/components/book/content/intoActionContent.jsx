@@ -46,7 +46,8 @@ export const intoActionContent = {
       segments: [
         { text: `` },
         { text: `We pocket our pride and go to it, illuminating every twist of character, every dark cranny of the past.`, highlight: 'pink' },
-        { text: ` Once we have taken this step, withholding nothing, we are delighted. We can look the world in the eye. We can be alone at perfect peace and ease. Our fears fall from us. We begin to feel the nearness of our Creator. We may have had certain spiritual beliefs, but now we begin to have a spiritual experience. The feeling that the drink problem has disappeared will often come strongly. We feel we are on the Broad Highway, walking hand in hand with the Spirit of the Universe.` }
+        { text: ` ` },
+        { text: `Once we have taken this step, withholding nothing, we are delighted. We can look the world in the eye. We can be alone at perfect peace and ease. Our fears fall from us. We begin to feel the nearness of our Creator. We may have had certain spiritual beliefs, but now we begin to have a spiritual experience. The feeling that the drink problem has disappeared will often come strongly. We feel we are on the Broad Highway, walking hand in hand with the Spirit of the Universe.`, highlight: 'blue' }
       ]
     },
     { pageNum: "76" },
@@ -54,8 +55,8 @@ export const intoActionContent = {
     {
       segments: [
         { text: `` },
-        { text: `If we can answer to our satisfaction, we then look at Step Six. We have emphasized willingness as being indispensable. Are we now ready to let God remove from us all the things which we have admitted are objectionable? Can He now take them all—every one?`, highlight: 'pink' },
-        { text: ` If we still cling to something we will not let go, we ask God to help us be willing.` }
+        { text: `If we can answer to our satisfaction, we then look at Step Six. We have emphasized willingness as being indispensable.`, highlight: 'blue' },
+        { text: ` Are we now ready to let God remove from us all the things which we have admitted are objectionable? Can He now take them all—every one? If we still cling to something we will not let go, we ask God to help us be willing.` }
       ]
     },
     {
@@ -181,8 +182,8 @@ export const intoActionContent = {
         { text: ` But we don't delay if it can be avoided. We should be sensible, tactful, considerate and humble without being servile or scraping. As God's people we stand on our feet; we don't crawl before anyone.` }
       ]
     },
-    { text: `If we are painstaking about this phase of our development, we will be amazed before we are half way through. We are going to know a new freedom and a new happiness. We will not regret the past nor wish to shut the door on it. We will comprehend the word serenity and we will know peace. No matter how far down the scale we have gone, we will see how our experience can benefit others. That feeling of uselessness and self-pity will disappear. We will lose interest in selfish things and gain interest in our fellows. Self-seeking will slip away. Our whole attitude and outlook upon life will change. Fear of people and of economic insecurity will leave us. We will intuitively know how to handle situations which used to baffle us. We will suddenly realize that God is doing for us what we could not do for ourselves.` },
-    { text: `Are these extravagant promises? We think not. They are being fulfilled among us—sometimes quickly, sometimes slowly. They will always materialize if we work for them.` },
+    { text: `If we are painstaking about this phase of our development, we will be amazed before we are half way through. We are going to know a new freedom and a new happiness. We will not regret the past nor wish to shut the door on it. We will comprehend the word serenity and we will know peace. No matter how far down the scale we have gone, we will see how our experience can benefit others. That feeling of uselessness and self-pity will disappear. We will lose interest in selfish things and gain interest in our fellows. Self-seeking will slip away. Our whole attitude and outlook upon life will change. Fear of people and of economic insecurity will leave us. We will intuitively know how to handle situations which used to baffle us. We will suddenly realize that God is doing for us what we could not do for ourselves.`, highlight: 'blue' },
+    { text: `Are these extravagant promises? We think not. They are being fulfilled among us—sometimes quickly, sometimes slowly. They will always materialize if we work for them.`, highlight: 'blue' },
     { pageNum: "86" },
     {
       segments: [
@@ -193,13 +194,21 @@ export const intoActionContent = {
         { text: ` Love and tolerance of others is our code.` }
       ]
     },
-    { text: `And we have ceased fighting anything or anyone—even alcohol. For by this time sanity will have returned. We will seldom be interested in liquor. If tempted, we recoil from it as from a hot flame. We react sanely and normally, and we will find that this has happened automatically. We will see that our new attitude toward liquor has been given us without any thought or effort on our part. It just comes! That is the miracle of it. We are not fighting it, neither are we avoiding temptation. We feel as though we had been placed in a position of neutrality—safe and protected. We have not even sworn off. Instead, the problem has been removed. It does not exist for us. We are neither cocky nor are we afraid. That is our experience. That is how we react so long as we keep in fit spiritual condition.` },
-    { text: `It is easy to let up on the spiritual program of action and rest on our laurels. We are headed for trouble if we do, for alcohol is a subtle foe. We are not cured of alcoholism. What we really have is a daily reprieve contingent on the maintenance of our spiritual condition. Every day is a day when we must carry the vision of God's will into all of our activities. "How can I best serve Thee—Thy will (not mine) be done." These are thoughts which must go with us constantly. We can exercise our will power along this line all we wish. It is the proper use of the will.` },
-    { pageNum: "87" },
-    { text: `Much has already been said about receiving strength, inspiration, and direction from Him who has all knowledge and power. If we have carefully followed directions, we have begun to sense the flow of His Spirit into us. To some extent we have become God-conscious. We have begun to develop this vital sixth sense. But we must go further and that means more action.` },
+    { text: `And we have ceased fighting anything or anyone—even alcohol. For by this time sanity will have returned. We will seldom be interested in liquor. If tempted, we recoil from it as from a hot flame. We react sanely and normally, and we will find that this has happened automatically. We will see that our new attitude toward liquor has been given us without any thought or effort on our part. It just comes! That is the miracle of it. We are not fighting it, neither are we avoiding temptation. We feel as though we had been placed in a position of neutrality—safe and protected. We have not even sworn off. Instead, the problem has been removed. It does not exist for us. We are neither cocky nor are we afraid. That is our experience. That is how we react so long as we keep in fit spiritual condition.`, highlight: 'blue' },
     {
       segments: [
-        { text: `Step Eleven suggests prayer and meditation. We shouldn't be shy on this matter of prayer. Better men than we are using it constantly. It works, if we have the proper attitude and work at it. It would be easy to be vague about this matter. ` },
+        { text: `It is easy to let up on the spiritual program of action and rest on our laurels. We are headed for trouble if we do, for alcohol is a subtle foe. We are not cured of alcoholism. ` },
+        { text: `What we really have is a daily reprieve contingent on the maintenance of our spiritual condition.`, highlight: 'blue' },
+        { text: ` Every day is a day when we must carry the vision of God's will into all of our activities. "How can I best serve Thee—Thy will (not mine) be done." These are thoughts which must go with us constantly. We can exercise our will power along this line all we wish. It is the proper use of the will.` }
+      ]
+    },
+    { pageNum: "87" },
+    { text: `Much has already been said about receiving strength, inspiration, and direction from Him who has all knowledge and power. If we have carefully followed directions, we have begun to sense the flow of His Spirit into us. To some extent we have become God-conscious. We have begun to develop this vital sixth sense. But we must go further and that means more action.`, highlight: 'blue' },
+    {
+      segments: [
+        { text: `Step Eleven suggests prayer and meditation. We shouldn't be shy on this matter of prayer. Better men than we are using it constantly. ` },
+        { text: `It works, if we have the proper attitude and work at it.`, highlight: 'blue' },
+        { text: ` It would be easy to be vague about this matter. ` },
         { text: `Yet, we believe we can make some definite and valuable suggestions.`, highlight: 'pink' }
       ]
     },
@@ -214,15 +223,21 @@ export const intoActionContent = {
       segments: [
         { text: `` },
         { text: `On awakening`, highlight: 'pink' },
-        { text: ` let us think about the twenty-four hours ahead. We consider our plans for the day. Before we begin, we ask God to direct our thinking, especially asking that it be divorced from self-pity, dishonest or self-seeking motives. Under these conditions we can employ our mental faculties with assurance, for after all God gave us brains to use. Our thought-life will be placed on a much higher plane when our thinking is cleared of wrong motives.` }
+        { text: ` let us think about the twenty-four hours ahead. We consider our plans for the day. Before we begin, we ask God to direct our thinking, especially asking that it be divorced from self-pity, dishonest or self-seeking motives. Under these conditions ` },
+        { text: `we can employ our mental faculties with assurance, for after all God gave us brains to use. Our thought-life will be placed on a much higher plane when our thinking is cleared of wrong motives.`, highlight: 'blue' }
       ]
     },
-    { text: `In thinking about our day we may face indecision. We may not be able to determine which course to take. Here we ask God for inspiration, an intuitive thought or a decision. We relax and take it easy. We don't struggle. We are often surprised how the right answers come after we have tried this for a while. What used to be the hunch or the occasional inspiration gradually becomes a working part of the mind. Being still inexperienced and having just made conscious contact with God, it is not probable that we are going to be inspired at all times. We might pay for this presumption in all sorts of absurd actions and ideas. Nevertheless, we find that our thinking will, as time passes, be more and more on the plane of inspiration. We come to rely upon it.` },
+    { text: `In thinking about our day we may face indecision. We may not be able to determine which course to take. Here we ask God for inspiration, an intuitive thought or a decision. We relax and take it easy. We don't struggle. We are often surprised how the right answers come after we have tried this for a while. What used to be the hunch or the occasional inspiration gradually becomes a working part of the mind. Being still inexperienced and having just made conscious contact with God, it is not probable that we are going to be inspired at all times. We might pay for this presumption in all sorts of absurd actions and ideas. Nevertheless, we find that our thinking will, as time passes, be more and more on the plane of inspiration. We come to rely upon it.`, highlight: 'blue' },
     { text: `We usually conclude the period of meditation with a prayer that we be shown all through the day what our next step is to be, that we be given whatever we need to take care of such problems. We ask especially for freedom from self-will, and are careful to make no request for ourselves only. We may ask for ourselves, however, if others will be helped. We are careful never to pray for our own selfish ends. Many of us have wasted a lot of time doing that and it doesn't work. You can easily see why.` },
     { pageNum: "88" },
     { text: `If circumstances warrant, we ask our wives or friends to join us in morning meditation. If we belong to a religious denomination which requires a definite morning devotion, we attend to that also. If not members of religious bodies, we sometimes select and memorize a few set prayers which emphasize the principles we have been discussing. There are many helpful books also. Suggestions about these may be obtained from one's priest, minister, or rabbi. Be quick to see where religious people are right. Make use of what they offer.` },
-    { text: `As we go through the day we pause, when agitated or doubtful, and ask for the right thought or action. We constantly remind ourselves we are no longer running the show, humbly saying to ourselves many times each day "Thy will be done." We are then in much less danger of excitement, fear, anger, worry, self-pity, or foolish decisions. We become much more efficient. We do not tire so easily, for we are not burning up energy foolishly as we did when we were trying to arrange life to suit ourselves.` },
-    { text: `It works—it really does.` },
+    {
+      segments: [
+        { text: `As we go through the day we pause, when agitated or doubtful, and ask for the right thought or action. We constantly remind ourselves we are no longer running the show, humbly saying to ourselves many times each day "Thy will be done." ` },
+        { text: `We are then in much less danger of excitement, fear, anger, worry, self-pity, or foolish decisions. We become much more efficient. We do not tire so easily, for we are not burning up energy foolishly as we did when we were trying to arrange life to suit ourselves.`, highlight: 'blue' }
+      ]
+    },
+    { text: `It works—it really does.`, highlight: 'blue' },
     {
       segments: [
         { text: `` },
