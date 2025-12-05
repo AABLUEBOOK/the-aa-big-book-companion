@@ -167,8 +167,8 @@ export function renderTextWithTerms(text) {
   const parts = processed.split(/(\{\{TERM:[^}]+\}\})/g);
   
   return parts.map((part, idx) => {
-    // Match TERM:term:definition - use lazy match for term, greedy for definition
-    const match = part.match(/^\{\{TERM:(.+?):(.+)\}\}$/);
+    // Match TERM:term:definition - term is first segment, definition is everything after second colon
+    const match = part.match(/\{\{TERM:([^:]+):(.+)\}\}$/);
     if (match) {
       return <TermTooltip key={idx} term={match[1]} definition={match[2]} />;
     }
