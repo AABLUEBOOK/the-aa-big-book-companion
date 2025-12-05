@@ -164,19 +164,13 @@ export function renderTextWithTerms(text) {
   }
   
   const processed = wrapTermsInText(text);
-  // Use a more robust split that handles }} correctly
-  const parts = processed.split(/(\{\{TERM:[^:]+:[^{}]*(?:\{[^}]*\}[^{}]*)*\}\})/g);
+  const parts = processed.split(/(\{\{TERM:[^}]+\}\})/g);
   
   return parts.map((part, idx) => {
-    // Match TERM:term:definition - use explicit pattern to capture term and full definition
-    if (part.startsWith('{{TERM:') && part.endsWith('}}')) {
-      const inner = part.slice(7, -2); // Remove {{TERM: and }}
-      const firstColonIdx = inner.indexOf(':');
-      if (firstColonIdx !== -1) {
-        const term = inner.slice(0, firstColonIdx);
-        const definition = inner.slice(firstColonIdx + 1);
-        return <TermTooltip key={idx} term={term} definition={definition} />;
-      }
+    // Match TERM:term:definition - term is first segment, definition is everything after second colon
+    const match = part.match(/\{\{TERM:([^:]+):(.+)\}\}$/);
+    if (match) {
+      return <TermTooltip key={idx} term={match[1]} definition={match[2]} />;
     }
     return <span key={idx}>{part}</span>;
   });
