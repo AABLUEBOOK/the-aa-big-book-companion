@@ -81,7 +81,17 @@ const AudioPlayer = memo(function AudioPlayer({ content }) {
 
   const extractText = () => {
     if (!content?.paragraphs) return [];
-    return content.paragraphs.map(p => p.text);
+    return content.paragraphs
+      .map(p => {
+        // Handle simple text paragraphs
+        if (p.text) return p.text;
+        // Handle segmented paragraphs
+        if (p.segments) {
+          return p.segments.map(s => s.text || '').join('');
+        }
+        return null;
+      })
+      .filter(text => text && text.trim().length > 0);
   };
 
   const speak = (text, index) => {
