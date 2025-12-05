@@ -83,11 +83,20 @@ export default function ChapterContent({ chapter, sectionRoute }) {
   const [loading, setLoading] = useState(true);
   const [notesPanelOpen, setNotesPanelOpen] = useState(false);
   const [notesRefreshKey, setNotesRefreshKey] = useState(0);
+  const [selectedText, setSelectedText] = useState('');
 
   const { data: notes = [], refetch: refetchNotes } = useQuery({
     queryKey: ['notes', chapter?.id, notesRefreshKey],
     queryFn: () => base44.entities.Note.filter({ chapter_id: chapter?.id }),
     enabled: !!chapter?.id,
+  });
+
+  const { data: settings } = useQuery({
+    queryKey: ['user-settings'],
+    queryFn: async () => {
+      const list = await base44.entities.UserSettings.list();
+      return list[0] || null;
+    },
   });
 
   // Create a map of paragraph index to note
@@ -135,10 +144,44 @@ export default function ChapterContent({ chapter, sectionRoute }) {
 
   const data = chapterData || { paragraphs: [{ text: "Content loading..." }] };
 
+  // Apply settings
+  const fontSizeClasses = {
+    'small': 'text-sm sm:text-base md:text-lg',
+    'medium': 'text-base sm:text-lg md:text-xl',
+    'large': 'text-lg sm:text-xl md:text-2xl',
+    'extra-large': 'text-xl sm:text-2xl md:text-3xl',
+  };
+
+  const lineSpacingClasses = {
+    'compact': 'leading-normal',
+    'normal': 'leading-relaxed',
+    'relaxed': 'leading-loose',
+  };
+
+  const themeClasses = {
+    'light': 'bg-white text-gray-800',
+    'dark': 'bg-gray-900 text-gray-100',
+    'sepia': 'bg-[#f4ecd8] text-[#5c4b37]',
+  };
+
+  const fontSize = settings?.font_size || 'medium';
+  const lineSpacing = settings?.line_spacing || 'normal';
+  const theme = settings?.theme || 'light';
+  const dyslexiaFont = settings?.dyslexia_font || false;
+
+  const handleTextSelection = () => {
+    const selection = window.getSelection();
+    const text = selection?.toString().trim();
+    if (text) {
+      setSelectedText(text);
+    }
+  };
+
   return (
     <section 
-      className="bg-white rounded-xl sm:rounded-2xl shadow-lg sm:shadow-xl border border-gray-200 overflow-visible relative"
+      className={`${themeClasses[theme]} rounded-xl sm:rounded-2xl shadow-lg sm:shadow-xl border border-gray-200 overflow-visible relative`}
       aria-labelledby={`chapter-title-${chapter.id}`}
+      onMouseUp={handleTextSelection}
     >
       {/* Chapter Header */}
       <header className="bg-gradient-to-r from-gray-100 to-gray-50 border-b border-gray-200 px-3 sm:px-6 md:px-8 lg:px-10 py-3 sm:py-5 md:py-6">
@@ -187,7 +230,7 @@ export default function ChapterContent({ chapter, sectionRoute }) {
       {/* Chapter Body */}
       <div className="px-3 sm:px-6 md:px-8 lg:px-10 py-4 sm:py-6 md:py-8 lg:py-10 relative">
         <div className="prose prose-sm sm:prose-base lg:prose-lg max-w-none relative select-text">
-          <div className="font-serif text-gray-800 leading-relaxed text-base sm:text-lg md:text-xl space-y-3 sm:space-y-4 md:space-y-5">
+          <div className={`${dyslexiaFont ? 'font-sans' : 'font-serif'} ${fontSizeClasses[fontSize]} ${lineSpacingClasses[lineSpacing]} space-y-3 sm:space-y-4 md:space-y-5`}>
             {data.paragraphs?.map((para, idx) => (
               <Paragraph 
                 key={idx} 
