@@ -3,13 +3,14 @@ export const workingWithOthersContent = {
     { pageNum: "89" },
     {
       segments: [
-        { text: `PRACTICAL experience shows that nothing will so much insure immunity from drinking as intensive work with other alcoholics. It works when other activities fail. This is our twelfth suggestion: ` },
+        { text: `PRACTICAL experience shows that nothing will so much insure immunity from drinking as intensive work with other alcoholics. It works when other activities fail.`, highlight: 'blue' },
+        { text: ` This is our twelfth suggestion: ` },
         { text: `Carry this message to other alcoholics!`, highlight: 'pink' },
         { text: ` You can help when no one else can. You can secure their confidence when others fail. Remember they are very ill.` }
       ]
     },
     { pageNum: "90" },
-    { text: `Life will take on new meaning. To watch people recover, to see them help others, to watch loneliness vanish, to see a fellowship grow up about you, to have a host of friends—this is an experience you must not miss. We know you will not want to miss it. Frequent contact with newcomers and with each other is the bright spot of our lives.` },
+    { text: `Life will take on new meaning. To watch people recover, to see them help others, to watch loneliness vanish, to see a fellowship grow up about you, to have a host of friends—this is an experience you must not miss. We know you will not want to miss it. Frequent contact with newcomers and with each other is the bright spot of our lives.`, highlight: 'blue' },
     { text: `Perhaps you are not acquainted with any drinkers who want to recover. You can easily find some by asking a few doctors, ministers, priests or hospitals. They will be only too glad to assist you. Don't start out as an evangelist or reformer. Unfortunately a lot of prejudice exists. You will be handicapped if you arouse it. Ministers and doctors are competent and you can learn much from them if you wish, but it happens that because of your own drinking experience you can be uniquely useful to other alcoholics. So cooperate; never criticize. To be helpful is our only aim.` },
     { text: `When you discover a prospect for Alcoholics Anonymous, find out all you can about him. If he does not want to stop drinking, don't waste time trying to persuade him. You may spoil a later opportunity. This advice is given for his family also. They should be patient, realizing they are dealing with a sick person.` },
     { text: `If there is any indication that he wants to stop, have a good talk with the person most interested in him—usually his wife. Get an idea of his behavior, his problems, his background, the seriousness of his condition, and his religious leanings. You need this information to put yourself in his place, to see how you would like him to approach you if the tables were turned.` },
@@ -67,7 +68,7 @@ export const workingWithOthersContent = {
     { text: `After they have seen tangible results, the family will perhaps want to go along. These things will come to pass naturally and in good time provided, however, the alcoholic continues to demonstrate that he can be sober, considerate, and helpful, regardless of what anyone says or does. Of course, we all fall much below this standard many times. But we must try to repair the damage immediately lest we pay the penalty by a spree.` },
     { text: `If there be divorce or separation, there should be no undue haste for the couple to get together. The man should be sure of his recovery. The wife should fully understand his new way of life. If their old relationship is to be resumed it must be on a better basis, since the former did not work. This means a new attitude and spirit all around. Sometimes it is to the best interests of all concerned that a couple remain apart. Obviously, no rule can be laid down. Let the alcoholic continue his program day by day. When the time for living together has come, it will be apparent to both parties.` },
     { text: `Let no alcoholic say he cannot recover unless he has his family back. This just isn't so. In some cases the wife will never come back for one reason or another. Remind the prospect that his recovery is not dependent upon people. It is dependent upon his relationship with God. We have seen men get well whose families have not returned at all. We have seen others slip when the family came back too soon.` },
-    { text: `Both you and the new man must walk day by day in the path of spiritual progress. If you persist, remarkable things will happen. When we look back, we realize that the things which came to us when we put ourselves in God's hands were better than anything we could have planned. Follow the dictates of a Higher Power and you will presently live in a new and wonderful world, no matter what your present circumstances!` },
+    { text: `Both you and the new man must walk day by day in the path of spiritual progress. If you persist, remarkable things will happen. When we look back, we realize that the things which came to us when we put ourselves in God's hands were better than anything we could have planned. Follow the dictates of a Higher Power and you will presently live in a new and wonderful world, no matter what your present circumstances!`, highlight: 'blue' },
     { text: `When working with a man and his family, you should take care not to participate in their quarrels. You may spoil your chance of being helpful if you do. But urge upon a man's family that he has been a very sick person and should be treated accordingly. You should warn against arousing resentment or jealousy. You should point out that his defects of character are not going to disappear over night. Show them that he has entered upon a period of growth. Ask them to remember, when they are impatient, the blessed fact of his sobriety.` },
     { text: `If you have been successful in solving your own domestic problems, tell the newcomer's family how that was accomplished. In this way you can set them on the right track without becoming critical of them. The story of how you and your wife settled your difficulties is worth any amount of criticism.` },
     { text: `Assuming we are spiritually fit, we can do all sorts of things alcoholics are not supposed to do. People have said we must not go where liquor is served; we must not have it in our homes; we must shun friends who drink; we must avoid moving pictures which show drinking scenes; we must not go into bars; our friends must hide their bottles if we go to their houses; we mustn't think or be reminded about alcohol at all. Our experience shows that this is not necessarily so.` },
@@ -75,7 +76,8 @@ export const workingWithOthersContent = {
       segments: [
         { text: `We meet these conditions every day. An alcoholic who cannot meet them, still has an ` },
         { text: `alcoholic mind;`, highlight: 'pink' },
-        { text: ` there is something the matter with his spiritual status. His only chance for sobriety would be some place like the Greenland Ice Cap, and even there an Eskimo might turn up with a bottle of scotch and ruin everything! Ask any woman who has sent her husband to distant places on the theory he would escape the alcohol problem.` }
+        { text: ` there is something the matter with his spiritual status. His only chance for sobriety would be some place like the Greenland Ice Cap, and even there an Eskimo might turn up with a bottle of scotch and ruin everything! Ask any woman who has sent her husband to distant places on the theory he would escape the alcohol problem. ` },
+        { text: `Assuming we are spiritually fit, we can do all sorts of things alcoholics are not supposed to do.`, highlight: 'blue' }
       ]
     },
     { text: `In our belief any scheme of combating alcoholism which proposes to shield the sick man from temptation is doomed to failure. If the alcoholic tries to shield himself he may succeed for a time, but he usually winds up with a bigger explosion than ever. We have tried these methods. These attempts to do the impossible have always failed.` },
@@ -89,7 +91,7 @@ export const workingWithOthersContent = {
     {
       segments: [
         { text: `` },
-        { text: `Your job now is to be at the place where you may be of maximum helpfulness to others, so never hesitate to go anywhere if you can be helpful.`, highlight: 'pink' },
+        { text: `Your job now is to be at the place where you may be of maximum helpfulness to others, so never hesitate to go anywhere if you can be helpful.`, highlight: 'blue' },
         { text: ` You should not hesitate to visit the most sordid spot on earth on such an errand. Keep on the firing line of life with these motives and God will keep you unharmed.` }
       ]
     },
