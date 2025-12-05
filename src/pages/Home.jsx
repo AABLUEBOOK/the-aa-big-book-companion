@@ -100,7 +100,7 @@ const Home = memo(function Home() {
       {/* Highlighting Guide - Compact */}
       <div className="px-4 py-3">
         <div className="max-w-3xl mx-auto">
-          <p className="text-[10px] sm:text-xs text-[#FFFFFD]/70 font-medium text-center mb-2">Highlighting Guide</p>
+          <p className="text-[10px] sm:text-xs text-[#FFFFFD]/70 font-medium text-center mb-2">Reference Guide</p>
           <div className="flex flex-wrap justify-center gap-x-4 gap-y-1">
             <div className="flex items-center gap-1.5">
               <span className="w-4 h-4 rounded-sm bg-orange-400"></span>
