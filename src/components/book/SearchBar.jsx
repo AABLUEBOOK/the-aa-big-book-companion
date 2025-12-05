@@ -3,6 +3,8 @@ import { useNavigate } from "react-router-dom";
 import { Input } from "@/components/ui/input";
 import { Search, X, BookOpen, FileText, Loader2 } from "lucide-react";
 import { search, highlightMatches } from "./searchIndex";
+import { base44 } from "@/api/base44Client";
+import { useMutation } from "@tanstack/react-query";
 
 const SearchBar = memo(function SearchBar({ className = "" }) {
   const [searchQuery, setSearchQuery] = useState("");
@@ -10,6 +12,10 @@ const SearchBar = memo(function SearchBar({ className = "" }) {
   const [results, setResults] = useState({ chapters: [], content: [] });
   const [isSearching, setIsSearching] = useState(false);
   const navigate = useNavigate();
+
+  const saveSearchMutation = useMutation({
+    mutationFn: (query) => base44.entities.SearchHistory.create({ query }),
+  });
 
   // Index builds on first search - no preloading needed
 
@@ -31,6 +37,9 @@ const SearchBar = memo(function SearchBar({ className = "" }) {
   }, [searchQuery]);
 
   const handleSelect = (chId) => {
+    if (searchQuery.trim()) {
+      saveSearchMutation.mutate(searchQuery.trim());
+    }
     navigate(`/Chapter?id=${chId}`);
     setSearchQuery("");
     setIsFocused(false);
