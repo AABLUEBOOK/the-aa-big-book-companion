@@ -12,7 +12,9 @@ export const moreAboutAlcoholismContent = {
     },
     {
       segments: [
-        { text: `We learned that we had to fully concede to our innermost selves that we were alcoholics. This is the first step in recovery. ` },
+        { text: `We learned that we had to fully concede to our innermost selves that we were alcoholics. This is the ` },
+        { text: `first step`, highlight: 'orange' },
+        { text: ` in recovery. ` },
         { text: `The delusion`, highlight: 'pink' },
         { text: ` that we are like other people, or presently may be, has to be smashed.` }
       ]
