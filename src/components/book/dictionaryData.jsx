@@ -256,6 +256,7 @@ export const TERM_DEFINITIONS = {
   "begotten": "Caused / produced / caused to exist",
   "begrudged": "Reluctantly used, given or spent",
   "behalf": "For the benefit of",
+  "before and after": "Before the first drink and after the first drink",
   "beheld": "Looked upon / gazed at / perceived visually",
   "behoove": "Seem necessary for / to be necessary, proper, or gainful for",
   "belittle": "Discount / think, represent, or speak of as small or unimportant",
