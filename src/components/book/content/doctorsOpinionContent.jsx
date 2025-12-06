@@ -79,7 +79,13 @@ export const doctorsOpinionContent = {
     { text: `Faced with this problem, if a doctor is honest with himself, he must sometimes feel his own inadequacy. Although he gives all that is in him, it often is not enough. One feels that something more than human power is needed to produce the essential psychic change. Though the aggregate of recoveries resulting from psychiatric effort is considerable, we physicians must admit we have made little impression upon the problem as a whole. Many types do not respond to the ordinary psychological approach.` },
     { text: `I do not hold with those who believe that alcoholism is entirely a problem of mental control. I have had many men who had, for example, worked a period of months on some problem or business deal which was to be settled on a certain date, favorably to them. They took a drink a day or so prior to the date, and then the phenomenon of craving at once became paramount to all other interests so that the important appointment was not met. These men were not drinking to escape; they were drinking to overcome a craving beyond their mental control.` },
     { pageNum: "xxx" },
-    { text: `There are many situations which arise out of the phenomenon of craving which cause men to make the supreme sacrifice rather than continue to fight.` },
+    {
+      segments: [
+        { text: `There are many situations which arise out of the ` },
+        { text: `phenomenon of craving`, highlight: 'pink' },
+        { text: ` which cause men to make the supreme sacrifice rather than continue to fight.` }
+      ]
+    },
     {
       segments: [
         { text: `The ` },
