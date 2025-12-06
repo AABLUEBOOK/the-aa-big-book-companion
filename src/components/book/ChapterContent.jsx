@@ -124,6 +124,18 @@ export default function ChapterContent({ chapter, sectionRoute, searchQuery = ''
     });
   }, [chapter?.id]);
 
+  // Scroll to first search match on mount
+  useEffect(() => {
+    if (searchQuery && searchQuery.trim().length >= 2) {
+      setTimeout(() => {
+        const marks = document.querySelectorAll('mark');
+        if (marks.length > 0) {
+          marks[0].scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      }, 500);
+    }
+  }, [searchQuery, chapter?.id]);
+
   const handleNoteChange = () => {
     setNotesRefreshKey(prev => prev + 1);
   };
@@ -199,18 +211,6 @@ export default function ChapterContent({ chapter, sectionRoute, searchQuery = ''
       ) : part
     );
   };
-
-  // Scroll to first search match on mount
-  useEffect(() => {
-    if (searchQuery && searchQuery.trim().length >= 2) {
-      setTimeout(() => {
-        const marks = document.querySelectorAll('mark');
-        if (marks.length > 0) {
-          marks[0].scrollIntoView({ behavior: 'smooth', block: 'center' });
-        }
-      }, 500);
-    }
-  }, [searchQuery, chapter?.id]);
 
   return (
     <section 
