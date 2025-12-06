@@ -15,7 +15,7 @@ import { base44 } from "@/api/base44Client";
 const Paragraph = memo(({ para, idx, renderTerms, chapterId, currentPageNum, note, onNoteChange }) => {
   const highlightClasses = {
     'yellow': 'bg-yellow-400/30 px-1 py-0.5 rounded',
-    'pink': 'bg-pink-400/40 px-1 py-0.5 rounded',
+    'pink': 'text-pink-600 font-semibold',
     'blue': 'underline decoration-2 decoration-blue-600 underline-offset-2',
     'orange': 'text-orange-600 font-bold underline decoration-2 decoration-orange-600 underline-offset-2',
     'green': 'underline decoration-2 decoration-green-600 underline-offset-2'
