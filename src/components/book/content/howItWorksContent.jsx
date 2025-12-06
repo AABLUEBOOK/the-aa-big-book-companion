@@ -327,10 +327,8 @@ export const howItWorksContent = {
       segments: [
         { text: `We never apologize to anyone for depending upon our Creator. We can laugh at those who think spirituality the way of weakness. Paradoxically, it is the way of strength. The verdict of the ages is that ` },
         { text: `faith means courage.`, highlight: 'pink' },
-        { text: ` All men of faith have courage. They trust their God. We never apologize for God. Instead we let Him demonstrate, through us, what He can do. We ask Him to remove ` },
-        { text: `our fear`, highlight: 'pink' },
-        { text: ` and ` },
-        { text: `direct our attention to what He would have us be.`, highlight: 'green' },
+        { text: ` All men of faith have courage. They trust their God. We never apologize for God. Instead we let Him demonstrate, through us, what He can do. ` },
+        { text: `We ask Him to remove our fear and direct our attention to what He would have us be.`, highlight: 'green' },
         { text: ` ` },
         { text: `At once, we commence to outgrow fear.`, highlight: 'blue' }
       ]
