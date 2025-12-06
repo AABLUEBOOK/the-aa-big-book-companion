@@ -18,7 +18,8 @@ const Paragraph = memo(({ para, idx, renderTerms, chapterId, currentPageNum, not
     'pink': 'text-pink-600 font-semibold',
     'blue': 'underline decoration-2 decoration-blue-600 underline-offset-2',
     'orange': 'text-orange-600 font-bold underline decoration-2 decoration-orange-600 underline-offset-2',
-    'green': 'underline decoration-2 decoration-green-600 underline-offset-2'
+    'green': 'underline decoration-2 decoration-green-600 underline-offset-2',
+    'pink-green-underline': 'pink-green-underline'
   };
 
   const getSegmentClasses = (segment) => {

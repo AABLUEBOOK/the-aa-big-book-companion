@@ -15,6 +15,16 @@ const Layout = memo(function Layout({ children }) {
             font-weight: bold;
         }
 
+        /* Pink text with green underline */
+        .pink-green-underline {
+            color: #db2777;
+            font-weight: 600;
+            text-decoration: underline;
+            text-decoration-color: #16a34a;
+            text-decoration-thickness: 2px;
+            text-underline-offset: 2px;
+        }
+
         /* Modal Overlay - Mobile Optimized with Portal */
         .big-book-modal-overlay {
             position: fixed !important;
