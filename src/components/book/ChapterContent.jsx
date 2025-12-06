@@ -21,6 +21,12 @@ const Paragraph = memo(({ para, idx, renderTerms, chapterId, currentPageNum, not
     'green': 'underline decoration-2 decoration-green-600 underline-offset-2'
   };
 
+  const getSegmentClasses = (segment) => {
+    let classes = segment.highlight ? highlightClasses[segment.highlight] : '';
+    if (segment.bold) classes += ' font-bold';
+    return classes.trim();
+  };
+
   // Page break marker
   if (para.pageNum) {
     return (
@@ -37,8 +43,8 @@ const Paragraph = memo(({ para, idx, renderTerms, chapterId, currentPageNum, not
       <div key={idx} className="group flex gap-1 items-start">
         <p className="mb-4 sm:mb-5 first:mt-0 leading-relaxed sm:leading-relaxed flex-1">
           {para.segments.map((segment, segIdx) => (
-            segment.highlight ? (
-              <span key={segIdx} className={highlightClasses[segment.highlight]}>
+            segment.highlight || segment.bold ? (
+              <span key={segIdx} className={getSegmentClasses(segment)}>
                 {renderTerms ? renderTerms(segment.text) : segment.text}
               </span>
             ) : (
