@@ -225,7 +225,9 @@ export const intoActionContent = {
         { text: `Step Ten`, highlight: 'orange' },
         { text: `, which suggests we continue to take personal inventory and continue to set right any new mistakes as we go along. We vigorously commenced this way of living as we cleaned up the past. We have entered the world of the Spirit. Our next function is to grow in understanding and effectiveness.` },
         { text: ` This is not an overnight matter. It should continue for our lifetime. ` },
-        { text: `Continue to watch for selfishness, dishonesty, resentment, and fear. When these crop up, we ask God at once to remove them. We discuss them with someone immediately and make amends quickly if we have harmed anyone. Then we resolutely turn our thoughts to someone we can help.`, highlight: 'pink' },
+        { text: `Continue to watch for selfishness, dishonesty, resentment, and fear. `, highlight: 'pink' },
+        { text: `When these crop up, we ask God at once to remove them.`, highlight: 'green' },
+        { text: ` We discuss them with someone immediately and make amends quickly if we have harmed anyone. Then we resolutely turn our thoughts to someone we can help.`, highlight: 'pink' },
         { text: ` Love and tolerance of others is our code.` }
       ]
     },
