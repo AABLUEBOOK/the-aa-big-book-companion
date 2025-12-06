@@ -673,7 +673,7 @@ export const TERM_DEFINITIONS = {
   "insane": "Mentally ill / of unsound mind / senseless / extreme foolishness",
   "insanity": "Extreme senselessness or foolishness / delusion / delirium / irrationality",
   "inventory": "A detailed list / a thorough examination of one's character defects and assets",
-  "meditation": "Purposeful and intentional focusing of one's thoughts / to reflect upon / to ponder or consider thoughtfully / contemplation",
+  "meditation": "Ponder and reflect on what you're reading and how it applies to you / what your reading means to you / how it relates to you",
   "miracle": "An event that appears beyond explanation by the laws of nature and so is held to be supernatural in origin or an act of God",
   "moral": "Ethical / relating to principles of right and wrong - good and bad in conduct",
   "obsession": "Excessive and irrational mental attachment / a persistent and disturbing preoccupation with an often unreasonable idea or feeling / compelling motivation / fixation / compulsion",
