@@ -46,9 +46,10 @@ const Chapter = memo(function Chapter() {
   const [bookmarksOpen, setBookmarksOpen] = useState(false);
   const navigate = useNavigate();
   
-  // Get chapter ID from URL
+  // Get chapter ID and search query from URL
   const urlParams = new URLSearchParams(window.location.search);
   const chapterId = urlParams.get('id') || 'preface';
+  const searchQuery = urlParams.get('search') || '';
   
   // Memoize chapter lookup
   const { chapter, prevChapter, nextChapter } = useMemo(() => {
@@ -142,7 +143,7 @@ const Chapter = memo(function Chapter() {
               <Loader2 className="w-8 h-8 animate-spin text-[#25DCE6]" />
             </div>
           }>
-            <ChapterContent chapter={chapter} sectionRoute="Chapter" />
+            <ChapterContent chapter={chapter} sectionRoute="Chapter" searchQuery={searchQuery} />
           </Suspense>
         </article>
 

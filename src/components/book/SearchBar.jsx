@@ -39,8 +39,10 @@ const SearchBar = memo(function SearchBar({ className = "" }) {
   const handleSelect = (chId) => {
     if (searchQuery.trim()) {
       saveSearchMutation.mutate(searchQuery.trim());
+      navigate(`/Chapter?id=${chId}&search=${encodeURIComponent(searchQuery.trim())}`);
+    } else {
+      navigate(`/Chapter?id=${chId}`);
     }
-    navigate(`/Chapter?id=${chId}`);
     setSearchQuery("");
     setIsFocused(false);
   };

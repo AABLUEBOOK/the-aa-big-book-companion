@@ -12,7 +12,7 @@ import { useQuery } from "@tanstack/react-query";
 import { base44 } from "@/api/base44Client";
 
 // Memoized paragraph component
-const Paragraph = memo(({ para, idx, renderTerms, chapterId, currentPageNum, note, onNoteChange }) => {
+const Paragraph = memo(({ para, idx, renderTerms, chapterId, currentPageNum, note, onNoteChange, highlightSearch }) => {
   const highlightClasses = {
     'yellow': 'bg-yellow-400/30 px-1 py-0.5 rounded',
     'pink': 'text-pink-600 font-semibold',
@@ -46,10 +46,10 @@ const Paragraph = memo(({ para, idx, renderTerms, chapterId, currentPageNum, not
           {para.segments.map((segment, segIdx) => (
             segment.highlight || segment.bold ? (
               <span key={segIdx} className={getSegmentClasses(segment)}>
-                {renderTerms ? renderTerms(segment.text) : segment.text}
+                {highlightSearch ? highlightSearch(renderTerms ? renderTerms(segment.text) : segment.text) : (renderTerms ? renderTerms(segment.text) : segment.text)}
               </span>
             ) : (
-              <span key={segIdx}>{renderTerms ? renderTerms(segment.text) : segment.text}</span>
+              <span key={segIdx}>{highlightSearch ? highlightSearch(renderTerms ? renderTerms(segment.text) : segment.text) : (renderTerms ? renderTerms(segment.text) : segment.text)}</span>
             )
           ))}
         </p>
@@ -72,7 +72,7 @@ const Paragraph = memo(({ para, idx, renderTerms, chapterId, currentPageNum, not
           para.highlight && highlightClasses[para.highlight]
         )}
       >
-        {renderTerms ? renderTerms(para.text) : para.text}
+        {highlightSearch ? highlightSearch(renderTerms ? renderTerms(para.text) : para.text) : (renderTerms ? renderTerms(para.text) : para.text)}
       </p>
       <NoteButton
         chapterId={chapterId}
@@ -85,7 +85,7 @@ const Paragraph = memo(({ para, idx, renderTerms, chapterId, currentPageNum, not
   );
 });
 
-export default function ChapterContent({ chapter, sectionRoute }) {
+export default function ChapterContent({ chapter, sectionRoute, searchQuery = '' }) {
   const [chapterData, setChapterData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [notesPanelOpen, setNotesPanelOpen] = useState(false);
@@ -184,6 +184,34 @@ export default function ChapterContent({ chapter, sectionRoute }) {
     }
   };
 
+  // Helper function to highlight search terms in text
+  const highlightSearchTerm = (text, query) => {
+    if (!query || query.trim().length < 2) return text;
+    
+    const regex = new RegExp(`(${query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
+    const parts = text.split(regex);
+    
+    return parts.map((part, i) => 
+      regex.test(part) ? (
+        <mark key={i} className="bg-yellow-300/60 px-0.5 rounded">
+          {part}
+        </mark>
+      ) : part
+    );
+  };
+
+  // Scroll to first search match on mount
+  useEffect(() => {
+    if (searchQuery && searchQuery.trim().length >= 2) {
+      setTimeout(() => {
+        const marks = document.querySelectorAll('mark');
+        if (marks.length > 0) {
+          marks[0].scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      }, 500);
+    }
+  }, [searchQuery, chapter?.id]);
+
   return (
     <section 
       className={`${themeClasses[theme]} rounded-xl sm:rounded-2xl shadow-lg sm:shadow-xl border border-gray-200 overflow-visible relative`}
@@ -248,6 +276,7 @@ export default function ChapterContent({ chapter, sectionRoute }) {
                 currentPageNum={getCurrentPageNum(data.paragraphs, idx)}
                 note={notesByParagraph[idx]}
                 onNoteChange={handleNoteChange}
+                highlightSearch={(text) => highlightSearchTerm(text, searchQuery)}
               />
             ))}
           </div>
