@@ -116,10 +116,10 @@ export const doctorsOpinionContent = {
     {
       segments: [
         { text: `All these, and many others, have one symptom in common: they cannot start drinking without developing the ` },
+        { text: `phenomenon of craving`, highlight: 'pink' },
+        { text: `. This ` },
         { text: `phenomenon`, highlight: 'pink' },
-        { text: ` of craving. This ` },
-        { text: `phenomenon,`, highlight: 'pink' },
-        { text: ` as we have suggested, may be the ` },
+        { text: `, as we have suggested, may be the ` },
         { text: `manifestation of an allergy`, highlight: 'pink' },
         { text: ` which differentiates these people, and sets them apart as a distinct entity. It has never been, by any treatment with which we are familiar, permanently eradicated. The only relief we have to suggest is entire abstinence.` }
       ]
