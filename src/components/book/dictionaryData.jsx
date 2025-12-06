@@ -678,7 +678,7 @@ export const TERM_DEFINITIONS = {
   "moral": "Ethical / relating to principles of right and wrong - good and bad in conduct",
   "obsession": "Excessive and irrational mental attachment / a persistent and disturbing preoccupation with an often unreasonable idea or feeling / compelling motivation / fixation / compulsion",
   "powerless": "Without power / defenseless / ineffective / lacking in strength, power, or authority (over alcohol)",
-  "prayer": "An earnest or urgent request / appeal / ask",
+  "prayer": "Two-way prayer - asking and listening/three-way prayer - hearing God speaking thru others",
   "program": "A formulated plan listing things to be done or to take place especially in their time order / way of acting or proceeding",
   "recovery": "Regaining health, self-awareness, balance, and composure in one's life",
   "resentment": "A persistent feeling of ill will and suppressed anger caused by a sense of an injustice, insult, injury, offense, or wrong done",
