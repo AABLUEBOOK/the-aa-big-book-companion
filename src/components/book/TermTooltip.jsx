@@ -35,7 +35,7 @@ export function wrapTermsInText(text) {
   
   // Use a single pass with combined regex for better performance
   for (const term of sortedTerms) {
-    const regex = new RegExp(`\\b(${term})\\b`, 'gi');
+    const regex = new RegExp(`\\b(${term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})\\b`, 'gi');
     let match;
     while ((match = regex.exec(text)) !== null) {
       replacements.push({
@@ -52,9 +52,24 @@ export function wrapTermsInText(text) {
     return text;
   }
   
-  replacements.sort((a, b) => b.start - a.start);
-  
+  // Remove overlapping replacements - keep longest matches
+  replacements.sort((a, b) => a.start - b.start || (b.end - b.start) - (a.end - a.start));
+  const filtered = [];
   for (const rep of replacements) {
+    const overlaps = filtered.some(existing => 
+      (rep.start >= existing.start && rep.start < existing.end) ||
+      (rep.end > existing.start && rep.end <= existing.end) ||
+      (rep.start <= existing.start && rep.end >= existing.end)
+    );
+    if (!overlaps) {
+      filtered.push(rep);
+    }
+  }
+  
+  // Sort by position descending for replacement
+  filtered.sort((a, b) => b.start - a.start);
+  
+  for (const rep of filtered) {
     const escapedDef = rep.definition.replace(/:/g, '|||COLON|||');
     result = result.slice(0, rep.start) + `{{TERM:${rep.term}:${escapedDef}}}` + result.slice(rep.end);
   }
