@@ -169,7 +169,7 @@ export function renderTextWithTerms(text) {
   
   return parts.map((part, idx) => {
     // Match TERM:term:definition - term is first segment, definition is everything after second colon
-    const match = part.match(/\{\{TERM:([^:]+):(.+)\}\}$/);
+    const match = part.match(/^\{\{TERM:([^:]+):(.+)\}\}$/);
     if (match) {
       const definition = match[2].replace(/\|\|\|COLON\|\|\|/g, ':');
       return <TermTooltip key={idx} term={match[1]} definition={definition} />;
