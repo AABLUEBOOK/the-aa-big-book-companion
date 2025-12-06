@@ -6,7 +6,7 @@ export const intoActionContent = {
         { text: `HAVING made our personal inventory, what shall we do about it? We have been trying to get a new attitude, a new relationship with our Creator, and to discover the obstacles in our path. We have admitted certain defects; we have ascertained in a rough way what the trouble is; we have put our finger on the weak items in our personal inventory. Now these are about to be cast out. ` },
         { text: `This requires action on our part, which, when completed, will mean that we have admitted to God, to ourselves, and to another human being, the exact nature of our defects.`, highlight: 'pink' },
         { text: ` This brings us to the ` },
-        { text: `Fifth Step`, highlight: 'orange' },
+        { text: `Fifth Step`, highlight: 'orange', bold: true },
         { text: ` in the program of recovery mentioned in the preceding chapter.` }
       ]
     },
