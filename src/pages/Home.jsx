@@ -1,13 +1,9 @@
 import React, { memo, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
-import { ChevronRight, Settings, BookOpen, Brain, Calendar } from "lucide-react";
+import { ChevronRight, Settings } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import SearchBar from "../components/book/SearchBar";
-import ProgressTracker from "../components/reading/ProgressTracker";
 import SettingsPanel from "../components/reading/SettingsPanel";
-import ReadingPlanCard from "../components/reading/ReadingPlanCard";
-import CollectionsManager from "../components/reading/CollectionsManager";
-import ExportNotes from "../components/reading/ExportNotes";
 
 // Memoized chapter item for better performance
 const ChapterItem = memo(function ChapterItem({ chapter, createPageUrl }) {
@@ -98,21 +94,14 @@ const Home = memo(function Home() {
               <h1 className="text-lg sm:text-xl md:text-2xl font-serif font-bold text-[#FFFFFD] leading-tight">
                 Alcoholics Anonymous
               </h1>
-              <div className="flex gap-2">
-                <Link to={createPageUrl('Flashcards')}>
-                  <Button variant="ghost" size="sm" className="text-white hover:text-[#25DCE6]">
-                    <Brain className="w-4 h-4" />
-                  </Button>
-                </Link>
-                <Button 
-                  variant="ghost" 
-                  size="sm" 
-                  onClick={() => setSettingsOpen(true)}
-                  className="text-white hover:text-[#25DCE6]"
-                >
-                  <Settings className="w-4 h-4" />
-                </Button>
-              </div>
+              <Button 
+                variant="ghost" 
+                size="sm" 
+                onClick={() => setSettingsOpen(true)}
+                className="text-white hover:text-[#25DCE6]"
+              >
+                <Settings className="w-4 h-4" />
+              </Button>
             </div>
             <p className="text-[11px] sm:text-xs md:text-sm text-[#25DCE6] leading-snug text-center">
               The Story of How Many Thousands of Men and Women Have Recovered from Alcoholism
@@ -154,25 +143,6 @@ const Home = memo(function Home() {
 
       {/* Main Content */}
       <main className="max-w-3xl mx-auto px-3 sm:px-4 py-4 sm:py-6 space-y-6">
-        {/* Quick Actions */}
-        <div className="grid sm:grid-cols-2 gap-4">
-          <ReadingPlanCard />
-          <div className="bg-white rounded-xl p-4 border border-gray-200">
-            <div className="flex items-center justify-between mb-3">
-              <h3 className="font-semibold text-gray-900">Tools</h3>
-            </div>
-            <div className="space-y-2">
-              <ExportNotes />
-            </div>
-          </div>
-        </div>
-
-        {/* Progress Tracker */}
-        <ProgressTracker chapters={CHAPTERS} compact />
-
-        {/* Collections */}
-        <CollectionsManager />
-
         {/* Chapter List */}
         <div>
           <h2 className="text-lg font-semibold text-white mb-3">Chapters</h2>
