@@ -89,19 +89,19 @@ const Home = memo(function Home() {
     <div className="min-h-screen min-h-[100dvh] w-full bg-[#222A31] overflow-x-hidden overflow-y-auto">
         {/* Header */}
         <header className="bg-[#2A3440] border-b border-[#25DCE6]/20 px-3 sm:px-4 py-4 sm:py-5 w-full position-relative z-10">
-          <div className="max-w-3xl mx-auto px-2">
-            <div className="flex items-center justify-between mb-3">
+          <div className="max-w-3xl mx-auto px-2 relative">
+            <Button 
+              variant="ghost" 
+              size="sm" 
+              onClick={() => setSettingsOpen(true)}
+              className="text-white hover:text-[#25DCE6] absolute right-2 top-0"
+            >
+              <Settings className="w-4 h-4" />
+            </Button>
+            <div className="text-center mb-3">
               <h1 className="text-lg sm:text-xl md:text-2xl font-serif font-bold text-[#FFFFFD] leading-tight">
                 Alcoholics Anonymous
               </h1>
-              <Button 
-                variant="ghost" 
-                size="sm" 
-                onClick={() => setSettingsOpen(true)}
-                className="text-white hover:text-[#25DCE6]"
-              >
-                <Settings className="w-4 h-4" />
-              </Button>
             </div>
             <p className="text-[11px] sm:text-xs md:text-sm text-[#25DCE6] leading-snug text-center">
               The Story of How Many Thousands of Men and Women Have Recovered from Alcoholism
