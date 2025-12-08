@@ -16,6 +16,13 @@ const chapterModules = {
   "to-employers": () => import("./content/toEmployersContent"),
   "vision-for-you": () => import("./content/visionForYouContent"),
   "dr-bob-nightmare": () => import("./content/doctorBobsNightmareContent"),
+  "aa-number-three": () => import("./content/aaNumberThreeContent"),
+  "gratitude-in-action": () => import("./content/gratitudeInActionContent"),
+  "women-suffer-too": () => import("./content/womenSufferTooContent"),
+  "man-who-mastered-fear": () => import("./content/manWhoMasteredFearContent"),
+  "he-sold-himself-short": () => import("./content/heSoldHimselfShortContent"),
+  "keys-of-the-kingdom": () => import("./content/keysOfTheKingdomContent"),
+  "our-southern-friend": () => import("./content/ourSouthernFriendContent"),
   "appendices": () => import("./content/appendicesContent"),
 };
 
