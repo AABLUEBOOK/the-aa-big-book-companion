@@ -61,18 +61,26 @@ const CHAPTERS = [
   { id: "family-afterward", title: "The Family Afterward", pages: "122-135", chapter: 9, section: "Section1" },
   { id: "to-employers", title: "To Employers", pages: "136-150", chapter: 10, section: "Section1" },
   { id: "vision-for-you", title: "A Vision For You", pages: "151-164", chapter: 11, section: "Section1" },
-  
-  // Personal Stories
-  { id: "dr-bob-nightmare", title: "Doctor Bob's Nightmare", pages: "171-181" },
-  { id: "aa-number-three", title: "Alcoholic Anonymous Number Three", pages: "180-192" },
-  { id: "women-suffer-too", title: "Women Suffer Too", pages: "222-233" },
-  { id: "man-who-mastered-fear", title: "The Man Who Mastered Fear", pages: "246-257" },
-  { id: "he-sold-himself-short", title: "He Sold Himself Short", pages: "260-267" },
-  { id: "gratitude-in-action", title: "Gratitude in Action", pages: "275-281" },
-  { id: "keys-of-the-kingdom", title: "The Keys of the Kingdom", pages: "304-321" },
-  { id: "our-southern-friend", title: "Our Southern Friend", pages: "423-438" },
-  
-  // Appendices
+];
+
+const PERSONAL_STORIES = {
+  "Part I: Pioneers of AA": [
+    { id: "dr-bob-nightmare", title: "Doctor Bob's Nightmare", pages: "171-181" },
+    { id: "aa-number-three", title: "Alcoholics Anonymous Number Three", pages: "180-192" },
+  ],
+  "Part II: They Stopped in Time": [
+    { id: "women-suffer-too", title: "Women Suffer Too", pages: "222-233" },
+    { id: "man-who-mastered-fear", title: "The Man Who Mastered Fear", pages: "246-257" },
+    { id: "he-sold-himself-short", title: "He Sold Himself Short", pages: "260-267" },
+    { id: "gratitude-in-action", title: "Gratitude in Action", pages: "275-281" },
+  ],
+  "Part III: They Lost Nearly All": [
+    { id: "keys-of-the-kingdom", title: "The Keys of the Kingdom", pages: "304-321" },
+    { id: "our-southern-friend", title: "Our Southern Friend", pages: "423-438" },
+  ]
+};
+
+const APPENDICES = [
   { id: "appendices", title: "Appendices", pages: "561-575" },
 ];
 
@@ -137,11 +145,38 @@ const Home = memo(function Home() {
 
       {/* Main Content */}
       <main className="max-w-3xl mx-auto px-3 sm:px-4 py-4 sm:py-6 space-y-6">
-        {/* Chapter List */}
+        {/* Main Chapters */}
         <div>
-          <h2 className="text-lg font-semibold text-white mb-3">Chapters</h2>
+          <h2 className="text-lg font-semibold text-white mb-3">Main Text</h2>
           <div className="flex flex-col gap-2 sm:gap-2.5">
             {CHAPTERS.map((chapter) => (
+              <ChapterItem key={chapter.id} chapter={chapter} createPageUrl={createPageUrl} />
+            ))}
+          </div>
+        </div>
+
+        {/* Personal Stories */}
+        <div>
+          <h2 className="text-lg font-semibold text-white mb-3">Personal Stories</h2>
+          <div className="space-y-4">
+            {Object.entries(PERSONAL_STORIES).map(([partTitle, stories]) => (
+              <div key={partTitle}>
+                <h3 className="text-sm font-medium text-[#4A9EFF] mb-2 pl-2">{partTitle}</h3>
+                <div className="flex flex-col gap-2 sm:gap-2.5">
+                  {stories.map((chapter) => (
+                    <ChapterItem key={chapter.id} chapter={chapter} createPageUrl={createPageUrl} />
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Appendices */}
+        <div>
+          <h2 className="text-lg font-semibold text-white mb-3">Reference</h2>
+          <div className="flex flex-col gap-2 sm:gap-2.5">
+            {APPENDICES.map((chapter) => (
               <ChapterItem key={chapter.id} chapter={chapter} createPageUrl={createPageUrl} />
             ))}
           </div>
