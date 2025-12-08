@@ -11,14 +11,14 @@ const ChapterItem = memo(function ChapterItem({ chapter, createPageUrl }) {
     <Link
       to={`${createPageUrl("Chapter")}?id=${chapter.id}`}
       className="flex items-center justify-between px-3 sm:px-4 py-3 sm:py-3.5 
-                 border border-[#0063e3]/30 rounded-lg
-                 bg-[#2A3440] hover:bg-[#0063e3]/10 active:bg-[#0063e3]/20
-                 hover:border-[#0063e3]/50 active:scale-[0.99]
+                 border border-[#4A9EFF]/30 rounded-lg
+                 bg-[#2A3440] hover:bg-[#4A9EFF]/10 active:bg-[#4A9EFF]/20
+                 hover:border-[#4A9EFF]/50 active:scale-[0.99]
                  transition-all duration-150 shadow-sm"
     >
       <div className="flex items-center gap-2 sm:gap-3 min-w-0 flex-1">
         {chapter.chapter && (
-          <span className="text-[#0063e3] text-xs sm:text-sm font-medium w-6 sm:w-8 flex-shrink-0">
+          <span className="text-[#4A9EFF] text-xs sm:text-sm font-medium w-6 sm:w-8 flex-shrink-0">
             {chapter.chapter}.
           </span>
         )}
@@ -30,7 +30,7 @@ const ChapterItem = memo(function ChapterItem({ chapter, createPageUrl }) {
         <span className="text-[#FFFFFD]/50 text-xs sm:text-sm">
           p. {chapter.pages}
         </span>
-        <ChevronRight className="w-4 h-4 text-[#0063e3]/60" />
+        <ChevronRight className="w-4 h-4 text-[#4A9EFF]/60" />
       </div>
     </Link>
   );
@@ -82,13 +82,13 @@ const Home = memo(function Home() {
   return (
     <div className="min-h-screen min-h-[100dvh] w-full bg-[#222A31] overflow-x-hidden overflow-y-auto">
         {/* Header */}
-        <header className="bg-[#2A3440] border-b border-[#0063e3]/20 px-3 sm:px-4 py-4 sm:py-5 w-full position-relative z-10">
+        <header className="bg-[#2A3440] border-b border-[#4A9EFF]/20 px-3 sm:px-4 py-4 sm:py-5 w-full position-relative z-10">
           <div className="max-w-3xl mx-auto px-2 relative">
             <Button 
               variant="ghost" 
               size="sm" 
               onClick={() => setSettingsOpen(true)}
-              className="text-white hover:text-[#0063e3] absolute right-2 top-0"
+              className="text-white hover:text-[#4A9EFF] absolute right-2 top-0"
             >
               <Settings className="w-4 h-4" />
             </Button>
@@ -97,7 +97,7 @@ const Home = memo(function Home() {
                 Alcoholics Anonymous
               </h1>
             </div>
-            <p className="text-[11px] sm:text-xs md:text-sm text-[#0063e3] leading-snug text-center">
+            <p className="text-[11px] sm:text-xs md:text-sm text-[#4A9EFF] leading-snug text-center">
               The Story of How Many Thousands of Men and Women Have Recovered from Alcoholism
             </p>
             <div className="mt-3 max-w-xs mx-auto">
@@ -157,7 +157,7 @@ const Home = memo(function Home() {
       )}
 
       {/* Footer */}
-      <footer className="bg-[#2A3440]/50 border-t border-[#0063e3]/10 px-4 py-4 mt-4">
+      <footer className="bg-[#2A3440]/50 border-t border-[#4A9EFF]/10 px-4 py-4 mt-4">
         <p className="text-center text-[10px] sm:text-xs text-[#FFFFFD]/40">
           Fourth Edition • Alcoholics Anonymous World Services, Inc.
         </p>
