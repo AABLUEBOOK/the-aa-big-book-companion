@@ -53,6 +53,6 @@ export const womenSufferTooContent = {
     { text: `Now I have faith. Now I believe that God can and will help me, provided I continue to seek Him in prayer, and then try to carry out His will to the` },
     { pageNum: "233" },
     { text: `best of my ability. As I see it, my greatest problem is myself. I can go just as far as I am big enough to go and no farther. But I believe I can grow. If I do, it will be because God makes me grow.` },
-    { text: `I cannot begin to describe in this short space how much A.A. has done for me and can do for others, if they will let it. I am a reasonably happy and, I believe, a fairly sensible human being today. My family has returned to me. I hope and I pray that, with God's help, I may always be strong enough to stay away from liquor one day at a time.`
+    { text: `I cannot begin to describe in this short space how much A.A. has done for me and can do for others, if they will let it. I am a reasonably happy and, I believe, a fairly sensible human being today. My family has returned to me. I hope and I pray that, with God's help, I may always be strong enough to stay away from liquor one day at a time.` }
   ]
 };
