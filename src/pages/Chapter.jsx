@@ -1,13 +1,11 @@
-import React, { useState, memo, useMemo, Suspense, useEffect } from "react";
+import React, { useState, memo, useMemo, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, BookOpen, BookmarkCheck, Loader2 } from "lucide-react";
-import { preloadChapter, loadChapterContent } from "../components/book/chapterLoader";
+import { ArrowLeft, BookOpen, BookmarkCheck } from "lucide-react";
+import { preloadChapter } from "../components/book/chapterLoader";
 import SearchBar from "../components/book/SearchBar";
-
-// Lazy load heavy components
-const ChapterContent = React.lazy(() => import("../components/book/ChapterContent"));
-const BookmarksList = React.lazy(() => import("../components/book/BookmarksList"));
+import ChapterContent from "../components/book/ChapterContent";
+import BookmarksList from "../components/book/BookmarksList";
 
 function createPageUrl(pageName) {
   return `/${pageName}`;
@@ -134,9 +132,7 @@ const Chapter = memo(function Chapter() {
             aria-hidden="true"
           />
           <aside className="absolute right-0 top-0 h-full w-full sm:w-96 max-w-full bg-[#2A3440] shadow-2xl overflow-y-auto overscroll-contain p-4 sm:p-6">
-            <Suspense fallback={<div className="flex justify-center p-8"><Loader2 className="w-6 h-6 animate-spin text-[#25DCE6]" /></div>}>
-              <BookmarksList onClose={() => setBookmarksOpen(false)} />
-            </Suspense>
+            <BookmarksList onClose={() => setBookmarksOpen(false)} />
           </aside>
         </div>
       )}
@@ -145,13 +141,7 @@ const Chapter = memo(function Chapter() {
         
         {/* Chapter Content */}
         <article className="scroll-mt-16">
-          <Suspense fallback={
-            <div className="bg-white rounded-xl shadow-lg border border-gray-200 p-8 flex items-center justify-center min-h-[300px]">
-              <Loader2 className="w-8 h-8 animate-spin text-[#25DCE6]" />
-            </div>
-          }>
-            <ChapterContent chapter={chapter} sectionRoute="Chapter" searchQuery={searchQuery} />
-          </Suspense>
+          <ChapterContent chapter={chapter} sectionRoute="Chapter" searchQuery={searchQuery} />
         </article>
 
         {/* Bottom Navigation */}

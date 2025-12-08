@@ -1,8 +1,7 @@
-import React, { useState, useEffect, memo } from "react";
+import React, { useState, useEffect, memo, useMemo } from "react";
 import { cn } from "@/lib/utils";
 import { loadChapterContent } from "./chapterLoader";
 import AudioPlayer from "./AudioPlayer";
-import { Loader2 } from "lucide-react";
 import { renderTextWithTerms } from "./TermTooltip";
 import { useQuery } from "@tanstack/react-query";
 import { base44 } from "@/api/base44Client";
@@ -66,7 +65,6 @@ const Paragraph = memo(({ para, idx, renderTerms, highlightSearch }) => {
 
 export default function ChapterContent({ chapter, sectionRoute, searchQuery = '' }) {
   const [chapterData, setChapterData] = useState(null);
-  const [loading, setLoading] = useState(true);
 
   const { data: settings } = useQuery({
     queryKey: ['user-settings'],
@@ -79,10 +77,8 @@ export default function ChapterContent({ chapter, sectionRoute, searchQuery = ''
   useEffect(() => {
     if (!chapter) return;
     
-    setLoading(true);
     loadChapterContent(chapter.id).then(content => {
       setChapterData(content);
-      setLoading(false);
     });
   }, [chapter?.id]);
 
@@ -102,15 +98,7 @@ export default function ChapterContent({ chapter, sectionRoute, searchQuery = ''
 
   if (!chapter) return null;
 
-  if (loading) {
-    return (
-      <section className="bg-white rounded-xl sm:rounded-2xl shadow-lg border border-gray-200 p-8 flex items-center justify-center min-h-[200px]">
-        <Loader2 className="w-8 h-8 animate-spin text-[#25DCE6]" />
-      </section>
-    );
-  }
-
-  const data = chapterData || { paragraphs: [{ text: "Content loading..." }] };
+  const data = chapterData || { paragraphs: [] };
 
   // Apply settings
   const fontSizeClasses = {
