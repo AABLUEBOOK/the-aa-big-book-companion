@@ -22,6 +22,7 @@ const chapterModules = {
   "women-suffer-too": () => import("./content/womenSufferTooContent"),
   "our-southern-friend": () => import("./content/ourSouthernFriendContent"),
   "vicious-cycle": () => import("./content/viciousCycleContent"),
+  "jims-story": () => import("./content/jimsStoryContent"),
   "man-who-mastered-fear": () => import("./content/manWhoMasteredFearContent"),
   "he-sold-himself-short": () => import("./content/heSoldHimselfShortContent"),
   "keys-of-the-kingdom": () => import("./content/keysOfTheKingdomContent"),
