@@ -2,17 +2,13 @@ import React, { useState, useEffect, memo } from "react";
 import { cn } from "@/lib/utils";
 import { loadChapterContent } from "./chapterLoader";
 import AudioPlayer from "./AudioPlayer";
-import BookmarkButton from "./BookmarkButton";
-import { Loader2, StickyNote } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Loader2 } from "lucide-react";
 import { renderTextWithTerms } from "./TermTooltip";
-import NoteButton from "./NoteButton";
-import NotesPanel from "./NotesPanel";
 import { useQuery } from "@tanstack/react-query";
 import { base44 } from "@/api/base44Client";
 
 // Memoized paragraph component
-const Paragraph = memo(({ para, idx, renderTerms, chapterId, currentPageNum, note, onNoteChange, highlightSearch }) => {
+const Paragraph = memo(({ para, idx, renderTerms, highlightSearch }) => {
   const highlightClasses = {
     'yellow': 'bg-yellow-400/30 px-1 py-0.5 rounded',
     'pink': 'text-pink-600 font-semibold',
@@ -41,62 +37,36 @@ const Paragraph = memo(({ para, idx, renderTerms, chapterId, currentPageNum, not
 
   if (para.segments) {
     return (
-      <div key={idx} className="group flex gap-1 items-start">
-        <p className="mb-4 sm:mb-5 first:mt-0 leading-relaxed sm:leading-relaxed flex-1">
-          {para.segments.map((segment, segIdx) => (
-            segment.highlight || segment.bold ? (
-              <span key={segIdx} className={getSegmentClasses(segment)}>
-                {highlightSearch ? highlightSearch(renderTerms ? renderTerms(segment.text) : segment.text) : (renderTerms ? renderTerms(segment.text) : segment.text)}
-              </span>
-            ) : (
-              <span key={segIdx}>{highlightSearch ? highlightSearch(renderTerms ? renderTerms(segment.text) : segment.text) : (renderTerms ? renderTerms(segment.text) : segment.text)}</span>
-            )
-          ))}
-        </p>
-        <NoteButton
-          chapterId={chapterId}
-          pageNumber={currentPageNum}
-          paragraphIndex={idx}
-          existingNote={note}
-          onNoteChange={onNoteChange}
-        />
-      </div>
+      <p key={idx} className="mb-4 sm:mb-5 first:mt-0 leading-relaxed sm:leading-relaxed">
+        {para.segments.map((segment, segIdx) => (
+          segment.highlight || segment.bold ? (
+            <span key={segIdx} className={getSegmentClasses(segment)}>
+              {highlightSearch ? highlightSearch(renderTerms ? renderTerms(segment.text) : segment.text) : (renderTerms ? renderTerms(segment.text) : segment.text)}
+            </span>
+          ) : (
+            <span key={segIdx}>{highlightSearch ? highlightSearch(renderTerms ? renderTerms(segment.text) : segment.text) : (renderTerms ? renderTerms(segment.text) : segment.text)}</span>
+          )
+        ))}
+      </p>
     );
   }
 
   return (
-    <div key={idx} className="group flex gap-1 items-start">
-      <p 
-        className={cn(
-          "mb-4 sm:mb-5 first:mt-0 leading-relaxed sm:leading-relaxed flex-1",
-          para.highlight && highlightClasses[para.highlight]
-        )}
-      >
-        {highlightSearch ? highlightSearch(renderTerms ? renderTerms(para.text) : para.text) : (renderTerms ? renderTerms(para.text) : para.text)}
-      </p>
-      <NoteButton
-        chapterId={chapterId}
-        pageNumber={currentPageNum}
-        paragraphIndex={idx}
-        existingNote={note}
-        onNoteChange={onNoteChange}
-      />
-    </div>
+    <p 
+      key={idx}
+      className={cn(
+        "mb-4 sm:mb-5 first:mt-0 leading-relaxed sm:leading-relaxed",
+        para.highlight && highlightClasses[para.highlight]
+      )}
+    >
+      {highlightSearch ? highlightSearch(renderTerms ? renderTerms(para.text) : para.text) : (renderTerms ? renderTerms(para.text) : para.text)}
+    </p>
   );
 });
 
 export default function ChapterContent({ chapter, sectionRoute, searchQuery = '' }) {
   const [chapterData, setChapterData] = useState(null);
   const [loading, setLoading] = useState(true);
-  const [notesPanelOpen, setNotesPanelOpen] = useState(false);
-  const [notesRefreshKey, setNotesRefreshKey] = useState(0);
-  const [selectedText, setSelectedText] = useState('');
-
-  const { data: notes = [], refetch: refetchNotes } = useQuery({
-    queryKey: ['notes', chapter?.id, notesRefreshKey],
-    queryFn: () => base44.entities.Note.filter({ chapter_id: chapter?.id }),
-    enabled: !!chapter?.id,
-  });
 
   const { data: settings } = useQuery({
     queryKey: ['user-settings'],
@@ -105,14 +75,6 @@ export default function ChapterContent({ chapter, sectionRoute, searchQuery = ''
       return list[0] || null;
     },
   });
-
-  // Create a map of paragraph index to note
-  const notesByParagraph = notes.reduce((acc, note) => {
-    if (note.paragraph_index !== undefined) {
-      acc[note.paragraph_index] = note;
-    }
-    return acc;
-  }, {});
 
   useEffect(() => {
     if (!chapter) return;
@@ -136,20 +98,7 @@ export default function ChapterContent({ chapter, sectionRoute, searchQuery = ''
     }
   }, [searchQuery, chapter?.id]);
 
-  const handleNoteChange = () => {
-    setNotesRefreshKey(prev => prev + 1);
-  };
 
-  // Track current page number as we iterate through paragraphs
-  const getCurrentPageNum = (paragraphs, currentIdx) => {
-    let pageNum = chapter?.pageNum || '';
-    for (let i = 0; i <= currentIdx; i++) {
-      if (paragraphs[i]?.pageNum) {
-        pageNum = paragraphs[i].pageNum;
-      }
-    }
-    return pageNum;
-  };
 
   if (!chapter) return null;
 
@@ -188,14 +137,6 @@ export default function ChapterContent({ chapter, sectionRoute, searchQuery = ''
   const theme = settings?.theme || 'light';
   const dyslexiaFont = settings?.dyslexia_font || false;
 
-  const handleTextSelection = () => {
-    const selection = window.getSelection();
-    const text = selection?.toString().trim();
-    if (text) {
-      setSelectedText(text);
-    }
-  };
-
   // Helper function to highlight search terms in text
   const highlightSearchTerm = (text, query) => {
     if (!query || query.trim().length < 2) return text;
@@ -216,7 +157,6 @@ export default function ChapterContent({ chapter, sectionRoute, searchQuery = ''
     <section 
       className={`${themeClasses[theme]} rounded-xl sm:rounded-2xl shadow-lg sm:shadow-xl border border-gray-200 overflow-visible relative`}
       aria-labelledby={`chapter-title-${chapter.id}`}
-      onMouseUp={handleTextSelection}
     >
       {/* Chapter Header */}
       <header className="bg-gradient-to-r from-gray-100 to-gray-50 border-b border-gray-200 px-3 sm:px-6 md:px-8 lg:px-10 py-3 sm:py-5 md:py-6">
@@ -237,23 +177,7 @@ export default function ChapterContent({ chapter, sectionRoute, searchQuery = ''
               Page {chapter.pageNum}
             </div>
           </div>
-          <div className="flex items-center gap-2">
-            <Button
-              variant="outline"
-              size="sm"
-              onClick={() => setNotesPanelOpen(true)}
-              className="flex items-center gap-1.5 text-xs"
-            >
-              <StickyNote className="w-4 h-4 text-yellow-500" />
-              <span className="hidden sm:inline">Notes</span>
-              {notes.length > 0 && (
-                <span className="bg-yellow-100 text-yellow-700 px-1.5 py-0.5 rounded-full text-xs">
-                  {notes.length}
-                </span>
-              )}
-            </Button>
-            <BookmarkButton chapter={chapter} sectionRoute={sectionRoute} />
-          </div>
+
         </div>
       </header>
 
@@ -272,24 +196,12 @@ export default function ChapterContent({ chapter, sectionRoute, searchQuery = ''
                 para={para} 
                 idx={idx} 
                 renderTerms={renderTextWithTerms}
-                chapterId={chapter.id}
-                currentPageNum={getCurrentPageNum(data.paragraphs, idx)}
-                note={notesByParagraph[idx]}
-                onNoteChange={handleNoteChange}
                 highlightSearch={(text) => highlightSearchTerm(text, searchQuery)}
               />
             ))}
           </div>
         </div>
-      </div>
-
-      {/* Notes Panel */}
-      <NotesPanel
-        chapterId={chapter.id}
-        chapterTitle={chapter.title}
-        isOpen={notesPanelOpen}
-        onClose={() => setNotesPanelOpen(false)}
-      />
+        </div>
     </section>
   );
 }
