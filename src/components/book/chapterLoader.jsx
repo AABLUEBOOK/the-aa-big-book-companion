@@ -31,6 +31,7 @@ const chapterModules = {
   "missing-link": () => import("./content/missingLinkContent"),
   "fear-of-fear": () => import("./content/fearOfFearContent"),
   "housewife-who-drank": () => import("./content/housewifeWhoDrankContent"),
+  "student-of-life": () => import("./content/studentOfLifeContent"),
   
   // Appendices
   "appendices": () => import("./content/appendicesContent"),
