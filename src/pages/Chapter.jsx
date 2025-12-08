@@ -37,6 +37,13 @@ const ALL_CHAPTERS = [
   
   // Personal Stories
   { id: "dr-bob-nightmare", title: "Doctor Bob's Nightmare", pageNum: "171", pages: "171-181" },
+  { id: "aa-number-three", title: "Alcoholic Anonymous Number Three", pageNum: "180", pages: "180-192" },
+  { id: "women-suffer-too", title: "Women Suffer Too", pageNum: "222", pages: "222-233" },
+  { id: "man-who-mastered-fear", title: "The Man Who Mastered Fear", pageNum: "246", pages: "246-257" },
+  { id: "he-sold-himself-short", title: "He Sold Himself Short", pageNum: "260", pages: "260-267" },
+  { id: "gratitude-in-action", title: "Gratitude in Action", pageNum: "275", pages: "275-281" },
+  { id: "keys-of-the-kingdom", title: "The Keys of the Kingdom", pageNum: "304", pages: "304-321" },
+  { id: "our-southern-friend", title: "Our Southern Friend", pageNum: "423", pages: "423-438" },
   
   // Appendices
   { id: "appendices", title: "Appendices", pageNum: "561", pages: "561-575" },
