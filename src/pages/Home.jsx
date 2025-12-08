@@ -62,23 +62,18 @@ const CHAPTERS = [
   { id: "to-employers", title: "To Employers", pages: "136-150", chapter: 10, section: "Section1" },
   { id: "vision-for-you", title: "A Vision For You", pages: "151-164", chapter: 11, section: "Section1" },
   
-  // Personal Stories Intro
-  { id: "how-forty-two", title: "How Forty-Two Alcoholics Recovered From Their Malady", pages: "165-166", section: "Section2" },
-  
-  // Personal Stories Sections
-  { id: "dr-bob-nightmare", title: "Doctor Bob\'s Nightmare", pages: "171-181", chapter: null, section: "Section3" },
-  { id: "pioneers", title: "Pioneers of A.A.", pages: "169-276", section: "Section3" },
-  { id: "stopped-in-time", title: "They Stopped in Time", pages: "277-431", section: "Section4" },
-  { id: "lost-nearly-all", title: "They Lost Nearly All", pages: "435-559", section: "Section5" },
+  // Personal Stories
+  { id: "dr-bob-nightmare", title: "Doctor Bob's Nightmare", pages: "171-181" },
+  { id: "aa-number-three", title: "Alcoholic Anonymous Number Three", pages: "180-192" },
+  { id: "women-suffer-too", title: "Women Suffer Too", pages: "222-233" },
+  { id: "man-who-mastered-fear", title: "The Man Who Mastered Fear", pages: "246-257" },
+  { id: "he-sold-himself-short", title: "He Sold Himself Short", pages: "260-267" },
+  { id: "gratitude-in-action", title: "Gratitude in Action", pages: "275-281" },
+  { id: "keys-of-the-kingdom", title: "The Keys of the Kingdom", pages: "304-321" },
+  { id: "our-southern-friend", title: "Our Southern Friend", pages: "423-438" },
   
   // Appendices
-  { id: "aa-tradition", title: "The A.A. Tradition", pages: "561-566", section: "Section6" },
-  { id: "spiritual-experience", title: "Spiritual Experience", pages: "567-568", section: "Section6" },
-  { id: "medical-view", title: "The Medical View On A.A.", pages: "569-570", section: "Section6" },
-  { id: "lasker-award", title: "The Lasker Award", pages: "571", section: "Section6" },
-  { id: "religious-view", title: "The Religious View On A.A.", pages: "572", section: "Section6" },
-  { id: "get-in-touch", title: "How To Get in Touch With A.A.", pages: "573", section: "Section6" },
-  { id: "twelve-concepts", title: "Twelve Concepts (Short Form)", pages: "574-575", section: "Section6" },
+  { id: "appendices", title: "Appendices", pages: "561-575" },
 ];
 
 const Home = memo(function Home() {
