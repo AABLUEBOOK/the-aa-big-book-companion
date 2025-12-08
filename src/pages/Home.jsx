@@ -1,4 +1,4 @@
-import React, { memo, useMemo, useState } from "react";
+import React, { memo, useState } from "react";
 import { Link } from "react-router-dom";
 import { ChevronRight, Settings } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -78,7 +78,6 @@ const CHAPTERS = [
 
 const Home = memo(function Home() {
   const [settingsOpen, setSettingsOpen] = useState(false);
-  const [settings, setSettings] = useState(null);
 
   return (
     <div className="min-h-screen min-h-[100dvh] w-full bg-[#222A31] overflow-x-hidden overflow-y-auto">
@@ -150,11 +149,12 @@ const Home = memo(function Home() {
       </main>
 
       {/* Settings Panel */}
-      <SettingsPanel 
-        isOpen={settingsOpen} 
-        onClose={() => setSettingsOpen(false)}
-        onSettingsChange={setSettings}
-      />
+      {settingsOpen && (
+        <SettingsPanel 
+          isOpen={settingsOpen} 
+          onClose={() => setSettingsOpen(false)}
+        />
+      )}
 
       {/* Footer */}
       <footer className="bg-[#2A3440]/50 border-t border-[#25DCE6]/10 px-4 py-4 mt-4">
