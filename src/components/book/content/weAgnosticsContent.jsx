@@ -1,67 +1,24 @@
 export const weAgnosticsContent = {
   paragraphs: [
-    {
-      segments: [
-        { text: `` },
-        { text: `Chapter 4 WE AGNOSTICS`, highlight: 'pink' }
-      ]
-    },
+    { text: `Chapter 4`, highlight: 'pink' },
+    { text: `WE AGNOSTICS`, highlight: 'pink' },
     { pageNum: "44" },
     { text: `In the preceding chapters you have learned something of alcoholism. We hope we have made clear the distinction between the alcoholic and the non-alcoholic. If, when you honestly want to, you find you cannot quit entirely, or if when drinking, you have little control over the amount you take, you are probably alcoholic. If that be the case, you may be suffering from an illness which only a spiritual experience will conquer.` },
-    {
-      segments: [
-        { text: `` },
-        { text: `To one who feels he is an atheist or agnostic such an experience seems impossible, but to continue as he is means disaster, especially if he is an alcoholic of the hopeless variety. To be doomed to an alcoholic death or to live on a spiritual basis are not always easy alternatives to face.`, highlight: 'pink' }
-      ]
-    },
+    { text: `To one who feels he is an atheist or agnostic such an experience seems impossible, but to continue as he is means disaster, especially if he is an alcoholic of the hopeless variety. To be doomed to an alcoholic death or to live on a spiritual basis are not always easy alternatives to face.`, highlight: 'pink' },
     { text: `But it isn't so difficult. About half our original fellowship were of exactly that type. At first some of us tried to avoid the issue, hoping against hope we were not true alcoholics. But after a while we had to face the fact that we must find a spiritual basis of life—or else. Perhaps it is going to be that way with you. But cheer up, something like half of us thought we were atheists or agnostics. Our experience shows that you need not be disconcerted.` },
     { text: `If a mere code of morals or a better philosophy of life were sufficient to overcome alcoholism, many of us` },
     { pageNum: "45" },
     { text: `would have recovered long ago. But we found that such codes and philosophies did not save us, no matter how much we tried. We could wish to be moral, we could wish to be philosophically comforted, in fact, we could will these things with all our might, but the needed power wasn't there. Our human resources, as marshalled by the will, were not sufficient; they failed utterly.` },
-    {
-      segments: [
-        { text: `` },
-        { text: `Lack of power, that was our dilemma. We had to find a power by which we could live, and it had to be a Power greater than ourselves. Obviously. But where and how were we to find this Power?`, highlight: 'pink' }
-      ]
-    },
-    {
-      segments: [
-        { text: `` },
-        { text: `Well, that's exactly what this book is about. Its main object is to enable you to find a Power greater than yourself which will solve your problem.`, highlight: 'pink' },
-        { text: ` That means we have written a book which we believe to be spiritual as well as moral. And it means, of course, that we are going to talk about God. Here difficulty arises with agnostics. Many times we talk to a new man and watch his hope rise as we discuss his alcoholic problems and explain our fellowship. But his face falls when we speak of spiritual matters, especially when we mention God, for we have re-opened a subject which our man thought he had neatly evaded or entirely ignored.` }
-      ]
-    },
+    { text: `Lack of power, that was our dilemma. We had to find a power by which we could live, and it had to be a Power greater than ourselves. Obviously. But where and how were we to find this Power?`, highlight: 'pink' },
+    { text: `Well, that's exactly what this book is about. Its main object is to enable you to find a Power greater than yourself which will solve your problem. That means we have written a book which we believe to be spiritual as well as moral. And it means, of course, that we are going to talk about God. Here difficulty arises with agnostics. Many times we talk to a new man and watch his hope rise as we discuss his alcoholic problems and explain our fellowship. But his face falls when we speak of spiritual matters, especially when we mention God, for we have re-opened a subject which our man thought he had neatly evaded or entirely ignored.` },
     { text: `We know how he feels. We have shared his honest doubt and prejudice. Some of us have been violently anti-religious. To others, the word "God" brought up a particular idea of Him with which someone had tried to impress them during childhood. Perhaps we rejected this particular conception because it seemed inadequate. With that rejection we imagined we had abandoned the God idea entirely. We were bothered` },
     { pageNum: "46" },
     { text: `with the thought that faith and dependence upon a Power beyond ourselves was somewhat weak, even cowardly. We looked upon this world of warring individuals, warring theological systems, and inexplicable calamity, with deep skepticism. We looked askance at many individuals who claimed to be godly. How could a Supreme Being have anything to do with it all? And who could comprehend a Supreme Being anyhow? Yet, in other moments, we found ourselves thinking, when enchanted by a starlit night, "Who, then, made all this?" There was a feeling of awe and wonder, but it was fleeting and soon lost.` },
-    {
-      segments: [
-        { text: `Yes, we of agnostic temperament have had these thoughts and experiences. Let us make haste to reassure you. ` },
-        { text: `We found that as soon as we were able to lay aside prejudice and express even a willingness to believe in a Power greater than ourselves, we commenced to get results, even though it was impossible for any of us to fully define or comprehend that Power, which is God.`, highlight: 'blue' }
-      ]
-    },
-    {
-      segments: [
-        { text: `Much to our relief, we discovered we did not need to consider another's conception of God. Our own conception, however inadequate, was sufficient to make the approach and to effect a contact with Him. ` },
-        { text: `As soon as we admitted the possible existence of a Creative Intelligence, a Spirit of the Universe underlying the totality of things, we began to be possessed of a new sense of power and direction, provided we took other simple steps. We found that God does not make too hard terms with those who seek Him. To us, the Realm of Spirit is broad, roomy, all inclusive; never exclusive or forbidding to those who earnestly seek. It is open, we believe, to all men.`, highlight: 'blue' }
-      ]
-    },
+    { text: `Yes, we of agnostic temperament have had these thoughts and experiences. Let us make haste to reassure you. We found that as soon as we were able to lay aside prejudice and express even a willingness to believe in a Power greater than ourselves, we commenced to get results, even though it was impossible for any of us to fully define or comprehend that Power, which is God.`, highlight: 'blue' },
+    { text: `Much to our relief, we discovered we did not need to consider another's conception of God. Our own conception, however inadequate, was sufficient to make the approach and to effect a contact with Him. As soon as we admitted the possible existence of a Creative Intelligence, a Spirit of the Universe underlying the totality of things, we began to be possessed of a new sense of power and direction, provided we took other simple steps. We found that God does not make too hard terms with those who seek Him. To us, the Realm of Spirit is broad, roomy, all inclusive; never exclusive or forbidding to those who earnestly seek. It is open, we believe, to all men.`, highlight: 'blue' },
     { pageNum: "47" },
-    {
-      segments: [
-        { text: `` },
-        { text: `When, therefore, we speak to you of God, we mean your own conception of God.`, highlight: 'pink' },
-        { text: ` This applies, too, to other spiritual expressions which you find in this book. Do not let any prejudice you may have against spiritual terms deter you from honestly asking yourself what they mean to you. At the start, this was all we needed to commence spiritual growth, to effect our first conscious relation with God as we understood Him. Afterward, we found ourselves accepting many things which then seemed entirely out of reach. That was growth, but if we wished to grow we had to begin somewhere. So we used our own conception, however limited it was.` }
-      ]
-    },
-    {
-      segments: [
-        { text: `` },
-        { text: `We needed to ask ourselves but one short question. "Do I now believe, or am I even willing to believe, that there is a Power greater than myself?"`, highlight: 'pink' },
-        { text: ` ` },
-        { text: `As soon as a man can say that he does believe, or is willing to believe, we emphatically assure him that he is on his way. It has been repeatedly proven among us that upon this simple cornerstone a wonderfully effective spiritual structure can be built.*`, highlight: 'blue' }
-      ]
-    },
+    { text: `When, therefore, we speak to you of God, we mean your own conception of God. This applies, too, to other spiritual expressions which you find in this book. Do not let any prejudice you may have against spiritual terms deter you from honestly asking yourself what they mean to you. At the start, this was all we needed to commence spiritual growth, to effect our first conscious relation with God as we understood Him. Afterward, we found ourselves accepting many things which then seemed entirely out of reach. That was growth, but if we wished to grow we had to begin somewhere. So we used our own conception, however limited it was.`, highlight: 'pink' },
+    { text: `We needed to ask ourselves but one short question. "Do I now believe, or am I even willing to believe, that there is a Power greater than myself?" As soon as a man can say that he does believe, or is willing to believe, we emphatically assure him that he is on his way. It has been repeatedly proven among us that upon this simple cornerstone a wonderfully effective spiritual structure can be built.*`, highlight: 'pink' },
     { text: `That was great news to us, for we had assumed we could not make use of spiritual principles unless we accepted many things on faith which seemed difficult to believe. When people presented us with spiritual approaches, how frequently did we all say, "I wish I had what that man has. I'm sure it would work if I could only believe as he believes. But I cannot accept as surely true the many articles of faith which are so plain to him." So it was comforting to learn that we could commence at a simpler level.` },
     { text: `Besides a seeming inability to accept much on faith,` },
     { text: `* Please be sure to read Appendix II on "Spiritual Experience."` },
@@ -79,13 +36,7 @@ export const weAgnosticsContent = {
     { text: `Instead, we looked at the human defects of these people, and sometimes used their shortcomings as a basis of wholesale condemnation. We talked of intolerance, while we were intolerant ourselves. We missed the reality and the beauty of the forest because we were diverted by the ugliness of some of its trees. We never gave the spiritual side of life a fair hearing.` },
     { text: `In our personal stories you will find a wide variation in the way each teller approaches and conceives of the Power which is greater than himself. Whether we agree with a particular approach or conception seems to make little difference. Experience has taught us that these are matters about which, for our purpose, we need not be worried. They are questions for each individual to settle for himself.` },
     { text: `On one proposition, however, these men and women are strikingly agreed. Every one of them has gained access to, and believes in, a Power greater than himself. This Power has in each case accomplished the miraculous, the humanly impossible. As a celebrated American statesman put it, "Let's look at the record."` },
-    {
-      segments: [
-        { text: `Here are thousands of men and women, worldly indeed. They flatly declare that since they have come to believe in a Power greater than themselves, to take a certain attitude toward that Power, and to do certain simple things, there has been a revolutionary change in their way of living and thinking. ` },
-        { text: `In the face of collapse and despair, in the face of the total failure of their human resources, they found that a new power, peace, happiness, and sense of direction flowed into them. This happened soon after they wholeheartedly met a few simple requirements.`, highlight: 'blue' },
-        { text: ` Once con-` }
-      ]
-    },
+    { text: `Here are thousands of men and women, worldly indeed. They flatly declare that since they have come to believe in a Power greater than themselves, to take a certain attitude toward that Power, and to do certain simple things, there has been a revolutionary change in their way of living and thinking. In the face of collapse and despair, in the face of the total failure of their human resources, they found that a new power, peace, happiness, and sense of direction flowed into them. This happened soon after they wholeheartedly met a few simple requirements. Once con-`, highlight: 'blue' },
     { pageNum: "51" },
     { text: `fused and baffled by the seeming futility of existence, they show the underlying reasons why they were making heavy going of life. Leaving aside the drink question, they tell why living was so unsatisfactory. They show how the change came over them. When many hundreds of people are able to say that the consciousness of the Presence of God is today the most important fact of their lives, they present a powerful reason why one should have faith.` },
     { text: `This world of ours has made more material progress in the last century than in all the millenniums which went before. Almost everyone knows the reason. Students of ancient history tell us that the intellect of men in those days was equal to the best of today. Yet in ancient times material progress was painfully slow. The spirit of modern scientific inquiry, research and invention was almost unknown. In the realm of the material, men's minds were fettered by superstition, tradition, and all sorts of fixed ideas. Some of the contemporaries of Columbus thought a round earth preposterous. Others came near putting Galileo to death for his astronomical heresies.` },
@@ -94,23 +45,13 @@ export const weAgnosticsContent = {
     { pageNum: "52" },
     { text: `birds? Only thirty years later the conquest of the air was almost an old story and airplane travel was in full swing.` },
     { text: `But in most fields our generation has witnessed complete liberation of our thinking. Show any longshoreman a Sunday supplement describing a proposal to explore the moon by means of a rocket and he will say, "I bet they do it—maybe not so long either." Is not our age characterized by the ease with which we discard old ideas for new, by the complete readiness with which we throw away the theory or gadget which does not work for something new which does?` },
-    {
-      segments: [
-        { text: `` },
-        { text: `We had to ask ourselves why we shouldn't apply to our human problems this same readiness to change our point of view. We were having trouble with personal relationships, we couldn't control our emotional natures, we were a prey to misery and depression, we couldn't make a living, we had a feeling of uselessness, we were full of fear, we were unhappy, we couldn't seem to be of real help to other people—was not a basic solution of these bedevilments more important than whether we should see newsreels of lunar flight? Of course it was.`, highlight: 'pink' }
-      ]
-    },
+    { text: `We had to ask ourselves why we shouldn't apply to our human problems this same readiness to change our point of view. We were having trouble with personal relationships, we couldn't control our emotional natures, we were a prey to misery and depression, we couldn't make a living, we had a feeling of uselessness, we were full of fear, we were unhappy, we couldn't seem to be of real help to other people—was not a basic solution of these bedevilments more important than whether we should see newsreels of lunar flight? Of course it was.`, highlight: 'pink' },
     { text: `When we saw others solve their problems by a simple reliance upon the Spirit of the Universe, we had to stop doubting the power of God. Our ideas did not work. But the God idea did.` },
     { text: `The Wright brothers' almost childish faith that they could build a machine which would fly was the mainspring of their accomplishment. Without that, nothing could have happened. We agnostics and atheists were sticking to the idea that self-sufficiency would solve our problems. When others showed us that "God-suf-` },
     { pageNum: "53" },
     { text: `ficiency" worked with them, we began to feel like those who had insisted the Wrights would never fly.` },
     { text: `Logic is great stuff. We liked it. We still like it. It is not by chance we were given the power to reason, to examine the evidence of our senses, and to draw conclusions. That is one of man's magnificent attributes. We agnostically inclined would not feel satisfied with a proposal which does not lend itself to reasonable approach and interpretation. Hence we are at pains to tell why we think our present faith is reasonable, why we think it more sane and logical to believe than not to believe, why we say our former thinking was soft and mushy when we threw up our hands in doubt and said, "We don't know."` },
-    {
-      segments: [
-        { text: `When we became alcoholics, crushed by a self-imposed crisis we could not postpone or evade, we had to fearlessly face the proposition that either God is everything or else He is nothing. God either is, or He isn't. ` },
-        { text: `What was our choice to be?`, highlight: 'pink' }
-      ]
-    },
+    { text: `When we became alcoholics, crushed by a self-imposed crisis we could not postpone or evade, we had to fearlessly face the proposition that either God is everything or else He is nothing. God either is, or He isn't. What was our choice to be?`, highlight: 'pink' },
     { text: `Arrived at this point, we were squarely confronted with the question of faith. We couldn't duck the issue. Some of us had already walked far over the Bridge of Reason toward the desired shore of faith. The outlines and the promise of the New Land had brought lustre to tired eyes and fresh courage to flagging spirits. Friendly hands had stretched out in welcome. We were grateful that Reason had brought us so far. But somehow, we couldn't quite step ashore. Perhaps we had been leaning too heavily on Reason that last mile and we did not like to lose our support.` },
     { text: `That was natural, but let us think a little more closely. Without knowing it, had we not been brought to where we stood by a certain kind of faith? For did` },
     { pageNum: "54" },
@@ -123,21 +64,10 @@ export const weAgnosticsContent = {
     { text: `Yet we had been seeing another kind of flight, a spiritual liberation from this world, people who rose above their problems. They said God made these things possible, and we only smiled. We had seen spiritual release, but liked to tell ourselves it wasn't true.` },
     { text: `Actually we were fooling ourselves, for deep down in every man, woman, and child, is the fundamental idea of God. It may be obscured by calamity, by pomp, by worship of other things, but in some form or other it is there. For faith in a Power greater than ourselves, and miraculous demonstrations of that power in human lives, are facts as old as man himself.` },
     { text: `We finally saw that faith in some kind of God was a part of our make-up, just as much as the feeling we have for a friend. Sometimes we had to search fearlessly, but He was there. He was as much a fact as we were. We found the Great Reality deep down within us. In the last analysis it is only there that He may be found. It was so with us.` },
-    {
-      segments: [
-        { text: `We can only clear the ground a bit. ` },
-        { text: `If our testimony helps sweep away prejudice, enables you to think honestly, encourages you to search diligently within yourself, then, if you wish, you can join us on the Broad Highway. With this attitude you cannot fail. The consciousness of your belief is sure to come to you.`, highlight: 'blue' }
-      ]
-    },
+    { text: `We can only clear the ground a bit. If our testimony helps sweep away prejudice, enables you to think honestly, encourages you to search diligently within yourself, then, if you wish, you can join us on the Broad Highway. With this attitude you cannot fail. The consciousness of your belief is sure to come to you.`, highlight: 'blue' },
     { text: `In this book you will read the experience of a man who thought he was an atheist. His story is so interesting that some of it should be told now. His change of heart was dramatic, convincing, and moving.` },
     { pageNum: "56" },
-    {
-      segments: [
-        { text: `` },
-        { text: `Our friend was a minister's son.`, highlight: 'pink' },
-        { text: ` He attended church school, where he became rebellious at what he thought an overdose of religious education. For years thereafter he was dogged by trouble and frustration. Business failure, insanity, fatal illness, suicide—these calamities in his immediate family embittered and depressed him. Post-war disillusionment, ever more serious alcoholism, impending mental and physical collapse, brought him to the point of self-destruction.` }
-      ]
-    },
+    { text: `Our friend was a minister's son. He attended church school, where he became rebellious at what he thought an overdose of religious education. For years thereafter he was dogged by trouble and frustration. Business failure, insanity, fatal illness, suicide—these calamities in his immediate family embittered and depressed him. Post-war disillusionment, ever more serious alcoholism, impending mental and physical collapse, brought him to the point of self-destruction.`, highlight: 'pink' },
     { text: `One night, when confined in a hospital, he was approached by an alcoholic who had known a spiritual experience. Our friend's gorge rose as he bitterly cried out: "If there is a God, He certainly hasn't done anything for me!" But later, alone in his room, he asked himself this question: "Is it possible that all the religious people I have known are wrong?" While pondering the answer he felt as though he lived in hell. Then, like a thunderbolt, a great thought came. It crowded out all else:` },
     { text: `"Who are you to say there is no God?"` },
     { text: `This man recounts that he tumbled out of bed to his knees. In a few seconds he was overwhelmed by a conviction of the Presence of God. It poured over and through him with the certainty and majesty of a great tide at flood. The barriers he had built through the years were swept away. He stood in the Presence of Infinite Power and Love. He had stepped from bridge to shore. For the first time, he lived in conscious companionship with his Creator.` },
