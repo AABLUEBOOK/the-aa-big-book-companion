@@ -15,14 +15,17 @@ const chapterModules = {
   "family-afterward": () => import("./content/familyAfterwardContent"),
   "to-employers": () => import("./content/toEmployersContent"),
   "vision-for-you": () => import("./content/visionForYouContent"),
+  // Personal Stories - Part I: Pioneers of A.A.
   "dr-bob-nightmare": () => import("./content/doctorBobsNightmareContent"),
   "aa-number-three": () => import("./content/aaNumberThreeContent"),
   "gratitude-in-action": () => import("./content/gratitudeInActionContent"),
   "women-suffer-too": () => import("./content/womenSufferTooContent"),
+  "our-southern-friend": () => import("./content/ourSouthernFriendContent"),
   "man-who-mastered-fear": () => import("./content/manWhoMasteredFearContent"),
   "he-sold-himself-short": () => import("./content/heSoldHimselfShortContent"),
   "keys-of-the-kingdom": () => import("./content/keysOfTheKingdomContent"),
-  "our-southern-friend": () => import("./content/ourSouthernFriendContent"),
+  
+  // Appendices
   "appendices": () => import("./content/appendicesContent"),
 };
 
