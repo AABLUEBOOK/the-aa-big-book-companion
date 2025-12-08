@@ -64,19 +64,53 @@ const CHAPTERS = [
 ];
 
 const PERSONAL_STORIES = {
-  "Part I: Pioneers of AA": [
+  "Part I: Pioneers of A.A.": [
     { id: "dr-bob-nightmare", title: "Doctor Bob's Nightmare", pages: "171-181" },
     { id: "aa-number-three", title: "Alcoholics Anonymous Number Three", pages: "180-192" },
-  ],
-  "Part II: They Stopped in Time": [
+    { id: "gratitude-in-action", title: "Gratitude in Action", pages: "275-281" },
     { id: "women-suffer-too", title: "Women Suffer Too", pages: "222-233" },
+    { id: "our-southern-friend", title: "Our Southern Friend", pages: "423-438" },
+    { id: "vicious-cycle", title: "The Vicious Cycle", pages: "193-201" },
+    { id: "jims-story", title: "Jim's Story", pages: "202-209" },
     { id: "man-who-mastered-fear", title: "The Man Who Mastered Fear", pages: "246-257" },
     { id: "he-sold-himself-short", title: "He Sold Himself Short", pages: "260-267" },
-    { id: "gratitude-in-action", title: "Gratitude in Action", pages: "275-281" },
+    { id: "keys-of-the-kingdom", title: "The Keys of the Kingdom", pages: "304-321" },
+  ],
+  "Part II: They Stopped in Time": [
+    { id: "missing-link", title: "The Missing Link", pages: "210-221" },
+    { id: "fear-of-fear", title: "Fear of Fear", pages: "234-245" },
+    { id: "housewife-who-drank", title: "The Housewife Who Drank at Home", pages: "258-259" },
+    { id: "physician-heal-thyself", title: "Physician, Heal Thyself!", pages: "268-274" },
+    { id: "my-chance-to-live", title: "My Chance to Live", pages: "282-285" },
+    { id: "student-of-life", title: "Student of Life", pages: "286-294" },
+    { id: "crossing-river-denial", title: "Crossing the River of Denial", pages: "295-303" },
+    { id: "because-im-alcoholic", title: "Because I'm an Alcoholic", pages: "322-334" },
+    { id: "me-an-alcoholic", title: "Me An Alcoholic?", pages: "335-345" },
+    { id: "aa-taught-him", title: "A.A. Taught Him to Handle Sobriety", pages: "346-356" },
+    { id: "my-next-two-weeks", title: "My Next Two Weeks", pages: "357-362" },
+    { id: "another-quiet-victory", title: "Another Quiet Victory", pages: "363-370" },
+    { id: "acceptance-was-answer", title: "Acceptance Was the Answer", pages: "371-380" },
+    { id: "window-of-opportunity", title: "Window of Opportunity", pages: "381-390" },
   ],
   "Part III: They Lost Nearly All": [
-    { id: "keys-of-the-kingdom", title: "The Keys of the Kingdom", pages: "304-321" },
-    { id: "our-southern-friend", title: "Our Southern Friend", pages: "423-438" },
+    { id: "news-hawk", title: "The News Hawk", pages: "391-398" },
+    { id: "european-drinker", title: "The European Drinker", pages: "399-409" },
+    { id: "my-bottle-my-resentments", title: "My Bottle, My Resentments, and Me", pages: "410-422" },
+    { id: "he-lived-only-to-drink", title: "He Lived Only to Drink", pages: "439-447" },
+    { id: "safe-haven", title: "Safe Haven", pages: "448-457" },
+    { id: "listening-to-wind", title: "Listening to the Wind", pages: "458-468" },
+    { id: "twice-gifted", title: "Twice Gifted", pages: "469-481" },
+    { id: "building-new-life", title: "Building a New Life", pages: "482-490" },
+    { id: "freedom-from-bondage", title: "Freedom From Bondage", pages: "491-499" },
+    { id: "he-who-loses-life", title: "He Who Loses His Life", pages: "500-510" },
+    { id: "another-chance", title: "Another Chance", pages: "511-521" },
+    { id: "late-start", title: "Late Start", pages: "522-524" },
+    { id: "rum-radio-rebellion", title: "Rum, Radio, and Rebellion", pages: "525-533" },
+    { id: "teenagers-decision", title: "A Teenager's Decision", pages: "534-539" },
+    { id: "growing-up-all-over", title: "Growing Up All Over", pages: "540-545" },
+    { id: "unto-second-generation", title: "Unto the Second Generation", pages: "546-552" },
+    { id: "one-mans-passage", title: "One Man's Passage", pages: "553-556" },
+    { id: "grounded", title: "Grounded", pages: "557-560" },
   ]
 };
 
