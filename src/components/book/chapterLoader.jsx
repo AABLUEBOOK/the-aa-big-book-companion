@@ -25,6 +25,11 @@ const chapterModules = {
   "he-sold-himself-short": () => import("./content/heSoldHimselfShortContent"),
   "keys-of-the-kingdom": () => import("./content/keysOfTheKingdomContent"),
   
+  // Personal Stories - Part II: They Stopped in Time
+  "missing-link": () => import("./content/missingLinkContent"),
+  "fear-of-fear": () => import("./content/fearOfFearContent"),
+  "housewife-who-drank": () => import("./content/housewifeWhoDrankContent"),
+  
   // Appendices
   "appendices": () => import("./content/appendicesContent"),
 };
