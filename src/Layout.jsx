@@ -7,7 +7,7 @@ const Layout = memo(function Layout({ children }) {
         /* Interactive Big Book Term Tooltips */
         .big-book-term {
             text-decoration: underline;
-            text-decoration-color: #25DCE6;
+            text-decoration-color: #0063e3;
             text-underline-offset: 3px;
             cursor: pointer;
             display: inline;
@@ -50,7 +50,7 @@ const Layout = memo(function Layout({ children }) {
         .big-book-modal-popup {
             background: #ffffff !important;
             border-radius: 16px !important;
-            border: 3px solid #25DCE6 !important;
+            border: 3px solid #0063e3 !important;
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5) !important;
             max-width: 320px !important;
             width: calc(100% - 40px) !important;
@@ -70,7 +70,7 @@ const Layout = memo(function Layout({ children }) {
             align-items: center;
             padding: 16px 18px;
             background: #222A31;
-            border-bottom: 2px solid #25DCE6;
+            border-bottom: 2px solid #0063e3;
             position: sticky;
             top: 0;
             z-index: 1;
@@ -84,7 +84,7 @@ const Layout = memo(function Layout({ children }) {
         }
 
         .big-book-modal-close {
-            background: #25DCE6 !important;
+            background: #0063e3 !important;
             border: none !important;
             color: #222A31 !important;
             font-size: 1.5em !important;
@@ -115,7 +115,7 @@ const Layout = memo(function Layout({ children }) {
             font-size: 0.8em;
             text-transform: uppercase;
             letter-spacing: 1px;
-            color: #25DCE6;
+            color: #0063e3;
             font-weight: 600;
             background: #f8f9fa;
         }

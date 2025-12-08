@@ -151,7 +151,7 @@ export default function ChapterContent({ chapter, sectionRoute, searchQuery = ''
         <div className="flex items-start justify-between gap-3 sm:gap-4">
           <div className="flex-1 min-w-0">
             {chapter.chapter && (
-              <div className="text-[10px] sm:text-xs md:text-sm font-medium text-[#25DCE6] uppercase tracking-widest mb-1">
+              <div className="text-[10px] sm:text-xs md:text-sm font-medium text-[#0063e3] uppercase tracking-widest mb-1">
                 Chapter {chapter.chapter}
               </div>
             )}

@@ -86,12 +86,12 @@ const Chapter = memo(function Chapter() {
     <div className="min-h-screen min-h-[100dvh] bg-[#222A31] pb-20 sm:pb-24">
       
       {/* Top Navigation */}
-      <header className="bg-[#2A3440]/95 backdrop-blur-sm border-b border-[#25DCE6]/20 sticky top-0 z-40 shadow-lg">
+      <header className="bg-[#2A3440]/95 backdrop-blur-sm border-b border-[#0063e3]/20 sticky top-0 z-40 shadow-lg">
         <nav className="w-full px-3 sm:px-4 lg:px-6" aria-label="Main navigation">
           <div className="flex items-center justify-between h-12 sm:h-14 md:h-16">
             <Link 
               to={createPageUrl("Home")} 
-              className="flex items-center gap-1.5 sm:gap-2 text-[#25DCE6] hover:text-[#FFFFFD] active:text-[#FFFFFD] transition-colors min-h-[44px] min-w-[44px] px-1"
+              className="flex items-center gap-1.5 sm:gap-2 text-[#0063e3] hover:text-[#FFFFFD] active:text-[#FFFFFD] transition-colors min-h-[44px] min-w-[44px] px-1"
               aria-label="Back to Table of Contents"
             >
               <ArrowLeft className="w-5 h-5 sm:w-5 sm:h-5" />
@@ -101,7 +101,7 @@ const Chapter = memo(function Chapter() {
             
             <div className="flex items-center gap-2 sm:gap-3">
               <div className="hidden sm:flex items-center gap-1.5">
-                <BookOpen className="w-4 h-4 text-[#25DCE6]" />
+                <BookOpen className="w-4 h-4 text-[#0063e3]" />
                 <span className="font-serif font-semibold text-[#FFFFFD] text-xs sm:text-sm">
                   p. {chapter.pages}
                 </span>
@@ -113,7 +113,7 @@ const Chapter = memo(function Chapter() {
                 onClick={() => setBookmarksOpen(!bookmarksOpen)}
                 variant="ghost"
                 size="sm"
-                className="text-[#25DCE6] hover:bg-[#25DCE6]/10 active:bg-[#25DCE6]/20 h-10 w-10 p-0"
+                className="text-[#0063e3] hover:bg-[#0063e3]/10 active:bg-[#0063e3]/20 h-10 w-10 p-0"
                 aria-label="Open bookmarks"
               >
                 <BookmarkCheck className="w-5 h-5" />
@@ -145,7 +145,7 @@ const Chapter = memo(function Chapter() {
         </article>
 
         {/* Bottom Navigation */}
-        <div className="bg-[#2A3440] rounded-xl border border-[#25DCE6]/20 p-4 sm:p-6 md:p-8 mt-6 sm:mt-8 space-y-4">
+        <div className="bg-[#2A3440] rounded-xl border border-[#0063e3]/20 p-4 sm:p-6 md:p-8 mt-6 sm:mt-8 space-y-4">
           
           {/* Prev/Next Navigation */}
           <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 justify-between">
@@ -153,7 +153,7 @@ const Chapter = memo(function Chapter() {
               <Button
                 variant="outline"
                 onClick={() => navigate(`/Chapter?id=${prevChapter.id}`)}
-                className="flex-1 border-[#25DCE6]/40 text-[#25DCE6] hover:bg-[#25DCE6]/10 active:bg-[#25DCE6]/20 min-h-[44px] justify-start"
+                className="flex-1 border-[#0063e3]/40 text-[#0063e3] hover:bg-[#0063e3]/10 active:bg-[#0063e3]/20 min-h-[44px] justify-start"
               >
                 <ArrowLeft className="w-4 h-4 mr-2 flex-shrink-0" />
                 <span className="truncate">{prevChapter.title}</span>
@@ -163,7 +163,7 @@ const Chapter = memo(function Chapter() {
             {nextChapter ? (
               <Button
                 onClick={() => navigate(`/Chapter?id=${nextChapter.id}`)}
-                className="flex-1 bg-[#25DCE6] text-[#222A31] hover:bg-[#25DCE6]/90 active:bg-[#25DCE6]/80 min-h-[44px] justify-end"
+                className="flex-1 bg-[#0063e3] text-[#FFFFFD] hover:bg-[#0063e3]/90 active:bg-[#0063e3]/80 min-h-[44px] justify-end"
               >
                 <span className="truncate">{nextChapter.title}</span>
                 <ArrowLeft className="w-4 h-4 ml-2 rotate-180 flex-shrink-0" />
@@ -172,18 +172,18 @@ const Chapter = memo(function Chapter() {
           </div>
 
           {/* Back to Contents */}
-          <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 justify-center pt-2 border-t border-[#25DCE6]/20">
+          <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 justify-center pt-2 border-t border-[#0063e3]/20">
             <Button
               onClick={scrollToTop}
               variant="outline"
-              className="border-[#25DCE6]/40 text-[#25DCE6] hover:bg-[#25DCE6]/10 active:bg-[#25DCE6]/20 min-h-[44px]"
+              className="border-[#0063e3]/40 text-[#0063e3] hover:bg-[#0063e3]/10 active:bg-[#0063e3]/20 min-h-[44px]"
             >
               Back to Top
             </Button>
             <Button 
               onClick={() => navigate('/Home')}
               variant="outline"
-              className="border-[#25DCE6]/40 text-[#25DCE6] hover:bg-[#25DCE6]/10 active:bg-[#25DCE6]/20 min-h-[44px]"
+              className="border-[#0063e3]/40 text-[#0063e3] hover:bg-[#0063e3]/10 active:bg-[#0063e3]/20 min-h-[44px]"
             >
               Table of Contents
             </Button>
