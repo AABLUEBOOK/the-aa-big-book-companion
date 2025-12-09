@@ -34,6 +34,7 @@ const chapterModules = {
   "student-of-life": () => import("./content/studentOfLifeContent"),
   "crossing-river-denial": () => import("./content/crossingRiverDenialContent"),
   "because-im-alcoholic": () => import("./content/becauseImAlcoholicContent"),
+  "aa-taught-him": () => import("./content/aaTaughtHimContent"),
   
   // Appendices
   "appendices": () => import("./content/appendicesContent"),
