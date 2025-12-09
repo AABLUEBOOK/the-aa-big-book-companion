@@ -31,6 +31,7 @@ const chapterModules = {
   "missing-link": () => import("./content/missingLinkContent"),
   "fear-of-fear": () => import("./content/fearOfFearContent"),
   "housewife-who-drank": () => import("./content/housewifeWhoDrankContent"),
+  "physician-heal-thyself": () => import("./content/physicianHealThyselfContent"),
   "student-of-life": () => import("./content/studentOfLifeContent"),
   "crossing-river-denial": () => import("./content/crossingRiverDenialContent"),
   "because-im-alcoholic": () => import("./content/becauseImAlcoholicContent"),
