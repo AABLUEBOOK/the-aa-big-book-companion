@@ -96,11 +96,11 @@ const SectionCard = memo(function SectionCard({ section, createPageUrl }) {
   return (
     <Link
       to={createPageUrl(section.route)}
-      className="group relative overflow-hidden rounded-2xl border-2 border-[#25DCE6]/30 
+      className="group relative overflow-hidden rounded-xl sm:rounded-2xl border-2 border-[#25DCE6]/30 
                  bg-gradient-to-br from-[#2A3440]/90 to-[#1a2028]/90 
-                 backdrop-blur-sm p-6 transition-all duration-300 
+                 backdrop-blur-sm p-4 sm:p-6 transition-all duration-300 
                  hover:border-[#25DCE6]/60 hover:shadow-lg hover:shadow-[#25DCE6]/20
-                 active:scale-[0.98]"
+                 active:scale-[0.98] min-h-[140px] sm:min-h-[160px]"
       style={{
         backgroundImage: `repeating-linear-gradient(45deg, 
           transparent, 
@@ -110,32 +110,32 @@ const SectionCard = memo(function SectionCard({ section, createPageUrl }) {
       }}
     >
       {/* Number badge */}
-      <div className="absolute top-4 left-4 w-12 h-12 rounded-full bg-[#25DCE6]/20 
+      <div className="absolute top-3 left-3 sm:top-4 sm:left-4 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-[#25DCE6]/20 
                       flex items-center justify-center border-2 border-[#25DCE6]">
-        <span className="text-2xl font-bold text-[#25DCE6]">{section.number}</span>
+        <span className="text-xl sm:text-2xl font-bold text-[#25DCE6]">{section.number}</span>
       </div>
 
       {/* Arrow indicator */}
-      <div className="absolute top-6 right-6 text-[#25DCE6]/60 group-hover:text-[#25DCE6] 
+      <div className="absolute top-4 right-3 sm:top-6 sm:right-6 text-[#25DCE6]/60 group-hover:text-[#25DCE6] 
                       transition-colors group-hover:translate-x-1 transition-transform">
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
         </svg>
       </div>
 
-      <div className="mt-16">
+      <div className="mt-12 sm:mt-16">
         {/* Page range */}
-        <div className="text-xs font-semibold text-[#25DCE6] mb-2 tracking-wider">
+        <div className="text-[10px] sm:text-xs font-semibold text-[#25DCE6] mb-1 sm:mb-2 tracking-wider">
           {section.pages}
         </div>
 
         {/* Title */}
-        <h3 className="text-xl font-bold text-[#FFFFFD] mb-2 leading-tight">
+        <h3 className="text-base sm:text-xl font-bold text-[#FFFFFD] mb-1 sm:mb-2 leading-tight">
           {section.title}
         </h3>
 
         {/* Description */}
-        <p className="text-sm text-[#FFFFFD]/70 leading-relaxed">
+        <p className="text-xs sm:text-sm text-[#FFFFFD]/70 leading-relaxed">
           {section.description}
         </p>
       </div>
@@ -171,32 +171,30 @@ const Home = memo(function Home() {
       </header>
 
       {/* Highlighting Guide */}
-      <div className="px-4 py-6">
+      <div className="px-3 sm:px-4 py-4 sm:py-6">
         <div className="max-w-6xl mx-auto">
-          <div className="rounded-2xl border-2 border-[#25DCE6]/30 bg-[#2A3440]/50 backdrop-blur-sm p-6">
-            <h2 className="text-lg font-bold text-[#FFFFFD] mb-4 text-center">Highlighting Guide</h2>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              <div className="flex items-center gap-2">
-                <span className="w-5 h-5 rounded bg-orange-400"></span>
-                <span className="text-sm text-[#FFFFFD] font-medium">Orange = Steps</span>
+          <div className="rounded-xl sm:rounded-2xl border-2 border-[#25DCE6]/30 bg-[#2A3440]/50 backdrop-blur-sm p-4 sm:p-6">
+            <h2 className="text-base sm:text-lg font-bold text-[#FFFFFD] mb-3 sm:mb-4 text-center">Highlighting Guide</h2>
+            <div className="flex flex-col gap-2 sm:gap-3">
+              <div className="flex items-center justify-center gap-2">
+                <span className="w-4 h-4 sm:w-5 sm:h-5 rounded bg-orange-400 flex-shrink-0"></span>
+                <span className="text-xs sm:text-sm text-[#FFFFFD] font-medium">Orange = Steps</span>
               </div>
-              <div className="flex items-center gap-2">
-                <span className="w-5 h-5 rounded bg-blue-400"></span>
-                <span className="text-sm text-[#FFFFFD] font-medium">Blue = Promises</span>
+              <div className="flex items-center justify-center gap-2">
+                <span className="w-4 h-4 sm:w-5 sm:h-5 rounded bg-blue-400 flex-shrink-0"></span>
+                <span className="text-xs sm:text-sm text-[#FFFFFD] font-medium">Blue = Promises</span>
               </div>
-              <div className="flex items-center gap-2">
-                <span className="w-5 h-5 rounded bg-green-400"></span>
-                <span className="text-sm text-[#FFFFFD] font-medium">Green = Prayers</span>
+              <div className="flex items-center justify-center gap-2">
+                <span className="w-4 h-4 sm:w-5 sm:h-5 rounded bg-green-400 flex-shrink-0"></span>
+                <span className="text-xs sm:text-sm text-[#FFFFFD] font-medium">Green = Prayers</span>
               </div>
-              <div className="flex items-center gap-2">
-                <span className="w-5 h-5 rounded bg-yellow-400"></span>
-                <span className="text-sm text-[#FFFFFD] font-medium">Yellow = General Info</span>
+              <div className="flex items-center justify-center gap-2">
+                <span className="w-4 h-4 sm:w-5 sm:h-5 rounded bg-yellow-400 flex-shrink-0"></span>
+                <span className="text-xs sm:text-sm text-[#FFFFFD] font-medium">Yellow = General Info</span>
               </div>
-            </div>
-            <div className="mt-3 flex justify-center">
-              <div className="flex items-center gap-2">
-                <span className="w-5 h-5 rounded bg-pink-400"></span>
-                <span className="text-sm text-[#FFFFFD] font-medium">Pink = Tab Reference</span>
+              <div className="flex items-center justify-center gap-2">
+                <span className="w-4 h-4 sm:w-5 sm:h-5 rounded bg-pink-400 flex-shrink-0"></span>
+                <span className="text-xs sm:text-sm text-[#FFFFFD] font-medium">Pink = Tab Reference</span>
               </div>
             </div>
           </div>
@@ -204,8 +202,8 @@ const Home = memo(function Home() {
       </div>
 
       {/* Section Cards */}
-      <main className="max-w-6xl mx-auto px-4 py-6 pb-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <main className="max-w-6xl mx-auto px-3 sm:px-4 py-4 sm:py-6 pb-8 sm:pb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4 md:gap-6">
           {SECTIONS.map((section) => (
             <SectionCard key={section.id} section={section} createPageUrl={createPageUrl} />
           ))}
