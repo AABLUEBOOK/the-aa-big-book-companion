@@ -42,6 +42,7 @@ const chapterModules = {
   "twice-gifted": () => import("./content/twiceGiftedContent"),
   "building-new-life": () => import("./content/buildingNewLifeContent"),
   "on-the-move": () => import("./content/onTheMoveContent"),
+  "vision-of-recovery": () => import("./content/visionOfRecoveryContent"),
   
   // Appendices
   "appendices": () => import("./content/appendicesContent"),
