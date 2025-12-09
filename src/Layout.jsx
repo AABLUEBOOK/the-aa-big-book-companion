@@ -4,12 +4,28 @@ const Layout = memo(function Layout({ children }) {
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#1a1f26] via-[#222A31] to-[#2a3440]">
       <style>{`
+        /* Apple Liquid Glass System */
+        * {
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+        }
+        
         /* Glass morphism base */
         .glass-panel {
           background: rgba(255, 255, 255, 0.05);
-          backdrop-filter: blur(20px);
-          -webkit-backdrop-filter: blur(20px);
-          border: 1px solid rgba(255, 255, 255, 0.1);
+          backdrop-filter: blur(40px) saturate(180%);
+          -webkit-backdrop-filter: blur(40px) saturate(180%);
+          border: 1px solid rgba(255, 255, 255, 0.12);
+          box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+        
+        /* Enhanced button interactions */
+        button, a {
+          transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        button:active, a:active {
+          transform: scale(0.96);
         }
 
         /* Interactive Big Book Term Tooltips */
