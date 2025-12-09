@@ -118,7 +118,7 @@ const SectionCard = memo(function SectionCard({ section, createPageUrl }) {
                         group-hover:bg-white/15 transition-all duration-500">
           <span className="text-lg sm:text-xl font-bold text-[#5EAAFF]">{section.number}</span>
         </div>
-        <div className="text-[10px] sm:text-xs font-semibold text-[#5EAAFF] tracking-wider">
+        <div className="text-[10px] sm:text-xs text-[#5EAAFF] tracking-wider" style={{ fontFamily: 'Lato, sans-serif', fontWeight: 700 }}>
           {section.pages}
         </div>
       </div>
@@ -137,12 +137,12 @@ const SectionCard = memo(function SectionCard({ section, createPageUrl }) {
 
       <div>
         {/* Title */}
-        <h3 className="text-base sm:text-xl font-bold text-[#FFFFFD] mb-1 sm:mb-2 leading-tight">
+        <h3 className="text-lg sm:text-2xl text-[#FFFFFD] mb-1 sm:mb-2 leading-tight tracking-wide" style={{ fontFamily: 'Bebas Neue, sans-serif' }}>
           {section.title}
         </h3>
 
         {/* Description */}
-        <p className="text-xs sm:text-sm text-[#FFFFFD]/70 leading-relaxed">
+        <p className="text-xs sm:text-sm text-[#FFFFFD]/70 leading-relaxed" style={{ fontFamily: 'Lato, sans-serif', fontWeight: 300 }}>
           {section.description}
         </p>
       </div>
@@ -170,10 +170,10 @@ const Home = memo(function Home() {
             <Settings className="w-4 h-4" />
           </Button>
           <div className="text-center mb-3">
-            <h1 className="text-xl sm:text-2xl md:text-3xl font-serif font-bold text-[#FFFFFD] leading-tight">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl text-[#FFFFFD] leading-tight tracking-wide" style={{ fontFamily: 'Bebas Neue, sans-serif' }}>
               Alcoholics Anonymous
             </h1>
-            <p className="text-[10px] sm:text-xs md:text-sm text-[#5EAAFF] leading-snug mt-2">
+            <p className="text-[10px] sm:text-xs md:text-sm text-[#5EAAFF] leading-snug mt-2" style={{ fontFamily: 'Lato, sans-serif', fontWeight: 300 }}>
               The Story of How Many Thousands of Men and Women Have Recovered from Alcoholism
             </p>
           </div>
@@ -187,30 +187,30 @@ const Home = memo(function Home() {
       <div className="px-3 sm:px-4 py-4 sm:py-6">
         <div className="max-w-6xl mx-auto">
           <div className="rounded-xl sm:rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10 p-4 sm:p-6 shadow-xl shadow-[#5EAAFF]/5">
-            <h2 className="text-base sm:text-lg font-bold text-[#FFFFFD] mb-3 sm:mb-4 text-center">Highlighting Guide</h2>
+            <h2 className="text-lg sm:text-xl text-[#FFFFFD] mb-3 sm:mb-4 text-center tracking-wide" style={{ fontFamily: 'Bebas Neue, sans-serif' }}>Highlighting Guide</h2>
             <div className="flex flex-col gap-2 sm:gap-3">
               <div className="flex items-center justify-center gap-3 sm:gap-4 flex-wrap">
                 <div className="flex items-center gap-2">
                   <span className="w-4 h-4 sm:w-5 sm:h-5 rounded bg-orange-400 flex-shrink-0"></span>
-                  <span className="text-xs sm:text-sm text-[#FFFFFD] font-medium">Orange = Steps</span>
+                  <span className="text-xs sm:text-sm text-[#FFFFFD]" style={{ fontFamily: 'Lato, sans-serif', fontWeight: 400 }}>Orange = Steps</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <span className="w-4 h-4 sm:w-5 sm:h-5 rounded bg-blue-400 flex-shrink-0"></span>
-                  <span className="text-xs sm:text-sm text-[#FFFFFD] font-medium">Blue = Promises</span>
+                  <span className="text-xs sm:text-sm text-[#FFFFFD]" style={{ fontFamily: 'Lato, sans-serif', fontWeight: 400 }}>Blue = Promises</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <span className="w-4 h-4 sm:w-5 sm:h-5 rounded bg-green-400 flex-shrink-0"></span>
-                  <span className="text-xs sm:text-sm text-[#FFFFFD] font-medium">Green = Prayers</span>
+                  <span className="text-xs sm:text-sm text-[#FFFFFD]" style={{ fontFamily: 'Lato, sans-serif', fontWeight: 400 }}>Green = Prayers</span>
                 </div>
               </div>
               <div className="flex items-center justify-center gap-3 sm:gap-4 flex-wrap">
                 <div className="flex items-center gap-2">
                   <span className="w-4 h-4 sm:w-5 sm:h-5 rounded bg-yellow-400 flex-shrink-0"></span>
-                  <span className="text-xs sm:text-sm text-[#FFFFFD] font-medium">Yellow = General Info</span>
+                  <span className="text-xs sm:text-sm text-[#FFFFFD]" style={{ fontFamily: 'Lato, sans-serif', fontWeight: 400 }}>Yellow = General Info</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <span className="w-4 h-4 sm:w-5 sm:h-5 rounded bg-pink-400 flex-shrink-0"></span>
-                  <span className="text-xs sm:text-sm text-[#FFFFFD] font-medium">Pink = Tab Reference</span>
+                  <span className="text-xs sm:text-sm text-[#FFFFFD]" style={{ fontFamily: 'Lato, sans-serif', fontWeight: 400 }}>Pink = Tab Reference</span>
                 </div>
               </div>
             </div>
@@ -237,7 +237,7 @@ const Home = memo(function Home() {
 
       {/* Footer */}
       <footer className="bg-white/5 backdrop-blur-xl border-t border-white/10 px-4 py-4 mt-8 shadow-lg shadow-black/20">
-        <p className="text-center text-xs text-[#FFFFFD]/40">
+        <p className="text-center text-xs text-[#FFFFFD]/40" style={{ fontFamily: 'Lato, sans-serif', fontWeight: 300 }}>
           Fourth Edition • Alcoholics Anonymous World Services, Inc.
         </p>
       </footer>

@@ -3,6 +3,9 @@ import React, { memo } from "react";
 const Layout = memo(function Layout({ children }) {
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#1a1f26] via-[#222A31] to-[#2a3440]">
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
       <style>{`
         /* Apple Liquid Glass System */
         * {
