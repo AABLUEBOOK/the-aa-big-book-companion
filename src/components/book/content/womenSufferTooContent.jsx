@@ -40,7 +40,6 @@ export const womenSufferTooContent = {
     { pageNum: "207" }
   ]
 };
-    { text: `Despite great opportunities, I just about managed to disgrace myself, my family, and the great profession of law.` },
     { text: `I drank for twenty-five years, the last three years being characterized by such utter abandon on my part that I was in danger of losing everything I held dear, including my life.` },
     { text: `My parents, who lived in another city, were not alarmed until about a year before I sobered up. I had managed to keep my drinking fairly well under cover, although there had been occasional times when they had wondered just how much I did drink. My husband, of course, knew. He was at first very patient, then as time went on and I failed to carry out promise after promise to reform, he adopted an attitude of polite tolerance; and I don't suppose I can blame him for feeling that his first duty was to save the children from more grief on account of me.` },
     { text: `Many times when I was drinking I saw my friends draw away from me. I know that on occasions they tried to help me. They would plan little parties for me, arrange dinners and teas, hoping thereby to divert my mind, only to find me intoxicated when they came for me; and finally they gave me up as hopeless. I had lost the confidence of my partners; I had lost the respect of my friends.` },
