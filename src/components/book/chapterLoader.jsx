@@ -33,6 +33,7 @@ const chapterModules = {
   "housewife-who-drank": () => import("./content/housewifeWhoDrankContent"),
   "student-of-life": () => import("./content/studentOfLifeContent"),
   "crossing-river-denial": () => import("./content/crossingRiverDenialContent"),
+  "because-im-alcoholic": () => import("./content/becauseImAlcoholicContent"),
   
   // Appendices
   "appendices": () => import("./content/appendicesContent"),
