@@ -44,6 +44,8 @@ const chapterModules = {
   "on-the-move": () => import("./content/onTheMoveContent"),
   "vision-of-recovery": () => import("./content/visionOfRecoveryContent"),
   "gutter-bravado": () => import("./content/gutterBravadoContent"),
+  "empty-on-the-inside": () => import("./content/emptyOnTheInsideContent"),
+  "grounded": () => import("./content/groundedContent"),
   
   // Appendices
   "appendices": () => import("./content/appendicesContent"),
