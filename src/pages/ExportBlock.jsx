@@ -27,7 +27,7 @@ export default function ExportBlock() {
           ref={blockRef}
           className="relative overflow-hidden rounded-3xl 
                      bg-white/5 backdrop-blur-xl border border-white/10
-                     w-[400px] h-[200px]
+                     w-[400px] h-[400px]
                      shadow-2xl shadow-black/20"
           style={{
             backgroundImage: `repeating-linear-gradient(45deg, 
