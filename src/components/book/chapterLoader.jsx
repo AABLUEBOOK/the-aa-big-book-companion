@@ -39,6 +39,7 @@ const chapterModules = {
   "he-lived-only-to-drink": () => import("./content/heLivedOnlyToDrinkContent"),
   "safe-haven": () => import("./content/safeHavenContent"),
   "listening-to-wind": () => import("./content/listeningToWindContent"),
+  "twice-gifted": () => import("./content/twiceGiftedContent"),
   
   // Appendices
   "appendices": () => import("./content/appendicesContent"),
