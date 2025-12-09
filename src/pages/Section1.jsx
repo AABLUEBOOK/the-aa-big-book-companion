@@ -155,15 +155,18 @@ export default function Section1() {
   };
 
   return (
-    <div className="min-h-screen min-h-[100dvh] bg-[#222A31] pb-20 sm:pb-24">
+    <div className="min-h-screen min-h-[100dvh] bg-gradient-to-br from-[#1a1f26] via-[#222A31] to-[#2a3440] pb-20 sm:pb-24">
       
       {/* Top Navigation */}
-      <header className="bg-[#2A3440]/95 backdrop-blur-sm border-b border-[#25DCE6]/20 sticky top-0 z-40 shadow-lg">
+      <header className="bg-white/5 backdrop-blur-3xl border-b border-white/10 sticky top-0 z-40 shadow-2xl shadow-black/30">
         <nav className="w-full px-3 sm:px-4 lg:px-6" aria-label="Main navigation">
           <div className="flex items-center justify-between h-12 sm:h-14 md:h-16">
             <Link 
               to={createPageUrl("Home")} 
-              className="flex items-center gap-1.5 sm:gap-2 text-[#25DCE6] hover:text-[#FFFFFD] active:text-[#FFFFFD] transition-colors min-h-[44px] min-w-[44px] px-1"
+              className="flex items-center gap-1.5 sm:gap-2 text-[#5EAAFF] hover:text-[#FFFFFD] active:text-[#FFFFFD] 
+                         transition-all duration-500 min-h-[44px] min-w-[44px] px-3 py-2 rounded-2xl
+                         bg-white/5 backdrop-blur-xl border border-white/10 hover:bg-white/10
+                         shadow-lg shadow-black/20 hover:shadow-xl hover:shadow-[#5EAAFF]/20"
               aria-label="Back to home"
             >
               <ArrowLeft className="w-5 h-5 sm:w-5 sm:h-5" />
@@ -171,8 +174,9 @@ export default function Section1() {
             </Link>
             
             <div className="flex items-center gap-2 sm:gap-3 md:gap-4">
-              <div className="hidden xs:flex items-center gap-1.5 sm:gap-2">
-                <BookOpen className="w-4 h-4 sm:w-5 sm:h-5 text-[#25DCE6]" />
+              <div className="hidden xs:flex items-center gap-1.5 sm:gap-2 bg-white/5 backdrop-blur-xl 
+                              border border-white/10 rounded-2xl px-3 py-2 shadow-lg shadow-black/20">
+                <BookOpen className="w-4 h-4 sm:w-5 sm:h-5 text-[#5EAAFF] drop-shadow-lg" />
                 <span className="font-serif font-semibold text-[#FFFFFD] text-xs sm:text-sm md:text-base">
                   Pages 1-164
                 </span>
@@ -182,7 +186,10 @@ export default function Section1() {
                 onClick={() => setBookmarksOpen(!bookmarksOpen)}
                 variant="ghost"
                 size="sm"
-                className="text-[#25DCE6] hover:bg-[#25DCE6]/10 active:bg-[#25DCE6]/20 h-11 w-11 sm:h-10 sm:w-10 p-0"
+                className="text-[#5EAAFF] bg-white/5 backdrop-blur-xl border border-white/10 
+                           hover:bg-white/10 active:bg-white/15 h-11 w-11 sm:h-10 sm:w-10 p-0 rounded-2xl
+                           shadow-lg shadow-black/20 hover:shadow-xl hover:shadow-[#5EAAFF]/20
+                           transition-all duration-500"
                 aria-label="Open bookmarks"
               >
                 <BookmarkCheck className="w-5 h-5 sm:w-5 sm:h-5" />
@@ -202,7 +209,7 @@ export default function Section1() {
             onClick={() => setBookmarksOpen(false)} 
             aria-hidden="true"
           />
-          <aside className="absolute right-0 top-0 h-full w-full sm:w-96 max-w-full bg-[#2A3440] shadow-2xl overflow-y-auto overscroll-contain p-4 sm:p-6">
+          <aside className="absolute right-0 top-0 h-full w-full sm:w-96 max-w-full bg-white/5 backdrop-blur-3xl border-l border-white/10 shadow-2xl overflow-y-auto overscroll-contain p-4 sm:p-6">
             <BookmarksList onClose={() => setBookmarksOpen(false)} />
           </aside>
         </div>
@@ -213,7 +220,7 @@ export default function Section1() {
           
           {/* Side Navigation - Desktop */}
           <aside className="hidden lg:block w-60 xl:w-72 flex-shrink-0" aria-label="Chapter navigation">
-            <div className="sticky top-20 bg-[#2A3440] rounded-xl border border-[#25DCE6]/20 shadow-lg">
+            <div className="sticky top-20 bg-white/5 backdrop-blur-3xl rounded-3xl border border-white/10 shadow-2xl shadow-black/30">
               <BookNavigation />
             </div>
           </aside>
@@ -227,19 +234,26 @@ export default function Section1() {
             ))}
 
             {/* Bottom Navigation */}
-            <div className="bg-[#2A3440] rounded-xl border border-[#25DCE6]/20 p-4 sm:p-6 md:p-8 text-center space-y-3 sm:space-y-4">
+            <div className="bg-white/5 backdrop-blur-3xl rounded-3xl border border-white/10 p-4 sm:p-6 md:p-8 text-center space-y-3 sm:space-y-4 shadow-2xl shadow-black/30">
               <h3 className="text-lg sm:text-xl font-serif font-bold text-[#FFFFFD]">End of Section 1</h3>
               <p className="text-sm sm:text-base text-[#FFFFFD]/70">Continue to the next section or return to top</p>
               <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 justify-center">
                 <Button
                   onClick={scrollToTop}
                   variant="outline"
-                  className="border-[#25DCE6]/40 text-[#25DCE6] hover:bg-[#25DCE6]/10 active:bg-[#25DCE6]/20 min-h-[44px]"
+                  className="bg-white/5 backdrop-blur-xl border-white/20 text-[#5EAAFF] 
+                             hover:bg-white/10 hover:border-[#5EAAFF]/40 active:bg-white/15 min-h-[44px]
+                             rounded-2xl shadow-lg shadow-black/20 hover:shadow-xl hover:shadow-[#5EAAFF]/20
+                             transition-all duration-500"
                 >
                   Back to Top
                 </Button>
                 <Link to={createPageUrl("Home")} className="w-full sm:w-auto">
-                  <Button className="w-full bg-[#25DCE6] text-[#222A31] hover:bg-[#25DCE6]/90 active:bg-[#25DCE6]/80 min-h-[44px]">
+                  <Button className="w-full bg-[#5EAAFF]/90 backdrop-blur-xl text-white 
+                                     hover:bg-[#5EAAFF] active:bg-[#5EAAFF]/80 min-h-[44px]
+                                     rounded-2xl shadow-xl shadow-[#5EAAFF]/40 
+                                     hover:shadow-2xl hover:shadow-[#5EAAFF]/60
+                                     border border-white/20 transition-all duration-500">
                     Table of Contents
                   </Button>
                 </Link>

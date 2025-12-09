@@ -88,9 +88,9 @@ export default function Section9() {
   };
 
   return (
-    <div className="min-h-screen bg-[#222A31]">
+    <div className="min-h-screen bg-gradient-to-br from-[#1a1f26] via-[#222A31] to-[#2a3440]">
       {/* Top Navigation */}
-      <div className="sticky top-0 z-50 bg-[#2A3440] border-b border-[#5EAAFF]/20 shadow-lg backdrop-blur-sm">
+      <div className="sticky top-0 z-50 bg-white/5 backdrop-blur-3xl border-b border-white/10 shadow-2xl shadow-black/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4">
           <div className="flex items-center justify-between gap-4">
             <Link to={createPageUrl("Home")} className="flex items-center gap-2 text-[#25DCE6] hover:text-[#FFFFFD] transition-colors">
@@ -105,9 +105,11 @@ export default function Section9() {
 
             <button
               onClick={() => setMobileNavOpen(!mobileNavOpen)}
-              className="lg:hidden p-2 text-[#5EAAFF] hover:bg-[#5EAAFF]/10 rounded-lg transition-colors"
+              className="lg:hidden p-2.5 text-[#5EAAFF] bg-white/5 backdrop-blur-xl border border-white/10
+                         hover:bg-white/10 rounded-2xl transition-all duration-500 shadow-lg shadow-black/20
+                         hover:shadow-xl hover:shadow-[#5EAAFF]/20"
             >
-              {mobileNavOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+              {mobileNavOpen ? <X className="w-5 h-5 drop-shadow-lg" /> : <Menu className="w-5 h-5 drop-shadow-lg" />}
             </button>
           </div>
         </div>
@@ -116,8 +118,8 @@ export default function Section9() {
       {/* Mobile Navigation Drawer */}
       {mobileNavOpen && (
         <div className="fixed inset-0 z-40 lg:hidden">
-          <div className="absolute inset-0 bg-black/50" onClick={() => setMobileNavOpen(false)} />
-          <div className="absolute right-0 top-0 h-full w-80 bg-[#2A3440] shadow-2xl overflow-y-auto p-6">
+          <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" onClick={() => setMobileNavOpen(false)} />
+          <div className="absolute right-0 top-0 h-full w-80 bg-white/5 backdrop-blur-3xl border-l border-white/10 shadow-2xl overflow-y-auto p-6">
             <ChapterNav
               chapters={CHAPTERS}
               currentChapterId={currentChapterId}
@@ -130,11 +132,13 @@ export default function Section9() {
       <div className="flex max-w-7xl mx-auto">
         {/* Desktop Side Navigation */}
         <aside className="hidden lg:block w-80 sticky top-24 h-[calc(100vh-6rem)] overflow-y-auto p-6">
-          <ChapterNav
-            chapters={CHAPTERS}
-            currentChapterId={currentChapterId}
-            onChapterChange={handleChapterChange}
-          />
+          <div className="bg-white/5 backdrop-blur-3xl rounded-3xl border border-white/10 shadow-2xl shadow-black/30">
+            <ChapterNav
+              chapters={CHAPTERS}
+              currentChapterId={currentChapterId}
+              onChapterChange={handleChapterChange}
+            />
+          </div>
         </aside>
 
         {/* Main Content */}
@@ -154,18 +158,22 @@ export default function Section9() {
       </div>
 
       {/* Bottom Navigation */}
-      <div className="sticky bottom-0 bg-[#2A3440] border-t border-[#5EAAFF]/20 shadow-lg backdrop-blur-sm">
+      <div className="sticky bottom-0 bg-white/5 backdrop-blur-3xl border-t border-white/10 shadow-2xl shadow-black/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4">
           <div className="flex items-center justify-between">
             <Link
               to={createPageUrl("Section8")}
-              className="text-[#5EAAFF] hover:text-[#FFFFFD] transition-colors text-sm sm:text-base"
+              className="text-[#5EAAFF] hover:text-[#FFFFFD] transition-all duration-500 text-sm sm:text-base
+                         px-4 py-2 rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10
+                         hover:bg-white/10 shadow-lg shadow-black/20 hover:shadow-xl hover:shadow-[#5EAAFF]/20"
             >
               ← Previous Section
             </Link>
             <Link
               to={createPageUrl("Section10")}
-              className="text-[#5EAAFF] hover:text-[#FFFFFD] transition-colors text-sm sm:text-base"
+              className="text-[#5EAAFF] hover:text-[#FFFFFD] transition-all duration-500 text-sm sm:text-base
+                         px-4 py-2 rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10
+                         hover:bg-white/10 shadow-lg shadow-black/20 hover:shadow-xl hover:shadow-[#5EAAFF]/20"
             >
               Next Section →
             </Link>

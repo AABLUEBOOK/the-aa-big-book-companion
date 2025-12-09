@@ -52,7 +52,7 @@ const SearchBar = memo(function SearchBar({ className = "" }) {
     const parts = highlightMatches(snippet, query);
     return parts.map((part, i) => 
       part.highlight ? (
-        <mark key={i} className="bg-[#25DCE6]/30 text-[#FFFFFD] px-0.5 rounded">{part.text}</mark>
+        <mark key={i} className="bg-[#5EAAFF]/20 backdrop-blur-xl text-[#5EAAFF] px-1.5 py-0.5 rounded-lg border border-[#5EAAFF]/30 shadow-lg">{part.text}</mark>
       ) : (
         <span key={i}>{part.text}</span>
       )
@@ -62,7 +62,10 @@ const SearchBar = memo(function SearchBar({ className = "" }) {
   return (
     <div className={`relative ${className}`}>
       <div className="relative">
-        <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[#25DCE6]/60" />
+        <div className="absolute left-3 top-1/2 -translate-y-1/2 bg-[#5EAAFF]/10 backdrop-blur-xl 
+                        rounded-full p-1.5 border border-[#5EAAFF]/20 shadow-lg">
+          <Search className="w-3 h-3 text-[#5EAAFF]" />
+        </div>
         <Input
           type="text"
           placeholder="Search chapters..."
@@ -70,33 +73,41 @@ const SearchBar = memo(function SearchBar({ className = "" }) {
           onChange={(e) => setSearchQuery(e.target.value)}
           onFocus={() => setIsFocused(true)}
           onBlur={() => setTimeout(() => setIsFocused(false), 150)}
-          className="pl-9 pr-8 h-9 bg-[#222A31] border-[#25DCE6]/30 text-[#FFFFFD] placeholder:text-[#FFFFFD]/40 focus:border-[#25DCE6] text-sm"
+          className="pl-12 pr-10 h-11 bg-white/5 backdrop-blur-3xl border-white/10 text-[#FFFFFD] 
+                     placeholder:text-[#FFFFFD]/40 focus:border-[#5EAAFF]/50 text-sm rounded-2xl
+                     shadow-lg shadow-black/20 hover:bg-white/8 transition-all duration-500"
         />
         {searchQuery && (
           <button
             onClick={() => setSearchQuery("")}
-            className="absolute right-2 top-1/2 -translate-y-1/2 text-[#FFFFFD]/40 hover:text-[#FFFFFD]"
+            className="absolute right-2 top-1/2 -translate-y-1/2 text-[#FFFFFD]/40 hover:text-[#FFFFFD]
+                       bg-white/5 backdrop-blur-xl rounded-full p-1.5 border border-white/10
+                       hover:bg-white/10 transition-all duration-300 shadow-lg"
           >
-            <X className="w-4 h-4" />
+            <X className="w-3 h-3" />
           </button>
         )}
       </div>
       
       {isFocused && (results.chapters.length > 0 || results.content.length > 0) && (
-        <div className="absolute top-full left-0 right-0 mt-1 bg-[#222A31] rounded-lg border border-[#25DCE6]/20 overflow-hidden z-50 shadow-xl max-h-80 overflow-y-auto">
+        <div className="absolute top-full left-0 right-0 mt-2 bg-white/5 backdrop-blur-3xl rounded-2xl border border-white/10 overflow-hidden z-50 shadow-2xl shadow-black/40 max-h-80 overflow-y-auto">
           {results.chapters.length > 0 && (
             <>
-              <div className="px-3 py-1.5 text-[10px] uppercase tracking-wide text-[#25DCE6]/60 bg-[#1a2028] flex items-center gap-1 sticky top-0">
-                <BookOpen className="w-3 h-3" /> Chapters
+              <div className="px-3 py-2 text-[10px] uppercase tracking-wide text-[#5EAAFF] bg-white/5 backdrop-blur-xl flex items-center gap-1.5 sticky top-0 border-b border-white/10">
+                <div className="bg-[#5EAAFF]/10 rounded-full p-1">
+                  <BookOpen className="w-3 h-3" />
+                </div>
+                Chapters
               </div>
               {results.chapters.map((result) => (
                 <button
                   key={result.id}
                   onMouseDown={() => handleSelect(result.id)}
-                  className="w-full text-left px-3 py-2 hover:bg-[#25DCE6]/10 border-b border-[#25DCE6]/10 transition-colors"
+                  className="w-full text-left px-3 py-2.5 hover:bg-white/10 border-b border-white/5 
+                             transition-all duration-300 group"
                 >
-                  <div className="text-[#FFFFFD] text-sm font-medium truncate">{result.title}</div>
-                  <div className="text-[#FFFFFD]/50 text-xs">p. {result.pages}</div>
+                  <div className="text-[#FFFFFD] text-sm font-medium truncate group-hover:text-[#5EAAFF] transition-colors">{result.title}</div>
+                  <div className="text-[#FFFFFD]/50 text-xs bg-white/5 backdrop-blur-xl rounded-lg px-2 py-0.5 inline-block mt-1">p. {result.pages}</div>
                 </button>
               ))}
             </>
@@ -104,17 +115,21 @@ const SearchBar = memo(function SearchBar({ className = "" }) {
           
           {results.content.length > 0 && (
             <>
-              <div className="px-3 py-1.5 text-[10px] uppercase tracking-wide text-[#25DCE6]/60 bg-[#1a2028] flex items-center gap-1 sticky top-0">
-                <FileText className="w-3 h-3" /> In Text {results.content.length > 0 && `(${results.content.length})`}
+              <div className="px-3 py-2 text-[10px] uppercase tracking-wide text-[#5EAAFF] bg-white/5 backdrop-blur-xl flex items-center gap-1.5 sticky top-0 border-b border-white/10">
+                <div className="bg-[#5EAAFF]/10 rounded-full p-1">
+                  <FileText className="w-3 h-3" />
+                </div>
+                In Text {results.content.length > 0 && `(${results.content.length})`}
               </div>
               {results.content.map((result, idx) => (
                 <button
                   key={`${result.chapterId}-${idx}`}
                   onMouseDown={() => handleSelect(result.chapterId)}
-                  className="w-full text-left px-3 py-2 hover:bg-[#25DCE6]/10 border-b border-[#25DCE6]/10 last:border-b-0 transition-colors"
+                  className="w-full text-left px-3 py-2.5 hover:bg-white/10 border-b border-white/5 last:border-b-0 
+                             transition-all duration-300 group"
                 >
-                  <div className="text-[#FFFFFD] text-sm font-medium truncate">{result.chapterTitle}</div>
-                  <div className="text-[#FFFFFD]/40 text-xs line-clamp-2 italic">
+                  <div className="text-[#FFFFFD] text-sm font-medium truncate group-hover:text-[#5EAAFF] transition-colors">{result.chapterTitle}</div>
+                  <div className="text-[#FFFFFD]/40 text-xs line-clamp-2 italic mt-1">
                     "{renderHighlightedSnippet(result.snippet, result.matchedQuery)}"
                   </div>
                 </button>
@@ -125,17 +140,17 @@ const SearchBar = memo(function SearchBar({ className = "" }) {
       )}
       
       {isFocused && searchQuery.length >= 2 && results.chapters.length === 0 && results.content.length === 0 && !isSearching && (
-        <div className="absolute top-full left-0 right-0 mt-1 bg-[#222A31] rounded-lg border border-[#25DCE6]/20 z-50 shadow-xl">
-          <div className="text-center text-[#FFFFFD]/50 text-sm py-3">
+        <div className="absolute top-full left-0 right-0 mt-2 bg-white/5 backdrop-blur-3xl rounded-2xl border border-white/10 z-50 shadow-2xl shadow-black/40">
+          <div className="text-center text-[#FFFFFD]/50 text-sm py-4">
             No results found
           </div>
         </div>
       )}
       
       {isFocused && isSearching && results.chapters.length === 0 && (
-        <div className="absolute top-full left-0 right-0 mt-1 bg-[#222A31] rounded-lg border border-[#25DCE6]/20 z-50 shadow-xl">
-          <div className="flex items-center justify-center gap-2 text-[#FFFFFD]/50 text-sm py-3">
-            <Loader2 className="w-4 h-4 animate-spin" /> Searching...
+        <div className="absolute top-full left-0 right-0 mt-2 bg-white/5 backdrop-blur-3xl rounded-2xl border border-white/10 z-50 shadow-2xl shadow-black/40">
+          <div className="flex items-center justify-center gap-2 text-[#FFFFFD]/50 text-sm py-4">
+            <Loader2 className="w-4 h-4 animate-spin drop-shadow-lg" /> Searching...
           </div>
         </div>
       )}
