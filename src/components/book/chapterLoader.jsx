@@ -36,6 +36,7 @@ const chapterModules = {
   "student-of-life": () => import("./content/studentOfLifeContent"),
   "crossing-river-denial": () => import("./content/crossingRiverDenialContent"),
   "because-im-alcoholic": () => import("./content/becauseImAlcoholicContent"),
+  "me-an-alcoholic": () => import("./content/meAnAlcoholicContent"),
   "aa-taught-him": () => import("./content/aaTaughtHimContent"),
   "my-bottle-my-resentments": () => import("./content/myBottleMyResentmentsContent"),
   "he-lived-only-to-drink": () => import("./content/heLivedOnlyToDrinkContent"),
