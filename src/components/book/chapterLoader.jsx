@@ -41,6 +41,7 @@ const chapterModules = {
   "listening-to-wind": () => import("./content/listeningToWindContent"),
   "twice-gifted": () => import("./content/twiceGiftedContent"),
   "building-new-life": () => import("./content/buildingNewLifeContent"),
+  "on-the-move": () => import("./content/onTheMoveContent"),
   
   // Appendices
   "appendices": () => import("./content/appendicesContent"),
