@@ -10,7 +10,6 @@ import Section8 from './pages/Section8';
 import Section9 from './pages/Section9';
 import Section10 from './pages/Section10';
 import Chapter from './pages/Chapter';
-import ExportBlock from './pages/ExportBlock';
 import __Layout from './Layout.jsx';
 
 
@@ -27,7 +26,6 @@ export const PAGES = {
     "Section9": Section9,
     "Section10": Section10,
     "Chapter": Chapter,
-    "ExportBlock": ExportBlock,
 }
 
 export const pagesConfig = {
