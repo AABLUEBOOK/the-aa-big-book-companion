@@ -38,6 +38,7 @@ const chapterModules = {
   "my-bottle-my-resentments": () => import("./content/myBottleMyResentmentsContent"),
   "he-lived-only-to-drink": () => import("./content/heLivedOnlyToDrinkContent"),
   "safe-haven": () => import("./content/safeHavenContent"),
+  "listening-to-wind": () => import("./content/listeningToWindContent"),
   
   // Appendices
   "appendices": () => import("./content/appendicesContent"),
