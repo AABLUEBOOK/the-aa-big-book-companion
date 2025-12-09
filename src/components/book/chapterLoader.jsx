@@ -32,6 +32,7 @@ const chapterModules = {
   "fear-of-fear": () => import("./content/fearOfFearContent"),
   "housewife-who-drank": () => import("./content/housewifeWhoDrankContent"),
   "physician-heal-thyself": () => import("./content/physicianHealThyselfContent"),
+  "my-chance-to-live": () => import("./content/myChanceToLiveContent"),
   "student-of-life": () => import("./content/studentOfLifeContent"),
   "crossing-river-denial": () => import("./content/crossingRiverDenialContent"),
   "because-im-alcoholic": () => import("./content/becauseImAlcoholicContent"),
