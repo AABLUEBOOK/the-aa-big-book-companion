@@ -10,20 +10,33 @@ function createPageUrl(pageName) {
 }
 
 const CHAPTERS = [
-  { id: "on-the-move", title: "On the Move", pageNum: "303", chapter: null },
-  { id: "a-vision-of-recovery", title: "A Vision of Recovery", pageNum: "315", chapter: null },
-  { id: "gutter-bravado", title: "Gutter Bravado", pageNum: "325", chapter: null },
-  { id: "empty-on-the-inside", title: "Empty on the Inside", pageNum: "337", chapter: null },
-  { id: "grounded", title: "Grounded", pageNum: "351", chapter: null },
-  { id: "another-chance", title: "Another Chance", pageNum: "361", chapter: null },
-  { id: "a-late-start", title: "A Late Start", pageNum: "377", chapter: null },
-  { id: "freedom-from-bondage", title: "Freedom from Bondage", pageNum: "389", chapter: null },
-  { id: "a-a-taught-him-to-handle-sobriety", title: "A.A. Taught Him to Handle Sobriety", pageNum: "401", chapter: null },
-  { id: "me-an-alcoholic", title: "Me, an Alcoholic?", pageNum: "413", chapter: null },
-  { id: "the-perpetual-quest", title: "The Perpetual Quest", pageNum: "425", chapter: null },
-  { id: "a-drunk-like-you", title: "A Drunk Like You", pageNum: "437", chapter: null },
-  { id: "acceptance-was-the-answer", title: "Acceptance Was the Answer", pageNum: "449", chapter: null },
-  { id: "window-of-opportunity", title: "Window of Opportunity", pageNum: "461", chapter: null }
+  { id: "missing-link", title: "The Missing Link", pageNum: "210" },
+  { id: "fear-of-fear", title: "Fear of Fear", pageNum: "234" },
+  { id: "housewife-who-drank", title: "The Housewife Who Drank at Home", pageNum: "258" },
+  { id: "physician-heal-thyself", title: "Physician, Heal Thyself!", pageNum: "268" },
+  { id: "my-chance-to-live", title: "My Chance to Live", pageNum: "282" },
+  { id: "student-of-life", title: "Student of Life", pageNum: "286" },
+  { id: "crossing-river-denial", title: "Crossing the River of Denial", pageNum: "295" },
+  { id: "because-im-alcoholic", title: "Because I'm an Alcoholic", pageNum: "322" },
+  { id: "me-an-alcoholic", title: "Me An Alcoholic?", pageNum: "335" },
+  { id: "aa-taught-him", title: "A.A. Taught Him to Handle Sobriety", pageNum: "346" },
+  { id: "acceptance-was-answer", title: "Acceptance Was the Answer", pageNum: "371" },
+  { id: "window-of-opportunity", title: "Window of Opportunity", pageNum: "381" },
+  { id: "my-bottle-my-resentments", title: "My Bottle, My Resentments, and Me", pageNum: "410" },
+  { id: "he-lived-only-to-drink", title: "He Lived Only to Drink", pageNum: "439" },
+  { id: "safe-haven", title: "Safe Haven", pageNum: "448" },
+  { id: "listening-to-wind", title: "Listening to the Wind", pageNum: "458" },
+  { id: "twice-gifted", title: "Twice Gifted", pageNum: "469" },
+  { id: "building-new-life", title: "Building a New Life", pageNum: "482" },
+  { id: "freedom-from-bondage", title: "Freedom From Bondage", pageNum: "491" },
+  { id: "another-chance", title: "Another Chance", pageNum: "511" },
+  { id: "late-start", title: "Late Start", pageNum: "522" },
+  { id: "grounded", title: "Grounded", pageNum: "557" },
+  { id: "on-the-move", title: "On the Move", pageNum: "540" },
+  { id: "vision-of-recovery", title: "Vision of Recovery", pageNum: "315" },
+  { id: "gutter-bravado", title: "Gutter Bravado", pageNum: "325" },
+  { id: "empty-on-the-inside", title: "Empty on the Inside", pageNum: "337" },
+  { id: "aa-taught-him-sobriety", title: "A.A. Taught Him Sobriety", pageNum: "401" }
 ];
 
 export default function Section9() {
@@ -126,7 +139,7 @@ export default function Section9() {
                 id={chapter.id}
                 ref={(el) => (chapterRefs.current[chapter.id] = el)}
               >
-                <ChapterContent chapter={chapter} />
+                <ChapterContent chapter={chapter} sectionRoute="Section9" />
               </div>
             ))}
           </div>

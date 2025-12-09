@@ -10,15 +10,16 @@ function createPageUrl(pageName) {
 }
 
 const CHAPTERS = [
-  { id: "tightrope", title: "A Tight Rope to Freedom", pageNum: "171", chapter: null },
-  { id: "flooded-with-feeling", title: "Flooded with Feeling", pageNum: "175", chapter: null },
-  { id: "winner-takes-all", title: "Winner Takes All", pageNum: "180", chapter: null },
-  { id: "my-bottle-my-resentments-and-me", title: "My Bottle, My Resentments, and Me", pageNum: "184", chapter: null },
-  { id: "he-lived-only-to-drink", title: "He Lived Only to Drink", pageNum: "201", chapter: null },
-  { id: "safe-haven", title: "Safe Haven", pageNum: "212", chapter: null },
-  { id: "listening-to-the-wind", title: "Listening to the Wind", pageNum: "221", chapter: null },
-  { id: "twice-gifted", title: "Twice Gifted", pageNum: "235", chapter: null },
-  { id: "building-a-new-life", title: "Building a New Life", pageNum: "241", chapter: null }
+  { id: "dr-bob-nightmare", title: "Doctor Bob's Nightmare", pageNum: "171" },
+  { id: "aa-number-three", title: "Alcoholics Anonymous Number Three", pageNum: "180" },
+  { id: "gratitude-in-action", title: "Gratitude in Action", pageNum: "275" },
+  { id: "women-suffer-too", title: "Women Suffer Too", pageNum: "222" },
+  { id: "our-southern-friend", title: "Our Southern Friend", pageNum: "423" },
+  { id: "vicious-cycle", title: "The Vicious Cycle", pageNum: "193" },
+  { id: "jims-story", title: "Jim's Story", pageNum: "202" },
+  { id: "man-who-mastered-fear", title: "The Man Who Mastered Fear", pageNum: "246" },
+  { id: "he-sold-himself-short", title: "He Sold Himself Short", pageNum: "260" },
+  { id: "keys-of-the-kingdom", title: "The Keys of the Kingdom", pageNum: "304" }
 ];
 
 export default function Section8() {
@@ -121,7 +122,7 @@ export default function Section8() {
                 id={chapter.id}
                 ref={(el) => (chapterRefs.current[chapter.id] = el)}
               >
-                <ChapterContent chapter={chapter} />
+                <ChapterContent chapter={chapter} sectionRoute="Section8" />
               </div>
             ))}
           </div>
