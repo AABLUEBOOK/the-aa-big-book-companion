@@ -48,6 +48,8 @@ const chapterModules = {
   "grounded": () => import("./content/groundedContent"),
   "another-chance": () => import("./content/anotherChanceContent"),
   "late-start": () => import("./content/lateStartContent"),
+  "freedom-from-bondage": () => import("./content/freedomFromBondageContent"),
+  "aa-taught-him-sobriety": () => import("./content/aaTaughtHimSobrietyContent"),
   
   // Appendices
   "appendices": () => import("./content/appendicesContent"),
