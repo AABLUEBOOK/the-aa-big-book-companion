@@ -96,11 +96,12 @@ const SectionCard = memo(function SectionCard({ section, createPageUrl }) {
   return (
     <Link
       to={createPageUrl(section.route)}
-      className="group relative overflow-hidden rounded-xl sm:rounded-2xl border-2 border-[#5EAAFF]/30 
-                 bg-gradient-to-br from-[#2A3440]/90 to-[#1a2028]/90 
-                 backdrop-blur-sm p-3 sm:p-5 transition-all duration-300 
-                 hover:border-[#5EAAFF]/60 hover:shadow-lg hover:shadow-[#5EAAFF]/20
-                 active:scale-[0.98] min-h-[120px] sm:min-h-[140px]"
+      className="group relative overflow-hidden rounded-xl sm:rounded-2xl 
+                 bg-white/5 backdrop-blur-xl border border-white/10
+                 p-3 sm:p-5 transition-all duration-500 
+                 hover:bg-white/8 hover:border-[#5EAAFF]/40 hover:shadow-2xl hover:shadow-[#5EAAFF]/20
+                 hover:scale-[1.02] active:scale-[0.98] min-h-[120px] sm:min-h-[140px]
+                 shadow-lg shadow-black/20"
       style={{
         backgroundImage: `repeating-linear-gradient(45deg, 
           transparent, 
@@ -111,8 +112,9 @@ const SectionCard = memo(function SectionCard({ section, createPageUrl }) {
     >
       {/* Number and Pages badge */}
       <div className="flex items-center gap-2 mb-3 sm:mb-4">
-        <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-[#5EAAFF]/20 
-                        flex items-center justify-center border-2 border-[#5EAAFF] flex-shrink-0">
+        <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-[#5EAAFF]/10 backdrop-blur-sm
+                        flex items-center justify-center border border-[#5EAAFF]/40 flex-shrink-0
+                        shadow-lg shadow-[#5EAAFF]/20">
           <span className="text-lg sm:text-xl font-bold text-[#5EAAFF]">{section.number}</span>
         </div>
         <div className="text-[10px] sm:text-xs font-semibold text-[#5EAAFF] tracking-wider">
@@ -147,9 +149,9 @@ const Home = memo(function Home() {
   const [settingsOpen, setSettingsOpen] = useState(false);
 
   return (
-    <div className="min-h-screen min-h-[100dvh] w-full bg-[#222A31] overflow-x-hidden overflow-y-auto">
+    <div className="min-h-screen min-h-[100dvh] w-full bg-gradient-to-br from-[#1a1f26] via-[#222A31] to-[#2a3440] overflow-x-hidden overflow-y-auto">
       {/* Header */}
-      <header className="bg-[#2A3440] border-b border-[#25DCE6]/20 px-4 py-5 w-full">
+      <header className="bg-white/5 backdrop-blur-xl border-b border-white/10 px-4 py-5 w-full shadow-lg shadow-black/20">
         <div className="max-w-6xl mx-auto relative">
           <Button 
             variant="ghost" 
@@ -176,7 +178,7 @@ const Home = memo(function Home() {
       {/* Highlighting Guide */}
       <div className="px-3 sm:px-4 py-4 sm:py-6">
         <div className="max-w-6xl mx-auto">
-          <div className="rounded-xl sm:rounded-2xl border-2 border-[#5EAAFF]/30 bg-[#2A3440]/50 backdrop-blur-sm p-4 sm:p-6">
+          <div className="rounded-xl sm:rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10 p-4 sm:p-6 shadow-xl shadow-[#5EAAFF]/5">
             <h2 className="text-base sm:text-lg font-bold text-[#FFFFFD] mb-3 sm:mb-4 text-center">Highlighting Guide</h2>
             <div className="flex flex-col gap-2 sm:gap-3">
               <div className="flex items-center justify-center gap-3 sm:gap-4 flex-wrap">
@@ -226,7 +228,7 @@ const Home = memo(function Home() {
       )}
 
       {/* Footer */}
-      <footer className="bg-[#2A3440]/50 border-t border-[#5EAAFF]/10 px-4 py-4 mt-8">
+      <footer className="bg-white/5 backdrop-blur-xl border-t border-white/10 px-4 py-4 mt-8 shadow-lg shadow-black/20">
         <p className="text-center text-xs text-[#FFFFFD]/40">
           Fourth Edition • Alcoholics Anonymous World Services, Inc.
         </p>

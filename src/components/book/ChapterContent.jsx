@@ -143,11 +143,11 @@ export default function ChapterContent({ chapter, sectionRoute, searchQuery = ''
 
   return (
     <section 
-      className={`${themeClasses[theme]} rounded-xl sm:rounded-2xl shadow-lg sm:shadow-xl border border-gray-200 overflow-visible relative`}
+      className={`${themeClasses[theme]} rounded-xl sm:rounded-2xl shadow-2xl border border-white/10 overflow-visible relative backdrop-blur-xl bg-white/5`}
       aria-labelledby={`chapter-title-${chapter.id}`}
     >
       {/* Chapter Header */}
-      <header className="bg-gradient-to-r from-gray-100 to-gray-50 border-b border-gray-200 px-3 sm:px-6 md:px-8 lg:px-10 py-3 sm:py-5 md:py-6">
+      <header className="bg-white/10 backdrop-blur-xl border-b border-white/10 px-3 sm:px-6 md:px-8 lg:px-10 py-3 sm:py-5 md:py-6 shadow-lg">
         <div className="flex items-start justify-between gap-3 sm:gap-4">
           <div className="flex-1 min-w-0">
             {chapter.chapter && (
