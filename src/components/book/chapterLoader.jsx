@@ -43,6 +43,7 @@ const chapterModules = {
   "building-new-life": () => import("./content/buildingNewLifeContent"),
   "on-the-move": () => import("./content/onTheMoveContent"),
   "vision-of-recovery": () => import("./content/visionOfRecoveryContent"),
+  "gutter-bravado": () => import("./content/gutterBravadoContent"),
   
   // Appendices
   "appendices": () => import("./content/appendicesContent"),
