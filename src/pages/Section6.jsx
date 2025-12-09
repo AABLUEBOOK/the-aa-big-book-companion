@@ -57,7 +57,6 @@ export default function Section6() {
 
   return (
     <div className="min-h-screen bg-[#222A31]">
-      {/* Top Navigation */}
       <div className="sticky top-0 z-50 bg-[#2A3440] border-b border-[#25DCE6]/20 shadow-lg backdrop-blur-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4">
           <div className="flex items-center justify-between gap-4">
@@ -81,7 +80,6 @@ export default function Section6() {
         </div>
       </div>
 
-      {/* Mobile Navigation Drawer */}
       {mobileNavOpen && (
         <div className="fixed inset-0 z-40 lg:hidden">
           <div className="absolute inset-0 bg-black/50" onClick={() => setMobileNavOpen(false)} />
@@ -96,7 +94,6 @@ export default function Section6() {
       )}
 
       <div className="flex max-w-7xl mx-auto">
-        {/* Desktop Side Navigation */}
         <aside className="hidden lg:block w-80 sticky top-24 h-[calc(100vh-6rem)] overflow-y-auto p-6">
           <ChapterNav
             chapters={CHAPTERS}
@@ -105,7 +102,6 @@ export default function Section6() {
           />
         </aside>
 
-        {/* Main Content */}
         <main className="flex-1 p-4 sm:p-6 lg:p-8">
           <div className="max-w-4xl mx-auto space-y-12">
             {CHAPTERS.map((chapter) => (
@@ -121,7 +117,6 @@ export default function Section6() {
         </main>
       </div>
 
-      {/* Bottom Navigation */}
       <div className="sticky bottom-0 bg-[#2A3440] border-t border-[#25DCE6]/20 shadow-lg backdrop-blur-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4">
           <div className="flex items-center justify-between">

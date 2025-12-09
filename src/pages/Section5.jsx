@@ -10,8 +10,7 @@ function createPageUrl(pageName) {
 }
 
 const CHAPTERS = [
-  { id: "to-employers", title: "To Employers", pageNum: "136", chapter: 10 },
-  { id: "vision-for-you", title: "A Vision for You", pageNum: "151", chapter: 11 }
+  { id: "working-with-others", title: "Working with Others", pageNum: "89", chapter: 7 }
 ];
 
 export default function Section5() {
