@@ -46,6 +46,8 @@ const chapterModules = {
   "gutter-bravado": () => import("./content/gutterBravadoContent"),
   "empty-on-the-inside": () => import("./content/emptyOnTheInsideContent"),
   "grounded": () => import("./content/groundedContent"),
+  "another-chance": () => import("./content/anotherChanceContent"),
+  "late-start": () => import("./content/lateStartContent"),
   
   // Appendices
   "appendices": () => import("./content/appendicesContent"),
