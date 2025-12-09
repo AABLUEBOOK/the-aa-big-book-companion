@@ -116,6 +116,18 @@ export default function Section8() {
         {/* Main Content */}
         <main className="flex-1 p-4 sm:p-6 lg:p-8">
           <div className="max-w-4xl mx-auto space-y-12">
+            {/* Part I Introduction */}
+            <div className="bg-[#2A3440] rounded-xl border border-[#25DCE6]/20 p-6 sm:p-8 text-center">
+              <h2 className="text-2xl sm:text-3xl font-bold text-[#FFFFFD] mb-2">PART I</h2>
+              <h3 className="text-xl sm:text-2xl font-semibold text-[#25DCE6] mb-6">PIONEERS OF A.A.</h3>
+              <div className="text-sm sm:text-base text-[#FFFFFD]/80 space-y-3 max-w-2xl mx-auto">
+                <p>Dr. Bob and the nine men and women who here tell their stories were among the early members of A.A.'s first groups.</p>
+                <p>All ten have now passed away of natural causes, having maintained complete sobriety.</p>
+                <p>Today, hundreds of additional A.A. members can be found who have had no relapse for more than fifty years.</p>
+                <p>All of these, then, are the pioneers of A.A. They bear witness that release from alcoholism can really be permanent.</p>
+              </div>
+            </div>
+
             {CHAPTERS.map((chapter) => (
               <div
                 key={chapter.id}

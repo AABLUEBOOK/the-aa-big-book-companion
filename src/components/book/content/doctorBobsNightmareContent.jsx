@@ -1,3 +1,14 @@
+export const partOneIntro = {
+  paragraphs: [
+    { text: "PART I" },
+    { text: "PIONEERS OF A.A." },
+    { text: "Dr. Bob and the nine men and women who here tell their stories were among the early members of A.A.'s first groups." },
+    { text: "All ten have now passed away of natural causes, having maintained complete sobriety." },
+    { text: "Today, hundreds of additional A.A. members can be found who have had no relapse for more than fifty years." },
+    { text: "All of these, then, are the pioneers of A.A. They bear witness that release from alcoholism can really be permanent." }
+  ]
+};
+
 export const doctorBobsNightmareContent = {
   paragraphs: [
     { text: "DOCTOR BOB'S NIGHTMARE" },
