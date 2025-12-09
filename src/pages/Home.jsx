@@ -112,9 +112,10 @@ const SectionCard = memo(function SectionCard({ section, createPageUrl }) {
     >
       {/* Number and Pages badge */}
       <div className="flex items-center gap-2 mb-3 sm:mb-4">
-        <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-[#5EAAFF]/10 backdrop-blur-sm
-                        flex items-center justify-center border border-[#5EAAFF]/40 flex-shrink-0
-                        shadow-lg shadow-[#5EAAFF]/20">
+        <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-white/10 backdrop-blur-xl
+                        flex items-center justify-center border border-white/20 flex-shrink-0
+                        shadow-xl shadow-[#5EAAFF]/30 group-hover:shadow-[#5EAAFF]/50
+                        group-hover:bg-white/15 transition-all duration-500">
           <span className="text-lg sm:text-xl font-bold text-[#5EAAFF]">{section.number}</span>
         </div>
         <div className="text-[10px] sm:text-xs font-semibold text-[#5EAAFF] tracking-wider">
@@ -123,9 +124,13 @@ const SectionCard = memo(function SectionCard({ section, createPageUrl }) {
       </div>
 
       {/* Arrow indicator */}
-      <div className="absolute top-3 right-3 sm:top-4 sm:right-4 text-[#5EAAFF]/60 group-hover:text-[#5EAAFF] 
-                      transition-colors group-hover:translate-x-1 transition-transform">
-        <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <div className="absolute top-3 right-3 sm:top-4 sm:right-4 
+                      bg-white/5 backdrop-blur-xl border border-white/10 rounded-full p-1.5
+                      text-[#5EAAFF]/60 group-hover:text-[#5EAAFF] 
+                      group-hover:bg-white/10 group-hover:border-[#5EAAFF]/30
+                      transition-all duration-500 group-hover:translate-x-1
+                      shadow-lg shadow-black/20">
+        <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
         </svg>
       </div>
@@ -157,7 +162,10 @@ const Home = memo(function Home() {
             variant="ghost" 
             size="sm" 
             onClick={() => setSettingsOpen(true)}
-            className="text-white hover:text-[#25DCE6] absolute right-0 top-0"
+            className="text-white hover:text-[#5EAAFF] absolute right-0 top-0 
+                       bg-white/5 backdrop-blur-xl border border-white/10 
+                       hover:bg-white/10 transition-all duration-300
+                       shadow-lg shadow-black/20"
           >
             <Settings className="w-4 h-4" />
           </Button>
