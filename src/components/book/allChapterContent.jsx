@@ -258,7 +258,7 @@ export const CHAPTER_CONTENT = {
     ]
   },
 
-  "a-vision-of-recovery": {
+  "vision-of-recovery": {
     highlights: [],
     tabs: [],
     paragraphs: [
@@ -393,7 +393,7 @@ export const CHAPTER_CONTENT = {
     ]
   },
 
-  "a-late-start": {
+  "late-start": {
     highlights: [],
     tabs: [],
     paragraphs: [
@@ -444,7 +444,7 @@ export const CHAPTER_CONTENT = {
     ]
   },
 
-  "a-a-taught-him-to-handle-sobriety": {
+  "aa-taught-him-sobriety": {
     highlights: [],
     tabs: [],
     paragraphs: [
@@ -498,7 +498,7 @@ export const CHAPTER_CONTENT = {
     ]
   },
 
-  "the-perpetual-quest": {
+  "perpetual-quest": {
     highlights: [],
     tabs: [],
     paragraphs: [

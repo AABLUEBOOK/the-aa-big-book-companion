@@ -41,8 +41,12 @@ const chapterModules = {
   // TODO: Still need content files for these stories:
   // "my-next-two-weeks": () => import("./content/myNextTwoWeeksContent"),
   // "another-quiet-victory": () => import("./content/anotherQuietVictoryContent"),
+  // Part II & Part III Stories
+  "perpetual-quest": () => import("./content/perpetualQuestContent"),
+  "drunk-like-you": () => import("./content/drunkLikeYouContent"),
   "acceptance-was-answer": () => import("./content/acceptanceWasAnswerContent"),
   "window-of-opportunity": () => import("./content/windowOfOpportunityContent"),
+  // Part III: They Lost Nearly All
   "my-bottle-my-resentments": () => import("./content/myBottleMyResentmentsContent"),
   "he-lived-only-to-drink": () => import("./content/heLivedOnlyToDrinkContent"),
   "safe-haven": () => import("./content/safeHavenContent"),
@@ -57,7 +61,7 @@ const chapterModules = {
   "another-chance": () => import("./content/anotherChanceContent"),
   "late-start": () => import("./content/lateStartContent"),
   "freedom-from-bondage": () => import("./content/freedomFromBondageContent"),
-  "aa-taught-him-sobriety": () => import("./content/aaTaughtHimSobrietyContent"),
+  "aa-taught-him-sobriety": () => import("./content/aaTaughtHimContent"),
   // TODO: Still need content files for Part III stories:
   // "news-hawk": () => import("./content/newsHawkContent"),
   // "european-drinker": () => import("./content/europeanDrinkerContent"),

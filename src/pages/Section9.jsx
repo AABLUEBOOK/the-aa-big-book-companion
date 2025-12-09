@@ -10,6 +10,7 @@ function createPageUrl(pageName) {
 }
 
 const CHAPTERS = [
+  // Part II: They Stopped in Time
   { id: "missing-link", title: "The Missing Link", pageNum: "210" },
   { id: "fear-of-fear", title: "Fear of Fear", pageNum: "234" },
   { id: "housewife-who-drank", title: "The Housewife Who Drank at Home", pageNum: "258" },
@@ -19,24 +20,30 @@ const CHAPTERS = [
   { id: "crossing-river-denial", title: "Crossing the River of Denial", pageNum: "295" },
   { id: "because-im-alcoholic", title: "Because I'm an Alcoholic", pageNum: "322" },
   { id: "me-an-alcoholic", title: "Me An Alcoholic?", pageNum: "335" },
-  { id: "aa-taught-him", title: "A.A. Taught Him to Handle Sobriety", pageNum: "346" },
-  { id: "acceptance-was-answer", title: "Acceptance Was the Answer", pageNum: "371" },
-  { id: "window-of-opportunity", title: "Window of Opportunity", pageNum: "381" },
-  { id: "my-bottle-my-resentments", title: "My Bottle, My Resentments, and Me", pageNum: "410" },
-  { id: "he-lived-only-to-drink", title: "He Lived Only to Drink", pageNum: "439" },
-  { id: "safe-haven", title: "Safe Haven", pageNum: "448" },
-  { id: "listening-to-wind", title: "Listening to the Wind", pageNum: "458" },
+  { id: "it-might-have-been-worse", title: "It Might Have Been Worse", pageNum: "346" },
+  { id: "tightrope", title: "Tightrope", pageNum: "360" },
+  { id: "flooded-with-feeling", title: "Flooded with Feeling", pageNum: "368" },
+  { id: "winner-takes-all", title: "Winner Takes All", pageNum: "375" },
+  { id: "perpetual-quest", title: "The Perpetual Quest", pageNum: "387" },
+  { id: "drunk-like-you", title: "A Drunk, Like You", pageNum: "397" },
+  { id: "acceptance-was-answer", title: "Acceptance Was the Answer", pageNum: "406" },
+  { id: "window-of-opportunity", title: "Window of Opportunity", pageNum: "420" },
+  // Part III: They Lost Nearly All
+  { id: "my-bottle-my-resentments", title: "My Bottle, My Resentments, and Me", pageNum: "436" },
+  { id: "he-lived-only-to-drink", title: "He Lived Only to Drink", pageNum: "445" },
+  { id: "safe-haven", title: "Safe Haven", pageNum: "451" },
+  { id: "listening-to-wind", title: "Listening to the Wind", pageNum: "457" },
   { id: "twice-gifted", title: "Twice Gifted", pageNum: "469" },
-  { id: "building-new-life", title: "Building a New Life", pageNum: "482" },
-  { id: "freedom-from-bondage", title: "Freedom From Bondage", pageNum: "491" },
-  { id: "another-chance", title: "Another Chance", pageNum: "511" },
-  { id: "late-start", title: "Late Start", pageNum: "522" },
-  { id: "grounded", title: "Grounded", pageNum: "557" },
-  { id: "on-the-move", title: "On the Move", pageNum: "540" },
-  { id: "vision-of-recovery", title: "Vision of Recovery", pageNum: "315" },
-  { id: "gutter-bravado", title: "Gutter Bravado", pageNum: "325" },
-  { id: "empty-on-the-inside", title: "Empty on the Inside", pageNum: "337" },
-  { id: "aa-taught-him-sobriety", title: "A.A. Taught Him Sobriety", pageNum: "401" }
+  { id: "building-new-life", title: "Building a New Life", pageNum: "475" },
+  { id: "on-the-move", title: "On the Move", pageNum: "485" },
+  { id: "vision-of-recovery", title: "A Vision of Recovery", pageNum: "493" },
+  { id: "gutter-bravado", title: "Gutter Bravado", pageNum: "500" },
+  { id: "empty-on-the-inside", title: "Empty on the Inside", pageNum: "511" },
+  { id: "grounded", title: "Grounded", pageNum: "521" },
+  { id: "another-chance", title: "Another Chance", pageNum: "530" },
+  { id: "late-start", title: "A Late Start", pageNum: "534" },
+  { id: "freedom-from-bondage", title: "Freedom From Bondage", pageNum: "543" },
+  { id: "aa-taught-him-sobriety", title: "A.A. Taught Him to Handle Sobriety", pageNum: "553" }
 ];
 
 export default function Section9() {
@@ -83,7 +90,7 @@ export default function Section9() {
   return (
     <div className="min-h-screen bg-[#222A31]">
       {/* Top Navigation */}
-      <div className="sticky top-0 z-50 bg-[#2A3440] border-b border-[#25DCE6]/20 shadow-lg backdrop-blur-sm">
+      <div className="sticky top-0 z-50 bg-[#2A3440] border-b border-[#5EAAFF]/20 shadow-lg backdrop-blur-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4">
           <div className="flex items-center justify-between gap-4">
             <Link to={createPageUrl("Home")} className="flex items-center gap-2 text-[#25DCE6] hover:text-[#FFFFFD] transition-colors">
@@ -98,7 +105,7 @@ export default function Section9() {
 
             <button
               onClick={() => setMobileNavOpen(!mobileNavOpen)}
-              className="lg:hidden p-2 text-[#25DCE6] hover:bg-[#25DCE6]/10 rounded-lg transition-colors"
+              className="lg:hidden p-2 text-[#5EAAFF] hover:bg-[#5EAAFF]/10 rounded-lg transition-colors"
             >
               {mobileNavOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
             </button>
@@ -147,18 +154,18 @@ export default function Section9() {
       </div>
 
       {/* Bottom Navigation */}
-      <div className="sticky bottom-0 bg-[#2A3440] border-t border-[#25DCE6]/20 shadow-lg backdrop-blur-sm">
+      <div className="sticky bottom-0 bg-[#2A3440] border-t border-[#5EAAFF]/20 shadow-lg backdrop-blur-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4">
           <div className="flex items-center justify-between">
             <Link
               to={createPageUrl("Section8")}
-              className="text-[#25DCE6] hover:text-[#FFFFFD] transition-colors text-sm sm:text-base"
+              className="text-[#5EAAFF] hover:text-[#FFFFFD] transition-colors text-sm sm:text-base"
             >
               ← Previous Section
             </Link>
             <Link
               to={createPageUrl("Section10")}
-              className="text-[#25DCE6] hover:text-[#FFFFFD] transition-colors text-sm sm:text-base"
+              className="text-[#5EAAFF] hover:text-[#FFFFFD] transition-colors text-sm sm:text-base"
             >
               Next Section →
             </Link>
