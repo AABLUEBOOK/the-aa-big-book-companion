@@ -36,6 +36,7 @@ const chapterModules = {
   "because-im-alcoholic": () => import("./content/becauseImAlcoholicContent"),
   "aa-taught-him": () => import("./content/aaTaughtHimContent"),
   "my-bottle-my-resentments": () => import("./content/myBottleMyResentmentsContent"),
+  "he-lived-only-to-drink": () => import("./content/heLivedOnlyToDrinkContent"),
   
   // Appendices
   "appendices": () => import("./content/appendicesContent"),
