@@ -37,6 +37,7 @@ const chapterModules = {
   "aa-taught-him": () => import("./content/aaTaughtHimContent"),
   "my-bottle-my-resentments": () => import("./content/myBottleMyResentmentsContent"),
   "he-lived-only-to-drink": () => import("./content/heLivedOnlyToDrinkContent"),
+  "safe-haven": () => import("./content/safeHavenContent"),
   
   // Appendices
   "appendices": () => import("./content/appendicesContent"),
