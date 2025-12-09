@@ -40,6 +40,7 @@ const chapterModules = {
   "safe-haven": () => import("./content/safeHavenContent"),
   "listening-to-wind": () => import("./content/listeningToWindContent"),
   "twice-gifted": () => import("./content/twiceGiftedContent"),
+  "building-new-life": () => import("./content/buildingNewLifeContent"),
   
   // Appendices
   "appendices": () => import("./content/appendicesContent"),
