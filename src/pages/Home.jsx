@@ -142,7 +142,7 @@ const SectionCard = memo(function SectionCard({ section, createPageUrl }) {
         </h3>
 
         {/* Description */}
-        <p className="text-xs sm:text-sm text-[#FFFFFD]/70 leading-relaxed" style={{ fontFamily: 'Lato, sans-serif', fontWeight: 300 }}>
+        <p className="text-xs sm:text-sm text-[#FFFFFD] leading-relaxed" style={{ fontFamily: 'Lato, sans-serif', fontWeight: 600 }}>
           {section.description}
         </p>
       </div>
@@ -173,7 +173,7 @@ const Home = memo(function Home() {
             <h1 className="text-2xl sm:text-3xl md:text-4xl text-[#FFFFFD] leading-tight tracking-wide" style={{ fontFamily: 'Bebas Neue, sans-serif' }}>
               Alcoholics Anonymous
             </h1>
-            <p className="text-[10px] sm:text-xs md:text-sm text-[#5EAAFF] leading-snug mt-2" style={{ fontFamily: 'Lato, sans-serif', fontWeight: 300 }}>
+            <p className="text-[10px] sm:text-xs md:text-sm text-[#5EAAFF] leading-snug mt-2" style={{ fontFamily: 'Lato, sans-serif', fontWeight: 700 }}>
               The Story of How Many Thousands of Men and Women Have Recovered from Alcoholism
             </p>
           </div>
