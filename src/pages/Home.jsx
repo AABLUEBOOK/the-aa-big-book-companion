@@ -14,7 +14,7 @@ const SECTIONS = [
     id: 1,
     number: "1",
     title: "Preface & Forewords",
-    pages: "PAGES XI-XXXII",
+    pages: "Pages XI-XXXII",
     description: "Introduction to the book, its history, and The Doctor's Opinion",
     route: "Section1"
   },
@@ -22,7 +22,7 @@ const SECTIONS = [
     id: 2,
     number: "2",
     title: "Bill's Story & The Solution",
-    pages: "PAGES 1-43",
+    pages: "Pages 1-43",
     description: "Chapter 1-3: Bill's Story, There Is a Solution, More About Alcoholism",
     route: "Section2"
   },
@@ -30,7 +30,7 @@ const SECTIONS = [
     id: 3,
     number: "3",
     title: "We Agnostics & How It Works",
-    pages: "PAGES 44-71",
+    pages: "Pages 44-71",
     description: "Chapter 4-5: Faith and the Twelve Steps",
     route: "Section3"
   },
@@ -38,7 +38,7 @@ const SECTIONS = [
     id: 4,
     number: "4",
     title: "Into Action",
-    pages: "PAGES 72-88",
+    pages: "Pages 72-88",
     description: "Chapter 6: Working the program of recovery",
     route: "Section4"
   },
@@ -46,7 +46,7 @@ const SECTIONS = [
     id: 5,
     number: "5",
     title: "Working with Others",
-    pages: "PAGES 89-103",
+    pages: "Pages 89-103",
     description: "Chapter 7: How to help other alcoholics",
     route: "Section5"
   },
@@ -54,7 +54,7 @@ const SECTIONS = [
     id: 6,
     number: "6",
     title: "To Wives & The Family Afterward",
-    pages: "PAGES 104-135",
+    pages: "Pages 104-135",
     description: "Chapter 8-9: Guidance for families",
     route: "Section6"
   },
@@ -62,7 +62,7 @@ const SECTIONS = [
     id: 7,
     number: "7",
     title: "To Employers & A Vision for You",
-    pages: "PAGES 136-164",
+    pages: "Pages 136-164",
     description: "Chapter 10-11: The workplace and future of A.A.",
     route: "Section7"
   },
@@ -70,7 +70,7 @@ const SECTIONS = [
     id: 8,
     number: "8",
     title: "Personal Stories - Part I",
-    pages: "PAGES 171-321",
+    pages: "Pages 171-321",
     description: "Pioneers of A.A. - stories from the early days",
     route: "Section8"
   },
@@ -78,7 +78,7 @@ const SECTIONS = [
     id: 9,
     number: "9",
     title: "Personal Stories - Part II & III",
-    pages: "PAGES 322-560",
+    pages: "Pages 322-560",
     description: "They Stopped in Time & They Lost Nearly All",
     route: "Section9"
   },
@@ -86,7 +86,7 @@ const SECTIONS = [
     id: 10,
     number: "10",
     title: "Appendices",
-    pages: "PAGES 561-575",
+    pages: "Pages 561-575",
     description: "The Twelve Traditions, spiritual experience, and more",
     route: "Section10"
   }
@@ -96,39 +96,39 @@ const SectionCard = memo(function SectionCard({ section, createPageUrl }) {
   return (
     <Link
       to={createPageUrl(section.route)}
-      className="group relative overflow-hidden rounded-xl sm:rounded-2xl border-2 border-[#25DCE6]/30 
+      className="group relative overflow-hidden rounded-xl sm:rounded-2xl border-2 border-[#5EAAFF]/30 
                  bg-gradient-to-br from-[#2A3440]/90 to-[#1a2028]/90 
-                 backdrop-blur-sm p-4 sm:p-6 transition-all duration-300 
-                 hover:border-[#25DCE6]/60 hover:shadow-lg hover:shadow-[#25DCE6]/20
-                 active:scale-[0.98] min-h-[140px] sm:min-h-[160px]"
+                 backdrop-blur-sm p-3 sm:p-5 transition-all duration-300 
+                 hover:border-[#5EAAFF]/60 hover:shadow-lg hover:shadow-[#5EAAFF]/20
+                 active:scale-[0.98] min-h-[120px] sm:min-h-[140px]"
       style={{
         backgroundImage: `repeating-linear-gradient(45deg, 
           transparent, 
           transparent 10px, 
-          rgba(37, 220, 230, 0.03) 10px, 
-          rgba(37, 220, 230, 0.03) 20px)`
+          rgba(94, 170, 255, 0.03) 10px, 
+          rgba(94, 170, 255, 0.03) 20px)`
       }}
     >
-      {/* Number badge */}
-      <div className="absolute top-3 left-3 sm:top-4 sm:left-4 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-[#25DCE6]/20 
-                      flex items-center justify-center border-2 border-[#25DCE6]">
-        <span className="text-xl sm:text-2xl font-bold text-[#25DCE6]">{section.number}</span>
+      {/* Number and Pages badge */}
+      <div className="flex items-center gap-2 mb-3 sm:mb-4">
+        <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-[#5EAAFF]/20 
+                        flex items-center justify-center border-2 border-[#5EAAFF] flex-shrink-0">
+          <span className="text-lg sm:text-xl font-bold text-[#5EAAFF]">{section.number}</span>
+        </div>
+        <div className="text-[10px] sm:text-xs font-semibold text-[#5EAAFF] tracking-wider">
+          {section.pages}
+        </div>
       </div>
 
       {/* Arrow indicator */}
-      <div className="absolute top-4 right-3 sm:top-6 sm:right-6 text-[#25DCE6]/60 group-hover:text-[#25DCE6] 
+      <div className="absolute top-3 right-3 sm:top-4 sm:right-4 text-[#5EAAFF]/60 group-hover:text-[#5EAAFF] 
                       transition-colors group-hover:translate-x-1 transition-transform">
         <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
         </svg>
       </div>
 
-      <div className="mt-12 sm:mt-16">
-        {/* Page range */}
-        <div className="text-[10px] sm:text-xs font-semibold text-[#25DCE6] mb-1 sm:mb-2 tracking-wider">
-          {section.pages}
-        </div>
-
+      <div>
         {/* Title */}
         <h3 className="text-base sm:text-xl font-bold text-[#FFFFFD] mb-1 sm:mb-2 leading-tight">
           {section.title}
@@ -163,7 +163,7 @@ const Home = memo(function Home() {
             <h1 className="text-xl sm:text-2xl md:text-3xl font-serif font-bold text-[#FFFFFD] leading-tight">
               Alcoholics Anonymous
             </h1>
-            <p className="text-[10px] sm:text-xs md:text-sm text-[#25DCE6] leading-snug mt-2">
+            <p className="text-[10px] sm:text-xs md:text-sm text-[#5EAAFF] leading-snug mt-2">
               The Story of How Many Thousands of Men and Women Have Recovered from Alcoholism
             </p>
           </div>
@@ -176,7 +176,7 @@ const Home = memo(function Home() {
       {/* Highlighting Guide */}
       <div className="px-3 sm:px-4 py-4 sm:py-6">
         <div className="max-w-6xl mx-auto">
-          <div className="rounded-xl sm:rounded-2xl border-2 border-[#25DCE6]/30 bg-[#2A3440]/50 backdrop-blur-sm p-4 sm:p-6">
+          <div className="rounded-xl sm:rounded-2xl border-2 border-[#5EAAFF]/30 bg-[#2A3440]/50 backdrop-blur-sm p-4 sm:p-6">
             <h2 className="text-base sm:text-lg font-bold text-[#FFFFFD] mb-3 sm:mb-4 text-center">Highlighting Guide</h2>
             <div className="flex flex-col gap-2 sm:gap-3">
               <div className="flex items-center justify-center gap-3 sm:gap-4 flex-wrap">
@@ -226,7 +226,7 @@ const Home = memo(function Home() {
       )}
 
       {/* Footer */}
-      <footer className="bg-[#2A3440]/50 border-t border-[#25DCE6]/10 px-4 py-4 mt-8">
+      <footer className="bg-[#2A3440]/50 border-t border-[#5EAAFF]/10 px-4 py-4 mt-8">
         <p className="text-center text-xs text-[#FFFFFD]/40">
           Fourth Edition • Alcoholics Anonymous World Services, Inc.
         </p>
