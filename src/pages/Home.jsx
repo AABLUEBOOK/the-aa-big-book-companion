@@ -160,9 +160,12 @@ const Home = memo(function Home() {
             <Settings className="w-4 h-4" />
           </Button>
           <div className="text-center mb-3">
-            <h1 className="text-2xl md:text-3xl font-serif font-bold text-[#FFFFFD] leading-tight">
-              The AA Big Book Companion
+            <h1 className="text-xl sm:text-2xl md:text-3xl font-serif font-bold text-[#FFFFFD] leading-tight">
+              Alcoholics Anonymous
             </h1>
+            <p className="text-[10px] sm:text-xs md:text-sm text-[#25DCE6] leading-snug mt-2">
+              The Story of How Many Thousands of Men and Women Have Recovered from Alcoholism
+            </p>
           </div>
           <div className="mt-3 max-w-md mx-auto">
             <SearchBar />
@@ -176,25 +179,29 @@ const Home = memo(function Home() {
           <div className="rounded-xl sm:rounded-2xl border-2 border-[#25DCE6]/30 bg-[#2A3440]/50 backdrop-blur-sm p-4 sm:p-6">
             <h2 className="text-base sm:text-lg font-bold text-[#FFFFFD] mb-3 sm:mb-4 text-center">Highlighting Guide</h2>
             <div className="flex flex-col gap-2 sm:gap-3">
-              <div className="flex items-center justify-center gap-2">
-                <span className="w-4 h-4 sm:w-5 sm:h-5 rounded bg-orange-400 flex-shrink-0"></span>
-                <span className="text-xs sm:text-sm text-[#FFFFFD] font-medium">Orange = Steps</span>
+              <div className="flex items-center justify-center gap-3 sm:gap-4 flex-wrap">
+                <div className="flex items-center gap-2">
+                  <span className="w-4 h-4 sm:w-5 sm:h-5 rounded bg-orange-400 flex-shrink-0"></span>
+                  <span className="text-xs sm:text-sm text-[#FFFFFD] font-medium">Orange = Steps</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="w-4 h-4 sm:w-5 sm:h-5 rounded bg-blue-400 flex-shrink-0"></span>
+                  <span className="text-xs sm:text-sm text-[#FFFFFD] font-medium">Blue = Promises</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="w-4 h-4 sm:w-5 sm:h-5 rounded bg-green-400 flex-shrink-0"></span>
+                  <span className="text-xs sm:text-sm text-[#FFFFFD] font-medium">Green = Prayers</span>
+                </div>
               </div>
-              <div className="flex items-center justify-center gap-2">
-                <span className="w-4 h-4 sm:w-5 sm:h-5 rounded bg-blue-400 flex-shrink-0"></span>
-                <span className="text-xs sm:text-sm text-[#FFFFFD] font-medium">Blue = Promises</span>
-              </div>
-              <div className="flex items-center justify-center gap-2">
-                <span className="w-4 h-4 sm:w-5 sm:h-5 rounded bg-green-400 flex-shrink-0"></span>
-                <span className="text-xs sm:text-sm text-[#FFFFFD] font-medium">Green = Prayers</span>
-              </div>
-              <div className="flex items-center justify-center gap-2">
-                <span className="w-4 h-4 sm:w-5 sm:h-5 rounded bg-yellow-400 flex-shrink-0"></span>
-                <span className="text-xs sm:text-sm text-[#FFFFFD] font-medium">Yellow = General Info</span>
-              </div>
-              <div className="flex items-center justify-center gap-2">
-                <span className="w-4 h-4 sm:w-5 sm:h-5 rounded bg-pink-400 flex-shrink-0"></span>
-                <span className="text-xs sm:text-sm text-[#FFFFFD] font-medium">Pink = Tab Reference</span>
+              <div className="flex items-center justify-center gap-3 sm:gap-4 flex-wrap">
+                <div className="flex items-center gap-2">
+                  <span className="w-4 h-4 sm:w-5 sm:h-5 rounded bg-yellow-400 flex-shrink-0"></span>
+                  <span className="text-xs sm:text-sm text-[#FFFFFD] font-medium">Yellow = General Info</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="w-4 h-4 sm:w-5 sm:h-5 rounded bg-pink-400 flex-shrink-0"></span>
+                  <span className="text-xs sm:text-sm text-[#FFFFFD] font-medium">Pink = Tab Reference</span>
+                </div>
               </div>
             </div>
           </div>
