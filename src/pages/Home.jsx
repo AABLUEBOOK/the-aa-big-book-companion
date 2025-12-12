@@ -139,7 +139,7 @@ const SectionCard = memo(function SectionCard({ section, createPageUrl }) {
                  bg-white/5 backdrop-blur-xl border border-white/10
                  p-3 sm:p-5 transition-all duration-500 
                  hover:bg-white/8 hover:border-[#5EAAFF]/40 hover:shadow-2xl hover:shadow-[#5EAAFF]/20
-                 hover:scale-[1.02] active:scale-[0.98] min-h-[120px] sm:min-h-[140px]
+                 hover:scale-[1.02] active:scale-[0.98]
                  shadow-lg shadow-black/20"
       style={{
         backgroundImage: `repeating-linear-gradient(45deg, 
