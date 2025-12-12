@@ -12,79 +12,118 @@ function createPageUrl(pageName) {
 const SECTIONS = [
   {
     id: 1,
-    number: "1",
-    title: "Preface & Forewords",
-    pages: "Pages XI-XXXII",
-    description: "Introduction to the book, its history, and The Doctor's Opinion",
+    title: "Preface",
+    pages: "Pages XI-XIII",
+    description: "Introduction to the Fourth Edition",
     route: "Section1"
   },
   {
     id: 2,
-    number: "2",
-    title: "Bill's Story & The Solution",
-    pages: "Pages 1-43",
-    description: "Chapter 1-3: Bill's Story, There Is a Solution, More About Alcoholism",
-    route: "Section2"
+    title: "Forewords",
+    pages: "Pages XIII-XXIV",
+    description: "First, Second, Third, and Fourth Edition Forewords",
+    route: "Section1"
   },
   {
     id: 3,
-    number: "3",
-    title: "We Agnostics & How It Works",
-    pages: "Pages 44-71",
-    description: "Chapter 4-5: Faith and the Twelve Steps",
-    route: "Section3"
+    title: "Bill's Story",
+    pages: "Pages 1-16",
+    description: "Chapter 1: The co-founder's journey to sobriety",
+    route: "Section1"
   },
   {
     id: 4,
-    number: "4",
-    title: "Into Action",
-    pages: "Pages 72-88",
-    description: "Chapter 6: Working the program of recovery",
-    route: "Section4"
+    title: "There Is a Solution",
+    pages: "Pages 17-29",
+    description: "Chapter 2: The problem and the solution",
+    route: "Section1"
   },
   {
     id: 5,
-    number: "5",
-    title: "Working with Others",
-    pages: "Pages 89-103",
-    description: "Chapter 7: How to help other alcoholics",
-    route: "Section5"
+    title: "More About Alcoholism",
+    pages: "Pages 30-43",
+    description: "Chapter 3: Understanding the disease",
+    route: "Section1"
   },
   {
     id: 6,
-    number: "6",
-    title: "To Wives & The Family Afterward",
-    pages: "Pages 104-135",
-    description: "Chapter 8-9: Guidance for families",
-    route: "Section6"
+    title: "We Agnostics",
+    pages: "Pages 44-57",
+    description: "Chapter 4: Spiritual matters for skeptics",
+    route: "Section1"
   },
   {
     id: 7,
-    number: "7",
-    title: "To Employers & A Vision for You",
-    pages: "Pages 136-164",
-    description: "Chapter 10-11: The workplace and future of A.A.",
-    route: "Section7"
+    title: "How It Works",
+    pages: "Pages 58-71",
+    description: "Chapter 5: The Twelve Steps",
+    route: "Section1"
   },
   {
     id: 8,
-    number: "8",
+    title: "Into Action",
+    pages: "Pages 72-88",
+    description: "Chapter 6: Working the program of recovery",
+    route: "Section1"
+  },
+  {
+    id: 9,
+    title: "Working with Others",
+    pages: "Pages 89-103",
+    description: "Chapter 7: How to help other alcoholics",
+    route: "Section1"
+  },
+  {
+    id: 10,
+    title: "To Wives",
+    pages: "Pages 104-121",
+    description: "Chapter 8: Guidance for spouses",
+    route: "Section1"
+  },
+  {
+    id: 11,
+    title: "The Family Afterward",
+    pages: "Pages 122-135",
+    description: "Chapter 9: Family recovery and healing",
+    route: "Section1"
+  },
+  {
+    id: 12,
+    title: "To Employers",
+    pages: "Pages 136-150",
+    description: "Chapter 10: Workplace and employment guidance",
+    route: "Section1"
+  },
+  {
+    id: 13,
+    title: "A Vision for You",
+    pages: "Pages 151-164",
+    description: "Chapter 11: The future of Alcoholics Anonymous",
+    route: "Section1"
+  },
+  {
+    id: 14,
     title: "Personal Stories - Part I",
     pages: "Pages 171-321",
     description: "Pioneers of A.A. - stories from the early days",
     route: "Section8"
   },
   {
-    id: 9,
-    number: "9",
-    title: "Personal Stories - Part II & III",
-    pages: "Pages 322-560",
-    description: "They Stopped in Time & They Lost Nearly All",
+    id: 15,
+    title: "Personal Stories - Part II",
+    pages: "Pages 322-419",
+    description: "They Stopped in Time",
     route: "Section9"
   },
   {
-    id: 10,
-    number: "10",
+    id: 16,
+    title: "Personal Stories - Part III",
+    pages: "Pages 420-560",
+    description: "They Lost Nearly All",
+    route: "Section9"
+  },
+  {
+    id: 17,
     title: "Appendices",
     pages: "Pages 561-575",
     description: "The Twelve Traditions, spiritual experience, and more",
