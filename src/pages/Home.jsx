@@ -162,13 +162,15 @@ const SectionCard = memo(function SectionCard({ section, createPageUrl }) {
       </div>
 
       <div>
-        {/* Title with Pages */}
-        <h3 className="text-lg sm:text-2xl text-[#FFFFFD] mb-1 sm:mb-2 leading-tight tracking-wide flex items-center gap-2 flex-wrap" style={{ fontFamily: 'Bebas Neue, sans-serif' }}>
-          <span>{section.title}</span>
-          <span className="text-[10px] sm:text-xs text-[#5EAAFF] tracking-wider" style={{ fontFamily: 'Lato, sans-serif', fontWeight: 700 }}>
-            {section.pages}
-          </span>
+        {/* Title */}
+        <h3 className="text-lg sm:text-2xl text-[#FFFFFD] mb-1 leading-tight tracking-wide" style={{ fontFamily: 'Bebas Neue, sans-serif' }}>
+          {section.id >= 3 && section.id <= 13 ? `Chapter ${section.id - 2}. ` : ''}{section.title}
         </h3>
+
+        {/* Pages */}
+        <p className="text-xs sm:text-sm text-[#5EAAFF] font-bold mb-1" style={{ fontFamily: 'Lato, sans-serif' }}>
+          {section.pages}
+        </p>
 
         {/* Description */}
         <p className="text-xs sm:text-sm text-[#FFFFFD] leading-relaxed" style={{ fontFamily: 'Lato, sans-serif', fontWeight: 600 }}>
