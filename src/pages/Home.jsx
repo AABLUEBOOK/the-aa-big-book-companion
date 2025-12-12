@@ -163,8 +163,8 @@ const SectionCard = memo(function SectionCard({ section, createPageUrl }) {
 
       <div>
         {/* Title */}
-        <h3 className="text-lg sm:text-2xl text-[#FFFFFD] mb-1 leading-tight tracking-wide" style={{ fontFamily: 'Bebas Neue, sans-serif' }}>
-          {section.id >= 3 && section.id <= 13 ? `Chapter ${section.id - 2}. ` : ''}{section.title}
+        <h3 className="text-lg sm:text-2xl text-[#FFFFFD] mb-1 leading-tight tracking-wide uppercase" style={{ fontFamily: 'Bebas Neue, sans-serif' }}>
+          {section.id >= 3 && section.id <= 13 ? `Chapter ${section.id - 2} - ` : ''}{section.title}
         </h3>
 
         {/* Pages */}
@@ -174,7 +174,7 @@ const SectionCard = memo(function SectionCard({ section, createPageUrl }) {
 
         {/* Description */}
         <p className="text-xs sm:text-sm text-[#FFFFFD] leading-relaxed" style={{ fontFamily: 'Lato, sans-serif', fontWeight: 600 }}>
-          {section.description}
+          {section.description.replace(/^Chapter \d+:\s*/, '')}
         </p>
       </div>
     </Link>
