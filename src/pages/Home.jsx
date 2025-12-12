@@ -227,12 +227,12 @@ const Home = memo(function Home() {
                   <span className="w-4 h-4 sm:w-5 sm:h-5 rounded bg-blue-400 flex-shrink-0"></span>
                   <span className="text-xs sm:text-sm text-[#FFFFFD]" style={{ fontFamily: 'Lato, sans-serif', fontWeight: 400 }}>Blue = Promises</span>
                 </div>
+              </div>
+              <div className="flex items-center justify-center gap-3 sm:gap-4 flex-wrap">
                 <div className="flex items-center gap-2">
                   <span className="w-4 h-4 sm:w-5 sm:h-5 rounded bg-green-400 flex-shrink-0"></span>
                   <span className="text-xs sm:text-sm text-[#FFFFFD]" style={{ fontFamily: 'Lato, sans-serif', fontWeight: 400 }}>Green = Prayers</span>
                 </div>
-              </div>
-              <div className="flex items-center justify-center gap-3 sm:gap-4 flex-wrap">
                 <div className="flex items-center gap-2">
                   <span className="w-4 h-4 sm:w-5 sm:h-5 rounded bg-pink-400 flex-shrink-0"></span>
                   <span className="text-xs sm:text-sm text-[#FFFFFD]" style={{ fontFamily: 'Lato, sans-serif', fontWeight: 400 }}>Pink = Tab Reference</span>
