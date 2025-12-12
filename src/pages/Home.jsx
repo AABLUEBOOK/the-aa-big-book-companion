@@ -149,14 +149,8 @@ const SectionCard = memo(function SectionCard({ section, createPageUrl }) {
           rgba(94, 170, 255, 0.03) 20px)`
       }}
     >
-      {/* Number and Pages badge */}
-      <div className="flex items-center gap-2 mb-3 sm:mb-4">
-        <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-white/10 backdrop-blur-xl
-                        flex items-center justify-center border border-white/20 flex-shrink-0
-                        shadow-xl shadow-[#5EAAFF]/30 group-hover:shadow-[#5EAAFF]/50
-                        group-hover:bg-white/15 transition-all duration-500">
-          <span className="text-lg sm:text-xl font-bold text-[#5EAAFF]">{section.number}</span>
-        </div>
+      {/* Pages badge */}
+      <div className="mb-3 sm:mb-4">
         <div className="text-[10px] sm:text-xs text-[#5EAAFF] tracking-wider" style={{ fontFamily: 'Lato, sans-serif', fontWeight: 700 }}>
           {section.pages}
         </div>
