@@ -149,13 +149,6 @@ const SectionCard = memo(function SectionCard({ section, createPageUrl }) {
           rgba(94, 170, 255, 0.03) 20px)`
       }}
     >
-      {/* Pages badge */}
-      <div className="mb-3 sm:mb-4">
-        <div className="text-[10px] sm:text-xs text-[#5EAAFF] tracking-wider" style={{ fontFamily: 'Lato, sans-serif', fontWeight: 700 }}>
-          {section.pages}
-        </div>
-      </div>
-
       {/* Arrow indicator */}
       <div className="absolute top-3 right-3 sm:top-4 sm:right-4 
                       bg-white/5 backdrop-blur-xl border border-white/10 rounded-full p-1.5
@@ -169,9 +162,12 @@ const SectionCard = memo(function SectionCard({ section, createPageUrl }) {
       </div>
 
       <div>
-        {/* Title */}
-        <h3 className="text-lg sm:text-2xl text-[#FFFFFD] mb-1 sm:mb-2 leading-tight tracking-wide" style={{ fontFamily: 'Bebas Neue, sans-serif' }}>
-          {section.title}
+        {/* Title with Pages */}
+        <h3 className="text-lg sm:text-2xl text-[#FFFFFD] mb-1 sm:mb-2 leading-tight tracking-wide flex items-center gap-2 flex-wrap" style={{ fontFamily: 'Bebas Neue, sans-serif' }}>
+          <span>{section.title}</span>
+          <span className="text-[10px] sm:text-xs text-[#5EAAFF] tracking-wider" style={{ fontFamily: 'Lato, sans-serif', fontWeight: 700 }}>
+            {section.pages}
+          </span>
         </h3>
 
         {/* Description */}
@@ -237,10 +233,6 @@ const Home = memo(function Home() {
                 </div>
               </div>
               <div className="flex items-center justify-center gap-3 sm:gap-4 flex-wrap">
-                <div className="flex items-center gap-2">
-                  <span className="w-4 h-4 sm:w-5 sm:h-5 rounded bg-yellow-400 flex-shrink-0"></span>
-                  <span className="text-xs sm:text-sm text-[#FFFFFD]" style={{ fontFamily: 'Lato, sans-serif', fontWeight: 400 }}>Yellow = General Info</span>
-                </div>
                 <div className="flex items-center gap-2">
                   <span className="w-4 h-4 sm:w-5 sm:h-5 rounded bg-pink-400 flex-shrink-0"></span>
                   <span className="text-xs sm:text-sm text-[#FFFFFD]" style={{ fontFamily: 'Lato, sans-serif', fontWeight: 400 }}>Pink = Tab Reference</span>
