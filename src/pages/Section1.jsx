@@ -116,72 +116,43 @@ export default function Section1() {
 
   // Handle hash navigation on load and hash changes
   useEffect(() => {
-    const scrollToHash = () => {
+    const hash = window.location.hash.slice(1);
+    if (hash) {
+      const chapter = CHAPTERS.find(ch => ch.id === hash);
+      if (chapter) {
+        setCurrentChapterId(hash);
+      }
+    } else {
+      // Default to first chapter if no hash
+      setCurrentChapterId(CHAPTERS[0]?.id || "");
+    }
+  }, []);
+
+  // Listen for hash changes
+  useEffect(() => {
+    const handleHashChange = () => {
       const hash = window.location.hash.slice(1);
       if (hash) {
         const chapter = CHAPTERS.find(ch => ch.id === hash);
         if (chapter) {
           setCurrentChapterId(hash);
-          // Use requestAnimationFrame to ensure DOM is ready
-          requestAnimationFrame(() => {
-            const element = document.getElementById(hash);
-            if (element) {
-              const headerOffset = 80;
-              const elementPosition = element.getBoundingClientRect().top;
-              const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-              window.scrollTo({ top: offsetPosition, behavior: 'auto' });
-            }
-          });
+          window.scrollTo({ top: 0, behavior: 'auto' });
         }
       }
     };
 
-    // Scroll on initial load
-    scrollToHash();
-
-    // Listen for hash changes
-    window.addEventListener('hashchange', scrollToHash);
-    return () => window.removeEventListener('hashchange', scrollToHash);
+    window.addEventListener('hashchange', handleHashChange);
+    return () => window.removeEventListener('hashchange', handleHashChange);
   }, []);
 
-  // Track which chapter is in view
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting && entry.intersectionRatio > 0.5) {
-            setCurrentChapterId(entry.target.id);
-          }
-        });
-      },
-      { threshold: [0.5], rootMargin: '-100px 0px -100px 0px' }
-    );
+  const currentChapterIndex = CHAPTERS.findIndex(ch => ch.id === currentChapterId);
+  const currentChapter = CHAPTERS[currentChapterIndex];
+  const previousChapter = currentChapterIndex > 0 ? CHAPTERS[currentChapterIndex - 1] : null;
+  const nextChapter = currentChapterIndex < CHAPTERS.length - 1 ? CHAPTERS[currentChapterIndex + 1] : null;
 
-    CHAPTERS.forEach((chapter) => {
-      const element = document.getElementById(chapter.id);
-      if (element) observer.observe(element);
-    });
-
-    return () => observer.disconnect();
-  }, []);
-
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-
-  const scrollToChapter = (chapterId) => {
-    const element = document.getElementById(chapterId);
-    if (element) {
-      const offset = 80; // Account for sticky header
-      const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - offset;
-      
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth'
-      });
-      setMobileMenuOpen(false);
-    }
+  const goToChapter = (chapterId) => {
+    window.location.hash = chapterId;
+    setMobileMenuOpen(false);
   };
 
   return (
@@ -255,38 +226,96 @@ export default function Section1() {
             </div>
           </aside>
 
-          {/* Main Content - All Chapters */}
+          {/* Main Content - Single Chapter */}
           <div className="flex-1 w-full min-w-0 lg:max-w-4xl space-y-6 sm:space-y-8">
-            {CHAPTERS.map((chapter, index) => (
-              <article key={chapter.id} id={chapter.id} className="scroll-mt-16">
-                <ChapterContent chapter={chapter} sectionRoute="Section1" />
-              </article>
-            ))}
-
-            {/* Bottom Navigation */}
-            <div className="bg-white/5 backdrop-blur-3xl rounded-3xl border border-white/10 p-4 sm:p-6 md:p-8 text-center space-y-3 sm:space-y-4 shadow-2xl shadow-black/30">
-              <h3 className="text-lg sm:text-xl font-serif font-bold text-[#FFFFFD]">End of Section 1</h3>
-              <p className="text-sm sm:text-base text-[#FFFFFD]/70">Continue to the next section or return to top</p>
-              <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 justify-center">
-                <Button
-                  onClick={scrollToTop}
-                  variant="outline"
-                  className="bg-white/5 backdrop-blur-xl border-white/20 text-[#5EAAFF] 
-                             hover:bg-white/10 hover:border-[#5EAAFF]/40 active:bg-white/15 min-h-[44px]
-                             rounded-2xl shadow-lg shadow-black/20 hover:shadow-xl hover:shadow-[#5EAAFF]/20
-                             transition-all duration-500"
-                >
-                  Back to Top
-                </Button>
+            {/* Top Navigation */}
+            <div className="bg-white/5 backdrop-blur-3xl rounded-3xl border border-white/10 p-4 sm:p-6 shadow-2xl shadow-black/30">
+              <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 justify-between items-center">
+                {previousChapter ? (
+                  <Button
+                    onClick={() => goToChapter(previousChapter.id)}
+                    variant="outline"
+                    className="w-full sm:w-auto bg-white/5 backdrop-blur-xl border-white/20 text-[#5EAAFF] 
+                               hover:bg-white/10 hover:border-[#5EAAFF]/40 active:bg-white/15 min-h-[44px]
+                               rounded-2xl shadow-lg shadow-black/20 hover:shadow-xl hover:shadow-[#5EAAFF]/20
+                               transition-all duration-500"
+                  >
+                    ← Previous: {previousChapter.title}
+                  </Button>
+                ) : (
+                  <div className="hidden sm:block" />
+                )}
                 <Link to={createPageUrl("Home")} className="w-full sm:w-auto">
-                  <Button className="w-full bg-[#5EAAFF]/90 backdrop-blur-xl text-white 
-                                     hover:bg-[#5EAAFF] active:bg-[#5EAAFF]/80 min-h-[44px]
-                                     rounded-2xl shadow-xl shadow-[#5EAAFF]/40 
-                                     hover:shadow-2xl hover:shadow-[#5EAAFF]/60
-                                     border border-white/20 transition-all duration-500">
+                  <Button className="w-full bg-white/5 backdrop-blur-xl border-white/20 text-[#5EAAFF] 
+                                     hover:bg-white/10 hover:border-[#5EAAFF]/40 active:bg-white/15 min-h-[44px]
+                                     rounded-2xl shadow-lg shadow-black/20 hover:shadow-xl hover:shadow-[#5EAAFF]/20
+                                     transition-all duration-500">
                     Table of Contents
                   </Button>
                 </Link>
+                {nextChapter ? (
+                  <Button
+                    onClick={() => goToChapter(nextChapter.id)}
+                    variant="outline"
+                    className="w-full sm:w-auto bg-white/5 backdrop-blur-xl border-white/20 text-[#5EAAFF] 
+                               hover:bg-white/10 hover:border-[#5EAAFF]/40 active:bg-white/15 min-h-[44px]
+                               rounded-2xl shadow-lg shadow-black/20 hover:shadow-xl hover:shadow-[#5EAAFF]/20
+                               transition-all duration-500"
+                  >
+                    Next: {nextChapter.title} →
+                  </Button>
+                ) : (
+                  <div className="hidden sm:block" />
+                )}
+              </div>
+            </div>
+
+            {/* Current Chapter */}
+            {currentChapter && (
+              <article id={currentChapter.id}>
+                <ChapterContent chapter={currentChapter} sectionRoute="Section1" />
+              </article>
+            )}
+
+            {/* Bottom Navigation */}
+            <div className="bg-white/5 backdrop-blur-3xl rounded-3xl border border-white/10 p-4 sm:p-6 shadow-2xl shadow-black/30">
+              <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 justify-between items-center">
+                {previousChapter ? (
+                  <Button
+                    onClick={() => goToChapter(previousChapter.id)}
+                    variant="outline"
+                    className="w-full sm:w-auto bg-white/5 backdrop-blur-xl border-white/20 text-[#5EAAFF] 
+                               hover:bg-white/10 hover:border-[#5EAAFF]/40 active:bg-white/15 min-h-[44px]
+                               rounded-2xl shadow-lg shadow-black/20 hover:shadow-xl hover:shadow-[#5EAAFF]/20
+                               transition-all duration-500"
+                  >
+                    ← Previous: {previousChapter.title}
+                  </Button>
+                ) : (
+                  <div className="hidden sm:block" />
+                )}
+                <Link to={createPageUrl("Home")} className="w-full sm:w-auto">
+                  <Button className="w-full bg-white/5 backdrop-blur-xl border-white/20 text-[#5EAAFF] 
+                                     hover:bg-white/10 hover:border-[#5EAAFF]/40 active:bg-white/15 min-h-[44px]
+                                     rounded-2xl shadow-lg shadow-black/20 hover:shadow-xl hover:shadow-[#5EAAFF]/20
+                                     transition-all duration-500">
+                    Table of Contents
+                  </Button>
+                </Link>
+                {nextChapter ? (
+                  <Button
+                    onClick={() => goToChapter(nextChapter.id)}
+                    variant="outline"
+                    className="w-full sm:w-auto bg-white/5 backdrop-blur-xl border-white/20 text-[#5EAAFF] 
+                               hover:bg-white/10 hover:border-[#5EAAFF]/40 active:bg-white/15 min-h-[44px]
+                               rounded-2xl shadow-lg shadow-black/20 hover:shadow-xl hover:shadow-[#5EAAFF]/20
+                               transition-all duration-500"
+                  >
+                    Next: {nextChapter.title} →
+                  </Button>
+                ) : (
+                  <div className="hidden sm:block" />
+                )}
               </div>
             </div>
           </div>
