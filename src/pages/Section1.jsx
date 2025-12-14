@@ -127,7 +127,7 @@ export default function Section1() {
             const offset = 80;
             const elementPosition = element.getBoundingClientRect().top;
             const offsetPosition = elementPosition + window.pageYOffset - offset;
-            window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+            window.scrollTo({ top: offsetPosition, behavior: 'auto' });
           }
         }, 100);
       }
