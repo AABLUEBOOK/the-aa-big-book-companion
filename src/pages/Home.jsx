@@ -15,91 +15,91 @@ const SECTIONS = [
     title: "Preface",
     pages: "Pages XI-XIII",
     description: "Introduction to the Fourth Edition",
-    route: "Section1"
+    route: "Section1#preface"
   },
   {
     id: 2,
     title: "Forewords",
     pages: "Pages XIII-XXIV",
     description: "First, Second, Third, and Fourth Edition Forewords",
-    route: "Section1"
+    route: "Section1#foreword-first"
   },
   {
     id: 3,
     title: "Bill's Story",
     pages: "Pages 1-16",
     description: "Chapter 1: The co-founder's journey to sobriety",
-    route: "Section1"
+    route: "Section1#bills-story"
   },
   {
     id: 4,
     title: "There Is a Solution",
     pages: "Pages 17-29",
     description: "Chapter 2: The problem and the solution",
-    route: "Section1"
+    route: "Section1#there-is-solution"
   },
   {
     id: 5,
     title: "More About Alcoholism",
     pages: "Pages 30-43",
     description: "Chapter 3: Understanding the disease",
-    route: "Section1"
+    route: "Section1#more-about-alcoholism"
   },
   {
     id: 6,
     title: "We Agnostics",
     pages: "Pages 44-57",
     description: "Chapter 4: Spiritual matters for skeptics",
-    route: "Section1"
+    route: "Section1#we-agnostics"
   },
   {
     id: 7,
     title: "How It Works",
     pages: "Pages 58-71",
     description: "Chapter 5: The Twelve Steps",
-    route: "Section1"
+    route: "Section1#how-it-works"
   },
   {
     id: 8,
     title: "Into Action",
     pages: "Pages 72-88",
     description: "Chapter 6: Working the program of recovery",
-    route: "Section1"
+    route: "Section1#into-action"
   },
   {
     id: 9,
     title: "Working with Others",
     pages: "Pages 89-103",
     description: "Chapter 7: How to help other alcoholics",
-    route: "Section1"
+    route: "Section1#working-with-others"
   },
   {
     id: 10,
     title: "To Wives",
     pages: "Pages 104-121",
     description: "Chapter 8: Guidance for spouses",
-    route: "Section1"
+    route: "Section1#to-wives"
   },
   {
     id: 11,
     title: "The Family Afterward",
     pages: "Pages 122-135",
     description: "Chapter 9: Family recovery and healing",
-    route: "Section1"
+    route: "Section1#family-afterward"
   },
   {
     id: 12,
     title: "To Employers",
     pages: "Pages 136-150",
     description: "Chapter 10: Workplace and employment guidance",
-    route: "Section1"
+    route: "Section1#to-employers"
   },
   {
     id: 13,
     title: "A Vision for You",
     pages: "Pages 151-164",
     description: "Chapter 11: The future of Alcoholics Anonymous",
-    route: "Section1"
+    route: "Section1#vision-for-you"
   },
   {
     id: 14,
