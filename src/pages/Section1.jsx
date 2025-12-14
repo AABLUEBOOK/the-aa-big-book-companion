@@ -114,6 +114,26 @@ export default function Section1() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [bookmarksOpen, setBookmarksOpen] = useState(false);
 
+  // Handle initial hash anchor from URL
+  useEffect(() => {
+    const hash = window.location.hash.slice(1);
+    if (hash) {
+      const chapter = CHAPTERS.find(ch => ch.id === hash);
+      if (chapter) {
+        setCurrentChapterId(hash);
+        setTimeout(() => {
+          const element = document.getElementById(hash);
+          if (element) {
+            const offset = 80;
+            const elementPosition = element.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - offset;
+            window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+          }
+        }, 100);
+      }
+    }
+  }, []);
+
   // Track which chapter is in view
   useEffect(() => {
     const observer = new IntersectionObserver(
