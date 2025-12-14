@@ -114,24 +114,34 @@ export default function Section1() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [bookmarksOpen, setBookmarksOpen] = useState(false);
 
-  // Handle initial hash anchor from URL
+  // Handle hash navigation on load and hash changes
   useEffect(() => {
-    const hash = window.location.hash.slice(1);
-    if (hash) {
-      const chapter = CHAPTERS.find(ch => ch.id === hash);
-      if (chapter) {
-        setCurrentChapterId(hash);
-        setTimeout(() => {
-          const element = document.getElementById(hash);
-          if (element) {
-            const offset = 80;
-            const elementPosition = element.getBoundingClientRect().top;
-            const offsetPosition = elementPosition + window.pageYOffset - offset;
-            window.scrollTo({ top: offsetPosition, behavior: 'auto' });
-          }
-        }, 100);
+    const scrollToHash = () => {
+      const hash = window.location.hash.slice(1);
+      if (hash) {
+        const chapter = CHAPTERS.find(ch => ch.id === hash);
+        if (chapter) {
+          setCurrentChapterId(hash);
+          // Use requestAnimationFrame to ensure DOM is ready
+          requestAnimationFrame(() => {
+            const element = document.getElementById(hash);
+            if (element) {
+              const headerOffset = 80;
+              const elementPosition = element.getBoundingClientRect().top;
+              const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+              window.scrollTo({ top: offsetPosition, behavior: 'auto' });
+            }
+          });
+        }
       }
-    }
+    };
+
+    // Scroll on initial load
+    scrollToHash();
+
+    // Listen for hash changes
+    window.addEventListener('hashchange', scrollToHash);
+    return () => window.removeEventListener('hashchange', scrollToHash);
   }, []);
 
   // Track which chapter is in view
