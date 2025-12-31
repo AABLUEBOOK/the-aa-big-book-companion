@@ -9,7 +9,7 @@ import { base44 } from "@/api/base44Client";
 // Memoized paragraph component
 const Paragraph = memo(({ para, idx, renderTerms, highlightSearch }) => {
   const highlightClasses = {
-    'yellow': 'bg-yellow-400/30 px-1 py-0.5 rounded',
+    'yellow': 'underline decoration-2 decoration-yellow-500 underline-offset-2',
     'pink': 'text-pink-600 font-semibold',
     'blue': 'underline decoration-2 decoration-blue-600 underline-offset-2',
     'orange': 'text-orange-600 font-bold underline decoration-2 decoration-orange-600 underline-offset-2',
