@@ -1,5 +1,7 @@
+import Chapter from './pages/Chapter';
 import Home from './pages/Home';
 import Section1 from './pages/Section1';
+import Section10 from './pages/Section10';
 import Section2 from './pages/Section2';
 import Section3 from './pages/Section3';
 import Section4 from './pages/Section4';
@@ -8,14 +10,14 @@ import Section6 from './pages/Section6';
 import Section7 from './pages/Section7';
 import Section8 from './pages/Section8';
 import Section9 from './pages/Section9';
-import Section10 from './pages/Section10';
-import Chapter from './pages/Chapter';
 import __Layout from './Layout.jsx';
 
 
 export const PAGES = {
+    "Chapter": Chapter,
     "Home": Home,
     "Section1": Section1,
+    "Section10": Section10,
     "Section2": Section2,
     "Section3": Section3,
     "Section4": Section4,
@@ -24,8 +26,6 @@ export const PAGES = {
     "Section7": Section7,
     "Section8": Section8,
     "Section9": Section9,
-    "Section10": Section10,
-    "Chapter": Chapter,
 }
 
 export const pagesConfig = {
