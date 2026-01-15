@@ -367,7 +367,7 @@ export default function Section1() {
       {/* Annotation Toolbar */}
       <AnnotationToolbar
         selectedText={selectedText}
-        onHighlight={handleBoldPink}
+        onHighlight={handleHighlight}
         onClear={handleClear}
         position={selectionPosition}
       />
