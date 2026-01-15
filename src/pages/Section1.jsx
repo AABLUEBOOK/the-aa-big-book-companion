@@ -187,15 +187,8 @@ export default function Section1() {
   }, []);
 
   const handleHighlight = (color) => {
-    console.log(`Highlighting text in ${color}:`, selectedText);
-    // You can implement actual highlighting logic here
-    alert(`Text will be highlighted in ${color}: "${selectedText}"`);
-    setSelectedText("");
-  };
-
-  const handleBoldPink = () => {
-    console.log(`Making text bold pink:`, selectedText);
-    alert(`Text will be made BOLD PINK: "${selectedText}"\n\nThis text should be added to the content files with:\n{ text: "${selectedText}", highlight: 'pink', bold: true }`);
+    console.log(`Making text bold ${color}:`, selectedText);
+    alert(`Text will be made BOLD ${color.toUpperCase()}: "${selectedText}"\n\nAdd to content files:\n{ text: "${selectedText}", highlight: '${color}' }`);
     setSelectedText("");
   };
 
