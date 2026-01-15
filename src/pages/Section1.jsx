@@ -5,6 +5,7 @@ import { ArrowLeft, BookOpen, BookmarkCheck } from "lucide-react";
 import ChapterContent from "../components/book/ChapterContent";
 import BookNavigation, { MobileBookNavigation } from "../components/navigation/BookNavigation";
 import BookmarksList from "../components/book/BookmarksList";
+import AnnotationToolbar from "../components/book/AnnotationToolbar";
 
 function createPageUrl(pageName) {
   return `/${pageName}`;
@@ -113,6 +114,8 @@ export default function Section1() {
   const [currentChapterId, setCurrentChapterId] = useState(CHAPTERS[0]?.id || "");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [bookmarksOpen, setBookmarksOpen] = useState(false);
+  const [selectedText, setSelectedText] = useState("");
+  const [selectionPosition, setSelectionPosition] = useState({ x: 0, y: 0 });
 
   // Handle hash navigation on load and hash changes
   useEffect(() => {
@@ -153,6 +156,52 @@ export default function Section1() {
   const goToChapter = (chapterId) => {
     window.location.hash = chapterId;
     setMobileMenuOpen(false);
+  };
+
+  // Handle text selection
+  useEffect(() => {
+    const handleSelection = () => {
+      const selection = window.getSelection();
+      const text = selection?.toString().trim();
+      
+      if (text && text.length > 0) {
+        const range = selection.getRangeAt(0);
+        const rect = range.getBoundingClientRect();
+        setSelectedText(text);
+        setSelectionPosition({
+          x: rect.left + rect.width / 2,
+          y: rect.top + window.scrollY
+        });
+      } else {
+        setSelectedText("");
+      }
+    };
+
+    document.addEventListener('mouseup', handleSelection);
+    document.addEventListener('touchend', handleSelection);
+    
+    return () => {
+      document.removeEventListener('mouseup', handleSelection);
+      document.removeEventListener('touchend', handleSelection);
+    };
+  }, []);
+
+  const handleHighlight = (color) => {
+    console.log(`Highlighting text in ${color}:`, selectedText);
+    // You can implement actual highlighting logic here
+    alert(`Text will be highlighted in ${color}: "${selectedText}"`);
+    setSelectedText("");
+  };
+
+  const handleBoldPink = () => {
+    console.log(`Making text bold pink:`, selectedText);
+    alert(`Text will be made BOLD PINK: "${selectedText}"\n\nThis text should be added to the content files with:\n{ text: "${selectedText}", highlight: 'pink', bold: true }`);
+    setSelectedText("");
+  };
+
+  const handleClear = () => {
+    setSelectedText("");
+    window.getSelection()?.removeAllRanges();
   };
 
   return (
@@ -321,6 +370,14 @@ export default function Section1() {
           </div>
         </div>
       </main>
+
+      {/* Annotation Toolbar */}
+      <AnnotationToolbar
+        selectedText={selectedText}
+        onHighlight={handleBoldPink}
+        onClear={handleClear}
+        position={selectionPosition}
+      />
 
     </div>
   );
