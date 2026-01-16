@@ -8,8 +8,10 @@ export const doctorsOpinionContent = {
     { text: `I have specialized in the treatment of alcoholism for many years.` },
     {
       segments: [
-        { text: `In late 1934 I attended a patient who, though he had been a competent businessman of good earning capacity, was an alcoholic of a type I had come to regard as hopeless. ` },
-        { text: `Chronic alcoholics`, highlight: 'pink' }
+        { text: `In late 1934 I attended a patient who, though he had been a competent businessman of good earning capacity, was an ` },
+        { text: `alcoholic`, highlight: 'pink' },
+        { text: ` of a type I had come to regard as ` },
+        { text: `hopeless.`, highlight: 'pink' }
       ]
     },
     { text: `In the course of his third treatment he acquired certain ideas concerning a possible means of recovery. As part of his rehabilitation he commenced to present his conceptions to other alcoholics, impressing upon them that they must do likewise with still others. This has become the basis of a rapidly growing fellowship of these men and their families. This man and over one hundred others appear to have recovered.` },
