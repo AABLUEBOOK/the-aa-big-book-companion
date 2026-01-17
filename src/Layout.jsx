@@ -146,6 +146,38 @@ const Layout = memo(function Layout({ children }) {
             background: #ffffff;
         }
 
+        /* Glossary Terms - Purple Variants */
+        .glossary-term {
+            color: #9333EA;
+            font-weight: bold;
+            text-decoration: none;
+            cursor: pointer;
+            border-bottom: 2px solid transparent;
+            transition: border-bottom 0.2s;
+            display: inline;
+        }
+
+        .glossary-term:hover {
+            border-bottom: 2px solid #9333EA;
+        }
+
+        .glossary-modal-purple {
+            border: 3px solid #9333EA !important;
+        }
+
+        .glossary-header-purple {
+            border-bottom: 2px solid #9333EA !important;
+        }
+
+        .glossary-close-purple {
+            background: #9333EA !important;
+        }
+
+        .glossary-close-purple:hover,
+        .glossary-close-purple:active {
+            background: #7e22ce !important;
+        }
+
         /* Extra mobile optimizations */
         @media (max-width: 480px) {
             .big-book-modal-overlay {
