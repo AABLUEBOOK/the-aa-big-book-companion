@@ -1,10 +1,10 @@
 // Lazy chapter content loader - loads content on demand
 const chapterModules = {
    "preface": () => import("./content/prefaceContent"),
-   "foreword-first": () => import("./content/forewordFirstEditionContent"),
-   "foreword-second": () => import("./content/forewordSecondEditionContent"),
-   "foreword-third": () => import("./content/forewordThirdEditionContent"),
-   "foreword-fourth": () => import("./content/forewordFourthEditionContent"),
+   "foreword-first": () => import("./content/forewordFirstContent"),
+   "foreword-second": () => import("./content/forewordSecondContent"),
+   "foreword-third": () => import("./content/forewordThirdContent"),
+   "foreword-fourth": () => import("./content/forewordFourthContent"),
    "doctors-opinion": () => import("./content/doctorsOpinionContent"),
   "bills-story": () => import("./content/billsStoryContent"),
   "there-is-solution": () => import("./content/thereIsSolutionContent"),
