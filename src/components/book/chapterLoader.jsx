@@ -92,12 +92,6 @@ export async function loadChapterContent(chapterId) {
     return cache.get(chapterId);
   }
   
-  // Check inline content
-  if (inlineContent[chapterId]) {
-    cache.set(chapterId, inlineContent[chapterId]);
-    return inlineContent[chapterId];
-  }
-  
   // Check if we have a loader for this chapter
   if (chapterModules[chapterId]) {
     try {
